@@ -35,4 +35,5 @@ COPY --from=build /app/dist /app/dist
 EXPOSE 5000
 
 # Serve the app using the serve command
-CMD ["serve", "-s", "dist", "-l", "5000"]  # Serve on port 4173
+CMD ["serve", "-s", "dist", "-l", "5000"]
+# Serve on port 4173
