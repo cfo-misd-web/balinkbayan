@@ -1,5 +1,5 @@
 # Use official Node.js image
-FROM node:22 AS build
+FROM node:22-alpine AS build
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -18,7 +18,7 @@ RUN npm run build
 # Run the build command (npm run build)
 
 # Use a smaller image to run the app in production
-FROM node:22 AS serve
+FROM node:22-alpine AS serve
 
 # Set working directory for serving the app
 WORKDIR /app
