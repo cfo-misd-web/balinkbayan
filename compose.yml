@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  # React frontend service
+  react-app:
+    build: .
+    container_name: balinkbayan
+    ports:
+      - "5000:5000" # Expose the app on port 5000 for internal access
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.react-app.rule=Host(`localhost`)" # Traefik rule (no domain)
+      - "traefik.http.services.react-app.loadbalancer.server.port=5000"
+
+  # Prometheus service for monitoring
+  prometheus:
+    image: prom/prometheus:v2.43.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml # Local Prometheus config
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.prometheus.rule=Host(`localhost`)"
+      - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+
+  # Grafana service for visualizing metrics
+  grafana:
+    image: grafana/grafana:8.5.0
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin # Set Grafana admin password
+    ports:
+      - "3000:3000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.grafana.rule=Host(`localhost`)"
+      - "traefik.http.services.grafana.loadbalancer.server.port=3000"
+
+  # Traefik reverse proxy service
+  traefik:
+    image: traefik:v2.7
+    container_name: traefik
+    command:
+      - "--api.insecure=true" # Enable Traefik dashboard (insecure)
+      - "--providers.docker=true" # Use Docker provider
+      - "--entryPoints.web.address=:80" # Expose HTTP
+    ports:
+      - "80:80" # Expose port 80
+      - "8080:8080" # Expose the Traefik dashboard
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock" # Access Docker socket for Traefik to manage containers
