@@ -9,34 +9,34 @@ services:
       - "5000:5000" # Expose the app internally on port 5000, but Traefik will route to this port
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react-app.rule=Host(`react.localhost`)" # Traefik routing rule
+      - "traefik.http.routers.react-app.rule=Host(`localhost`)" # Traefik routing rule
       - "traefik.http.services.react-app.loadbalancer.server.port=5000" # Internal port to access React
 
   # Prometheus service for monitoring
-  prometheus:
-    image: prom/prometheus:v2.43.0
-    container_name: prometheus
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml # Local Prometheus config
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.prometheus.rule=Host(`prometheus.localhost`)"
-      - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
+  # prometheus:
+  #   image: prom/prometheus:v2.43.0
+  #   container_name: prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml # Local Prometheus config
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.prometheus.rule=Host(`prometheus.localhost`)"
+  #     - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
 
-  # Grafana service for visualizing metrics
-  grafana:
-    image: grafana/grafana:8.5.0
-    container_name: grafana
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin # Set Grafana admin password
-    ports:
-      - "3000:3000"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.grafana.rule=Host(`grafana.localhost`)"
-      - "traefik.http.services.grafana.loadbalancer.server.port=3000"
+  # # Grafana service for visualizing metrics
+  # grafana:
+  #   image: grafana/grafana:8.5.0
+  #   container_name: grafana
+  #   environment:
+  #     - GF_SECURITY_ADMIN_PASSWORD=admin # Set Grafana admin password
+  #   ports:
+  #     - "3000:3000"
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.grafana.rule=Host(`grafana.localhost`)"
+  #     - "traefik.http.services.grafana.loadbalancer.server.port=3000"
 
   # Traefik reverse proxy service
   traefik:
