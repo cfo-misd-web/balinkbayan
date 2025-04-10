@@ -6,11 +6,11 @@ services:
     build: .
     container_name: balinkbayan
     ports:
-      - "5000:5000" # Expose the app on port 5000 for internal access
+      - "5000:5000" # Expose the app internally on port 5000, but Traefik will route to this port
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react-app.rule=Host(`localhost`)" # Traefik rule (no domain)
-      - "traefik.http.services.react-app.loadbalancer.server.port=5000"
+      - "traefik.http.routers.react-app.rule=Host(`react.localhost`)" # Traefik routing rule
+      - "traefik.http.services.react-app.loadbalancer.server.port=5000" # Internal port to access React
 
   # Prometheus service for monitoring
   prometheus:
@@ -22,7 +22,7 @@ services:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml # Local Prometheus config
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.prometheus.rule=Host(`localhost`)"
+      - "traefik.http.routers.prometheus.rule=Host(`prometheus.localhost`)"
       - "traefik.http.services.prometheus.loadbalancer.server.port=9090"
 
   # Grafana service for visualizing metrics
@@ -35,7 +35,7 @@ services:
       - "3000:3000"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.grafana.rule=Host(`localhost`)"
+      - "traefik.http.routers.grafana.rule=Host(`grafana.localhost`)"
       - "traefik.http.services.grafana.loadbalancer.server.port=3000"
 
   # Traefik reverse proxy service
@@ -45,9 +45,9 @@ services:
     command:
       - "--api.insecure=true" # Enable Traefik dashboard (insecure)
       - "--providers.docker=true" # Use Docker provider
-      - "--entryPoints.web.address=:80" # Expose HTTP
+      - "--entryPoints.web.address=:80" # Expose HTTP on port 80
     ports:
-      - "80:80" # Expose port 80
-      - "8080:8080" # Expose the Traefik dashboard
+      - "80:80" # Expose port 80 (HTTP)
+      - "8080:8080" # Expose Traefik dashboard
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock" # Access Docker socket for Traefik to manage containers
