@@ -6,11 +6,11 @@ services:
     build: .
     container_name: balinkbayan
     ports:
-      - "5000:5000" # Expose the app internally on port 5000, but Traefik will route to this port
+      - "4173:4173" # Expose the app internally on port 5000, but Traefik will route to this port
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react-app.rule=Host(`localhost`)" # Traefik routing rule
-      - "traefik.http.services.react-app.loadbalancer.server.port=5000" # Internal port to access React
+      - "traefik.http.routers.react-app.rule=Host(`localhost`) && PathPrefix(`/`)" # Traefik routing rule
+      - "traefik.http.services.react-app.loadbalancer.server.port=4173" # Internal port to access React
 
   # Prometheus service for monitoring
   # prometheus:
