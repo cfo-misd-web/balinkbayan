@@ -6,7 +6,6 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.balinkbayan.rule=Host(`ec2-54-206-34-35.ap-southeast-2.compute.amazonaws.com`)"
-      - "traefik.http.routers.balinkbayan.rule=Host(`balinkbayan.com`)"
       - "traefik.http.services.balinkbayan.loadbalancer.server.port=4173"
     ports:
       - "4173:4173"
