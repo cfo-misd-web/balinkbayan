@@ -1,23 +1,5 @@
-version: "3.8"
-
 services:
   balinkbayan:
     build: .
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.balinkbayan.rule=Host(`ec2-54-206-34-35.ap-southeast-2.compute.amazonaws.com`)"
-      - "traefik.http.services.balinkbayan.loadbalancer.server.port=4173"
     ports:
       - "4173:4173"
-
-  traefik:
-    image: "traefik:v2.10"
-    command:
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--entryPoints.web.address=:80"
-    ports:
-      - "80:80" # HTTP
-      - "8080:8080" # Traefik dashboard
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
