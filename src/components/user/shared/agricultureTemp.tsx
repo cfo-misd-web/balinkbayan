@@ -23,7 +23,9 @@ const AgricultureTemp = ({text, label, img_url, className}:{text?:string, label?
             </motion.div>
 
             <div className='flex w-full items-center text-white absolute bottom-5 flex-col mb-5'>
-                <h2 className='text-8xl font-black'>
+                <p className='text-lg'>{text}</p>
+                <Separator className='max-w-32 h-[2px] bg-white my-5' />
+                <h2 className='text-6xl font-black'>
                     {label}
                 </h2>
             </div>
