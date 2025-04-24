@@ -57,6 +57,7 @@ function RouteComponent() {
           <Paragraph className='text-white'>Agriculture means everything to people, especially to Filipinos. Without this, no one can ever live—basically making it the most vital sector within our industries, even outside of our country from our exports. Agricultural investments encourage high contributions to overall development and sustenance, given their inevitable role in everyday life. With an abundance of natural resources distinct in the tropics, the Philippine agricultural sector proves to be one of the competitive exporters of fruit and edible oil, accounting for $1.956 billion and $2.2 billion, respectively. Furthermore, the different areas of the agricultural sector contributed a 25% increase in local employment as of 2023.</Paragraph>
         </div>
       </div>
+      <AgricultureTemp label='A' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
     </section>
   </>
 )
