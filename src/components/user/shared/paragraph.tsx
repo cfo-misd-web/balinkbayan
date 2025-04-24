@@ -1,6 +1,8 @@
-const Paragraph = ({children}: { children: React.ReactNode }) => {
+import { cn } from "@/lib/utils"
+
+const Paragraph = ({children, className}: { children: React.ReactNode , className?:string}) => {
     return (
-        <p className=''>
+        <p className={cn('text-cyan-900 text-lg mb-20 text-justify', className)}>
             {children}
         </p>
     );
