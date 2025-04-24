@@ -1,4 +1,5 @@
 import { Separator } from '@/components/ui/separator';
+import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
 
@@ -9,7 +10,7 @@ const AgricultureTemp = ({text, label, img_url, className}:{text?:string, label?
         <section className="relative">
 
             <motion.div
-                className={cn("w-full h-[150px] max-lg:h-[500px] relative bg-cover bg-center", className)}
+                className={cn("w-full h-[700px] max-lg:h-[500px] relative bg-cover bg-center", className)}
                 style={{
                     backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(${img_url})`,
                 }}
