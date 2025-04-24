@@ -1,4 +1,4 @@
-import HeaderTemp from '@/components/user/shared/header'
+import HeaderTemp from '@/components/user/shared/banner/header'
 import Paragraph from '@/components/user/shared/paragraph'
 import Image from '@/components/user/shared/image'
 import Heading3 from '@/components/user/shared/heading-3'
