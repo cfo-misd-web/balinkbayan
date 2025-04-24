@@ -6,14 +6,31 @@ import { SubHeader } from '@/components/user/layout/sub-header'
 
 export const Route = createRootRoute({
   component: () => (
-    <div className='w-full overflow-none'>
+    <>
+      <script
+        defer
+        data-domain="balinkbayan.r3workshop.live"
+        src="https://pl-analytics.r3workshop.live/js/script.js"
+      ></script>
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          window.plausible = window.plausible || function() { 
+            (window.plausible.q = window.plausible.q || []).push(arguments);
+          }
+        `
+      }}>
+      </script>
 
-      <SubHeader />
+      <div className='w-full overflow-none'>
 
-      <Outlet />
-      <TanStackRouterDevtools />
 
-      <Footer />
-    </div>
+        <SubHeader />
+
+        <Outlet />
+        <TanStackRouterDevtools />
+
+        <Footer />
+      </div>
+    </>
   ),
 })
