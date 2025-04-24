@@ -58,11 +58,80 @@ function RouteComponent() {
         </div>
       </div>
       <AgricultureTemp className='h-[150px]' label='A' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
-      <div className='bg-cyan-500 w-full'>
+      <div className='bg-teal-500 w-full'>
         <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
           <h4 className='font-bold text-xl mt-10'>ACTIVE GOVERNMENT SUPPORT AND INTERVENTION</h4>
-          <Separator className='w-32 h-[2px] bg-white my-5' />
           <Paragraph className='text-white h-0'>In line with the national response to both local and international demands, agriculture is one of the few national industries with the largest endowment of funds for productivity, alongside active research and the provision of incentives and supplies for local farmers and producers.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='G' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-teal-500 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>GROWING TRACTION AND SUPPORT OF AGRICULTURAL LABOR AND HUMAN RESOURCE</h4>
+          <Paragraph className='text-white h-0'>The Philippines has a large chunk of readily available labor for agricultural activities, particularly in rural areas. As of 2023, there exists a total of 25% of Filipino workers being involved in the agricultural industry–which continues to grow faster by 1.2%.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='R' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-teal-500 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>RICH, FERTILE, AND EXPANSIVE AGRICULTURAL LANDS</h4>
+          <Paragraph className='text-white h-0'>As an archipelagic country, the Philippines is richly built with both terrestrial and aquatic zones–offering a wide array of natural resources for cultivation and consumption.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='I' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-teal-500 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>IN-DEMAND AND CONSISTENT NECESSITY FOR AGRICULTURAL GOODS </h4>
+          <Paragraph className='text-white h-0'>The agricultural sector will always be needed as it is a means of public sustenance and development. Products and services, whether locally consumed or exported, are all dependent on raw materials from agriculture.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='C' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-rose-500 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>CLIMATE CHANGE AND THE UNCONTROLLABLE</h4>
+          <Paragraph className='text-white h-0'>Floods, typhoons, and even droughts are major critical and inevitable problems of the agricultural industry.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='U' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-rose-500 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>URBANIZATION AND INFRASTRUCTURAL DEVELOPMENTSTENT NECESSITY FOR AGRICULTURAL GOODS </h4>
+          <Paragraph className='text-white h-0'>The rapid growth of urbanization within the Philippines minimizes agricultural land capacity, leading to food supply shortages and the frequent importation of basic necessities.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='L' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-rose-500 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>LOW TECHNOLOGICAL SUPPORT</h4>
+          <Paragraph className='text-white h-0'>The Philippines remains less competitive in agricultural technology than other countries. Lesser productivity results because agricultural manpower is not supplemented enough by technological innovations that could improve performance.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='T' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-yellow-200 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>TECHNOLOGICAL AND MACHINERY ADVANCEMENTS </h4>
+          <Paragraph className='text-white h-0'>The creation of the National Agricultural and Fisheries Modernization and Industrialization Plan (NAFMIP) 2021-2030 of the DA aims to advance and modernize the agriculture industry through holistic agri-food systems and raising the compensation and benefits of fishermen and fisherfolk in the country.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='U' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-yellow-200 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>UPSTREAMING AGRICULTURE AND BUSINESS (AGRIBUSINESS)</h4>
+          <Paragraph className='text-white h-0'>The Philippine Development Plan of 2023 (PDP 2023) envisions promoting production efficiency through the adoption of technical advancements and integrating modern ways of farming into production and market supply.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='R' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-yellow-200 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>RURAL INFRASTRUCTURE INVESTMENTS</h4>
+          <Paragraph className='text-white h-0'>Revitalizing rural areas through infrastructure developments will create more opportunities for Filipinos to harness the agricultural industry. The DA, with the help of other government agencies, will pioneer bridging opportunities for rural communities in the country through Science and Technology (S&T) offices, private sector engagements, and agribusiness venture agreements.</Paragraph>
+        </div>
+      </div>
+      <AgricultureTemp className='h-[150px]' label='E' img_url='/img-assets/start-a-business/Agriculture/benefits/Active Government.jpg'/>
+      <div className='bg-yellow-200 w-full'>
+        <div className='text-white max-lg:mx-4 lg:w-[1400px] flex flex-col mx-auto bg-light'>
+          <h4 className='font-bold text-xl mt-10'>EDUCATION AND ACADEMIC INTERVENTIONS</h4>
+          <Paragraph className='text-white h-0'>The Philippine government targets improving training capacities and education services for the needs of small farmers and fisherfolks, improving and reforming education curriculum in agri-fishing schools, and highlighting the essence of modern innovations in local farming and fishing technologies.</Paragraph>
         </div>
       </div>
     </section>
