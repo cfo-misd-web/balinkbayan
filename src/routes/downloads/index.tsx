@@ -1,3 +1,4 @@
+import DownloadPage from '@/components/user/download/download-page'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/downloads/')({
@@ -5,5 +6,5 @@ export const Route = createFileRoute('/downloads/')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/download/"!</div>
+  return <DownloadPage />
 }

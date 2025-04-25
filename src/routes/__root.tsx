@@ -6,7 +6,7 @@ import { SubHeader } from '@/components/user/layout/sub-header'
 
 export const Route = createRootRoute({
   component: () => (
-    <div className='w-full overflow-none'>
+    <div className='w-full overflow-none max-lg:overflow-x-hidden'>
       <SubHeader />
       <Outlet />
       <TanStackRouterDevtools />
