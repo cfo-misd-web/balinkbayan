@@ -62,8 +62,8 @@ export const navLinks: NavItem[] = [
                         label: 'Starting a Business',
                         subsublinks: [
                             {
-                                label: 'Thiking of Starting a business?',
-                                href: '/start-business/guide',
+                                label: 'Thinking of Starting a business?',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
                             },
                             {
                                 label: 'Choose a Business Plan',

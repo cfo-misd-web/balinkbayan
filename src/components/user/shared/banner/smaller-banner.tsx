@@ -18,7 +18,7 @@ const SmallerBanner = ({label, img_url, className, textClass}:{label?:string, im
             >
             </motion.div>
 
-            <div className='flex w-full justify-center text-white absolute bottom-5'>
+            <div className='flex w-full justify-center text-center items-center text-white absolute bottom-0'>
                 <h2 className={cn('text-9xl font-black', textClass)}>
                     {label}
                 </h2>

@@ -15,10 +15,10 @@ export const Route = createFileRoute(
 function RouteComponent() {
   return (
   <>
-    <BiggerBanner text='Business Opportunities in the PH' label='Agriculture' img_url='/img-assets/start-a-business/Agriculture/intro-header.jpg'/>
+    <BiggerBanner text='Business Opportunities in the PH' label='Agriculture' img_url='/img-assets/start-a-business/agriculture/intro-header.jpg'/>
     <section className='text-cyan-900'>
-      <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col items-center justify-center mx-auto py-5 bg-light'>
-      <Paragraph><br/>Maximizing the potential of our country’s vast natural resources through financial and skills investments creates a more productive space for our local farmers and fisherfolk in one of the most essential industries for nation-building: agriculture.<br/><br/>
+      <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col items-center justify-center mx-auto mt-20 mb-32 bg-light'>
+      <Paragraph>Maximizing the potential of our country’s vast natural resources through financial and skills investments creates a more productive space for our local farmers and fisherfolk in one of the most essential industries for nation-building: agriculture.<br/><br/>
 
       The Philippines, inevitably agricultural in nature, caters to produce-related profitable opportunities considering the bountiful natural resources present across our vast fertile lands. The continuous development of the sector led to the production of our ever-growing agricultural commodities, which proudly showcase “tatak-Pinoy” products.<br/><br/>
 
@@ -27,20 +27,20 @@ function RouteComponent() {
       </div>
       <div className='bg-cyan-900 w-full flex items-center flex-col justify-center py-5'>
         <div className='flex flex-row space-x-5'>
-          <img className='w-[472px]' src='/img-assets/start-a-business/Agriculture/why-invest-1.png'/>
-          <img className='w-[450px]' src='/img-assets/start-a-business/Agriculture/why-invest-2.png'/>
+          <img className='w-[472px]' src='/img-assets/start-a-business/agriculture/why-invest-1.png'/>
+          <img className='w-[450px]' src='/img-assets/start-a-business/agriculture/why-invest-2.png'/>
         </div>
           
-        <div className='text-white flex justify-center max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex-col items-center mx-auto py-5 bg-light'>
+        <div className='text-white flex justify-center max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex-col items-center mx-auto mt-5 mb-32 bg-light'>
           <h4 className='font-bold text-3xl mt-10'>WHY INVEST?</h4>
           <Separator className='w-32 h-[2px] bg-white my-5' />
           <Paragraph>Agriculture means everything to people, especially to Filipinos. Without this, no one can ever live—basically making it the most vital sector within our industries, even outside of our country from our exports. Agricultural investments encourage high contributions to overall development and sustenance, given their inevitable role in everyday life. With an abundance of natural resources distinct in the tropics, the Philippine agricultural sector proves to be one of the competitive exporters of fruit and edible oil, accounting for $1.956 billion and $2.2 billion, respectively. Furthermore, the different areas of the agricultural sector contributed a 25% increase in local employment as of 2023.</Paragraph>
         </div>
       </div>
-      <div className='flex items-center flex-col justify-center py-5'>
+      <div className='flex items-center flex-col justify-center my-20'>
         <div className='flex flex-row space-x-20'>
-          <img className='w-[472px]' src='/img-assets/start-a-business/Agriculture/potential-industries-1.png'/>
-          <img className='w-[450px]' src='/img-assets/start-a-business/Agriculture/potential-industries-2.png'/>
+          <img className='w-[472px]' src='/img-assets/start-a-business/agriculture/potential-industries-1.png'/>
+          <img className='w-[450px]' src='/img-assets/start-a-business/agriculture/potential-industries-2.png'/>
         </div>
           
         <div className='justify-center max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto py-10 bg-light'>
@@ -60,49 +60,49 @@ function RouteComponent() {
       </div>
       {/*  */}
       <div className='text-white'>
-        <SmallerBanner label='A' img_url='/img-assets/start-a-business/Agriculture/benefits/active-government.jpg'/>
+        <SmallerBanner label='A' img_url='/img-assets/start-a-business/agriculture/benefits/active-government.jpg'/>
         <div className='bg-teal-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>ACTIVE GOVERNMENT SUPPORT AND INTERVENTION</Heading4>
             <Paragraph className='mt-5'>In line with the national response to both local and international demands, agriculture is one of the few national industries with the largest endowment of funds for productivity, alongside active research and the provision of incentives and supplies for local farmers and producers.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='G' img_url='/img-assets/start-a-business/Agriculture/benefits/growing-traction-and-support.jpg'/>
+        <SmallerBanner label='G' img_url='/img-assets/start-a-business/agriculture/benefits/growing-traction-and-support.jpg'/>
         <div className='bg-teal-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>GROWING TRACTION AND SUPPORT OF AGRICULTURAL LABOR AND HUMAN RESOURCE</Heading4>
             <Paragraph className='mt-5'>The Philippines has a large chunk of readily available labor for agricultural activities, particularly in rural areas. As of 2023, there exists a total of 25% of Filipino workers being involved in the agricultural industry–which continues to grow faster by 1.2%.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='R' img_url='/img-assets/start-a-business/Agriculture/benefits/rich-fertile-land.jpg'/>
+        <SmallerBanner label='R' img_url='/img-assets/start-a-business/agriculture/benefits/rich-fertile-land.jpg'/>
         <div className='bg-teal-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>RICH, FERTILE, AND EXPANSIVE AGRICULTURAL LANDS</Heading4>
             <Paragraph className='mt-5'>As an archipelagic country, the Philippines is richly built with both terrestrial and aquatic zones–offering a wide array of natural resources for cultivation and consumption.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='I' img_url='/img-assets/start-a-business/Agriculture/benefits/in-demand-and-consistent-necessity.jpg'/>
+        <SmallerBanner label='I' img_url='/img-assets/start-a-business/agriculture/benefits/in-demand-and-consistent-necessity.jpg'/>
         <div className='bg-teal-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>IN-DEMAND AND CONSISTENT NECESSITY FOR AGRICULTURAL GOODS </Heading4>
             <Paragraph className='mt-5'>The agricultural sector will always be needed as it is a means of public sustenance and development. Products and services, whether locally consumed or exported, are all dependent on raw materials from agriculture.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='C' img_url='/img-assets/start-a-business/Agriculture/benefits/climate-change.jpg'/>
+        <SmallerBanner label='C' img_url='/img-assets/start-a-business/agriculture/benefits/climate-change.jpg'/>
         <div className='bg-rose-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>CLIMATE CHANGE AND THE UNCONTROLLABLE</Heading4>
             <Paragraph className='mt-5'>Floods, typhoons, and even droughts are major critical and inevitable problems of the agricultural industry.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='U' img_url='/img-assets/start-a-business/Agriculture/benefits/urbanization.avif'/>
+        <SmallerBanner label='U' img_url='/img-assets/start-a-business/agriculture/benefits/urbanization.avif'/>
         <div className='bg-rose-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>URBANIZATION AND INFRASTRUCTURAL DEVELOPMENTS AND NECESSITY FOR AGRICULTURAL GOODS</Heading4>
             <Paragraph className='mt-5'>The rapid growth of urbanization within the Philippines minimizes agricultural land capacity, leading to food supply shortages and the frequent importation of basic necessities.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='L' img_url='/img-assets/start-a-business/Agriculture/benefits/low-technological-support.jpg'/>
+        <SmallerBanner label='L' img_url='/img-assets/start-a-business/agriculture/benefits/low-technological-support.jpg'/>
         <div className='bg-rose-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>LOW TECHNOLOGICAL SUPPORT</Heading4>
@@ -110,28 +110,28 @@ function RouteComponent() {
           </div>
         </div>
       </div>
-      <SmallerBanner label='T' img_url='/img-assets/start-a-business/Agriculture/benefits/technological-and-machinery-adv.jpg'/>
+      <SmallerBanner label='T' img_url='/img-assets/start-a-business/agriculture/benefits/technological-and-machinery-adv.jpg'/>
       <div className='bg-yellow-200 w-full py-5'>
         <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
           <Heading4>TECHNOLOGICAL AND MACHINERY ADVANCEMENTS</Heading4>
           <Paragraph className='mt-5'>The creation of the National Agricultural and Fisheries Modernization and Industrialization Plan (NAFMIP) 2021-2030 of the DA aims to advance and modernize the agriculture industry through holistic agri-food systems and raising the compensation and benefits of fishermen and fisherfolk in the country.</Paragraph>
         </div>
       </div>
-      <SmallerBanner label='U' img_url='/img-assets/start-a-business/Agriculture/benefits/upstreaming-agriculture.jpg'/>
+      <SmallerBanner label='U' img_url='/img-assets/start-a-business/agriculture/benefits/upstreaming-agriculture.jpg'/>
       <div className='bg-yellow-200 w-full py-5'>
         <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
           <Heading4>UPSTREAMING AGRICULTURE AND BUSINESS (AGRIBUSINESS)</Heading4>
           <Paragraph className='mt-5'>The Philippine Development Plan of 2023 (PDP 2023) envisions promoting production efficiency through the adoption of technical advancements and integrating modern ways of farming into production and market supply.</Paragraph>
         </div>
       </div>
-      <SmallerBanner label='R' img_url='/img-assets/start-a-business/Agriculture/benefits/rural-infra.png'/>
+      <SmallerBanner label='R' img_url='/img-assets/start-a-business/agriculture/benefits/rural-infra.png'/>
       <div className='bg-yellow-200 w-full py-5'>
         <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
           <Heading4>RURAL INFRASTRUCTURE INVESTMENTS</Heading4>
           <Paragraph className='mt-5'>Revitalizing rural areas through infrastructure developments will create more opportunities for Filipinos to harness the agricultural industry. The DA, with the help of other government agencies, will pioneer bridging opportunities for rural communities in the country through Science and Technology (S&T) offices, private sector engagements, and agribusiness venture agreements.</Paragraph>
         </div>
       </div>
-      <SmallerBanner label='E' img_url='/img-assets/start-a-business/Agriculture/benefits/educational-and-academic.jpg'/>
+      <SmallerBanner label='E' img_url='/img-assets/start-a-business/agriculture/benefits/educational-and-academic.jpg'/>
       <div className='bg-yellow-200 w-full py-5'>
         <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
           <Heading4>EDUCATION AND ACADEMIC INTERVENTIONS</Heading4>
@@ -142,56 +142,92 @@ function RouteComponent() {
       <div className='mt-20 mb-40 max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] mx-auto bg-light'>
           <Heading4>Government & Non-Government Support Channels</Heading4>
           <Separator className='w-32 h-[2px] bg-cyan-900 my-5' />
-          <div className='flex flex-row items-center space-x-20'>
-            <img className='max-h-[190px]' src='/img-assets/start-a-business/Agriculture/logo/dost-logo.png'/>
+          <div className='flex flex-row max-lg:flex-col max-lg:space-y-5 items-center space-x-20'>
+            <img className='max-lg:max-h-[150px] max-h-[190px]' src='/img-assets/start-a-business/agriculture/logo/dost-logo.png'/>
             <div className='flex flex-col'>
               <Heading5>Department of Science and Technology-Philippine Council for Agriculture, Aquatic, and Natural Resources Research and Development (DOST-PCAARRD)</Heading5>
               <Paragraph className='mt-5'>The DOST-PCAARRD publishes investment guides that encourage overseas Filipinos (OFs) and local entrepreneurs to invest in agriculture. The DOST-PCAARRD e-library provides these resources for the general public's consumption.<br/>
               
-              <span className='ml-8'>&#8226; You may visit their website to access their resources: <a href='https://elibrary.pcaarrd.dost.gov.ph/home' className='underline'>https://elibrary.pcaarrd.dost.gov.ph/home</a></span></Paragraph>
+              <div className='grid grid-cols-12'>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <Paragraph>You may visit their website to access their resources:</Paragraph>
+                  <a href='https://elibrary.pcaarrd.dost.gov.ph/home' className='underline'>https://elibrary.pcaarrd.dost.gov.ph/home</a>
+                </div>
+              </div></Paragraph>
             </div>
           </div>
           <Separator className='mx-[10vw] h-[5px] bg-teal-500 my-20'/>
-          <div className='flex flex-row items-center space-x-20'>
+          <div className='flex flex-row max-lg:flex-col max-lg:space-y-5 items-center xl:space-x-20'>
+            <img className='max-h-[190px] hidden max-lg:block' src='/img-assets/start-a-business/agriculture/logo/da-logo.png'/>
             <div className='flex flex-col'>
               <Heading5>Department of Agriculture (DA)</Heading5>
               <Paragraph className='mt-5'>The DA has partnered with the Department of Migrant Workers (DMW) to provide agri-loans, market linkages, and agribusiness training to OFWs. Numerous Philippine embassies abroad also conduct annual agricultural investment forums to promote agribusiness to OFs.<br/>
 
-              <span className='ml-8'>&#8226; You may visit their website for more information: <a href='https://www.da.gov.ph/services/agricultural-credit-and-financing-programs/' className='underline'>https://www.da.gov.ph/services/agricultural-credit-and-financing-programs/</a></span><br/><br/>
-              
+              <div className='grid grid-cols-12'>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <Paragraph>You may visit their website for more information:</Paragraph>
+                  <a href='https://www.da.gov.ph/services/agricultural-credit-and-financing-programs/' className='underline'>https://www.da.gov.ph/services/agricultural-credit-and-financing-programs/</a>
+                </div>
+              </div><br/>
+
               Both the Agribusiness and Marketing Assistance Service (AMAS) and Agribusiness Promotion Division (APD) of the Department of Agriculture provide timely and accurate market information that guides agribusiness stakeholders to encourage them in agribusiness investments.<br/>
 
-              <span className='ml-8'>&#8226; You may refer to their YouTube channel for reference: <a href='https://www.youtube.com/@daagribusiness-amas/videos' className='underline'>https://www.youtube.com/@daagribusiness-amas/videos</a></span></Paragraph>
+              <div className='grid grid-cols-12'>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <Paragraph>You may refer to their YouTube channel for reference:</Paragraph>
+                  <a href='https://www.youtube.com/@daagribusiness-amas/videos' className='underline'>https://www.youtube.com/@daagribusiness-amas/videos</a>
+                </div>
+              </div></Paragraph>
             </div>
-            <img className='max-h-[190px]' src='/img-assets/start-a-business/Agriculture/logo/da-logo.png'/>
+            <img className='max-h-[190px] max-lg:hidden' src='/img-assets/start-a-business/agriculture/logo/da-logo.png'/>
           </div>
           <Separator className='mx-[10vw] h-[5px] bg-rose-500 my-20'/>
-          <div className='flex flex-row items-center space-x-20'>
-            <img className='max-h-[190px]' src='/img-assets/start-a-business/Agriculture/logo/landbank-logo.png'/>
+          <div className='flex flex-row max-lg:flex-col max-lg:space-y-5 items-center xl:space-x-20'>
+            <img className='max-h-[190px]' src='/img-assets/start-a-business/agriculture/logo/landbank-logo.png'/>
             <div className='flex flex-col'>
               <Heading5>Land Bank of the Philippines (LandBank)</Heading5>
               <Paragraph className='mt-5'>Land Bank provides banking programs for overseas Filipinos, specifically the Overseas Filipino Bank and the Land Bank GoBayani.<br/><br/>
 
               You may check their website to know more:<br/>
-              <span className='ml-8'>&#8226; <a href='https://www.landbank.com/about-us/foundation-and-subsidiaries/overseas-filipino-bank' className='underline'>https://www.landbank.com/about-us/foundation-and-subsidiaries/overseas-filipino-bank</a></span><br/>
-              <span className='ml-8'>&#8226; <a href='https://www.landbank.com/news/landbank-launches-gobayani-digital-deposit-account-for-ofws\' className='underline'>https://www.landbank.com/news/landbank-launches-gobayani-digital-deposit-account-for-ofws\</a></span></Paragraph>
+              <div className='grid grid-cols-12'>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <a href='https://www.landbank.com/about-us/foundation-and-subsidiaries/overseas-filipino-bank' className='underline'>https://www.landbank.com/about-us/foundation-and-subsidiaries/overseas-filipino-bank</a>
+                </div>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <a href='https://www.landbank.com/news/landbank-launches-gobayani-digital-deposit-account-for-ofws\' className='underline'>https://www.landbank.com/news/landbank-launches-gobayani-digital-deposit-account-for-ofws\</a>
+                </div>
+              </div></Paragraph>
             </div>
           </div>
           <Separator className='mx-[10vw] h-[5px] bg-yellow-200 my-20'/>
-          <div className='flex flex-row items-center space-x-20'>
+          <div className='flex flex-row max-lg:flex-col max-lg:space-y-5 items-center xl:space-x-20'>
+            <img className='max-h-[190px] hidden max-lg:block' src='/img-assets/start-a-business/agriculture/logo/dbp-logo.png'/>
             <div className='flex flex-col'>
               <Heading5>Development Bank of the Philippines (DBP)</Heading5>
               <Paragraph className='mt-5'>Together with Land Bank of the Philippines, the DBP provides Enterprise Development Interventions for OFWs and their families in training them on business essentials. They also offer reintegration programs where flexible credit assistance may help Overseas Filipinos build their own businesses.<br/><br/>
 
               You may visit the following links for more information:<br/>
-              <span className='ml-8'>&#8226; <a href='https://www.dbp.ph/developmental-banking/micro-small-and-medium-enterprises/sustainable-agribusiness-financing-program-safp/' className='underline'>https://www.dbp.ph/developmental-banking/micro-small-and-medium-enterprises/sustainable-agribusiness-financing-program-safp/</a></span><br/>
-              <span className='ml-8'>&#8226; <a href='https://www.dbp.ph/personal-banking/remittance-products-and-services/products-and-services/' className='underline'>https://www.dbp.ph/personal-banking/remittance-products-and-services/products-and-services/</a></span></Paragraph>
+              <div className='grid grid-cols-12'>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <a href='https://www.dbp.ph/developmental-banking/micro-small-and-medium-enterprises/sustainable-agribusiness-financing-program-safp/' className='underline'>https://www.dbp.ph/developmental-banking/micro-small-and-medium-enterprises/sustainable-agribusiness-financing-program-safp/</a>
+                </div>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <a href='https://www.dbp.ph/personal-banking/remittance-products-and-services/products-and-services/' className='underline'>https://www.dbp.ph/personal-banking/remittance-products-and-services/products-and-services/</a>
+                </div>
+              </div></Paragraph>
             </div>
-            <img className='max-h-[190px]' src='/img-assets/start-a-business/Agriculture/logo/dbp-logo.png'/>
+            <img className='max-h-[190px] max-lg:hidden' src='/img-assets/start-a-business/agriculture/logo/dbp-logo.png'/>
           </div>
           <Separator className='mx-[10vw] h-[5px] bg-teal-500 my-20'/>
-          <div className='flex flex-row items-center space-x-20'>
-            <img className='max-h-[190px]' src='/img-assets/start-a-business/Agriculture/logo/cda-logo.png'/>
+          <div className='flex flex-row max-lg:flex-col max-lg:space-y-5 items-center xl:space-x-20'>
+            <img className='max-h-[190px]' src='/img-assets/start-a-business/agriculture/logo/cda-logo.png'/>
             <div className='flex flex-col'>
               <Heading5>Various Cooperatives for Overseas Filipinos</Heading5>
               <Paragraph className='mt-5'>There are many cooperatives in the Philippines that cater to the financial needs of OFs. You may check the BaLinkBayan’s dedicated page for the Cooperative Development Authority (CDA) here: <a href='https://balinkbayan.gov.ph/cooperative-development-authority-cda-2/' className='underline'>https://balinkbayan.gov.ph/cooperative-development-authority-cda-2/</a><br/><br/>
@@ -201,16 +237,25 @@ function RouteComponent() {
             </div>
           </div>
           <Separator className='mx-[10vw] h-[5px] bg-rose-500 my-20'/>
-          <div className='flex flex-row items-center space-x-20'>
+          <div className='flex flex-row max-lg:flex-col max-lg:space-y-5 items-center xl:space-x-20'>
+            <img className='max-h-[190px] hidden max-lg:block' src='/img-assets/start-a-business/agriculture/logo/irri-logo.jpg'/>
             <div className='flex flex-col'>
               <Heading5>International Rice Research Institute (IRRI)</Heading5>
               <Paragraph className='mt-5'>As a leading international organization for specialized rice research based in the Philippines, the International Rice Research Institute offers various training and educational programs—from micromodules (free access) to short courses—for those aspiring to invest in the agricultural sector, especially with a focus on producing rice.<br/><br/>
 
               You may visit the following links to learn more:<br/>
-              <span className='ml-8'>&#8226; <a href='https://www.irri.org/our-solutions/irri-education' className='underline'>https://www.irri.org/our-solutions/irri-education</a></span><br/>
-              <span className='ml-8'>&#8226; <a href='https://openlearning.cgiar.org/' className='underline'>https://openlearning.cgiar.org/</a></span></Paragraph>
+              <div className='grid grid-cols-12'>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <a href='https://www.irri.org/our-solutions/irri-education' className='underline'>https://www.irri.org/our-solutions/irri-education</a>
+                </div>
+                <div className='text-center'>&#8226;</div>
+                <div className='col-span-11'>
+                  <a href='https://openlearning.cgiar.org/' className='underline'>https://openlearning.cgiar.org/</a>
+                </div>
+              </div></Paragraph>
             </div>
-            <img className='max-h-[190px]' src='/img-assets/start-a-business/Agriculture/logo/irri-logo.jpg'/>
+            <img className='max-h-[190px] max-lg:hidden' src='/img-assets/start-a-business/agriculture/logo/irri-logo.jpg'/>
           </div>
       </div>
       {/*  */}
@@ -221,7 +266,7 @@ function RouteComponent() {
         </div>
       </div>
       <div className='text-white'>
-        <SmallerBanner  textClass='text-4xl mb-10' label='CREATE A PLAN' img_url='/img-assets/start-a-business/Agriculture/invest/create-a-plan.jpg'/>
+        <SmallerBanner  textClass='text-4xl mb-10' label='CREATE A PLAN' img_url='/img-assets/start-a-business/agriculture/invest/create-a-plan.jpg'/>
         <div className='bg-teal-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex justify-center mx-auto bg-light'>
             <Heading5 className='font-normal'>In order to succeed, you need to answer the questions:<br/>
@@ -231,34 +276,34 @@ function RouteComponent() {
             <span className='ml-8'>&#8226; how do you envision your investment/s in the future</span></Heading5>
           </div>
         </div>
-        <SmallerBanner  textClass='text-4xl mb-10' label='SEEK FINANCIAL AID PROGRAMS' img_url='/img-assets/start-a-business/Agriculture/invest/seek-financial-aid-programs.jpg'/>
+        <SmallerBanner  textClass='text-4xl mb-10' label='SEEK FINANCIAL AID PROGRAMS' img_url='/img-assets/start-a-business/agriculture/invest/seek-financial-aid-programs.jpg'/>
         <div className='bg-rose-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex justify-center mx-auto bg-light'>
             <Heading5 className='font-normal max-w-[60vw] text-justify'>Study financial loaning programs which cater to overseas Filipinos (OFs), and decide whether to enroll.</Heading5>
           </div>
         </div>
-        <SmallerBanner  textClass='text-4xl mb-10' label='STUDY' img_url='/img-assets/start-a-business/Agriculture/invest/study.jpg'/>
+        <SmallerBanner  textClass='text-4xl mb-10' label='STUDY' img_url='/img-assets/start-a-business/agriculture/invest/study.jpg'/>
         <div className='bg-yellow-200 text-cyan-900 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex justify-center mx-auto bg-light'>
             <Heading5 className='font-normal max-w-[60vw] text-justify'>Research farming and agricultural know-how to equip yourself with the knowledge and skills needed to be familiarized with the field.</Heading5>
           </div>
         </div>
-        <SmallerBanner textClass='text-4xl mb-10' label='CHECK AGRIBUSINESS FORUMS' img_url='/img-assets/start-a-business/Agriculture/invest/check-agribusiness-forums.jpg'/>
+        <SmallerBanner textClass='text-4xl mb-10' label='CHECK AGRIBUSINESS FORUMS' img_url='/img-assets/start-a-business/agriculture/invest/check-agribusiness-forums.jpg'/>
         <div className='bg-teal-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex justify-center mx-auto bg-light'>
             <Heading5 className='font-normal max-w-[60vw] text-justify'>This will greatly help you navigate your interests and establish a linkage among sectors within agriculture. This may be available online or onsite.</Heading5>
           </div>
         </div>
-        <SmallerBanner textClass='text-4xl mb-10' label='CONNECT WITH TARGET INVESTORS' img_url='/img-assets/start-a-business/Agriculture/invest/connect-with-investors.jpg'/>
+        <SmallerBanner textClass='text-4xl mb-10' label='CONNECT WITH TARGET INVESTORS' img_url='/img-assets/start-a-business/agriculture/invest/connect-with-investors.jpg'/>
         <div className='bg-rose-500 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex justify-center mx-auto bg-light'>
             <Heading5 className='font-normal max-w-[60vw] text-justify'>It is important to establish rapport with and know your target investors.</Heading5>
           </div>
         </div>
-        <SmallerBanner textClass='text-4xl mb-10' label='SUPPORT FILIPINO AGRICULTURE' img_url='/img-assets/start-a-business/Agriculture/invest/support-filipino-agri.jpg'/>
+        <SmallerBanner textClass='text-4xl mb-10' label='SUPPORT FILIPINO AGRICULTURE' img_url='/img-assets/start-a-business/agriculture/invest/support-filipino-agri.jpg'/>
         <div className='bg-yellow-200 text-cyan-900 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex justify-center mx-auto bg-light'>
-            <Heading5 className='font-normal max-w-[60vw] text-justify'>It is essential to support local farmers and fisherfolks in uplifting our agricultural industry towards technological progression and production development. Investing in agriculture will help our local industries create opportunities that will transcend our economy. </Heading5>
+            <Heading5 className='font-normal max-w-[60vw] text-justify'>It is essential to support local farmers and fisherfolks in uplifting our agricultural industry towards technological progression and production development. Investing in agriculture will help our local industries create opportunities that will transcend our economy.</Heading5>
           </div>
         </div>
       </div>
