@@ -2,25 +2,24 @@ import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
 
-const SmallerBanner = ({text, label, img_url, className}:{text?:string, label?:string, img_url:string, className?:string}) => {
+const SmallerBanner = ({label, img_url, className, textClass}:{label?:string, img_url?:string, className?:string, textClass?:string}) => {
     return (
-        <section className="relative">
+        <section className="relative overflow-hidden">
             <motion.div
-                className={cn("w-full h-[700px] max-lg:h-[500px] relative bg-cover bg-center", className)}
+                className={cn("w-full h-[150px] relative bg-cover bg-center", className)}
                 style={{
                     backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(${img_url})`,
+                    filter: 'blur(2px) brightness(0.8)',
                 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1, ease: 'easeInOut' }}
             >
-                <div className="absolute inset-0 bg-black/50"></div>
             </motion.div>
 
-            <div className='flex w-full items-center text-white absolute bottom-5 flex-col mb-5'>
-                <p className='text-lg'>{text}</p>
-                <h2 className='text-6xl font-black'>
+            <div className='flex w-full justify-center text-white absolute bottom-5'>
+                <h2 className={cn('text-9xl font-black', textClass)}>
                     {label}
                 </h2>
             </div>
