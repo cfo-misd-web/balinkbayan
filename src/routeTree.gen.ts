@@ -20,6 +20,7 @@ import { Route as DonateIndexImport } from './routes/donate/index'
 import { Route as ContactIndexImport } from './routes/contact/index'
 import { Route as AboutCfoIndexImport } from './routes/about/cfo/index'
 import { Route as AboutBalinkbayanIndexImport } from './routes/about/balinkbayan/index'
+import { Route as StartBusinessInvestmentOpAgricultureImport } from './routes/start-business/investment-op/agriculture'
 
 // Create/Update Routes
 
@@ -77,6 +78,13 @@ const AboutBalinkbayanIndexRoute = AboutBalinkbayanIndexImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
+const StartBusinessInvestmentOpAgricultureRoute =
+  StartBusinessInvestmentOpAgricultureImport.update({
+    id: '/start-business/investment-op/agriculture',
+    path: '/start-business/investment-op/agriculture',
+    getParentRoute: () => rootRoute,
+  } as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -130,6 +138,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StartBusinessIndexImport
       parentRoute: typeof rootRoute
     }
+    '/start-business/investment-op/agriculture': {
+      id: '/start-business/investment-op/agriculture'
+      path: '/start-business/investment-op/agriculture'
+      fullPath: '/start-business/investment-op/agriculture'
+      preLoaderRoute: typeof StartBusinessInvestmentOpAgricultureImport
+      parentRoute: typeof rootRoute
+    }
     '/about/balinkbayan/': {
       id: '/about/balinkbayan/'
       path: '/about/balinkbayan'
@@ -157,6 +172,7 @@ export interface FileRoutesByFullPath {
   '/news': typeof NewsIndexRoute
   '/services': typeof ServicesIndexRoute
   '/start-business': typeof StartBusinessIndexRoute
+  '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof AboutBalinkbayanIndexRoute
   '/about/cfo': typeof AboutCfoIndexRoute
 }
@@ -169,6 +185,7 @@ export interface FileRoutesByTo {
   '/news': typeof NewsIndexRoute
   '/services': typeof ServicesIndexRoute
   '/start-business': typeof StartBusinessIndexRoute
+  '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof AboutBalinkbayanIndexRoute
   '/about/cfo': typeof AboutCfoIndexRoute
 }
@@ -182,6 +199,7 @@ export interface FileRoutesById {
   '/news/': typeof NewsIndexRoute
   '/services/': typeof ServicesIndexRoute
   '/start-business/': typeof StartBusinessIndexRoute
+  '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan/': typeof AboutBalinkbayanIndexRoute
   '/about/cfo/': typeof AboutCfoIndexRoute
 }
@@ -196,6 +214,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/services'
     | '/start-business'
+    | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
   fileRoutesByTo: FileRoutesByTo
@@ -207,6 +226,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/services'
     | '/start-business'
+    | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
   id:
@@ -218,6 +238,7 @@ export interface FileRouteTypes {
     | '/news/'
     | '/services/'
     | '/start-business/'
+    | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan/'
     | '/about/cfo/'
   fileRoutesById: FileRoutesById
@@ -231,6 +252,7 @@ export interface RootRouteChildren {
   NewsIndexRoute: typeof NewsIndexRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
   StartBusinessIndexRoute: typeof StartBusinessIndexRoute
+  StartBusinessInvestmentOpAgricultureRoute: typeof StartBusinessInvestmentOpAgricultureRoute
   AboutBalinkbayanIndexRoute: typeof AboutBalinkbayanIndexRoute
   AboutCfoIndexRoute: typeof AboutCfoIndexRoute
 }
@@ -243,6 +265,8 @@ const rootRouteChildren: RootRouteChildren = {
   NewsIndexRoute: NewsIndexRoute,
   ServicesIndexRoute: ServicesIndexRoute,
   StartBusinessIndexRoute: StartBusinessIndexRoute,
+  StartBusinessInvestmentOpAgricultureRoute:
+    StartBusinessInvestmentOpAgricultureRoute,
   AboutBalinkbayanIndexRoute: AboutBalinkbayanIndexRoute,
   AboutCfoIndexRoute: AboutCfoIndexRoute,
 }
@@ -264,6 +288,7 @@ export const routeTree = rootRoute
         "/news/",
         "/services/",
         "/start-business/",
+        "/start-business/investment-op/agriculture",
         "/about/balinkbayan/",
         "/about/cfo/"
       ]
@@ -288,6 +313,9 @@ export const routeTree = rootRoute
     },
     "/start-business/": {
       "filePath": "start-business/index.tsx"
+    },
+    "/start-business/investment-op/agriculture": {
+      "filePath": "start-business/investment-op/agriculture.tsx"
     },
     "/about/balinkbayan/": {
       "filePath": "about/balinkbayan/index.tsx"

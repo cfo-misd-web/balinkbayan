@@ -22,11 +22,11 @@ export const navLinks: NavItem[] = [
         label: 'Start a Business',
         sublinks: [
             {
-                label: 'Investment and Bussiness Opportunities',
+                label: 'Investment and Business Opportunities',
                 links: [
                     {
                         label: 'Agriculture',
-                        href: '/investment/agriculture',
+                        href: '/start-business/investment-op/agriculture',
                     },
                     {
                         label: 'Franchise Business',
