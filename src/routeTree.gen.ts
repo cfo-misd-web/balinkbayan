@@ -21,6 +21,7 @@ import { Route as ContactIndexImport } from './routes/contact/index'
 import { Route as AboutCfoIndexImport } from './routes/about/cfo/index'
 import { Route as AboutBalinkbayanIndexImport } from './routes/about/balinkbayan/index'
 import { Route as StartBusinessInvestmentOpAgricultureImport } from './routes/start-business/investment-op/agriculture'
+import { Route as StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport } from './routes/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
 
 // Create/Update Routes
 
@@ -84,6 +85,15 @@ const StartBusinessInvestmentOpAgricultureRoute =
     path: '/start-business/investment-op/agriculture',
     getParentRoute: () => rootRoute,
   } as any)
+
+const StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute =
+  StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
+      getParentRoute: () => rootRoute,
+    } as any,
+  )
 
 // Populate the FileRoutesByPath interface
 
@@ -159,6 +169,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutCfoIndexImport
       parentRoute: typeof rootRoute
     }
+    '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+      preLoaderRoute: typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -175,6 +192,7 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof AboutBalinkbayanIndexRoute
   '/about/cfo': typeof AboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
 export interface FileRoutesByTo {
@@ -188,6 +206,7 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof AboutBalinkbayanIndexRoute
   '/about/cfo': typeof AboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
 export interface FileRoutesById {
@@ -202,6 +221,7 @@ export interface FileRoutesById {
   '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan/': typeof AboutBalinkbayanIndexRoute
   '/about/cfo/': typeof AboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
 export interface FileRouteTypes {
@@ -217,6 +237,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -229,6 +250,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   id:
     | '__root__'
     | '/'
@@ -241,6 +263,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan/'
     | '/about/cfo/'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   fileRoutesById: FileRoutesById
 }
 
@@ -255,6 +278,7 @@ export interface RootRouteChildren {
   StartBusinessInvestmentOpAgricultureRoute: typeof StartBusinessInvestmentOpAgricultureRoute
   AboutBalinkbayanIndexRoute: typeof AboutBalinkbayanIndexRoute
   AboutCfoIndexRoute: typeof AboutCfoIndexRoute
+  StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute: typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -269,6 +293,8 @@ const rootRouteChildren: RootRouteChildren = {
     StartBusinessInvestmentOpAgricultureRoute,
   AboutBalinkbayanIndexRoute: AboutBalinkbayanIndexRoute,
   AboutCfoIndexRoute: AboutCfoIndexRoute,
+  StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute:
+    StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute,
 }
 
 export const routeTree = rootRoute
@@ -290,7 +316,8 @@ export const routeTree = rootRoute
         "/start-business/",
         "/start-business/investment-op/agriculture",
         "/about/balinkbayan/",
-        "/about/cfo/"
+        "/about/cfo/",
+        "/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it"
       ]
     },
     "/": {
@@ -322,6 +349,9 @@ export const routeTree = rootRoute
     },
     "/about/cfo/": {
       "filePath": "about/cfo/index.tsx"
+    },
+    "/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it": {
+      "filePath": "start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it.tsx"
     }
   }
 }
