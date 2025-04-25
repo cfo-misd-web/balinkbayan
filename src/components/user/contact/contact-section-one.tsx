@@ -1,27 +1,25 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+
+type FormData = {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+};
 
 const ContactSectionOne: React.FC = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-    });
+    const {
+        register,
+        handleSubmit,
+        formState: { errors }
+    } = useForm<FormData>();
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+    const onSubmit = (data: FormData) => {
         // Handle form submission logic here
-        console.log('Form submitted:', formData);
+        console.log('Form submitted:', data);
     };
 
     return (
@@ -36,20 +34,19 @@ const ContactSectionOne: React.FC = () => {
 
                     <h3 className="text-2xl font-semibold text-teal-700 mb-8">Send us a message</h3>
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                                 Your name
                             </label>
                             <input
-                                type="text"
                                 id="name"
-                                name="name"
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
+                                className={`w-full p-3 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                                {...register('name', { required: 'Name is required' })}
                             />
+                            {errors.name && (
+                                <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+                            )}
                         </div>
 
                         <div>
@@ -57,14 +54,20 @@ const ContactSectionOne: React.FC = () => {
                                 Your email
                             </label>
                             <input
-                                type="email"
                                 id="email"
-                                name="email"
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
+                                type="email"
+                                className={`w-full p-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                                {...register('email', {
+                                    required: 'Email is required',
+                                    pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                        message: 'Invalid email address'
+                                    }
+                                })}
                             />
+                            {errors.email && (
+                                <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+                            )}
                         </div>
 
                         <div>
@@ -72,14 +75,13 @@ const ContactSectionOne: React.FC = () => {
                                 Subject
                             </label>
                             <input
-                                type="text"
                                 id="subject"
-                                name="subject"
-                                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                                value={formData.subject}
-                                onChange={handleChange}
-                                required
+                                className={`w-full p-3 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500`}
+                                {...register('subject', { required: 'Subject is required' })}
                             />
+                            {errors.subject && (
+                                <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
+                            )}
                         </div>
 
                         <div>
@@ -88,11 +90,9 @@ const ContactSectionOne: React.FC = () => {
                             </label>
                             <textarea
                                 id="message"
-                                name="message"
                                 className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                                 rows={6}
-                                value={formData.message}
-                                onChange={handleChange}
+                                {...register('message')}
                             />
                         </div>
 

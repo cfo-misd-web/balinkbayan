@@ -1,4 +1,4 @@
-import { MessageSquare, PhoneCall } from "lucide-react"
+import { MessageSquare, PhoneCall, Search } from "lucide-react"
 import { Link } from "@tanstack/react-router"
 import Nav from "./navs"
 import { NavSheet } from "../partials/navsheets"
@@ -34,10 +34,14 @@ export const SubHeader = () => {
                                 <form>
                                     <div className="flex rounded-md shadow-sm border">
                                         <div className="relative flex flex-grow items-stretch focus-within:z-10">
-                                            <input id="search" className="block min-w-[120px] w-full rounded-none rounded-l-md border-0 py-1.5 px-4 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="Search" type="text" value="" name="search" />
+                                            <input id="search" className="block min-w-[120px] w-full rounded-none rounded-l-md border-0 py-1.5 px-4 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6" placeholder="Search" type="text" name="search" />
                                         </div>
-                                        <button type="submit" aria-label="Search Button" className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" className="-ml-0.5 h-5 w-5 text-gray-400" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg></button></div></form><div className="flex items-center space-x-2">
+                                        <button type="submit" aria-label="Search Button" className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md px-3 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50">
+                                            <Search className="h-5 w-5" aria-hidden="true" />
+                                        </button>
+                                    </div>
+                                </form>
+                                <div className="flex items-center space-x-2">
                                     <a href="https://www.philhealth.gov.ph/about_us/transparency/" target="_blank" aria-label="Transparency Seal" rel="noopener noreferrer">
                                         <img className="w-auto max-h-[50px] h-auto max-w-[300px] object-center object-contain" src="/images/transparency-seal.png" alt="" /></a>
                                     <a href="https://www.foi.gov.ph/requests?agency=PH" target="_blank" aria-label="Freedom of Information" rel="noopener noreferrer">

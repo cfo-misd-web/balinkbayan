@@ -4,7 +4,7 @@ import { Facebook, Youtube } from 'lucide-react';
 const ContactMap: React.FC = () => {
     return (
         <section className="w-full">
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col md:flex-row gap-[1.5px]">
                 {/* Contact Information */}
                 <div className="w-full md:w-1/2 bg-[#F4A03A] p-8 md:p-12 rounded-tl-lg max-lg:rounded-tl-none">
                     <div>
