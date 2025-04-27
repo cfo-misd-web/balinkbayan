@@ -8,90 +8,127 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
+import { createFileRoute } from '@tanstack/react-router'
+
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as StartBusinessIndexImport } from './routes/start-business/index'
-import { Route as ServicesIndexImport } from './routes/services/index'
-import { Route as NewsIndexImport } from './routes/news/index'
-import { Route as DownloadsIndexImport } from './routes/downloads/index'
-import { Route as DonateIndexImport } from './routes/donate/index'
-import { Route as ContactIndexImport } from './routes/contact/index'
-import { Route as AboutCfoIndexImport } from './routes/about/cfo/index'
-import { Route as AboutBalinkbayanIndexImport } from './routes/about/balinkbayan/index'
-import { Route as StartBusinessInvestmentOpAgricultureImport } from './routes/start-business/investment-op/agriculture'
-import { Route as StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport } from './routes/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+import { Route as publicpImport } from './routes/(public)/__p'
+import { Route as authauthImport } from './routes/(auth)/__auth'
+import { Route as publicpIndexImport } from './routes/(public)/__p.index'
+import { Route as authauthLoginImport } from './routes/(auth)/__auth.login'
+import { Route as publicpStartBusinessIndexImport } from './routes/(public)/__p.start-business/index'
+import { Route as publicpServicesIndexImport } from './routes/(public)/__p.services/index'
+import { Route as publicpNewsIndexImport } from './routes/(public)/__p.news/index'
+import { Route as publicpDownloadsIndexImport } from './routes/(public)/__p.downloads/index'
+import { Route as publicpDonateIndexImport } from './routes/(public)/__p.donate/index'
+import { Route as publicpContactIndexImport } from './routes/(public)/__p.contact/index'
+import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
+import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
+import { Route as publicpStartBusinessInvestmentOpAgricultureImport } from './routes/(public)/__p.start-business/investment-op/agriculture'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+
+// Create Virtual Routes
+
+const publicImport = createFileRoute('/(public)')()
+const authImport = createFileRoute('/(auth)')()
 
 // Create/Update Routes
 
-const IndexRoute = IndexImport.update({
+const publicRoute = publicImport.update({
+  id: '/(public)',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const authRoute = authImport.update({
+  id: '/(auth)',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const publicpRoute = publicpImport.update({
+  id: '/__p',
+  getParentRoute: () => publicRoute,
+} as any)
+
+const authauthRoute = authauthImport.update({
+  id: '/__auth',
+  getParentRoute: () => authRoute,
+} as any)
+
+const publicpIndexRoute = publicpIndexImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const StartBusinessIndexRoute = StartBusinessIndexImport.update({
+const authauthLoginRoute = authauthLoginImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => authauthRoute,
+} as any)
+
+const publicpStartBusinessIndexRoute = publicpStartBusinessIndexImport.update({
   id: '/start-business/',
   path: '/start-business/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const ServicesIndexRoute = ServicesIndexImport.update({
+const publicpServicesIndexRoute = publicpServicesIndexImport.update({
   id: '/services/',
   path: '/services/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const NewsIndexRoute = NewsIndexImport.update({
+const publicpNewsIndexRoute = publicpNewsIndexImport.update({
   id: '/news/',
   path: '/news/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const DownloadsIndexRoute = DownloadsIndexImport.update({
+const publicpDownloadsIndexRoute = publicpDownloadsIndexImport.update({
   id: '/downloads/',
   path: '/downloads/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const DonateIndexRoute = DonateIndexImport.update({
+const publicpDonateIndexRoute = publicpDonateIndexImport.update({
   id: '/donate/',
   path: '/donate/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const ContactIndexRoute = ContactIndexImport.update({
+const publicpContactIndexRoute = publicpContactIndexImport.update({
   id: '/contact/',
   path: '/contact/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const AboutCfoIndexRoute = AboutCfoIndexImport.update({
+const publicpAboutCfoIndexRoute = publicpAboutCfoIndexImport.update({
   id: '/about/cfo/',
   path: '/about/cfo/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => publicpRoute,
 } as any)
 
-const AboutBalinkbayanIndexRoute = AboutBalinkbayanIndexImport.update({
-  id: '/about/balinkbayan/',
-  path: '/about/balinkbayan/',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const StartBusinessInvestmentOpAgricultureRoute =
-  StartBusinessInvestmentOpAgricultureImport.update({
-    id: '/start-business/investment-op/agriculture',
-    path: '/start-business/investment-op/agriculture',
-    getParentRoute: () => rootRoute,
+const publicpAboutBalinkbayanIndexRoute =
+  publicpAboutBalinkbayanIndexImport.update({
+    id: '/about/balinkbayan/',
+    path: '/about/balinkbayan/',
+    getParentRoute: () => publicpRoute,
   } as any)
 
-const StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute =
-  StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport.update(
+const publicpStartBusinessInvestmentOpAgricultureRoute =
+  publicpStartBusinessInvestmentOpAgricultureImport.update({
+    id: '/start-business/investment-op/agriculture',
+    path: '/start-business/investment-op/agriculture',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport.update(
     {
       id: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
       path: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
-      getParentRoute: () => rootRoute,
+      getParentRoute: () => publicpRoute,
     } as any,
   )
 
@@ -99,135 +136,244 @@ const StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRo
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
+    '/(auth)': {
+      id: '/(auth)'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexImport
+      preLoaderRoute: typeof authImport
       parentRoute: typeof rootRoute
     }
-    '/contact/': {
-      id: '/contact/'
+    '/(auth)/__auth': {
+      id: '/(auth)/__auth'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof authauthImport
+      parentRoute: typeof authRoute
+    }
+    '/(public)': {
+      id: '/(public)'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof publicImport
+      parentRoute: typeof rootRoute
+    }
+    '/(public)/__p': {
+      id: '/(public)/__p'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof publicpImport
+      parentRoute: typeof publicRoute
+    }
+    '/(auth)/__auth/login': {
+      id: '/(auth)/__auth/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof authauthLoginImport
+      parentRoute: typeof authauthImport
+    }
+    '/(public)/__p/': {
+      id: '/(public)/__p/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof publicpIndexImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/contact/': {
+      id: '/(public)/__p/contact/'
       path: '/contact'
       fullPath: '/contact'
-      preLoaderRoute: typeof ContactIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpContactIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/donate/': {
-      id: '/donate/'
+    '/(public)/__p/donate/': {
+      id: '/(public)/__p/donate/'
       path: '/donate'
       fullPath: '/donate'
-      preLoaderRoute: typeof DonateIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpDonateIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/downloads/': {
-      id: '/downloads/'
+    '/(public)/__p/downloads/': {
+      id: '/(public)/__p/downloads/'
       path: '/downloads'
       fullPath: '/downloads'
-      preLoaderRoute: typeof DownloadsIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpDownloadsIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/news/': {
-      id: '/news/'
+    '/(public)/__p/news/': {
+      id: '/(public)/__p/news/'
       path: '/news'
       fullPath: '/news'
-      preLoaderRoute: typeof NewsIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpNewsIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/services/': {
-      id: '/services/'
+    '/(public)/__p/services/': {
+      id: '/(public)/__p/services/'
       path: '/services'
       fullPath: '/services'
-      preLoaderRoute: typeof ServicesIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpServicesIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/start-business/': {
-      id: '/start-business/'
+    '/(public)/__p/start-business/': {
+      id: '/(public)/__p/start-business/'
       path: '/start-business'
       fullPath: '/start-business'
-      preLoaderRoute: typeof StartBusinessIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpStartBusinessIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/start-business/investment-op/agriculture': {
-      id: '/start-business/investment-op/agriculture'
+    '/(public)/__p/start-business/investment-op/agriculture': {
+      id: '/(public)/__p/start-business/investment-op/agriculture'
       path: '/start-business/investment-op/agriculture'
       fullPath: '/start-business/investment-op/agriculture'
-      preLoaderRoute: typeof StartBusinessInvestmentOpAgricultureImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpStartBusinessInvestmentOpAgricultureImport
+      parentRoute: typeof publicpImport
     }
-    '/about/balinkbayan/': {
-      id: '/about/balinkbayan/'
+    '/(public)/__p/about/balinkbayan/': {
+      id: '/(public)/__p/about/balinkbayan/'
       path: '/about/balinkbayan'
       fullPath: '/about/balinkbayan'
-      preLoaderRoute: typeof AboutBalinkbayanIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpAboutBalinkbayanIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/about/cfo/': {
-      id: '/about/cfo/'
+    '/(public)/__p/about/cfo/': {
+      id: '/(public)/__p/about/cfo/'
       path: '/about/cfo'
       fullPath: '/about/cfo'
-      preLoaderRoute: typeof AboutCfoIndexImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpAboutCfoIndexImport
+      parentRoute: typeof publicpImport
     }
-    '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': {
-      id: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
       path: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
       fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
-      preLoaderRoute: typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport
-      parentRoute: typeof rootRoute
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport
+      parentRoute: typeof publicpImport
     }
   }
 }
 
 // Create and export the route tree
 
+interface authauthRouteChildren {
+  authauthLoginRoute: typeof authauthLoginRoute
+}
+
+const authauthRouteChildren: authauthRouteChildren = {
+  authauthLoginRoute: authauthLoginRoute,
+}
+
+const authauthRouteWithChildren = authauthRoute._addFileChildren(
+  authauthRouteChildren,
+)
+
+interface authRouteChildren {
+  authauthRoute: typeof authauthRouteWithChildren
+}
+
+const authRouteChildren: authRouteChildren = {
+  authauthRoute: authauthRouteWithChildren,
+}
+
+const authRouteWithChildren = authRoute._addFileChildren(authRouteChildren)
+
+interface publicpRouteChildren {
+  publicpIndexRoute: typeof publicpIndexRoute
+  publicpContactIndexRoute: typeof publicpContactIndexRoute
+  publicpDonateIndexRoute: typeof publicpDonateIndexRoute
+  publicpDownloadsIndexRoute: typeof publicpDownloadsIndexRoute
+  publicpNewsIndexRoute: typeof publicpNewsIndexRoute
+  publicpServicesIndexRoute: typeof publicpServicesIndexRoute
+  publicpStartBusinessIndexRoute: typeof publicpStartBusinessIndexRoute
+  publicpStartBusinessInvestmentOpAgricultureRoute: typeof publicpStartBusinessInvestmentOpAgricultureRoute
+  publicpAboutBalinkbayanIndexRoute: typeof publicpAboutBalinkbayanIndexRoute
+  publicpAboutCfoIndexRoute: typeof publicpAboutCfoIndexRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
+}
+
+const publicpRouteChildren: publicpRouteChildren = {
+  publicpIndexRoute: publicpIndexRoute,
+  publicpContactIndexRoute: publicpContactIndexRoute,
+  publicpDonateIndexRoute: publicpDonateIndexRoute,
+  publicpDownloadsIndexRoute: publicpDownloadsIndexRoute,
+  publicpNewsIndexRoute: publicpNewsIndexRoute,
+  publicpServicesIndexRoute: publicpServicesIndexRoute,
+  publicpStartBusinessIndexRoute: publicpStartBusinessIndexRoute,
+  publicpStartBusinessInvestmentOpAgricultureRoute:
+    publicpStartBusinessInvestmentOpAgricultureRoute,
+  publicpAboutBalinkbayanIndexRoute: publicpAboutBalinkbayanIndexRoute,
+  publicpAboutCfoIndexRoute: publicpAboutCfoIndexRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute,
+}
+
+const publicpRouteWithChildren =
+  publicpRoute._addFileChildren(publicpRouteChildren)
+
+interface publicRouteChildren {
+  publicpRoute: typeof publicpRouteWithChildren
+}
+
+const publicRouteChildren: publicRouteChildren = {
+  publicpRoute: publicpRouteWithChildren,
+}
+
+const publicRouteWithChildren =
+  publicRoute._addFileChildren(publicRouteChildren)
+
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/contact': typeof ContactIndexRoute
-  '/donate': typeof DonateIndexRoute
-  '/downloads': typeof DownloadsIndexRoute
-  '/news': typeof NewsIndexRoute
-  '/services': typeof ServicesIndexRoute
-  '/start-business': typeof StartBusinessIndexRoute
-  '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
-  '/about/balinkbayan': typeof AboutBalinkbayanIndexRoute
-  '/about/cfo': typeof AboutCfoIndexRoute
-  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
+  '/': typeof publicpIndexRoute
+  '/login': typeof authauthLoginRoute
+  '/contact': typeof publicpContactIndexRoute
+  '/donate': typeof publicpDonateIndexRoute
+  '/downloads': typeof publicpDownloadsIndexRoute
+  '/news': typeof publicpNewsIndexRoute
+  '/services': typeof publicpServicesIndexRoute
+  '/start-business': typeof publicpStartBusinessIndexRoute
+  '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
+  '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
+  '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/contact': typeof ContactIndexRoute
-  '/donate': typeof DonateIndexRoute
-  '/downloads': typeof DownloadsIndexRoute
-  '/news': typeof NewsIndexRoute
-  '/services': typeof ServicesIndexRoute
-  '/start-business': typeof StartBusinessIndexRoute
-  '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
-  '/about/balinkbayan': typeof AboutBalinkbayanIndexRoute
-  '/about/cfo': typeof AboutCfoIndexRoute
-  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
+  '/': typeof publicpIndexRoute
+  '/login': typeof authauthLoginRoute
+  '/contact': typeof publicpContactIndexRoute
+  '/donate': typeof publicpDonateIndexRoute
+  '/downloads': typeof publicpDownloadsIndexRoute
+  '/news': typeof publicpNewsIndexRoute
+  '/services': typeof publicpServicesIndexRoute
+  '/start-business': typeof publicpStartBusinessIndexRoute
+  '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
+  '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
+  '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/contact/': typeof ContactIndexRoute
-  '/donate/': typeof DonateIndexRoute
-  '/downloads/': typeof DownloadsIndexRoute
-  '/news/': typeof NewsIndexRoute
-  '/services/': typeof ServicesIndexRoute
-  '/start-business/': typeof StartBusinessIndexRoute
-  '/start-business/investment-op/agriculture': typeof StartBusinessInvestmentOpAgricultureRoute
-  '/about/balinkbayan/': typeof AboutBalinkbayanIndexRoute
-  '/about/cfo/': typeof AboutCfoIndexRoute
-  '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
+  '/(auth)': typeof authRouteWithChildren
+  '/(auth)/__auth': typeof authauthRouteWithChildren
+  '/(public)': typeof publicRouteWithChildren
+  '/(public)/__p': typeof publicpRouteWithChildren
+  '/(auth)/__auth/login': typeof authauthLoginRoute
+  '/(public)/__p/': typeof publicpIndexRoute
+  '/(public)/__p/contact/': typeof publicpContactIndexRoute
+  '/(public)/__p/donate/': typeof publicpDonateIndexRoute
+  '/(public)/__p/downloads/': typeof publicpDownloadsIndexRoute
+  '/(public)/__p/news/': typeof publicpNewsIndexRoute
+  '/(public)/__p/services/': typeof publicpServicesIndexRoute
+  '/(public)/__p/start-business/': typeof publicpStartBusinessIndexRoute
+  '/(public)/__p/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
+  '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
+  '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/login'
     | '/contact'
     | '/donate'
     | '/downloads'
@@ -241,6 +387,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/login'
     | '/contact'
     | '/donate'
     | '/downloads'
@@ -253,48 +400,33 @@ export interface FileRouteTypes {
     | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   id:
     | '__root__'
-    | '/'
-    | '/contact/'
-    | '/donate/'
-    | '/downloads/'
-    | '/news/'
-    | '/services/'
-    | '/start-business/'
-    | '/start-business/investment-op/agriculture'
-    | '/about/balinkbayan/'
-    | '/about/cfo/'
-    | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+    | '/(auth)'
+    | '/(auth)/__auth'
+    | '/(public)'
+    | '/(public)/__p'
+    | '/(auth)/__auth/login'
+    | '/(public)/__p/'
+    | '/(public)/__p/contact/'
+    | '/(public)/__p/donate/'
+    | '/(public)/__p/downloads/'
+    | '/(public)/__p/news/'
+    | '/(public)/__p/services/'
+    | '/(public)/__p/start-business/'
+    | '/(public)/__p/start-business/investment-op/agriculture'
+    | '/(public)/__p/about/balinkbayan/'
+    | '/(public)/__p/about/cfo/'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ContactIndexRoute: typeof ContactIndexRoute
-  DonateIndexRoute: typeof DonateIndexRoute
-  DownloadsIndexRoute: typeof DownloadsIndexRoute
-  NewsIndexRoute: typeof NewsIndexRoute
-  ServicesIndexRoute: typeof ServicesIndexRoute
-  StartBusinessIndexRoute: typeof StartBusinessIndexRoute
-  StartBusinessInvestmentOpAgricultureRoute: typeof StartBusinessInvestmentOpAgricultureRoute
-  AboutBalinkbayanIndexRoute: typeof AboutBalinkbayanIndexRoute
-  AboutCfoIndexRoute: typeof AboutCfoIndexRoute
-  StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute: typeof StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
+  authRoute: typeof authRouteWithChildren
+  publicRoute: typeof publicRouteWithChildren
 }
 
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  ContactIndexRoute: ContactIndexRoute,
-  DonateIndexRoute: DonateIndexRoute,
-  DownloadsIndexRoute: DownloadsIndexRoute,
-  NewsIndexRoute: NewsIndexRoute,
-  ServicesIndexRoute: ServicesIndexRoute,
-  StartBusinessIndexRoute: StartBusinessIndexRoute,
-  StartBusinessInvestmentOpAgricultureRoute:
-    StartBusinessInvestmentOpAgricultureRoute,
-  AboutBalinkbayanIndexRoute: AboutBalinkbayanIndexRoute,
-  AboutCfoIndexRoute: AboutCfoIndexRoute,
-  StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute:
-    StartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute,
+  authRoute: authRouteWithChildren,
+  publicRoute: publicRouteWithChildren,
 }
 
 export const routeTree = rootRoute
@@ -307,51 +439,93 @@ export const routeTree = rootRoute
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/",
-        "/contact/",
-        "/donate/",
-        "/downloads/",
-        "/news/",
-        "/services/",
-        "/start-business/",
-        "/start-business/investment-op/agriculture",
-        "/about/balinkbayan/",
-        "/about/cfo/",
-        "/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it"
+        "/(auth)",
+        "/(public)"
       ]
     },
-    "/": {
-      "filePath": "index.tsx"
+    "/(auth)": {
+      "filePath": "(auth)",
+      "children": [
+        "/(auth)/__auth"
+      ]
     },
-    "/contact/": {
-      "filePath": "contact/index.tsx"
+    "/(auth)/__auth": {
+      "filePath": "(auth)/__auth.tsx",
+      "parent": "/(auth)",
+      "children": [
+        "/(auth)/__auth/login"
+      ]
     },
-    "/donate/": {
-      "filePath": "donate/index.tsx"
+    "/(public)": {
+      "filePath": "(public)",
+      "children": [
+        "/(public)/__p"
+      ]
     },
-    "/downloads/": {
-      "filePath": "downloads/index.tsx"
+    "/(public)/__p": {
+      "filePath": "(public)/__p.tsx",
+      "parent": "/(public)",
+      "children": [
+        "/(public)/__p/",
+        "/(public)/__p/contact/",
+        "/(public)/__p/donate/",
+        "/(public)/__p/downloads/",
+        "/(public)/__p/news/",
+        "/(public)/__p/services/",
+        "/(public)/__p/start-business/",
+        "/(public)/__p/start-business/investment-op/agriculture",
+        "/(public)/__p/about/balinkbayan/",
+        "/(public)/__p/about/cfo/",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it"
+      ]
     },
-    "/news/": {
-      "filePath": "news/index.tsx"
+    "/(auth)/__auth/login": {
+      "filePath": "(auth)/__auth.login.tsx",
+      "parent": "/(auth)/__auth"
     },
-    "/services/": {
-      "filePath": "services/index.tsx"
+    "/(public)/__p/": {
+      "filePath": "(public)/__p.index.tsx",
+      "parent": "/(public)/__p"
     },
-    "/start-business/": {
-      "filePath": "start-business/index.tsx"
+    "/(public)/__p/contact/": {
+      "filePath": "(public)/__p.contact/index.tsx",
+      "parent": "/(public)/__p"
     },
-    "/start-business/investment-op/agriculture": {
-      "filePath": "start-business/investment-op/agriculture.tsx"
+    "/(public)/__p/donate/": {
+      "filePath": "(public)/__p.donate/index.tsx",
+      "parent": "/(public)/__p"
     },
-    "/about/balinkbayan/": {
-      "filePath": "about/balinkbayan/index.tsx"
+    "/(public)/__p/downloads/": {
+      "filePath": "(public)/__p.downloads/index.tsx",
+      "parent": "/(public)/__p"
     },
-    "/about/cfo/": {
-      "filePath": "about/cfo/index.tsx"
+    "/(public)/__p/news/": {
+      "filePath": "(public)/__p.news/index.tsx",
+      "parent": "/(public)/__p"
     },
-    "/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it": {
-      "filePath": "start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it.tsx"
+    "/(public)/__p/services/": {
+      "filePath": "(public)/__p.services/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/": {
+      "filePath": "(public)/__p.start-business/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/investment-op/agriculture": {
+      "filePath": "(public)/__p.start-business/investment-op/agriculture.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/about/balinkbayan/": {
+      "filePath": "(public)/__p.about/balinkbayan/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/about/cfo/": {
+      "filePath": "(public)/__p.about/cfo/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it.tsx",
+      "parent": "/(public)/__p"
     }
   }
 }

@@ -4,7 +4,7 @@ import { MissionVision } from '@/components/user/about/us/mision-and-vision'
 import SectionOne from '@/components/user/about/us/section-one'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/about/balinkbayan/')({
+export const Route = createFileRoute('/(public)/__p/about/balinkbayan/')({
   component: RouteComponent,
 })
 

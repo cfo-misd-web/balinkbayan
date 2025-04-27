@@ -7,7 +7,7 @@ import Heading4 from '@/components/user/shared/headings/heading-4'
 import Heading5 from '@/components/user/shared/headings/heading-5'
 
 export const Route = createFileRoute(
-  '/start-business/investment-op/agriculture',
+  '/(public)/__p/start-business/investment-op/agriculture',
 )({
   component: RouteComponent,
 })

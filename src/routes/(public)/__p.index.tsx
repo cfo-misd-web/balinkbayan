@@ -5,7 +5,7 @@ import HeadSection from '@/components/user/home/head'
 import BaLinkBayanPortal from '@/components/user/home/portal'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute('/(public)/__p/')({
   component: App,
 })
 
@@ -16,7 +16,6 @@ function App() {
       <BaLinkBayanPortal />
       <FilipinoCategories />
       <FilipinoServices />
-
       <BalikbayanAbout />
     </div>
   )

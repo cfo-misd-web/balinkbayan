@@ -6,7 +6,7 @@ import QualityPolicyStatement from '@/components/user/about/cfo/quality-policy-s
 import SectionCFOOne from '@/components/user/about/cfo/section-one-about'
 import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/about/cfo/')({
+export const Route = createFileRoute('/(public)/__p/about/cfo/')({
   component: RouteComponent,
 })
 
@@ -14,7 +14,6 @@ function RouteComponent() {
   return <>
     <AboutCFOHead />
     <div className="max-lg:mx-4">
-      hello world
       <SectionCFOOne />
       <ClienteleHeader />
       <ClientGrid />
