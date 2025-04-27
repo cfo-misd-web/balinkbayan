@@ -14,6 +14,7 @@ import { createFileRoute } from '@tanstack/react-router'
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as publicpImport } from './routes/(public)/__p'
+import { Route as protectedprotectedImport } from './routes/(protected)/__protected'
 import { Route as authauthImport } from './routes/(auth)/__auth'
 import { Route as publicpIndexImport } from './routes/(public)/__p.index'
 import { Route as authauthLoginImport } from './routes/(auth)/__auth.login'
@@ -23,6 +24,7 @@ import { Route as publicpNewsIndexImport } from './routes/(public)/__p.news/inde
 import { Route as publicpDownloadsIndexImport } from './routes/(public)/__p.downloads/index'
 import { Route as publicpDonateIndexImport } from './routes/(public)/__p.donate/index'
 import { Route as publicpContactIndexImport } from './routes/(public)/__p.contact/index'
+import { Route as protectedprotectedCmsIndexImport } from './routes/(protected)/__protected.cms/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
 import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
 import { Route as publicpStartBusinessInvestmentOpAgricultureImport } from './routes/(public)/__p.start-business/investment-op/agriculture'
@@ -31,12 +33,18 @@ import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusine
 // Create Virtual Routes
 
 const publicImport = createFileRoute('/(public)')()
+const protectedImport = createFileRoute('/(protected)')()
 const authImport = createFileRoute('/(auth)')()
 
 // Create/Update Routes
 
 const publicRoute = publicImport.update({
   id: '/(public)',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const protectedRoute = protectedImport.update({
+  id: '/(protected)',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -48,6 +56,11 @@ const authRoute = authImport.update({
 const publicpRoute = publicpImport.update({
   id: '/__p',
   getParentRoute: () => publicRoute,
+} as any)
+
+const protectedprotectedRoute = protectedprotectedImport.update({
+  id: '/__protected',
+  getParentRoute: () => protectedRoute,
 } as any)
 
 const authauthRoute = authauthImport.update({
@@ -103,6 +116,14 @@ const publicpContactIndexRoute = publicpContactIndexImport.update({
   getParentRoute: () => publicpRoute,
 } as any)
 
+const protectedprotectedCmsIndexRoute = protectedprotectedCmsIndexImport.update(
+  {
+    id: '/cms/',
+    path: '/cms/',
+    getParentRoute: () => protectedprotectedRoute,
+  } as any,
+)
+
 const publicpAboutCfoIndexRoute = publicpAboutCfoIndexImport.update({
   id: '/about/cfo/',
   path: '/about/cfo/',
@@ -150,6 +171,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authauthImport
       parentRoute: typeof authRoute
     }
+    '/(protected)': {
+      id: '/(protected)'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof protectedImport
+      parentRoute: typeof rootRoute
+    }
+    '/(protected)/__protected': {
+      id: '/(protected)/__protected'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof protectedprotectedImport
+      parentRoute: typeof protectedRoute
+    }
     '/(public)': {
       id: '/(public)'
       path: '/'
@@ -177,6 +212,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof publicpIndexImport
       parentRoute: typeof publicpImport
+    }
+    '/(protected)/__protected/cms/': {
+      id: '/(protected)/__protected/cms/'
+      path: '/cms'
+      fullPath: '/cms'
+      preLoaderRoute: typeof protectedprotectedCmsIndexImport
+      parentRoute: typeof protectedprotectedImport
     }
     '/(public)/__p/contact/': {
       id: '/(public)/__p/contact/'
@@ -275,6 +317,29 @@ const authRouteChildren: authRouteChildren = {
 
 const authRouteWithChildren = authRoute._addFileChildren(authRouteChildren)
 
+interface protectedprotectedRouteChildren {
+  protectedprotectedCmsIndexRoute: typeof protectedprotectedCmsIndexRoute
+}
+
+const protectedprotectedRouteChildren: protectedprotectedRouteChildren = {
+  protectedprotectedCmsIndexRoute: protectedprotectedCmsIndexRoute,
+}
+
+const protectedprotectedRouteWithChildren =
+  protectedprotectedRoute._addFileChildren(protectedprotectedRouteChildren)
+
+interface protectedRouteChildren {
+  protectedprotectedRoute: typeof protectedprotectedRouteWithChildren
+}
+
+const protectedRouteChildren: protectedRouteChildren = {
+  protectedprotectedRoute: protectedprotectedRouteWithChildren,
+}
+
+const protectedRouteWithChildren = protectedRoute._addFileChildren(
+  protectedRouteChildren,
+)
+
 interface publicpRouteChildren {
   publicpIndexRoute: typeof publicpIndexRoute
   publicpContactIndexRoute: typeof publicpContactIndexRoute
@@ -322,6 +387,7 @@ const publicRouteWithChildren =
 export interface FileRoutesByFullPath {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/cms': typeof protectedprotectedCmsIndexRoute
   '/contact': typeof publicpContactIndexRoute
   '/donate': typeof publicpDonateIndexRoute
   '/downloads': typeof publicpDownloadsIndexRoute
@@ -337,6 +403,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/cms': typeof protectedprotectedCmsIndexRoute
   '/contact': typeof publicpContactIndexRoute
   '/donate': typeof publicpDonateIndexRoute
   '/downloads': typeof publicpDownloadsIndexRoute
@@ -353,10 +420,13 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/(auth)': typeof authRouteWithChildren
   '/(auth)/__auth': typeof authauthRouteWithChildren
+  '/(protected)': typeof protectedRouteWithChildren
+  '/(protected)/__protected': typeof protectedprotectedRouteWithChildren
   '/(public)': typeof publicRouteWithChildren
   '/(public)/__p': typeof publicpRouteWithChildren
   '/(auth)/__auth/login': typeof authauthLoginRoute
   '/(public)/__p/': typeof publicpIndexRoute
+  '/(protected)/__protected/cms/': typeof protectedprotectedCmsIndexRoute
   '/(public)/__p/contact/': typeof publicpContactIndexRoute
   '/(public)/__p/donate/': typeof publicpDonateIndexRoute
   '/(public)/__p/downloads/': typeof publicpDownloadsIndexRoute
@@ -374,6 +444,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/login'
+    | '/cms'
     | '/contact'
     | '/donate'
     | '/downloads'
@@ -388,6 +459,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/login'
+    | '/cms'
     | '/contact'
     | '/donate'
     | '/downloads'
@@ -402,10 +474,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/(auth)'
     | '/(auth)/__auth'
+    | '/(protected)'
+    | '/(protected)/__protected'
     | '/(public)'
     | '/(public)/__p'
     | '/(auth)/__auth/login'
     | '/(public)/__p/'
+    | '/(protected)/__protected/cms/'
     | '/(public)/__p/contact/'
     | '/(public)/__p/donate/'
     | '/(public)/__p/downloads/'
@@ -421,11 +496,13 @@ export interface FileRouteTypes {
 
 export interface RootRouteChildren {
   authRoute: typeof authRouteWithChildren
+  protectedRoute: typeof protectedRouteWithChildren
   publicRoute: typeof publicRouteWithChildren
 }
 
 const rootRouteChildren: RootRouteChildren = {
   authRoute: authRouteWithChildren,
+  protectedRoute: protectedRouteWithChildren,
   publicRoute: publicRouteWithChildren,
 }
 
@@ -440,6 +517,7 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/(auth)",
+        "/(protected)",
         "/(public)"
       ]
     },
@@ -454,6 +532,19 @@ export const routeTree = rootRoute
       "parent": "/(auth)",
       "children": [
         "/(auth)/__auth/login"
+      ]
+    },
+    "/(protected)": {
+      "filePath": "(protected)",
+      "children": [
+        "/(protected)/__protected"
+      ]
+    },
+    "/(protected)/__protected": {
+      "filePath": "(protected)/__protected.tsx",
+      "parent": "/(protected)",
+      "children": [
+        "/(protected)/__protected/cms/"
       ]
     },
     "/(public)": {
@@ -486,6 +577,10 @@ export const routeTree = rootRoute
     "/(public)/__p/": {
       "filePath": "(public)/__p.index.tsx",
       "parent": "/(public)/__p"
+    },
+    "/(protected)/__protected/cms/": {
+      "filePath": "(protected)/__protected.cms/index.tsx",
+      "parent": "/(protected)/__protected"
     },
     "/(public)/__p/contact/": {
       "filePath": "(public)/__p.contact/index.tsx",
