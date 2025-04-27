@@ -16,7 +16,6 @@ export const SubHeader = () => {
                             <img className="object-contain object-left w-auto max-h-[70px] h-auto max-w-[300px]" src="/balinkbayan.png" alt="" />
                         </Link>
                         <NavSheet open={open} setOpen={setOpen} />
-
                     </div>
                     <div className="flex items-center border-t sm:border-t-0 pt-3 sm:pt-0 text-sm space-y-0 sm:space-y-0 flex-col sm:flex-row w-full mx-auto justify-center sm:justify-end">
                         <div className=" text-black px-2 sm:pt-0 pt-2">
@@ -42,11 +41,11 @@ export const SubHeader = () => {
                                     </div>
                                 </form>
                                 <div className="flex items-center space-x-2">
-                                    <a href="https://www.philhealth.gov.ph/about_us/transparency/" target="_blank" aria-label="Transparency Seal" rel="noopener noreferrer">
-                                        <img className="w-auto max-h-[50px] h-auto max-w-[300px] object-center object-contain" src="/images/transparency-seal.png" alt="" /></a>
-                                    <a href="https://www.foi.gov.ph/requests?agency=PH" target="_blank" aria-label="Freedom of Information" rel="noopener noreferrer">
-                                        <img className="w-auto max-h-[50px] h-auto max-w-[300px] object-center object-contain" src="/images/freedom-of-information.png" alt="" /></a>
-                                    <img className="w-auto max-h-[50px] h-auto max-w-[300px] object-center object-contain" src="/images/bagong-pilipinas-dark.png" alt="" />
+                                    <a href="#" aria-label="Transparency Seal" rel="noopener noreferrer">
+                                        <img className="w-auto max-h-[50px] h-auto max-w-[300px] object-center object-contain" src="/icons/transparency-seal.png" alt="" /></a>
+                                    <a href="#" aria-label="Freedom of Information" rel="noopener noreferrer">
+                                        <img className="w-auto max-h-[50px] h-auto max-w-[300px] object-center object-contain" src="/icons/freedom-of-information.png" alt="" /></a>
+                                    <img className="w-auto max-h-[50px] h-auto max-w-[300px] object-center object-contain" src="/icons/bagong-pilipinas-dark.png" alt="" />
                                 </div>
                             </div>
                         </div>
