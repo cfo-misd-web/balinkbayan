@@ -205,6 +205,20 @@ function RouteComponent() {
                 <div className='flex justify-center'>
                   <img src='/img-assets/start-a-business/thinking-about-it/statistics.png' />
                 </div>
+                {/*  */}
+                <Paragraph className='mt-20'>The PSA produces and compiles the following data which are subdivided into four categories:</Paragraph>
+                <div className='grid grid-cols-12 gap-y-5'>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Economic</b>: Economic indicators include national accounts, regional accounts, input output tables, quarterly economic indices, leading economic indicators, foreign investments, tourism satellite accounts.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Environment</b>: Environment indicators are economic-environmental and natural resource accounts.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Governance</b>: PeGovernance indicators consist of good governance index and indigenous people’s rights.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Social</b>: Social indicators comprise statistics on poverty, human development index, national health accounts, national education expenditure accounts, gender and development, and children.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Multisectoral</b>: Multisectoral data include publications such as Millennium Development Goals, Statistical Indicators on Philippine Development, and Economic and Financial Data of the Philippines.</Paragraph>
+                </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

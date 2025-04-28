@@ -27,6 +27,7 @@ import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about
 import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
 import { Route as publicpStartBusinessInvestmentOpAgricultureImport } from './routes/(public)/__p.start-business/investment-op/agriculture'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
 
 // Create Virtual Routes
 
@@ -128,6 +129,15 @@ const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAb
     {
       id: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
       path: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan',
       getParentRoute: () => publicpRoute,
     } as any,
   )
@@ -241,6 +251,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpAboutCfoIndexImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanImport
+      parentRoute: typeof publicpImport
+    }
     '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': {
       id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
       path: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
@@ -286,6 +303,7 @@ interface publicpRouteChildren {
   publicpStartBusinessInvestmentOpAgricultureRoute: typeof publicpStartBusinessInvestmentOpAgricultureRoute
   publicpAboutBalinkbayanIndexRoute: typeof publicpAboutBalinkbayanIndexRoute
   publicpAboutCfoIndexRoute: typeof publicpAboutCfoIndexRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -301,6 +319,8 @@ const publicpRouteChildren: publicpRouteChildren = {
     publicpStartBusinessInvestmentOpAgricultureRoute,
   publicpAboutBalinkbayanIndexRoute: publicpAboutBalinkbayanIndexRoute,
   publicpAboutCfoIndexRoute: publicpAboutCfoIndexRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute,
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute:
     publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute,
 }
@@ -331,6 +351,7 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -346,6 +367,7 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -366,6 +388,7 @@ export interface FileRoutesById {
   '/(public)/__p/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
   '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -383,6 +406,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -397,6 +421,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   id:
     | '__root__'
@@ -415,6 +440,7 @@ export interface FileRouteTypes {
     | '/(public)/__p/start-business/investment-op/agriculture'
     | '/(public)/__p/about/balinkbayan/'
     | '/(public)/__p/about/cfo/'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   fileRoutesById: FileRoutesById
 }
@@ -476,6 +502,7 @@ export const routeTree = rootRoute
         "/(public)/__p/start-business/investment-op/agriculture",
         "/(public)/__p/about/balinkbayan/",
         "/(public)/__p/about/cfo/",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it"
       ]
     },
@@ -521,6 +548,10 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/about/cfo/": {
       "filePath": "(public)/__p.about/cfo/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it": {
