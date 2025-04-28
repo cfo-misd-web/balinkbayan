@@ -6,7 +6,8 @@
     "dev": "vite --port 2000",
     "build": "vite build && tsc",
     "serve": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "install:deps": "npm install --legacy-peer-deps"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",

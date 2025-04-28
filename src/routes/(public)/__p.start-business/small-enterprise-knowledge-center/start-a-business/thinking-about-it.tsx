@@ -20,12 +20,12 @@ function RouteComponent() {
       <section className='text-cyan-900'>
         <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col items-center justify-center mx-auto my-20 bg-light'>
           <Paragraph className='mb-32'>The Small Enterprise Knowledge Center provides a complete guide in starting and managing a business. Through the basic business modules, the Center aims to equip you with knowledge on the key aspects of a business. All materials published in the Center were based from the U.S. Small Business Administration website (www.sba.gov) and adapted to suit the local Philippine situation and laws.</Paragraph>
-          <Heading4>Starting a Business</Heading4>
-          <Paragraph className='mt-5'>Are you thinking about starting a business of your own? Explore the modules below to learn the aspects of starting a business and find ways on how to succeed.</Paragraph>
+          <Heading4 className='text-center'>Starting a Business</Heading4>
+          <Paragraph className='mt-10'>Are you thinking about starting a business of your own? Explore the modules below to learn the aspects of starting a business and find ways on how to succeed.</Paragraph>
         </div>
         <div className='bg-cyan-900 max-lg:px-4 text-white w-full flex items-center flex-col justify-center py-5 mb-32'>
           <Accordion type='single' collapsible className='max-lg:mx-4 mx-auto w-full max-w-3xl'>
-            <AccordionItem value='item-1' className='border-b mb-5'>
+            <AccordionItem value='item-1' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Is Entrepreneurship For You?</Heading4>
@@ -105,7 +105,7 @@ function RouteComponent() {
                 </div>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-2' className='border-b mb-5'>
+            <AccordionItem value='item-2' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>10 Steps to Starting a Business</Heading4>
@@ -143,7 +143,7 @@ function RouteComponent() {
                 </div>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-3' className='border-b mb-5'>
+            <AccordionItem value='item-3' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Understand Your Market</Heading4>
@@ -204,6 +204,20 @@ function RouteComponent() {
                   The Philippine Statistics Authority (PSA) is an attached agency of the National Economic and Development Authority. It is also the highest policy-making body on statistical matters. The agency produces official and controlling statistics of the government. Primarily, PSA is in-charge of all national censuses and surveys, sectoral statistics, consolidation of selected administrative recording systems and compilation of national accounts.</Paragraph>
                 <div className='flex justify-center'>
                   <img src='/img-assets/start-a-business/thinking-about-it/statistics.png' />
+                </div>
+                {/*  */}
+                <Paragraph className='mt-20'>The PSA produces and compiles the following data which are subdivided into four categories:</Paragraph>
+                <div className='grid grid-cols-12 gap-y-5'>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Economic</b>: Economic indicators include national accounts, regional accounts, input output tables, quarterly economic indices, leading economic indicators, foreign investments, tourism satellite accounts.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Environment</b>: Environment indicators are economic-environmental and natural resource accounts.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Governance</b>: PeGovernance indicators consist of good governance index and indigenous people’s rights.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Social</b>: Social indicators comprise statistics on poverty, human development index, national health accounts, national education expenditure accounts, gender and development, and children.</Paragraph>
+                  <Paragraph className='text-center'>&#8226;</Paragraph>
+                  <Paragraph className='col-span-11'><b>Multisectoral</b>: Multisectoral data include publications such as Millennium Development Goals, Statistical Indicators on Philippine Development, and Economic and Financial Data of the Philippines.</Paragraph>
                 </div>
               </AccordionContent>
             </AccordionItem>
