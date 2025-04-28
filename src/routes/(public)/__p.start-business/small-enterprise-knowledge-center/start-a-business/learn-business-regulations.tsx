@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import Paragraph from "@/components/user/shared/paragraph";
 import BiggerBanner from "@/components/user/shared/banner/bigger-banner";
 import Heading4 from "@/components/user/shared/headings/heading-4";
-import Heading5 from "@/components/user/shared/headings/heading-5";
 import {
   Accordion,
   AccordionContent,
