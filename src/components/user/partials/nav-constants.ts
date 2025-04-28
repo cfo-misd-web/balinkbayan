@@ -100,11 +100,11 @@ export const navLinks: NavItem[] = [
                         subsublinks: [
                             {
                                 label: "Bussiness Registration Guide",
-                                href: '/start-business/business-registration-guide',
+                                href: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide',
                             },
                             {
                                 label: "Barangay Micro-Business Enterprise Act of 2002",
-                                href: '/start-business/barangay-micro-business-enterprise-act',
+                                href: '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act',
                             }
                         ]
                     },

@@ -5,7 +5,6 @@ import Heading4 from '@/components/user/shared/headings/heading-4'
 import Heading5 from '@/components/user/shared/headings/heading-5'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { AccordionHeader } from '@radix-ui/react-accordion'
-import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
 
 export const Route = createFileRoute(
   '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan',
@@ -20,12 +19,12 @@ function RouteComponent() {
       <section className='text-cyan-900'>
         <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col items-center justify-center mx-auto my-20 bg-light'>
           <Paragraph className='mb-32'>The Small Enterprise Knowledge Center provides a complete guide in starting and managing a business. Through the basic business modules, the Center aims to equip you with knowledge on the key aspects of a business. All materials published in the Center were based from the U.S. Small Business Administration website (www.sba.gov) and adapted to suit the local Philippine situation and laws.</Paragraph>
-          <Heading4>Create your Business Plan</Heading4>
-          <Paragraph className='mt-5'>Are you thinking about starting a business of your own? Explore the modules below to learn the aspects of starting a business and find ways on how to succeed.</Paragraph>
+          <Heading4 className='text-center'>Create your Business Plan</Heading4>
+          <Paragraph className='mt-10'>Are you thinking about starting a business of your own? Explore the modules below to learn the aspects of starting a business and find ways on how to succeed.</Paragraph>
         </div>
         <div className='bg-cyan-900 max-lg:px-4 text-white w-full flex items-center flex-col justify-center py-5 mb-32'>
           <Accordion type='single' collapsible className='max-lg:mx-4 mx-auto w-full max-w-3xl'>
-            <AccordionItem value='item-1' className='border-b mb-5'>
+            <AccordionItem value='item-1' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Executive Summary</Heading4>
@@ -68,7 +67,7 @@ function RouteComponent() {
                 Remember, your Executive Summary will be the last thing you write. So the first section of the business plan that you will tackle is the Company Description section.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-2' className='border-b mb-5'>
+            <AccordionItem value='item-2' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Company Description</Heading4>
@@ -100,7 +99,7 @@ function RouteComponent() {
                 {/*  */}
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-3' className='border-b mb-5'>
+            <AccordionItem value='item-3' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Market Analysis (Marketing Your Product)</Heading4>
@@ -167,7 +166,7 @@ function RouteComponent() {
                 <Paragraph className='mt-20'>Once you’ve completed this section, you can move on to the Organization & Management section of your business plan.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-4' className='border-b mb-5'>
+            <AccordionItem value='item-4' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Organization and Management</Heading4>
@@ -261,7 +260,7 @@ function RouteComponent() {
                 <Paragraph className='mt-20'>Next, move on to the Service or Product Line section of your plan.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-5' className='border-b mb-5'>
+            <AccordionItem value='item-5' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Service or Product Line</Heading4>
@@ -288,7 +287,7 @@ function RouteComponent() {
                 Next, move on to the Marketing & Sales Management section of your plan.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-6' className='border-b mb-5'>
+            <AccordionItem value='item-6' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Marketing and Sales</Heading4>
@@ -322,7 +321,7 @@ function RouteComponent() {
                 <Paragraph className='mt-20'>Next, if you are seeking financing for your business, you’ll need to complete the next part of your plan – Funding Request.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-7' className='border-b mb-5'>
+            <AccordionItem value='item-7' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Funding Request</Heading4>
@@ -356,7 +355,7 @@ function RouteComponent() {
                 Once you have completed your funding request, move on to the next part of your plan –Financial Projections.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-8' className='border-b mb-5'>
+            <AccordionItem value='item-8' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Financial Projections</Heading4>
@@ -383,7 +382,7 @@ function RouteComponent() {
                 Next, you may want to include an Appendix to your plan. This can include items such as your credit history, resumes, letters of reference, and any additional information that a lender may request.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-9' className='border-b mb-5'>
+            <AccordionItem value='item-9' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>Appendix</Heading4>
@@ -426,7 +425,7 @@ function RouteComponent() {
                 <Paragraph className='mt-20'>Any copies of your business plan should be controlled; keep a distribution record. This will allow you to update and maintain your business plan on an as-needed basis. Remember, too, that you should include a private placement disclaimer with your business plan if you plan to use it to raise capital.</Paragraph>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value='item-10' className='border-b mb-5'>
+            <AccordionItem value='item-10' className='border-b mb-2'>
               <AccordionHeader>
                 <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
                   <Heading4>How to Make Your Business Plan Stand Out</Heading4>

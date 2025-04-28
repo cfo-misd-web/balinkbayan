@@ -27,7 +27,14 @@ import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about
 import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
 import { Route as publicpStartBusinessInvestmentOpAgricultureImport } from './routes/(public)/__p.start-business/investment-op/agriculture'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/finance-business'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
 
 // Create Virtual Routes
 
@@ -133,11 +140,74 @@ const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAb
     } as any,
   )
 
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
 const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute =
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanImport.update(
     {
       id: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan',
       path: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure',
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide',
+      path: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide',
       getParentRoute: () => publicpRoute,
     } as any,
   )
@@ -251,11 +321,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpAboutCfoIndexImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
+      path: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
+      fullPath: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentImport
+      parentRoute: typeof publicpImport
+    }
     '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': {
       id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
       path: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
       fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
       preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/finance-business': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/finance-business'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
+      path: '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
+      fullPath: '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsImport
       parentRoute: typeof publicpImport
     }
     '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': {
@@ -303,7 +422,14 @@ interface publicpRouteChildren {
   publicpStartBusinessInvestmentOpAgricultureRoute: typeof publicpStartBusinessInvestmentOpAgricultureRoute
   publicpAboutBalinkbayanIndexRoute: typeof publicpAboutBalinkbayanIndexRoute
   publicpAboutCfoIndexRoute: typeof publicpAboutCfoIndexRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -319,8 +445,22 @@ const publicpRouteChildren: publicpRouteChildren = {
     publicpStartBusinessInvestmentOpAgricultureRoute,
   publicpAboutBalinkbayanIndexRoute: publicpAboutBalinkbayanIndexRoute,
   publicpAboutCfoIndexRoute: publicpAboutCfoIndexRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute,
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute:
     publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute,
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute:
     publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute,
 }
@@ -351,7 +491,14 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -367,7 +514,14 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute
+  '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -388,7 +542,14 @@ export interface FileRoutesById {
   '/(public)/__p/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
   '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessCreateBusinessPlanRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFilingPayingTaxesRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/finance-business': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessFinanceBusinessRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute
 }
 
@@ -406,7 +567,14 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -421,7 +589,14 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
+    | '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   id:
     | '__root__'
@@ -440,7 +615,14 @@ export interface FileRouteTypes {
     | '/(public)/__p/start-business/investment-op/agriculture'
     | '/(public)/__p/about/balinkbayan/'
     | '/(public)/__p/about/cfo/'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/finance-business'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
   fileRoutesById: FileRoutesById
 }
@@ -502,7 +684,14 @@ export const routeTree = rootRoute
         "/(public)/__p/start-business/investment-op/agriculture",
         "/(public)/__p/about/balinkbayan/",
         "/(public)/__p/about/cfo/",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/finance-business",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it"
       ]
     },
@@ -550,8 +739,36 @@ export const routeTree = rootRoute
       "filePath": "(public)/__p.about/cfo/index.tsx",
       "parent": "/(public)/__p"
     },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/register-business/business-registration-guide.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment.tsx",
+      "parent": "/(public)/__p"
+    },
     "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan": {
       "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/finance-business": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/finance-business.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it": {

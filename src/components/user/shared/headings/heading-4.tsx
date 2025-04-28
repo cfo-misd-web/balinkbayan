@@ -1,6 +1,8 @@
-const Heading4 = ({children}: { children: React.ReactNode }) => {
+import { cn } from "@/lib/utils";
+
+const Heading4 = ({children, className}: { children: React.ReactNode, className?:string }) => {
     return (
-        <p className='font-bold text-3xl'>
+        <p className={cn('font-bold text-3xl',className)}>
             {children}
         </p>
     );
