@@ -3,12 +3,7 @@ import Paragraph from "@/components/user/shared/paragraph";
 import BiggerBanner from "@/components/user/shared/banner/bigger-banner";
 import Heading4 from "@/components/user/shared/headings/heading-4";
 import Heading5 from "@/components/user/shared/headings/heading-5";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AccordionHeader } from "@radix-ui/react-accordion";
 
 export const Route = createFileRoute(

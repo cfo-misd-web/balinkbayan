@@ -32,7 +32,7 @@ const NewsList = ({className, newsTitle, postedDate, newsDescription, imageUrl}:
               </div>
 
               <RoseAnchor 
-              className="flex flex-row text-rose-900" 
+              className="flex flex-row text-rose-700 hover:text-rose-500 cursor-pointer" 
               //TODO: href_url="template"
               >Read more <ChevronRight className="w-10"/></RoseAnchor>
             </div>

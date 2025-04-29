@@ -30,28 +30,28 @@ export const navLinks: NavItem[] = [
                     },
                     {
                         label: 'Franchise Business',
-                        href: '/investment/franchise',
+                        href: '/start-business/investment-op/franchise-business',
                     },
                     {
                         label: 'Financial Investment',
-                        href: '/investment/financial-investment',
+                        href: '/start-business/investment-op/financial-investment',
                     },
                     {
                         label: 'Real Property',
-                        href: '/investment/real-property',
+                        href: '/start-business/investment-op/real-property',
                     },
                     {
                         label: 'Retail',
-                        href: '/investment/retail',
+                        href: '/start-business/investment-op/retail',
                     },
                     {
                         label: 'Services',
-                        href: '/investment/services',
+                        href: '/start-business/investment-op/services',
 
                     },
                     {
                         label: 'Small and Medium Scale Manufacturing',
-                        href: '/investment/small-and-medium-scale-manufacturing',
+                        href: '/start-business/investment-op/scale-manufacturing',
                     }
                 ]
             },
@@ -99,7 +99,7 @@ export const navLinks: NavItem[] = [
                         label: 'Register your Business',
                         subsublinks: [
                             {
-                                label: "Bussiness Registration Guide",
+                                label: "Business Registration Guide",
                                 href: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide',
                             },
                             {
@@ -113,19 +113,19 @@ export const navLinks: NavItem[] = [
                         subsublinks: [
                             {
                                 label: "Leading Your Company",
-                                href: '/start-business/leading-company',
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/leading-company',
                             },
                             {
                                 label: "Growing your Bussiness",
-                                href: '/start-business/growing-business',
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/growing-business',
                             },
                             {
                                 label: "Running a Bussiness",
-                                href: '/start-business/running-business',
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/running-business',
                             },
                             {
                                 label: "Getting Out",
-                                href: '/start-business/getting-out',
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/getting-out',
                             }
                         ]
                     }

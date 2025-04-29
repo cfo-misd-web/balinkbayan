@@ -15,7 +15,7 @@ export const Route = createFileRoute(
 function RouteComponent() {
   return (
     <>
-      <BiggerBanner text='Business Registration Guide' label='Register your Business' img_url='/img-assets/start-a-business/thinking-about-it/starting-a-business.jpg' />
+      <BiggerBanner text='Business Registration Guide' label='Register your Business' img_url='/img-assets/start-a-business/register-business/laptop-office-hand-3196481.jpg' />
       <section className='text-cyan-900'>
         <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col items-center justify-center mx-auto my-20 bg-light'>
           <Heading4 className='text-center'>Business Registration Procedure</Heading4>
