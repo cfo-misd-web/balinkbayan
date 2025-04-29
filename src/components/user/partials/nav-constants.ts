@@ -62,32 +62,36 @@ export const navLinks: NavItem[] = [
                         label: 'Starting a Business',
                         subsublinks: [
                             {
-                                label: 'Thiking of Starting a business?',
-                                href: '/start-business/guide',
+                                label: 'Thinking of Starting a business?',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it',
                             },
                             {
-                                label: 'Choose a Business Plan',
-                                href: '/start-business/business-plan',
+                                label: 'Create a Business Plan',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/create-business-plan',
+                            },
+                            {
+                                label: 'Choose your Business Structure',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure',
                             },
                             {
                                 label: 'Obtain Business Licenses & Permits(Register your Business)',
-                                href: '/start-business/business-licenses-permits',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits',
                             },
                             {
                                 label: 'Learn About Business Law and Regulations',
-                                href: '/start-business/business-law-regulations',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations',
                             },
                             {
                                 label: 'Finance Your Business(Track Your Finance)',
-                                href: '/start-business/finance-your-business',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business',
                             },
                             {
                                 label: 'Filing and Paying Taxes',
-                                href: '/start-business/filing-paying-taxes',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes',
                             },
                             {
                                 label: 'Choose you Location and Equipment(HLUBR)',
-                                href: '/start-business/choose-location-equipment',
+                                href: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment',
                             }
                         ]
                     },
@@ -96,11 +100,11 @@ export const navLinks: NavItem[] = [
                         subsublinks: [
                             {
                                 label: "Bussiness Registration Guide",
-                                href: '/start-business/business-registration-guide',
+                                href: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide',
                             },
                             {
                                 label: "Barangay Micro-Business Enterprise Act of 2002",
-                                href: '/start-business/barangay-micro-business-enterprise-act',
+                                href: '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act',
                             }
                         ]
                     },
