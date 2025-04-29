@@ -1,8 +1,14 @@
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
+type SmallerBannerProps = {
+    label?:string,
+    img_url?:string,
+    className?:string,
+    textClass?:string,
+    divClass?:string
+}
 
-
-const SmallerBanner = ({label, img_url, className, textClass}:{label?:string, img_url?:string, className?:string, textClass?:string}) => {
+const SmallerBanner = ({label, img_url, className, textClass, divClass}: SmallerBannerProps) => {
     return (
         <section className="relative overflow-hidden">
             <motion.div
@@ -18,7 +24,7 @@ const SmallerBanner = ({label, img_url, className, textClass}:{label?:string, im
             >
             </motion.div>
 
-            <div className='flex w-full justify-center text-center items-center text-white absolute bottom-0'>
+            <div className={cn('flex w-full justify-center text-center items-center text-white absolute bottom-0', divClass)}>
                 <h2 className={cn('text-9xl font-black', textClass)}>
                     {label}
                 </h2>

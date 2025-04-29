@@ -34,7 +34,7 @@ function RouteComponent() {
                 <Paragraph className='mt-5'>
                 <div className='grid grid-cols-6 gap-y-5'>
                   <Paragraph>Where:</Paragraph>
-                  <Paragraph className='col-span-5'>DTI-Provincial Office where the business is located or log on to<a target='_blank' className='underline' href='https://www.bnrs.dti.gov.ph'>www.bnrs.dti.gov.ph</a></Paragraph>
+                  <Paragraph className='col-span-5'>DTI-Provincial Office where the business is located or log on to <a target='_blank' className='underline' href='https://www.bnrs.dti.gov.ph'>www.bnrs.dti.gov.ph</a></Paragraph>
                   <Paragraph>Validity:</Paragraph>
                   <Paragraph className='col-span-5'>5 years</Paragraph>
                 </div><br/><br/>
@@ -231,7 +231,7 @@ function RouteComponent() {
                   <Paragraph>Email:</Paragraph>
                   <Paragraph className='col-span-5'>mis@sec.gov.ph</Paragraph>
                   <Paragraph>Website:</Paragraph>
-                  <Paragraph className='col-span-5'>www.sec.gov.ph or<a href='http://iregister.sec.gov.ph/MainServlet' target='_blank' className='underline'>http://iregister.sec.gov.ph/MainServlet</a>(for online name verification and reservation)</Paragraph>
+                  <Paragraph className='col-span-5'>www.sec.gov.ph or <a href='http://iregister.sec.gov.ph/MainServlet' target='_blank' className='underline'>http://iregister.sec.gov.ph/MainServlet</a><br/>(for online name verification and reservation)</Paragraph>
                   <Paragraph>Validity:</Paragraph>
                   <Paragraph className='col-span-5'>50 years</Paragraph>
                 </div><br/><br/>
@@ -445,13 +445,13 @@ function RouteComponent() {
                 <Paragraph>
                 <div className='grid grid-cols-6 gap-y-5'>
                   <Paragraph>Where:</Paragraph>
-                  <Paragraph className='col-span-5'>5th and 6th Floors, Ben-Lor Building,1184 Quezon Avenue, Quezon City or827 Aurora Blvd., Brgy. Immaculate Concepcion, Cubao, Quezon City</Paragraph>
+                  <Paragraph className='col-span-5'>5th and 6th Floors, Ben-Lor Building,1184 Quezon Avenue, Quezon City or 827 Aurora Blvd., Brgy. Immaculate Concepcion, Cubao, Quezon City</Paragraph>
                   <Paragraph>Tel. Nos.:</Paragraph>
                   <Paragraph className='col-span-5'>(632) 372-3808 / 373-6895 / 332-0019</Paragraph>
                   <Paragraph>Email:</Paragraph>
                   <Paragraph className='col-span-5'>webmaster@cda.gov.ph</Paragraph>
                   <Paragraph>Website:</Paragraph>
-                  <Paragraph className='col-span-5'><a href='https://www.cda.gov.ph' target='_blank' className='underline'>www.cda.gov.ph</a>(for online name verification and reservation)</Paragraph>
+                  <Paragraph className='col-span-5'><a href='https://www.cda.gov.ph' target='_blank' className='underline'>www.cda.gov.ph</a> (for online name verification and reservation)</Paragraph>
                 </div><br/>
                 
                 A cooperative is a duly registered association of persons, with a common bond of interest who have a voluntarily joined together to achieve a lawful common social and economic end, making equitable contributions to the capital required, and accepting a fair share of the risks and benefits of the undertaking in accordance with universally accepted cooperative principles.<br/><br/>
@@ -550,8 +550,8 @@ function RouteComponent() {
                 </AccordionTrigger>
               </AccordionHeader>
               <AccordionContent className='my-10 space-y-10'>
-                <Paragraph>Employer’s Tax Identification Number
-                <div className='grid grid-cols-6 gap-y-5'>
+                <Paragraph><b>Employer’s Tax Identification Number</b>
+                <div className='grid grid-cols-6 gap-y-5 mt-10'>
                   <Paragraph>Where:</Paragraph>
                   <Paragraph className='col-span-5'>BIR Provincial Office where the business is located or go to the BIR Revenue District Office</Paragraph>
                   <Paragraph>Trunklines:</Paragraph>
