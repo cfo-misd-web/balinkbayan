@@ -5,10 +5,9 @@ import { motion } from 'framer-motion';
 
 const BiggerBanner = ({text, label, img_url, className}:{text?:string, label?:string, img_url:string, className?:string}) => {
     return (
-        <section className="relative">
-
+        <section className="relative flex">
             <motion.div
-                className={cn("w-full 2xl:h-[700px] xl:max-h-[600px] max-lg:h-[500px] relative bg-cover bg-center", className)}
+                className={cn("w-full h-[500px] relative bg-cover bg-center", className)}
                 style={{
                     backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(${img_url})`,
                 }}
