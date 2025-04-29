@@ -3,10 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --port 3000 --host",
+    "dev": "vite --port 2000",
     "build": "vite build && tsc",
     "serve": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "install:deps": "npm install --legacy-peer-deps"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
@@ -61,17 +62,19 @@
     "tailwindcss": "^4.0.6",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
-    "zod": "^3.24.2"
+    "zod": "^3.24.2",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
+    "@types/lodash": "^4.17.16",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "jsdom": "^26.0.0",
     "typescript": "^5.7.2",
-    "vite": "^6.1.0",
+    "vite": "^6.3.3",
     "vitest": "^3.0.5",
     "web-vitals": "^4.2.4"
   }
