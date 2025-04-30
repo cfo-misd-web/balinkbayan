@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import { Separator } from '@/components/ui/separator';
 
 
 const HeadSection = () => {
@@ -35,16 +36,28 @@ const HeadSection = () => {
                 <div className="absolute inset-0 bg-black/50"></div>
             </motion.div>
 
-            <h2 className='max-lg:hidden font-[1000] absolute text-start top-1/3     left-1/3 transform -translate-x-1/3 -translate-y-[75%] text-white text-[45px] drop-shadow-lg max-lg:w-[90%] max-lg:mx-auto'>
-                We aim to reconnect <br />
-                overseas Filipinos<br />
-                with the Philippines.</h2>
+            <div className='max-lg:hidden font-[1000] absolute text-start top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-[75%] text-white text-[45px] drop-shadow-lg max-lg:w-[90%] max-lg:mx-auto'>
+                <h2 className='text-center text-wrap'>We aim to reconnect
+                    overseas Filipinos
+                    with the Philippines.
+                </h2>
+                <div className='flex flex-col items-center justify-center mt-4 gap-y-5'>
+                    <Separator className='max-lg:hidden w-full data-[orientation=horizontal]:h-[5px] rounded-full bg-green-700' />
+                    <Separator className='max-lg:hidden data-[orientation=horizontal]:w-3/4 data-[orientation=horizontal]:h-[5px] rounded-full bg-[#F4A03A]' />
+                    <Separator className='max-lg:hidden data-[orientation=horizontal]:w-2/4 data-[orientation=horizontal]:h-[5px] rounded-full bg-white' />
+                </div>
+
+            </div>
+
+
+
 
             <div className='hidden max-lg:block absolute text-start bottom-2/3 translate-y-28 left-1/12 font-extrabold  text-[45px] text-white gap-y-1.5'>
                 We aim to reconnect <br />
                 overseas Filipinos<br />
                 with the Philippines.
             </div>
+
 
             <div className="flex mx-auto px-4 relative max-lg:max-w-screen max-lg:mt-[-640px] rounded-lg">
                 <div className="lg:absolute lg:w-[1400px] lg:bottom-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 flex flex-row bg-transparent rounded-t-lg shadow-lg z-2 overflow-hidden max-lg:mt-[-640  px] max-lg:w-full">

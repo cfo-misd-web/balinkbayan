@@ -18,15 +18,15 @@ export const SubHeader = () => {
                         <NavSheet open={open} setOpen={setOpen} />
                     </div>
                     <div className="flex items-center border-t sm:border-t-0 pt-3 sm:pt-0 text-sm space-y-0 sm:space-y-0 flex-col sm:flex-row w-full mx-auto justify-center sm:justify-end">
-                        <div className=" text-black px-2 sm:pt-0 pt-2">
+                        <div className=" text-black px-2 sm:pt-0 pt-2 font-bold">
                             <div className="flex justify-center sm:justify-end mb-2 flex-row">
                                 <div className="flex space-x-2 text-sm font-semibold px-2">
                                     <PhoneCall className="h-5 w-5 self-center" />
-                                    <span className="text-slate-900 text-xs">(02) 866-225-88</span>
+                                    <span className="text-slate-900 text-xs">(+632) 8552-4729</span>
                                 </div>
                                 <div className="flex space-x-2 text-sm font-semibold px-2">
                                     <MessageSquare className="h-5 w-5 self-center" />
-                                    <span className="text-slate-900 text-xs">actioncenter@cfo.gov.ph</span>
+                                    <span className="text-slate-900 text-xs">pmd@cfo.gov.ph</span>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-2 text-sm font-semibold">
