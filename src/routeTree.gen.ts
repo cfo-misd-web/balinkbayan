@@ -23,6 +23,8 @@ import { Route as publicpNewsIndexImport } from './routes/(public)/__p.news/inde
 import { Route as publicpDownloadsIndexImport } from './routes/(public)/__p.downloads/index'
 import { Route as publicpDonateIndexImport } from './routes/(public)/__p.donate/index'
 import { Route as publicpContactIndexImport } from './routes/(public)/__p.contact/index'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/index'
+import { Route as publicpStartBusinessInvestmentOpIndexImport } from './routes/(public)/__p.start-business/investment-op/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
 import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
 import { Route as publicpStartBusinessInvestmentOpServicesImport } from './routes/(public)/__p.start-business/investment-op/services'
@@ -32,6 +34,10 @@ import { Route as publicpStartBusinessInvestmentOpRealPropertyImport } from './r
 import { Route as publicpStartBusinessInvestmentOpFranchiseBusinessImport } from './routes/(public)/__p.start-business/investment-op/franchise-business'
 import { Route as publicpStartBusinessInvestmentOpFinancialInvestmentImport } from './routes/(public)/__p.start-business/investment-op/financial-investment'
 import { Route as publicpStartBusinessInvestmentOpAgricultureImport } from './routes/(public)/__p.start-business/investment-op/agriculture'
+import { Route as publicpDonateVolunteerBalikTuroImport } from './routes/(public)/__p.donate/volunteer/balik-turo'
+import { Route as publicpDonateVolunteerBalikScientistImport } from './routes/(public)/__p.donate/volunteer/balik-scientist'
+import { Route as publicpDonateDonateSurgicalMedicalMissionImport } from './routes/(public)/__p.donate/donate/surgical-medical-mission'
+import { Route as publicpDonateDonateLinkapilDonationsImport } from './routes/(public)/__p.donate/donate/linkapil-donations'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
@@ -122,6 +128,20 @@ const publicpContactIndexRoute = publicpContactIndexImport.update({
   getParentRoute: () => publicpRoute,
 } as any)
 
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport.update({
+    id: '/start-business/small-enterprise-knowledge-center/',
+    path: '/start-business/small-enterprise-knowledge-center/',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpStartBusinessInvestmentOpIndexRoute =
+  publicpStartBusinessInvestmentOpIndexImport.update({
+    id: '/start-business/investment-op/',
+    path: '/start-business/investment-op/',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
 const publicpAboutCfoIndexRoute = publicpAboutCfoIndexImport.update({
   id: '/about/cfo/',
   path: '/about/cfo/',
@@ -181,6 +201,34 @@ const publicpStartBusinessInvestmentOpAgricultureRoute =
   publicpStartBusinessInvestmentOpAgricultureImport.update({
     id: '/start-business/investment-op/agriculture',
     path: '/start-business/investment-op/agriculture',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpDonateVolunteerBalikTuroRoute =
+  publicpDonateVolunteerBalikTuroImport.update({
+    id: '/donate/volunteer/balik-turo',
+    path: '/donate/volunteer/balik-turo',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpDonateVolunteerBalikScientistRoute =
+  publicpDonateVolunteerBalikScientistImport.update({
+    id: '/donate/volunteer/balik-scientist',
+    path: '/donate/volunteer/balik-scientist',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpDonateDonateSurgicalMedicalMissionRoute =
+  publicpDonateDonateSurgicalMedicalMissionImport.update({
+    id: '/donate/donate/surgical-medical-mission',
+    path: '/donate/donate/surgical-medical-mission',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpDonateDonateLinkapilDonationsRoute =
+  publicpDonateDonateLinkapilDonationsImport.update({
+    id: '/donate/donate/linkapil-donations',
+    path: '/donate/donate/linkapil-donations',
     getParentRoute: () => publicpRoute,
   } as any)
 
@@ -398,6 +446,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpStartBusinessIndexImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/donate/donate/linkapil-donations': {
+      id: '/(public)/__p/donate/donate/linkapil-donations'
+      path: '/donate/donate/linkapil-donations'
+      fullPath: '/donate/donate/linkapil-donations'
+      preLoaderRoute: typeof publicpDonateDonateLinkapilDonationsImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/donate/donate/surgical-medical-mission': {
+      id: '/(public)/__p/donate/donate/surgical-medical-mission'
+      path: '/donate/donate/surgical-medical-mission'
+      fullPath: '/donate/donate/surgical-medical-mission'
+      preLoaderRoute: typeof publicpDonateDonateSurgicalMedicalMissionImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/donate/volunteer/balik-scientist': {
+      id: '/(public)/__p/donate/volunteer/balik-scientist'
+      path: '/donate/volunteer/balik-scientist'
+      fullPath: '/donate/volunteer/balik-scientist'
+      preLoaderRoute: typeof publicpDonateVolunteerBalikScientistImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/donate/volunteer/balik-turo': {
+      id: '/(public)/__p/donate/volunteer/balik-turo'
+      path: '/donate/volunteer/balik-turo'
+      fullPath: '/donate/volunteer/balik-turo'
+      preLoaderRoute: typeof publicpDonateVolunteerBalikTuroImport
+      parentRoute: typeof publicpImport
+    }
     '/(public)/__p/start-business/investment-op/agriculture': {
       id: '/(public)/__p/start-business/investment-op/agriculture'
       path: '/start-business/investment-op/agriculture'
@@ -459,6 +535,20 @@ declare module '@tanstack/react-router' {
       path: '/about/cfo'
       fullPath: '/about/cfo'
       preLoaderRoute: typeof publicpAboutCfoIndexImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/investment-op/': {
+      id: '/(public)/__p/start-business/investment-op/'
+      path: '/start-business/investment-op'
+      fullPath: '/start-business/investment-op'
+      preLoaderRoute: typeof publicpStartBusinessInvestmentOpIndexImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/'
+      path: '/start-business/small-enterprise-knowledge-center'
+      fullPath: '/start-business/small-enterprise-knowledge-center'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport
       parentRoute: typeof publicpImport
     }
     '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/getting-out': {
@@ -594,6 +684,10 @@ interface publicpRouteChildren {
   publicpNewsIndexRoute: typeof publicpNewsIndexRoute
   publicpServicesIndexRoute: typeof publicpServicesIndexRoute
   publicpStartBusinessIndexRoute: typeof publicpStartBusinessIndexRoute
+  publicpDonateDonateLinkapilDonationsRoute: typeof publicpDonateDonateLinkapilDonationsRoute
+  publicpDonateDonateSurgicalMedicalMissionRoute: typeof publicpDonateDonateSurgicalMedicalMissionRoute
+  publicpDonateVolunteerBalikScientistRoute: typeof publicpDonateVolunteerBalikScientistRoute
+  publicpDonateVolunteerBalikTuroRoute: typeof publicpDonateVolunteerBalikTuroRoute
   publicpStartBusinessInvestmentOpAgricultureRoute: typeof publicpStartBusinessInvestmentOpAgricultureRoute
   publicpStartBusinessInvestmentOpFinancialInvestmentRoute: typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   publicpStartBusinessInvestmentOpFranchiseBusinessRoute: typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -603,6 +697,8 @@ interface publicpRouteChildren {
   publicpStartBusinessInvestmentOpServicesRoute: typeof publicpStartBusinessInvestmentOpServicesRoute
   publicpAboutBalinkbayanIndexRoute: typeof publicpAboutBalinkbayanIndexRoute
   publicpAboutCfoIndexRoute: typeof publicpAboutCfoIndexRoute
+  publicpStartBusinessInvestmentOpIndexRoute: typeof publicpStartBusinessInvestmentOpIndexRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGettingOutRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGettingOutRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGrowingBusinessRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGrowingBusinessRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessLeadingCompanyRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessLeadingCompanyRoute
@@ -627,6 +723,13 @@ const publicpRouteChildren: publicpRouteChildren = {
   publicpNewsIndexRoute: publicpNewsIndexRoute,
   publicpServicesIndexRoute: publicpServicesIndexRoute,
   publicpStartBusinessIndexRoute: publicpStartBusinessIndexRoute,
+  publicpDonateDonateLinkapilDonationsRoute:
+    publicpDonateDonateLinkapilDonationsRoute,
+  publicpDonateDonateSurgicalMedicalMissionRoute:
+    publicpDonateDonateSurgicalMedicalMissionRoute,
+  publicpDonateVolunteerBalikScientistRoute:
+    publicpDonateVolunteerBalikScientistRoute,
+  publicpDonateVolunteerBalikTuroRoute: publicpDonateVolunteerBalikTuroRoute,
   publicpStartBusinessInvestmentOpAgricultureRoute:
     publicpStartBusinessInvestmentOpAgricultureRoute,
   publicpStartBusinessInvestmentOpFinancialInvestmentRoute:
@@ -643,6 +746,10 @@ const publicpRouteChildren: publicpRouteChildren = {
     publicpStartBusinessInvestmentOpServicesRoute,
   publicpAboutBalinkbayanIndexRoute: publicpAboutBalinkbayanIndexRoute,
   publicpAboutCfoIndexRoute: publicpAboutCfoIndexRoute,
+  publicpStartBusinessInvestmentOpIndexRoute:
+    publicpStartBusinessInvestmentOpIndexRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute,
   publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGettingOutRoute:
     publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGettingOutRoute,
   publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGrowingBusinessRoute:
@@ -696,6 +803,10 @@ export interface FileRoutesByFullPath {
   '/news': typeof publicpNewsIndexRoute
   '/services': typeof publicpServicesIndexRoute
   '/start-business': typeof publicpStartBusinessIndexRoute
+  '/donate/donate/linkapil-donations': typeof publicpDonateDonateLinkapilDonationsRoute
+  '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
+  '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
+  '/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -705,6 +816,8 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
+  '/start-business/small-enterprise-knowledge-center': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute
   '/start-business/small-enterprise-knowledge-center/manage-business/getting-out': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGettingOutRoute
   '/start-business/small-enterprise-knowledge-center/manage-business/growing-business': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGrowingBusinessRoute
   '/start-business/small-enterprise-knowledge-center/manage-business/leading-company': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessLeadingCompanyRoute
@@ -730,6 +843,10 @@ export interface FileRoutesByTo {
   '/news': typeof publicpNewsIndexRoute
   '/services': typeof publicpServicesIndexRoute
   '/start-business': typeof publicpStartBusinessIndexRoute
+  '/donate/donate/linkapil-donations': typeof publicpDonateDonateLinkapilDonationsRoute
+  '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
+  '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
+  '/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -739,6 +856,8 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
+  '/start-business/small-enterprise-knowledge-center': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute
   '/start-business/small-enterprise-knowledge-center/manage-business/getting-out': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGettingOutRoute
   '/start-business/small-enterprise-knowledge-center/manage-business/growing-business': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGrowingBusinessRoute
   '/start-business/small-enterprise-knowledge-center/manage-business/leading-company': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessLeadingCompanyRoute
@@ -769,6 +888,10 @@ export interface FileRoutesById {
   '/(public)/__p/news/': typeof publicpNewsIndexRoute
   '/(public)/__p/services/': typeof publicpServicesIndexRoute
   '/(public)/__p/start-business/': typeof publicpStartBusinessIndexRoute
+  '/(public)/__p/donate/donate/linkapil-donations': typeof publicpDonateDonateLinkapilDonationsRoute
+  '/(public)/__p/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
+  '/(public)/__p/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
+  '/(public)/__p/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
   '/(public)/__p/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/(public)/__p/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/(public)/__p/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -778,6 +901,8 @@ export interface FileRoutesById {
   '/(public)/__p/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
   '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
   '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
+  '/(public)/__p/start-business/investment-op/': typeof publicpStartBusinessInvestmentOpIndexRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/getting-out': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGettingOutRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/growing-business': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessGrowingBusinessRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/leading-company': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterManageBusinessLeadingCompanyRoute
@@ -805,6 +930,10 @@ export interface FileRouteTypes {
     | '/news'
     | '/services'
     | '/start-business'
+    | '/donate/donate/linkapil-donations'
+    | '/donate/donate/surgical-medical-mission'
+    | '/donate/volunteer/balik-scientist'
+    | '/donate/volunteer/balik-turo'
     | '/start-business/investment-op/agriculture'
     | '/start-business/investment-op/financial-investment'
     | '/start-business/investment-op/franchise-business'
@@ -814,6 +943,8 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/services'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/investment-op'
+    | '/start-business/small-enterprise-knowledge-center'
     | '/start-business/small-enterprise-knowledge-center/manage-business/getting-out'
     | '/start-business/small-enterprise-knowledge-center/manage-business/growing-business'
     | '/start-business/small-enterprise-knowledge-center/manage-business/leading-company'
@@ -838,6 +969,10 @@ export interface FileRouteTypes {
     | '/news'
     | '/services'
     | '/start-business'
+    | '/donate/donate/linkapil-donations'
+    | '/donate/donate/surgical-medical-mission'
+    | '/donate/volunteer/balik-scientist'
+    | '/donate/volunteer/balik-turo'
     | '/start-business/investment-op/agriculture'
     | '/start-business/investment-op/financial-investment'
     | '/start-business/investment-op/franchise-business'
@@ -847,6 +982,8 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/services'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/investment-op'
+    | '/start-business/small-enterprise-knowledge-center'
     | '/start-business/small-enterprise-knowledge-center/manage-business/getting-out'
     | '/start-business/small-enterprise-knowledge-center/manage-business/growing-business'
     | '/start-business/small-enterprise-knowledge-center/manage-business/leading-company'
@@ -875,6 +1012,10 @@ export interface FileRouteTypes {
     | '/(public)/__p/news/'
     | '/(public)/__p/services/'
     | '/(public)/__p/start-business/'
+    | '/(public)/__p/donate/donate/linkapil-donations'
+    | '/(public)/__p/donate/donate/surgical-medical-mission'
+    | '/(public)/__p/donate/volunteer/balik-scientist'
+    | '/(public)/__p/donate/volunteer/balik-turo'
     | '/(public)/__p/start-business/investment-op/agriculture'
     | '/(public)/__p/start-business/investment-op/financial-investment'
     | '/(public)/__p/start-business/investment-op/franchise-business'
@@ -884,6 +1025,8 @@ export interface FileRouteTypes {
     | '/(public)/__p/start-business/investment-op/services'
     | '/(public)/__p/about/balinkbayan/'
     | '/(public)/__p/about/cfo/'
+    | '/(public)/__p/start-business/investment-op/'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/getting-out'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/growing-business'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/leading-company'
@@ -955,6 +1098,10 @@ export const routeTree = rootRoute
         "/(public)/__p/news/",
         "/(public)/__p/services/",
         "/(public)/__p/start-business/",
+        "/(public)/__p/donate/donate/linkapil-donations",
+        "/(public)/__p/donate/donate/surgical-medical-mission",
+        "/(public)/__p/donate/volunteer/balik-scientist",
+        "/(public)/__p/donate/volunteer/balik-turo",
         "/(public)/__p/start-business/investment-op/agriculture",
         "/(public)/__p/start-business/investment-op/financial-investment",
         "/(public)/__p/start-business/investment-op/franchise-business",
@@ -964,6 +1111,8 @@ export const routeTree = rootRoute
         "/(public)/__p/start-business/investment-op/services",
         "/(public)/__p/about/balinkbayan/",
         "/(public)/__p/about/cfo/",
+        "/(public)/__p/start-business/investment-op/",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/getting-out",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/growing-business",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/leading-company",
@@ -1012,6 +1161,22 @@ export const routeTree = rootRoute
       "filePath": "(public)/__p.start-business/index.tsx",
       "parent": "/(public)/__p"
     },
+    "/(public)/__p/donate/donate/linkapil-donations": {
+      "filePath": "(public)/__p.donate/donate/linkapil-donations.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/donate/donate/surgical-medical-mission": {
+      "filePath": "(public)/__p.donate/donate/surgical-medical-mission.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/donate/volunteer/balik-scientist": {
+      "filePath": "(public)/__p.donate/volunteer/balik-scientist.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/donate/volunteer/balik-turo": {
+      "filePath": "(public)/__p.donate/volunteer/balik-turo.tsx",
+      "parent": "/(public)/__p"
+    },
     "/(public)/__p/start-business/investment-op/agriculture": {
       "filePath": "(public)/__p.start-business/investment-op/agriculture.tsx",
       "parent": "/(public)/__p"
@@ -1046,6 +1211,14 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/about/cfo/": {
       "filePath": "(public)/__p.about/cfo/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/investment-op/": {
+      "filePath": "(public)/__p.start-business/investment-op/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/index.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/getting-out": {
