@@ -37,6 +37,7 @@ import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusine
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
+import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act'
 
 // Create Virtual Routes
 
@@ -233,6 +234,15 @@ const publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusiness
     } as any,
   )
 
+const publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute =
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActImport.update(
+    {
+      id: '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act',
+      path: '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act',
+      getParentRoute: () => publicpRoute,
+    } as any,
+  )
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -363,6 +373,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpAboutCfoIndexImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act': {
+      id: '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act'
+      path: '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act'
+      fullPath: '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act'
+      preLoaderRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActImport
+      parentRoute: typeof publicpImport
+    }
     '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': {
       id: '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
       path: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
@@ -487,6 +504,7 @@ interface publicpRouteChildren {
   publicpStartBusinessInvestmentOpAgricultureRoute: typeof publicpStartBusinessInvestmentOpAgricultureRoute
   publicpAboutBalinkbayanIndexRoute: typeof publicpAboutBalinkbayanIndexRoute
   publicpAboutCfoIndexRoute: typeof publicpAboutCfoIndexRoute
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute: typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
@@ -510,6 +528,8 @@ const publicpRouteChildren: publicpRouteChildren = {
     publicpStartBusinessInvestmentOpAgricultureRoute,
   publicpAboutBalinkbayanIndexRoute: publicpAboutBalinkbayanIndexRoute,
   publicpAboutCfoIndexRoute: publicpAboutCfoIndexRoute,
+  publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute:
+    publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute,
   publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute:
     publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute,
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute:
@@ -557,6 +577,7 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute
   '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
@@ -581,6 +602,7 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
+  '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute
   '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
   '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
@@ -612,6 +634,7 @@ export interface FileRoutesById {
   '/(public)/__p/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
   '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
+  '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBarangayMicroBusinessEnterpriseActRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterRegisterBusinessBusinessRegistrationGuideRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseBusinessStructureRoute
   '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment': typeof publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessChooseLocationEquipmentRoute
@@ -638,6 +661,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act'
     | '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
@@ -661,6 +685,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/agriculture'
     | '/about/balinkbayan'
     | '/about/cfo'
+    | '/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act'
     | '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
     | '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
@@ -690,6 +715,7 @@ export interface FileRouteTypes {
     | '/(public)/__p/start-business/investment-op/agriculture'
     | '/(public)/__p/about/balinkbayan/'
     | '/(public)/__p/about/cfo/'
+    | '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure'
     | '/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment'
@@ -775,6 +801,7 @@ export const routeTree = rootRoute
         "/(public)/__p/start-business/investment-op/agriculture",
         "/(public)/__p/about/balinkbayan/",
         "/(public)/__p/about/cfo/",
+        "/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure",
         "/(public)/__p/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment",
@@ -832,6 +859,10 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/about/cfo/": {
       "filePath": "(public)/__p.about/cfo/index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act": {
+      "filePath": "(public)/__p.start-business/small-enterprise-knowledge-center/register-business/barangay-micro-business-enterprise-act.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide": {
