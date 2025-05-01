@@ -8,6 +8,7 @@ import { Link } from "@tanstack/react-router"
 import { AlignRight, X } from "lucide-react"
 import { navLinks } from "./nav-constants"
 import type { NavItem } from "./nav-types"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseId: string; depth?: number }) => {
     return (
@@ -124,13 +125,13 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
 }
 
 export const NavSheet = ({ open, setOpen }: { open: boolean; setOpen: (value: boolean) => void }) => {
-
+    const isMobile = useIsMobile()
     return (
         <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild className={cn("lg:hidden")}>
+            <SheetTrigger asChild>
                 <Button
                     variant="ghost"
-                    className="bg-transparent flex items-center justify-center   hover:text-white transition-all"
+                    className={cn("bg-transparent flex items-center justify-center hover:text-white transition-all", isMobile ? "block" : "hidden")}
                 >
                     {!open ? <AlignRight className="h-8 w-8" /> : <X className="h-6 w-6" />}
                     <span className="sr-only">Open menu</span>
