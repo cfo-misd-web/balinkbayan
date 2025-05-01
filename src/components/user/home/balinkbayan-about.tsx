@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react"
+import { CountCard } from "../shared/utils/count-up"
 
 export default function BalikbayanAbout() {
     return (
@@ -87,25 +88,13 @@ export default function BalikbayanAbout() {
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div className="border p-6 text-center">
-                        <h3 className="text-teal-700 text-5xl font-bold mb-6">15+</h3>
-                        <p className="text-sm font-medium">Provincial Government Agencies</p>
-                    </div>
+                    <CountCard target={15} label="Provincial Government Agencies" />
 
-                    <div className="border p-6 text-center">
-                        <h3 className="text-teal-700 text-5xl font-bold mb-6">28+</h3>
-                        <p className="text-sm font-medium">City Government Agencies</p>
-                    </div>
+                    <CountCard target={28} label="City Government Agencies" />
 
-                    <div className="border p-6 text-center">
-                        <h3 className="text-teal-700 text-5xl font-bold mb-6">13+</h3>
-                        <p className="text-sm font-medium">Municipal Government Agencies</p>
-                    </div>
+                    <CountCard target={15} label="Municipal Government Agencies" />
 
-                    <div className="border p-6 text-center">
-                        <h3 className="text-teal-700 text-5xl font-bold mb-6">10+</h3>
-                        <p className="text-sm font-medium">Filipino Association Overseas</p>
-                    </div>
+                    <CountCard target={10} label="Filipino Association Overseas" />
                 </div>
             </div>
         </div>

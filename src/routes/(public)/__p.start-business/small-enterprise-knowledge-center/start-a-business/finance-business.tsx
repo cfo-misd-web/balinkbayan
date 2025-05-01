@@ -31,18 +31,18 @@ function RouteComponent() {
                 </AccordionTrigger>
               </AccordionHeader>
               <AccordionContent className='my-10 space-y-10'>
-                <Paragraph className='mt-5'>Determining your budgetary needs is a critical stage in starting your business.<br/><br/>
+                <Paragraph className='mt-5'>Determining your budgetary needs is a critical stage in starting your business.<br /><br />
 
-                Every business is unique and carries a specific cash needs at different stages of development. Thus, there is no universal method for estimating your start-up costs. The budget varies depending on the type of your business. Some can start on small budget while others need large investments such as for long-term equipment and acquisition or renovation of a building.</Paragraph>
+                  Every business is unique and carries a specific cash needs at different stages of development. Thus, there is no universal method for estimating your start-up costs. The budget varies depending on the type of your business. Some can start on small budget while others need large investments such as for long-term equipment and acquisition or renovation of a building.</Paragraph>
                 <div className='flex justify-center'>
                   <img src='/img-assets/start-a-business/finance-business/10-Budget-02.png' />
                 </div>
                 {/*  */}
-                <Paragraph className='mt-5'>In computing for your startup costs, calculate an estimate of the cost you will acquire for the first months of operation. These expenses are either <b>one-time costs</b>, such as the fee of incorporating your business, or <b>ongoing costs</b>, such as cost of utilities, inventory, insurance, etc. After recognizing these costs, identify whether they are <b>important</b> or <b>optional</b>. A realistic startup budget should only include items that are important to start your business.<br/><br/>
+                <Paragraph className='mt-5'>In computing for your startup costs, calculate an estimate of the cost you will acquire for the first months of operation. These expenses are either <b>one-time costs</b>, such as the fee of incorporating your business, or <b>ongoing costs</b>, such as cost of utilities, inventory, insurance, etc. After recognizing these costs, identify whether they are <b>important</b> or <b>optional</b>. A realistic startup budget should only include items that are important to start your business.<br /><br />
 
-                Important expenses are categorized as fixed and variable. <b>Fixed expenses</b> are rent, utilities, administrative costs and insurance costs. <b>Variable expenses</b> are inventory, shipping and packaging costs, sales commissions, and other costs associated with the direct sale of a product or service.<br/><br/>
+                  Important expenses are categorized as fixed and variable. <b>Fixed expenses</b> are rent, utilities, administrative costs and insurance costs. <b>Variable expenses</b> are inventory, shipping and packaging costs, sales commissions, and other costs associated with the direct sale of a product or service.<br /><br />
 
-                The most effective method to estimate your start-up costs is to use a worksheet that identifies your business’ one-time and ongoing costs.</Paragraph>
+                  The most effective method to estimate your start-up costs is to use a worksheet that identifies your business’ one-time and ongoing costs.</Paragraph>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value='item-2' className='border-b mb-2'>
@@ -55,11 +55,11 @@ function RouteComponent() {
                 <div className='flex justify-center'>
                   <img src='/img-assets/start-a-business/finance-business/11-PersonalFinance-02.png' />
                 </div>
-                <Paragraph>One common source of start-up budget is your personal finance. This approach, however, can result to tremendous strain on your personal fund since it takes time before your new business earns profit. It is hence important to organize your personal finance.<br/><br/>
+                <Paragraph>One common source of start-up budget is your personal finance. This approach, however, can result to tremendous strain on your personal fund since it takes time before your new business earns profit. It is hence important to organize your personal finance.<br /><br />
 
-                Start by writing a monthly household budget that includes your income and your household expenses. Be conservative in handling your household expenses because it will also determine the success of your business. Any problem on your personal budget directly risks your business.<br/><br/>
+                  Start by writing a monthly household budget that includes your income and your household expenses. Be conservative in handling your household expenses because it will also determine the success of your business. Any problem on your personal budget directly risks your business.<br /><br />
 
-                It is important to build a strong personal credit history because it will serve as the basis of your lenders and suppliers in determining your terms of credit.</Paragraph>
+                  It is important to build a strong personal credit history because it will serve as the basis of your lenders and suppliers in determining your terms of credit.</Paragraph>
                 {/*  */}
               </AccordionContent>
             </AccordionItem>
@@ -74,15 +74,15 @@ function RouteComponent() {
                 {/*  */}
                 <Heading5>Balance Sheet</Heading5>
                 <div className='flex flex-row items-center space-x-20'>
-                  <Paragraph>The balance sheet is the summary of your business financials. It mainly includes assets, and liabilities and net worth (assets = liabilities + net worth). Balance sheet items change daily and reflect the activities of your business. It can help you understand and develop your business by providing relevant financial information such as your ability to collect revenues, manage your inventory, and asses your ability to satisfy creditors.<br/><br/>
+                  <Paragraph>The balance sheet is the summary of your business financials. It mainly includes assets, and liabilities and net worth (assets = liabilities + net worth). Balance sheet items change daily and reflect the activities of your business. It can help you understand and develop your business by providing relevant financial information such as your ability to collect revenues, manage your inventory, and asses your ability to satisfy creditors.<br /><br />
 
-                  Liabilities and net worth are sources of funds that are collected from creditors and investors. Liabilities are obligations to creditors while net worth are the owner’s investment in the business. Creditors and owners are both considered as “investors” in the business, although, they are repaid in a different timeframe. They are also important in sustaining and expanding your business operation.</Paragraph>
-                  <img src='/img-assets/start-a-business/finance-business/marketing-plan-1.png'/>
+                    Liabilities and net worth are sources of funds that are collected from creditors and investors. Liabilities are obligations to creditors while net worth are the owner’s investment in the business. Creditors and owners are both considered as “investors” in the business, although, they are repaid in a different timeframe. They are also important in sustaining and expanding your business operation.</Paragraph>
+                  <img src='/img-assets/start-a-business/finance-business/marketing-plan-1.png' />
                 </div>
                 <Paragraph>Consequently, assets represent the use of funds. The cash or other funds provided by creditors of investors are used to acquire assets. These include things of value that are acquired and owned or due to a business.</Paragraph>
                 {/*  */}
                 <div className='flex justify-center'>
-                  <img src='/img-assets/start-a-business/finance-business/12-Assets-02.png'/>
+                  <img src='/img-assets/start-a-business/finance-business/12-Assets-02.png' />
                 </div>
                 <Heading5>Assets</Heading5>
                 <Paragraph>Current Assets mature in less than one year. They are the sum of:</Paragraph>
@@ -108,7 +108,7 @@ function RouteComponent() {
                 </div>
                 {/*  */}
                 <div className='flex justify-center'>
-                  <img src='/img-assets/start-a-business/finance-business/13-FixedAssets-02.png'/>
+                  <img src='/img-assets/start-a-business/finance-business/13-FixedAssets-02.png' />
                 </div>
                 <Heading5>Fixed Assets</Heading5>
                 <Paragraph>Fixed assets are acquired physical assets whose life exceeds one year. These include the following:</Paragraph>
@@ -129,7 +129,7 @@ function RouteComponent() {
                 <Paragraph>Total Assets is the sum of all the assets acquired and owned by or claims due to a business.</Paragraph>
                 {/*  */}
                 <div className='flex justify-center'>
-                  <img src='/img-assets/start-a-business/finance-business/14-Debt-02.png'/>
+                  <img src='/img-assets/start-a-business/finance-business/14-Debt-02.png' />
                 </div>
                 <Heading5>Liabilities and Net Worth</Heading5>
                 <Paragraph><b>Current Liabilities</b>: Current liabilities are obligations that will mature and must be paid within 12 months. These liabilities are important especially when cash is inadequate. These will keep a business away from experiencing insolvency (incapacity to pay debt). Current creditors must always be satisfied to maintain a steady and important source of credit for short-term obligations.</Paragraph>
@@ -152,7 +152,7 @@ function RouteComponent() {
                     <Heading5>Income Statement</Heading5>
                     <Paragraph>The income statement is another type of financial statement that includes all income and expense accounts over a period of time. It is also referred as the profit and loss statement since it shows how much money the business will make after expenses are deducted.</Paragraph>
                   </div>
-                  <img src='/img-assets/start-a-business/finance-business/business-plan-1.png'/>
+                  <img src='/img-assets/start-a-business/finance-business/business-plan-1.png' />
                 </div>
               </AccordionContent>
             </AccordionItem>
