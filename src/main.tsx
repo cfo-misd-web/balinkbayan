@@ -8,6 +8,51 @@ import './styles.css'
 import reportWebVitals from './reportWebVitals.ts'
 import { routeTree } from './routeTree.gen.ts'
 
+// --- SSR ENTRY (entry-server.tsx) ---
+// This file should be created in src/entry-server.tsx
+// import { renderToString } from 'react-dom/server';
+// import { RouterProvider, createRouter } from '@tanstack/react-router';
+// import { routeTree } from './routeTree.gen';
+//
+// export function render(url: string) {
+//   const router = createRouter({
+//     routeTree,
+//     context: {},
+//     defaultPreload: 'intent',
+//     defaultStructuralSharing: true,
+//   });
+//   router.navigate({ to: url });
+//   return renderToString(
+//     <RouterProvider router={router} />
+//   );
+// }
+//
+// --- CLIENT ENTRY (entry-client.tsx) ---
+// This file should be created in src/entry-client.tsx
+// import { StrictMode } from 'react';
+// import ReactDOM from 'react-dom/client';
+// import { RouterProvider, createRouter } from '@tanstack/react-router';
+// import { routeTree } from './routeTree.gen';
+//
+// const router = createRouter({
+//   routeTree,
+//   context: {},
+//   defaultPreload: 'intent',
+//   defaultStructuralSharing: true,
+// });
+//
+// const rootElement = document.getElementById('app');
+// if (rootElement) {
+//   const root = ReactDOM.createRoot(rootElement);
+//   root.render(
+//     <StrictMode>
+//       <RouterProvider router={router} />
+//     </StrictMode>
+//   );
+// }
+//
+// You will also need to set up a Node.js server (e.g., with Express or Vite SSR) to use these entry points.
+
 // Create a new router instance
 const router = createRouter({
   routeTree,
