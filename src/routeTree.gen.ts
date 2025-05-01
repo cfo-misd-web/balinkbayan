@@ -24,6 +24,7 @@ import { Route as publicpNewsIndexImport } from './routes/(public)/__p.news/inde
 import { Route as publicpDownloadsIndexImport } from './routes/(public)/__p.downloads/index'
 import { Route as publicpDonateIndexImport } from './routes/(public)/__p.donate/index'
 import { Route as publicpContactIndexImport } from './routes/(public)/__p.contact/index'
+import { Route as protectedprotectedCmsIndexImport } from './routes/(protected)/__protected.cms/index'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/index'
 import { Route as publicpStartBusinessInvestmentOpIndexImport } from './routes/(public)/__p.start-business/investment-op/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
@@ -139,6 +140,14 @@ const publicpContactIndexRoute = publicpContactIndexImport.update({
   path: '/contact/',
   getParentRoute: () => publicpRoute,
 } as any)
+
+const protectedprotectedCmsIndexRoute = protectedprotectedCmsIndexImport.update(
+  {
+    id: '/cms/',
+    path: '/cms/',
+    getParentRoute: () => protectedprotectedRoute,
+  } as any,
+)
 
 const publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute =
   publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport.update({
