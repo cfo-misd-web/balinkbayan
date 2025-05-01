@@ -6,7 +6,8 @@ export const navLinks: NavItem[] = [
         href: "/",
     },
     {
-        label: 'About',
+        label: "About",
+        href: '/about',
         links: [
             {
                 label: 'About Balinkbayan',
@@ -20,9 +21,11 @@ export const navLinks: NavItem[] = [
     },
     {
         label: 'Start a Business',
+        href: '/start-business',
         sublinks: [
             {
                 label: 'Investment and Business Opportunities',
+                href: '/start-business/investment-op',
                 links: [
                     {
                         label: 'Agriculture',
@@ -30,33 +33,34 @@ export const navLinks: NavItem[] = [
                     },
                     {
                         label: 'Franchise Business',
-                        href: '/investment/franchise',
+                        href: '/start-business/investment-op/franchise-business',
                     },
                     {
                         label: 'Financial Investment',
-                        href: '/investment/financial-investment',
+                        href: '/start-business/investment-op/financial-investment',
                     },
                     {
                         label: 'Real Property',
-                        href: '/investment/real-property',
+                        href: '/start-business/investment-op/real-property',
                     },
                     {
                         label: 'Retail',
-                        href: '/investment/retail',
+                        href: '/start-business/investment-op/retail',
                     },
                     {
                         label: 'Services',
-                        href: '/investment/services',
+                        href: '/start-business/investment-op/services',
 
                     },
                     {
                         label: 'Small and Medium Scale Manufacturing',
-                        href: '/investment/small-and-medium-scale-manufacturing',
+                        href: '/start-business/investment-op/scale-manufacturing',
                     }
                 ]
             },
             {
                 label: 'Small Enterprise Knowledge Center',
+                href: '/start-business/small-enterprise-knowledge-center',
                 sublinks: [
                     {
                         label: 'Starting a Business',
@@ -74,7 +78,7 @@ export const navLinks: NavItem[] = [
                                 href: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-business-structure',
                             },
                             {
-                                label: 'Obtain Business Licenses & Permits(Register your Business)',
+                                label: 'Obtain Business Licenses & Permits',
                                 href: '/start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits',
                             },
                             {
@@ -82,7 +86,7 @@ export const navLinks: NavItem[] = [
                                 href: '/start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations',
                             },
                             {
-                                label: 'Finance Your Business(Track Your Finance)',
+                                label: 'Finance Your Business',
                                 href: '/start-business/small-enterprise-knowledge-center/start-a-business/finance-business',
                             },
                             {
@@ -90,7 +94,7 @@ export const navLinks: NavItem[] = [
                                 href: '/start-business/small-enterprise-knowledge-center/start-a-business/filing-paying-taxes',
                             },
                             {
-                                label: 'Choose you Location and Equipment(HLUBR)',
+                                label: 'Choose your Location and Equipment (HLUBR)',
                                 href: '/start-business/small-enterprise-knowledge-center/start-a-business/choose-location-equipment',
                             }
                         ]
@@ -99,7 +103,7 @@ export const navLinks: NavItem[] = [
                         label: 'Register your Business',
                         subsublinks: [
                             {
-                                label: "Bussiness Registration Guide",
+                                label: "Business Registration Guide",
                                 href: '/start-business/small-enterprise-knowledge-center/register-business/business-registration-guide',
                             },
                             {
@@ -113,19 +117,19 @@ export const navLinks: NavItem[] = [
                         subsublinks: [
                             {
                                 label: "Leading Your Company",
-                                href: '/start-business/leading-company',
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/leading-company',
                             },
                             {
-                                label: "Growing your Bussiness",
-                                href: '/start-business/growing-business',
+                                label: "Growing your Business",
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/growing-business',
                             },
                             {
-                                label: "Running a Bussiness",
-                                href: '/start-business/running-business',
+                                label: "Running a Business",
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/running-business',
                             },
                             {
                                 label: "Getting Out",
-                                href: '/start-business/getting-out',
+                                href: '/start-business/small-enterprise-knowledge-center/manage-business/getting-out',
                             }
                         ]
                     }
@@ -135,17 +139,18 @@ export const navLinks: NavItem[] = [
     },
     {
         label: 'Donate and Volunteer',
+        href: '/donate',
         sublinks: [
             {
                 label: 'Donate',
                 links: [
                     {
                         label: 'Donation for LINKAPIL',
-                        href: '/donate/linkapil',
+                        href: '/donate/donate/linkapil-donations',
                     },
                     {
                         label: 'Surgical and Medical Mission',
-                        href: '/donate/surgical-medical-mission',
+                        href: '/donate/donate/surgical-medical-mission',
                     },
                 ],
 
@@ -155,11 +160,11 @@ export const navLinks: NavItem[] = [
                 links: [
                     {
                         label: 'Balik Turo',
-                        href: '/volunteer/balik-turo',
+                        href: '/donate/volunteer/balik-turo',
                     },
                     {
                         label: 'Balik Scientist',
-                        href: '/volunteer/balik-scientist',
+                        href: '/donate/volunteer/balik-scientist',
                     },
                 ],
             },
@@ -190,7 +195,7 @@ export const navLinks: NavItem[] = [
                 ]
             },
             {
-                label: "Other Government Online Services for Oveseas Filipinos",
+                label: "Other Government Online Services for Overseas Filipinos",
                 href: "/services/other-government-online-services",
             },
             {
@@ -198,7 +203,7 @@ export const navLinks: NavItem[] = [
                 href: "/services/local-government-partners",
             },
             {
-                label: "Filipino Assiociation Overseas' Partners",
+                label: "Filipino Association Overseas' Partners",
                 links: [
                     {
                         label: "Balinkbayan Filipino Korean Heritage Association South Korea",
@@ -213,7 +218,7 @@ export const navLinks: NavItem[] = [
                         href: "/services/overseas-partners/balikbayan-philippine-institute-of-civil-engineers-qatar",
                     },
                     {
-                        label: "BalikBayan Institute of Electronics Engineers of the Philippines",
+                        label: "Balinkbayan Institute of Electronics Engineers of the Philippines",
                         href: "/services/overseas-partners/balikbayan-institute-of-electronics-engineers-of-the-philippines",
                     },
                     {
@@ -222,19 +227,19 @@ export const navLinks: NavItem[] = [
 
                     },
                     {
-                        label: "BalikBayan Association of Fil-Am Teachers in America",
+                        label: "Balinkbayan Association of Fil-Am Teachers in America",
                         href: "/services/overseas-partners/balikbayan-association-of-fil-am-teachers-in-america",
                     },
                     {
-                        label: "Batangas Varsitarian International Chapter Singapore (BVISO)",
+                        label: "Balinkbayan Batangas Varsitarian International Chapter Singapore (BVISO)",
                         href: "/services/overseas-partners/batangas-varsitarian-international-chapter-singapore-bviso",
                     },
                     {
-                        label: "Philippine Bayanihan Society Singapore (PBSS)",
+                        label: "Balinkbayan Philippine Bayanihan Society Singapore (PBSS)",
                         href: "/services/overseas-partners/philippine-bayanihan-society-singapore-pbss",
                     },
                     {
-                        label: "United Architects of the Philippines-Singapore Chapter (UAPS)",
+                        label: "Balinkbayan United Architects of the Philippines-Singapore Chapter (UAPS)",
                         href: "/services/overseas-partners/united-architects-of-the-philippines-singapore-chapter-uaps",
                     },
                     {
@@ -247,7 +252,7 @@ export const navLinks: NavItem[] = [
                 label: "Partners Resource Agencies and Organizations",
                 links: [
                     {
-                        label: "Bureau of Treasure (BTr)",
+                        label: "Bureau of Treasury (BTr)",
                         href: "/services/partners/bureau-of-treasure",
                     },
                     {
