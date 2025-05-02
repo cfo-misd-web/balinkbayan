@@ -1,11 +1,29 @@
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { api } from "@/services/axios-fetchers/api";
+import { toast } from "sonner";
 
 interface ImageUploadProps {
     onChange: (file: File | null) => void;
     value: string | null;
     label: string;
+}
+
+
+export const uploaDer = async (file: File) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    return await api.post("/protected/upload", formData, {
+        headers: {
+            "Content-Type": "multipart/form-data",
+        },
+        withCredentials: true
+    }).then((res) => {
+        return res.data.url;
+    }).catch((err) => {
+        console.error(err);
+    })
 }
 
 export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
@@ -14,14 +32,21 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0] || null;
 
+
         if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setPreview(reader.result as string);
-            };
-            reader.readAsDataURL(file);
-            onChange(file);
+            uploaDer(file).then(
+                (url) => {
+                    const fullurl = `${import.meta.env.VITE_API_URL}${url}`;
+                    setPreview(fullurl);
+                    onChange(file);
+                }
+            ).catch((err) => {
+                toast.error(err);
+            }
+            )
         }
+
+
     };
 
     const handleRemove = () => {

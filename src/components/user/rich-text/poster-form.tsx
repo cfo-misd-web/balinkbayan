@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,7 @@ import { cmsformSchema, type cmsFormValues } from "@/constants/schema";
 export function PosterForm() {
     const [activeTab, setActiveTab] = useState("edit");
     const [content] = useState("<p>Start writing your content here...</p>");
+    const [routeTouched, setRouteTouched] = useState(false);
 
     const form = useForm<cmsFormValues>({
         resolver: zodResolver(cmsformSchema),
@@ -40,6 +41,21 @@ export function PosterForm() {
             publishDate: new Date().toISOString().split('T')[0],
         },
     });
+
+    const { watch, setValue } = form;
+    const title = watch("title");
+
+    useEffect(() => {
+        if (!routeTouched && title) {
+            setValue("route", title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
+        }
+        if (!title && !routeTouched) {
+            setValue("route", "");
+        }
+    }, [title, setValue, routeTouched]);
+
+
+
 
     const onSubmit = (data: cmsFormValues) => {
         console.log("Form submitted:", data);
@@ -82,20 +98,18 @@ export function PosterForm() {
                                         <FormLabel>Route</FormLabel>
                                         <FormControl>
                                             <Input
-                                                placeholder="e.g., /blog/my-new-post"
+                                                placeholder="e.g..my-new-post"
                                                 {...field}
-                                                onChange={(e) => {
-                                                    // Auto-generate slug from title if empty
-                                                    const value = e.target.value || form.getValues("title")
-                                                        .toLowerCase()
-                                                        .replace(/[^a-z0-9]+/g, '-')
-                                                        .replace(/^-|-$/g, '');
-                                                    field.onChange(value);
+                                                disabled
+                                                value={field.value || ""}
+                                                onChange={e => {
+                                                    setRouteTouched(true);
+                                                    field.onChange(e);
                                                 }}
                                             />
                                         </FormControl>
                                         <FormDescription>
-                                            URL path for this poster
+                                            URL path for this post. Will be auto-generated from the title unless you edit it.
                                         </FormDescription>
                                         <FormMessage />
                                     </FormItem>

@@ -18,9 +18,9 @@ import {
     Image as ImageIcon,
     Maximize,
     Minimize,
-    Grid2X2,
-    Grid3X3
 } from "lucide-react";
+
+import '@/styles.css'
 
 interface RichTextEditorProps {
     value: string;
@@ -63,8 +63,6 @@ const ResizableImage = Image.extend({
 export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
     const [isMounted, setIsMounted] = useState(false);
     const [selectedImage, setSelectedImage] = useState<{ node: any, width: number } | null>(null);
-    const [imageLayout, setImageLayout] = useState<string | null>(null);
-    const [groupId, setGroupId] = useState<string | null>(null);
 
     const editor = useEditor({
         extensions: [
@@ -106,13 +104,10 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                         node,
                         width: numWidth
                     });
-                    setImageLayout(node.attrs.layout || null);
-                    setGroupId(node.attrs.group || null);
+
                     return true;
                 } else {
                     setSelectedImage(null);
-                    setImageLayout(null);
-                    setGroupId(null);
                 }
 
                 return false;
@@ -120,6 +115,19 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
         },
         onUpdate: ({ editor }) => {
             onChange(editor.getHTML());
+        },
+        onSelectionUpdate: ({ editor }) => {
+            // Check if the current selection is an image node
+            const { state } = editor;
+            const { selection, doc } = state;
+            const node = doc.nodeAt(selection.from);
+            if (node && node.type.name === 'image') {
+                const widthStr = node.attrs.width || '100%';
+                const numWidth = parseInt(widthStr) || 100;
+                setSelectedImage({ node, width: numWidth });
+            } else {
+                setSelectedImage(null);
+            }
         },
     });
 
@@ -223,48 +231,8 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
         }
     };
 
-    // Create a new group of images
-    const createImageGroup = (layout: string) => {
-        if (!editor || !selectedImage) return;
 
-        const pos = findSelectedImagePosition();
-        if (pos === null) return;
 
-        const newGroupId = `group-${Date.now()}`;
-        setGroupId(newGroupId);
-
-        editor
-            .chain()
-            .focus()
-            .setNodeSelection(pos)
-            .updateAttributes('image', {
-                group: newGroupId,
-                layout: layout
-            })
-            .run();
-
-        setImageLayout(layout);
-    };
-
-    const removeFromGroup = () => {
-        if (!editor || !selectedImage) return;
-
-        const pos = findSelectedImagePosition();
-        if (pos === null) return;
-
-        editor
-            .chain()
-            .focus()
-            .setNodeSelection(pos)
-            .updateAttributes('image', {
-                group: null,
-                layout: null
-            })
-            .run();
-
-        setGroupId(null);
-        setImageLayout(null);
-    };
 
     if (!isMounted) {
         return null;
@@ -275,7 +243,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
     }
 
     return (
-        <div className="border rounded-md">
+        <div className="border min-h-[400px] rounded-md">
             <div className="flex flex-wrap items-center gap-1 p-2 border-b">
                 <Toggle
                     pressed={editor.isActive('bold')}
@@ -419,75 +387,10 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                         </Button>
                     </div>
 
-                    <div className="flex items-center gap-2 mt-2">
-                        <span className="text-xs font-medium">Layout:</span>
-                        <Button
-                            size="sm"
-                            variant={imageLayout === '2-col' ? "default" : "outline"}
-                            onClick={() => createImageGroup('2-col')}
-                            className="h-7 px-2"
-                        >
-                            <Grid2X2 className="h-3.5 w-3.5 mr-1" />
-                            2 Images
-                        </Button>
-                        <Button
-                            size="sm"
-                            variant={imageLayout === '3-col' ? "default" : "outline"}
-                            onClick={() => createImageGroup('3-col')}
-                            className="h-7 px-2"
-                        >
-                            <Grid3X3 className="h-3.5 w-3.5 mr-1" />
-                            3 Images
-                        </Button>
 
-                        {(groupId || imageLayout) && (
-                            <Button
-                                size="sm"
-                                variant="outline"
-                                onClick={removeFromGroup}
-                                className="h-7 px-2 ml-2"
-                            >
-                                Remove from group
-                            </Button>
-                        )}
-                    </div>
                 </div>
             )}
 
-            <style>
-                {`
-        .tiptap [data-layout="2-col"] {
-          display: inline-block;
-          width: calc(50% - 5px);
-          margin-right: 5px;
-        }
-        
-        .tiptap [data-layout="2-col"]:nth-of-type(2n) {
-          margin-right: 0;
-          margin-left: 5px;
-        }
-        
-        .tiptap [data-layout="3-col"] {
-          display: inline-block;
-          width: calc(33.33% - 4px);
-          margin-right: 6px;
-        }
-        
-        .tiptap [data-layout="3-col"]:nth-of-type(3n) {
-          margin-right: 0;
-        }
-
-        .tiptap ul {
-          list-style-type: disc;
-          padding-left: 1.5em;
-        }
-
-        .tiptap ol {
-          list-style-type: decimal;
-          padding-left: 1.5em;
-        }
-        `}
-            </style>
 
             <EditorContent editor={editor} className="tiptap p-3" />
         </div>

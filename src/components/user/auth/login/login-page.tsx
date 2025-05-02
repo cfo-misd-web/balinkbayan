@@ -11,8 +11,6 @@ type LoginFormInputs = {
     password: string;
 };
 
-
-
 export default function LoginPage() {
     const setSession = useSessionStore((s) => s.setSession);
     const navigate = useNavigate();
@@ -29,7 +27,9 @@ export default function LoginPage() {
         login(data, {
             onSuccess: (data) => {
                 setSession({ name: data.user.name, email: data.user.email });
-                navigate({ to: '/cms'});
+                setTimeout(() => {
+                    navigate({ to: "/cms/editor" });
+                }, 500);
             },
         })
     };
@@ -72,7 +72,7 @@ export default function LoginPage() {
                     className="w-full bg-teal-700 text-white py-2 rounded hover:bg-teal-800 transition"
                     disabled={isPending}
                 >
-                    {isPending ? <><Loader2 className="animate-spin mr-2" size={16} /> Logging in...</> : "Login"}
+                    {isPending ? <div className="flex flex-row items-center justify-center"><Loader2 className="animate-spin mr-2" size={16} /> Logging in...</div> : "Login"}
                 </button>
             </form>
         </div>

@@ -1,14 +1,11 @@
-import { useState } from "react";
 import { PosterForm } from "@/components/user/rich-text/poster-form";
-import { RichTextEditor } from "@/components/user/rich-text/editor";
-import { TagInput } from "@/components/user/rich-text/tag-input";
 import { createFileRoute } from "@tanstack/react-router";
 
 export default function CmsEditorPage() {
 
 
     return (
-        <div className="max-w-[1400px] mx-auto py-10">
+        <div className="max-w-[1400px] mx-auto py-10 px-[50px]">
             <h1 className="text-2xl font-bold mb-6">CMS Poster Editor</h1>
             <PosterForm />
         </div>
