@@ -6,7 +6,6 @@ import Heading5 from '@/components/user/shared/headings/heading-5'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { AccordionHeader } from '@radix-ui/react-accordion'
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
-import { Separator } from '@radix-ui/react-separator'
 import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
 
 export const Route = createFileRoute(
