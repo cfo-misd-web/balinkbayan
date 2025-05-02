@@ -38,7 +38,7 @@ export function PosterForm() {
             content: content,
             author: "",
             tags: [],
-            publishDate: new Date().toISOString().split('T')[0],
+            publishDate: new Date().toISOString().slice(0, 16), // yyyy-MM-ddTHH:mm
         },
     });
 
@@ -135,9 +135,14 @@ export function PosterForm() {
                                 name="publishDate"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Publish Date</FormLabel>
+                                        <FormLabel>Publish Date & Time</FormLabel>
                                         <FormControl>
-                                            <Input type="date" {...field} />
+                                            <Input
+                                                type="datetime-local"
+                                                {...field}
+                                                value={field.value ? field.value.slice(0, 16) : ''}
+                                                onChange={e => field.onChange(e.target.value)}
+                                            />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
