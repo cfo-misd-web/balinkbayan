@@ -21,11 +21,31 @@ import {
 } from "lucide-react";
 
 import '@/styles.css'
+import { useSessionStore } from "@/store/session-store";
+import { api } from "@/services/axios-fetchers/api";
 
 interface RichTextEditorProps {
     value: string;
     onChange: (value: string) => void;
 }
+
+export const uploaDer = async (file: File) => {
+    const session = useSessionStore.getState().session;
+
+    const formData = new FormData();
+    formData.append("file", file);
+    return await api.post("/protected/upload", formData, {
+        headers: {
+            "Content-Type": "multipart/form-data",
+            'Authorization': `Bearer ${session?.token}`
+        },
+    }).then((res) => {
+        return res.data.url;
+    }).catch((err) => {
+        console.error(err);
+    })
+}
+
 
 const ResizableImage = Image.extend({
     addAttributes() {
@@ -146,31 +166,27 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
             if (!target.files?.length) return;
 
             const file = target.files[0];
-            const reader = new FileReader();
 
-            reader.onload = (e) => {
-                const result = e.target?.result;
-                if (typeof result === 'string' && editor) {
-                    editor.chain().focus().setImage({
-                        src: result,
-                    }).run();
 
-                    // After inserting, find the image and set its width
-                    const { state } = editor;
-                    const { doc, selection } = state;
-                    const node = doc.nodeAt(selection.from);
-
-                    if (node && node.type.name === 'image') {
-                        editor
-                            .chain()
-                            .focus()
-                            .updateAttributes('image', { width: '100%' })
-                            .run();
-                    }
+            const placeholderSrc = '/balinkbayan.png';
+            if (editor) {
+                editor.chain().focus().setImage({ src: placeholderSrc }).run();
+            }
+            try {
+                const url = await uploaDer(file);
+                if (url && editor) {
+                    const html = editor.getHTML();
+                    const updatedHtml = html.replace(placeholderSrc, `${import.meta.env.VITE_API_URL}${url}`);
+                    editor.commands.setContent(updatedHtml, false);
                 }
-            };
-
-            reader.readAsDataURL(file);
+            } catch (err) {
+                console.error(err);
+                if (editor) {
+                    const html = editor.getHTML();
+                    const updatedHtml = html.replace(placeholderSrc, '');
+                    editor.commands.setContent(updatedHtml, false);
+                }
+            }
         };
 
         input.click();

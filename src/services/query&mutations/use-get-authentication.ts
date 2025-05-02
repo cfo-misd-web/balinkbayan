@@ -6,7 +6,7 @@ import { toast } from "sonner";
 export const useGetAuthentication = () => {
     return useMutation({
         mutationFn: async (data: { email: string; password: string }) => {
-            const res = await api.post("/auth/login", data, { withCredentials: true }).then((res) => res.data);
+            const res = await api.post("/auth/login", data).then((res) => res.data);
             return res;
         },
         onError: (e) => {

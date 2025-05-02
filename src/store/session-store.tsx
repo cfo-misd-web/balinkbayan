@@ -4,6 +4,7 @@ import { createJSONStorage, persist } from "zustand/middleware";
 type Session = {
     name: string;
     email: string;
+    token: string;
 };
 
 type SessionState = {

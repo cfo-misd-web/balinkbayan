@@ -3,6 +3,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { api } from "@/services/axios-fetchers/api";
 import { toast } from "sonner";
+import { useSessionStore } from "@/store/session-store";
 
 interface ImageUploadProps {
     onChange: (file: File | null) => void;
@@ -12,13 +13,15 @@ interface ImageUploadProps {
 
 
 export const uploaDer = async (file: File) => {
+    const session = useSessionStore.getState().session;
+
     const formData = new FormData();
     formData.append("file", file);
     return await api.post("/protected/upload", formData, {
         headers: {
             "Content-Type": "multipart/form-data",
+            'Authorization': `Bearer ${session?.token}`
         },
-        withCredentials: true
     }).then((res) => {
         return res.data.url;
     }).catch((err) => {

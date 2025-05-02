@@ -26,7 +26,7 @@ export default function LoginPage() {
     const onSubmit = (data: LoginFormInputs) => {
         login(data, {
             onSuccess: (data) => {
-                setSession({ name: data.user.name, email: data.user.email });
+                setSession({ name: data.user.name, email: data.user.email, token: data.token });
                 setTimeout(() => {
                     navigate({ to: "/cms/editor" });
                 }, 500);
