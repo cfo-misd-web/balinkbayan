@@ -29,6 +29,7 @@ import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport 
 import { Route as publicpStartBusinessInvestmentOpIndexImport } from './routes/(public)/__p.start-business/investment-op/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
 import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
+import { Route as protectedprotectedCmsEditorIndexImport } from './routes/(protected)/__protected.cms/editor/index'
 import { Route as publicpStartBusinessInvestmentOpServicesImport } from './routes/(public)/__p.start-business/investment-op/services'
 import { Route as publicpStartBusinessInvestmentOpScaleManufacturingImport } from './routes/(public)/__p.start-business/investment-op/scale-manufacturing'
 import { Route as publicpStartBusinessInvestmentOpRetailImport } from './routes/(public)/__p.start-business/investment-op/retail'
@@ -174,6 +175,13 @@ const publicpAboutBalinkbayanIndexRoute =
     id: '/about/balinkbayan/',
     path: '/about/balinkbayan/',
     getParentRoute: () => publicpRoute,
+  } as any)
+
+const protectedprotectedCmsEditorIndexRoute =
+  protectedprotectedCmsEditorIndexImport.update({
+    id: '/cms/editor/',
+    path: '/cms/editor/',
+    getParentRoute: () => protectedprotectedRoute,
   } as any)
 
 const publicpStartBusinessInvestmentOpServicesRoute =
@@ -565,6 +573,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpStartBusinessInvestmentOpServicesImport
       parentRoute: typeof publicpImport
     }
+    '/(protected)/__protected/cms/editor/': {
+      id: '/(protected)/__protected/cms/editor/'
+      path: '/cms/editor'
+      fullPath: '/cms/editor'
+      preLoaderRoute: typeof protectedprotectedCmsEditorIndexImport
+      parentRoute: typeof protectedprotectedImport
+    }
     '/(public)/__p/about/balinkbayan/': {
       id: '/(public)/__p/about/balinkbayan/'
       path: '/about/balinkbayan'
@@ -720,10 +735,12 @@ const authRouteWithChildren = authRoute._addFileChildren(authRouteChildren)
 
 interface protectedprotectedRouteChildren {
   protectedprotectedCmsIndexRoute: typeof protectedprotectedCmsIndexRoute
+  protectedprotectedCmsEditorIndexRoute: typeof protectedprotectedCmsEditorIndexRoute
 }
 
 const protectedprotectedRouteChildren: protectedprotectedRouteChildren = {
   protectedprotectedCmsIndexRoute: protectedprotectedCmsIndexRoute,
+  protectedprotectedCmsEditorIndexRoute: protectedprotectedCmsEditorIndexRoute,
 }
 
 const protectedprotectedRouteWithChildren =
@@ -880,6 +897,7 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/retail': typeof publicpStartBusinessInvestmentOpRetailRoute
   '/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
+  '/cms/editor': typeof protectedprotectedCmsEditorIndexRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
   '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -921,6 +939,7 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/retail': typeof publicpStartBusinessInvestmentOpRetailRoute
   '/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
+  '/cms/editor': typeof protectedprotectedCmsEditorIndexRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
   '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -969,6 +988,7 @@ export interface FileRoutesById {
   '/(public)/__p/start-business/investment-op/retail': typeof publicpStartBusinessInvestmentOpRetailRoute
   '/(public)/__p/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/(public)/__p/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
+  '/(protected)/__protected/cms/editor/': typeof protectedprotectedCmsEditorIndexRoute
   '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
   '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
   '/(public)/__p/start-business/investment-op/': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -1012,6 +1032,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/retail'
     | '/start-business/investment-op/scale-manufacturing'
     | '/start-business/investment-op/services'
+    | '/cms/editor'
     | '/about/balinkbayan'
     | '/about/cfo'
     | '/start-business/investment-op'
@@ -1052,6 +1073,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/retail'
     | '/start-business/investment-op/scale-manufacturing'
     | '/start-business/investment-op/services'
+    | '/cms/editor'
     | '/about/balinkbayan'
     | '/about/cfo'
     | '/start-business/investment-op'
@@ -1098,6 +1120,7 @@ export interface FileRouteTypes {
     | '/(public)/__p/start-business/investment-op/retail'
     | '/(public)/__p/start-business/investment-op/scale-manufacturing'
     | '/(public)/__p/start-business/investment-op/services'
+    | '/(protected)/__protected/cms/editor/'
     | '/(public)/__p/about/balinkbayan/'
     | '/(public)/__p/about/cfo/'
     | '/(public)/__p/start-business/investment-op/'
@@ -1169,7 +1192,8 @@ export const routeTree = rootRoute
       "filePath": "(protected)/__protected.tsx",
       "parent": "/(protected)",
       "children": [
-        "/(protected)/__protected/cms/"
+        "/(protected)/__protected/cms/",
+        "/(protected)/__protected/cms/editor/"
       ]
     },
     "/(public)": {
@@ -1299,6 +1323,10 @@ export const routeTree = rootRoute
     "/(public)/__p/start-business/investment-op/services": {
       "filePath": "(public)/__p.start-business/investment-op/services.tsx",
       "parent": "/(public)/__p"
+    },
+    "/(protected)/__protected/cms/editor/": {
+      "filePath": "(protected)/__protected.cms/editor/index.tsx",
+      "parent": "/(protected)/__protected"
     },
     "/(public)/__p/about/balinkbayan/": {
       "filePath": "(public)/__p.about/balinkbayan/index.tsx",
