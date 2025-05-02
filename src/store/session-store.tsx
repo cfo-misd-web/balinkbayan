@@ -2,9 +2,8 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 type Session = {
-    username: string;
+    name: string;
     email: string;
-    token: string;
 };
 
 type SessionState = {
