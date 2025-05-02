@@ -3,7 +3,6 @@ import Paragraph from '@/components/user/shared/paragraph'
 import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading5 from '@/components/user/shared/headings/heading-5'
 
-
 export const Route = createFileRoute(
   '/(public)/__p/start-business/investment-op/retail',
 )({
