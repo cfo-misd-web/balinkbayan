@@ -36,6 +36,10 @@ import { Route as publicpStartBusinessInvestmentOpRealPropertyImport } from './r
 import { Route as publicpStartBusinessInvestmentOpFranchiseBusinessImport } from './routes/(public)/__p.start-business/investment-op/franchise-business'
 import { Route as publicpStartBusinessInvestmentOpFinancialInvestmentImport } from './routes/(public)/__p.start-business/investment-op/financial-investment'
 import { Route as publicpStartBusinessInvestmentOpAgricultureImport } from './routes/(public)/__p.start-business/investment-op/agriculture'
+import { Route as publicpServicesNationalGovServicesSssImport } from './routes/(public)/__p.services/national-gov-services/sss'
+import { Route as publicpServicesNationalGovServicesReintegrationProgImport } from './routes/(public)/__p.services/national-gov-services/reintegration-prog'
+import { Route as publicpServicesNationalGovServicesPhilhealthImport } from './routes/(public)/__p.services/national-gov-services/philhealth'
+import { Route as publicpServicesNationalGovServicesPagibigImport } from './routes/(public)/__p.services/national-gov-services/pagibig'
 import { Route as publicpDonateVolunteerBalikTuroImport } from './routes/(public)/__p.donate/volunteer/balik-turo'
 import { Route as publicpDonateVolunteerBalikScientistImport } from './routes/(public)/__p.donate/volunteer/balik-scientist'
 import { Route as publicpDonateDonateSurgicalMedicalMissionImport } from './routes/(public)/__p.donate/donate/surgical-medical-mission'
@@ -222,6 +226,34 @@ const publicpStartBusinessInvestmentOpAgricultureRoute =
   publicpStartBusinessInvestmentOpAgricultureImport.update({
     id: '/start-business/investment-op/agriculture',
     path: '/start-business/investment-op/agriculture',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesSssRoute =
+  publicpServicesNationalGovServicesSssImport.update({
+    id: '/services/national-gov-services/sss',
+    path: '/services/national-gov-services/sss',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesReintegrationProgRoute =
+  publicpServicesNationalGovServicesReintegrationProgImport.update({
+    id: '/services/national-gov-services/reintegration-prog',
+    path: '/services/national-gov-services/reintegration-prog',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesPhilhealthRoute =
+  publicpServicesNationalGovServicesPhilhealthImport.update({
+    id: '/services/national-gov-services/philhealth',
+    path: '/services/national-gov-services/philhealth',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesPagibigRoute =
+  publicpServicesNationalGovServicesPagibigImport.update({
+    id: '/services/national-gov-services/pagibig',
+    path: '/services/national-gov-services/pagibig',
     getParentRoute: () => publicpRoute,
   } as any)
 
@@ -516,6 +548,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpDonateVolunteerBalikTuroImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/services/national-gov-services/pagibig': {
+      id: '/(public)/__p/services/national-gov-services/pagibig'
+      path: '/services/national-gov-services/pagibig'
+      fullPath: '/services/national-gov-services/pagibig'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesPagibigImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/national-gov-services/philhealth': {
+      id: '/(public)/__p/services/national-gov-services/philhealth'
+      path: '/services/national-gov-services/philhealth'
+      fullPath: '/services/national-gov-services/philhealth'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesPhilhealthImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/national-gov-services/reintegration-prog': {
+      id: '/(public)/__p/services/national-gov-services/reintegration-prog'
+      path: '/services/national-gov-services/reintegration-prog'
+      fullPath: '/services/national-gov-services/reintegration-prog'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesReintegrationProgImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/national-gov-services/sss': {
+      id: '/(public)/__p/services/national-gov-services/sss'
+      path: '/services/national-gov-services/sss'
+      fullPath: '/services/national-gov-services/sss'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesSssImport
+      parentRoute: typeof publicpImport
+    }
     '/(public)/__p/start-business/investment-op/agriculture': {
       id: '/(public)/__p/start-business/investment-op/agriculture'
       path: '/start-business/investment-op/agriculture'
@@ -753,6 +813,10 @@ interface publicpRouteChildren {
   publicpDonateDonateSurgicalMedicalMissionRoute: typeof publicpDonateDonateSurgicalMedicalMissionRoute
   publicpDonateVolunteerBalikScientistRoute: typeof publicpDonateVolunteerBalikScientistRoute
   publicpDonateVolunteerBalikTuroRoute: typeof publicpDonateVolunteerBalikTuroRoute
+  publicpServicesNationalGovServicesPagibigRoute: typeof publicpServicesNationalGovServicesPagibigRoute
+  publicpServicesNationalGovServicesPhilhealthRoute: typeof publicpServicesNationalGovServicesPhilhealthRoute
+  publicpServicesNationalGovServicesReintegrationProgRoute: typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  publicpServicesNationalGovServicesSssRoute: typeof publicpServicesNationalGovServicesSssRoute
   publicpStartBusinessInvestmentOpAgricultureRoute: typeof publicpStartBusinessInvestmentOpAgricultureRoute
   publicpStartBusinessInvestmentOpFinancialInvestmentRoute: typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   publicpStartBusinessInvestmentOpFranchiseBusinessRoute: typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -795,6 +859,14 @@ const publicpRouteChildren: publicpRouteChildren = {
   publicpDonateVolunteerBalikScientistRoute:
     publicpDonateVolunteerBalikScientistRoute,
   publicpDonateVolunteerBalikTuroRoute: publicpDonateVolunteerBalikTuroRoute,
+  publicpServicesNationalGovServicesPagibigRoute:
+    publicpServicesNationalGovServicesPagibigRoute,
+  publicpServicesNationalGovServicesPhilhealthRoute:
+    publicpServicesNationalGovServicesPhilhealthRoute,
+  publicpServicesNationalGovServicesReintegrationProgRoute:
+    publicpServicesNationalGovServicesReintegrationProgRoute,
+  publicpServicesNationalGovServicesSssRoute:
+    publicpServicesNationalGovServicesSssRoute,
   publicpStartBusinessInvestmentOpAgricultureRoute:
     publicpStartBusinessInvestmentOpAgricultureRoute,
   publicpStartBusinessInvestmentOpFinancialInvestmentRoute:
@@ -873,6 +945,10 @@ export interface FileRoutesByFullPath {
   '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
   '/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
+  '/services/national-gov-services/pagibig': typeof publicpServicesNationalGovServicesPagibigRoute
+  '/services/national-gov-services/philhealth': typeof publicpServicesNationalGovServicesPhilhealthRoute
+  '/services/national-gov-services/reintegration-prog': typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  '/services/national-gov-services/sss': typeof publicpServicesNationalGovServicesSssRoute
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -914,6 +990,10 @@ export interface FileRoutesByTo {
   '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
   '/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
+  '/services/national-gov-services/pagibig': typeof publicpServicesNationalGovServicesPagibigRoute
+  '/services/national-gov-services/philhealth': typeof publicpServicesNationalGovServicesPhilhealthRoute
+  '/services/national-gov-services/reintegration-prog': typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  '/services/national-gov-services/sss': typeof publicpServicesNationalGovServicesSssRoute
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -962,6 +1042,10 @@ export interface FileRoutesById {
   '/(public)/__p/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/(public)/__p/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
   '/(public)/__p/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
+  '/(public)/__p/services/national-gov-services/pagibig': typeof publicpServicesNationalGovServicesPagibigRoute
+  '/(public)/__p/services/national-gov-services/philhealth': typeof publicpServicesNationalGovServicesPhilhealthRoute
+  '/(public)/__p/services/national-gov-services/reintegration-prog': typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  '/(public)/__p/services/national-gov-services/sss': typeof publicpServicesNationalGovServicesSssRoute
   '/(public)/__p/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/(public)/__p/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/(public)/__p/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -1005,6 +1089,10 @@ export interface FileRouteTypes {
     | '/donate/donate/surgical-medical-mission'
     | '/donate/volunteer/balik-scientist'
     | '/donate/volunteer/balik-turo'
+    | '/services/national-gov-services/pagibig'
+    | '/services/national-gov-services/philhealth'
+    | '/services/national-gov-services/reintegration-prog'
+    | '/services/national-gov-services/sss'
     | '/start-business/investment-op/agriculture'
     | '/start-business/investment-op/financial-investment'
     | '/start-business/investment-op/franchise-business'
@@ -1045,6 +1133,10 @@ export interface FileRouteTypes {
     | '/donate/donate/surgical-medical-mission'
     | '/donate/volunteer/balik-scientist'
     | '/donate/volunteer/balik-turo'
+    | '/services/national-gov-services/pagibig'
+    | '/services/national-gov-services/philhealth'
+    | '/services/national-gov-services/reintegration-prog'
+    | '/services/national-gov-services/sss'
     | '/start-business/investment-op/agriculture'
     | '/start-business/investment-op/financial-investment'
     | '/start-business/investment-op/franchise-business'
@@ -1091,6 +1183,10 @@ export interface FileRouteTypes {
     | '/(public)/__p/donate/donate/surgical-medical-mission'
     | '/(public)/__p/donate/volunteer/balik-scientist'
     | '/(public)/__p/donate/volunteer/balik-turo'
+    | '/(public)/__p/services/national-gov-services/pagibig'
+    | '/(public)/__p/services/national-gov-services/philhealth'
+    | '/(public)/__p/services/national-gov-services/reintegration-prog'
+    | '/(public)/__p/services/national-gov-services/sss'
     | '/(public)/__p/start-business/investment-op/agriculture'
     | '/(public)/__p/start-business/investment-op/financial-investment'
     | '/(public)/__p/start-business/investment-op/franchise-business'
@@ -1193,6 +1289,10 @@ export const routeTree = rootRoute
         "/(public)/__p/donate/donate/surgical-medical-mission",
         "/(public)/__p/donate/volunteer/balik-scientist",
         "/(public)/__p/donate/volunteer/balik-turo",
+        "/(public)/__p/services/national-gov-services/pagibig",
+        "/(public)/__p/services/national-gov-services/philhealth",
+        "/(public)/__p/services/national-gov-services/reintegration-prog",
+        "/(public)/__p/services/national-gov-services/sss",
         "/(public)/__p/start-business/investment-op/agriculture",
         "/(public)/__p/start-business/investment-op/financial-investment",
         "/(public)/__p/start-business/investment-op/franchise-business",
@@ -1270,6 +1370,22 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/donate/volunteer/balik-turo": {
       "filePath": "(public)/__p.donate/volunteer/balik-turo.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/national-gov-services/pagibig": {
+      "filePath": "(public)/__p.services/national-gov-services/pagibig.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/national-gov-services/philhealth": {
+      "filePath": "(public)/__p.services/national-gov-services/philhealth.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/national-gov-services/reintegration-prog": {
+      "filePath": "(public)/__p.services/national-gov-services/reintegration-prog.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/national-gov-services/sss": {
+      "filePath": "(public)/__p.services/national-gov-services/sss.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/start-business/investment-op/agriculture": {
