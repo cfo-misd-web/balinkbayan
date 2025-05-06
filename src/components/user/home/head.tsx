@@ -7,8 +7,8 @@ import { Link } from '@tanstack/react-router';
 
 const HeadSection = () => {
     const images = [
-        '/img-assets/homepage/slider-images/Antipolo-City-Data-Gathering-16x9.jpg',
-        '/img-assets/homepage/slider-images/Pasig-City-Data-Gathering-4x3.jpg',
+        '/img-assets/homepage/slider-images/Pasig-City-Data-Gathering-768x512.jpg',
+        '/img-assets/homepage/slider-images/Samar-Province-Data-Gathering-768x435.jpg',
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
