@@ -2,15 +2,15 @@ import { ChevronRight } from "lucide-react"
 
 export default function BaLinkBayanPortal() {
     return (
-        <div className="max-lg:mx-auto max-lg:mt-0 rounded-b-lg lg:w-[1400px] h-fit flex flex-col mx-auto">
+        <div className="max-lg:mx-auto max-lg:mt-0 rounded-b-lg lg:w-[1100px] h-fit flex flex-col mx-auto">
 
             <div className="max-lg:px-4 flex">
 
                 {/* Lower Section */}
-                <div className="flex h-full w-full gap-[1px] bg-white rounded-b-lg">
+                <div className="flex h-full w-full bg-white rounded-b-lg">
                     {/* Lower Left - Logo section */}
 
-                    <div className="w-1/2 h-[267px] max-lg:hidden">
+                    <div className="w-1/2 h-[292px] max-lg:hidden bg-black/30">
                         <img src="/balinkbayan-sl.png"
                             alt="BaLinkBayan Logo"
                             className="object-center w-full h-full rounded-tl-lg shadow-lg rounded-bl-lg"
