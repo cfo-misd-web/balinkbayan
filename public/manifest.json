@@ -1,11 +1,11 @@
 {
-  "short_name": "TanStack App",
-  "name": "Create TanStack App Sample",
+  "short_name": "BalinkBayan",
+  "name": "The BaLinkBayan Portal offers several features aimed to mainstream migration and development around the world.",
   "icons": [
     {
-      "src": "hammer.svg",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/svg+xml"
+      "type": "image/x-icon"
     }
   ],
   "start_url": ".",

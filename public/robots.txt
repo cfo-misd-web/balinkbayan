@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://balinkbayan.r3workshop.live/sitemap.xml

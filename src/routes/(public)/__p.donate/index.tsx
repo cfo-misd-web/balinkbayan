@@ -5,5 +5,5 @@ export const Route = createFileRoute('/(public)/__p/donate/')({
 })
 
 function RouteComponent() {
-  return <div>Hello "/donate/"!</div>
+  return <div>Hello "/(public)/__p/donate/"!</div>
 }

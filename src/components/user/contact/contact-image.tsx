@@ -18,7 +18,6 @@ const ContactImage: React.FC<ContactImageProps> = ({
 }) => {
     const isMobile = useIsMobile();
 
-    console.log(isMobile, "isMobile");
 
     return (
         <div className={cn(className, "relative w-full")}>

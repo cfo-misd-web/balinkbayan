@@ -31,9 +31,9 @@ function RouteComponent() {
                 </AccordionTrigger>
               </AccordionHeader>
               <AccordionContent className='my-10 space-y-10'>
-                <Paragraph className='mt-5'>When it comes to starting your own business, or growing your existing one, entrepreneurs agree that site location is one of the most crucial and challenging components for success. Selecting a location requires an extensive amount of research and planning, but luckily resources are available to help guide you through the process.<br/><br/>
+                <Paragraph className='mt-5'>When it comes to starting your own business, or growing your existing one, entrepreneurs agree that site location is one of the most crucial and challenging components for success. Selecting a location requires an extensive amount of research and planning, but luckily resources are available to help guide you through the process.<br /><br />
 
-                Here are tips to consider when choosing the right location for your business:</Paragraph>
+                  Here are tips to consider when choosing the right location for your business:</Paragraph>
                 {/*  */}
                 <Heading5>Know Your Needs</Heading5>
                 <Paragraph className='mt-5'>Choose a location that provides exposure to your potential clients. There are also factors to consider:</Paragraph>
@@ -62,9 +62,9 @@ function RouteComponent() {
                   <Paragraph className='text-center'>&#8226;</Paragraph>
                   <Paragraph className='col-span-11'><b>Taxes </b>: What are the income and sales tax rates for your municipality? What about property taxes? Could you pay less in taxes by locating your business across a nearby municipality line?</Paragraph>
                 </div>
-                <Paragraph>Is the Area Business Friendly?<br/><br/>
+                <Paragraph>Is the Area Business Friendly?<br /><br />
 
-                Understanding laws and regulations imposed on businesses in a particular location is essential. As you look to grow your business, it can be advantageous to work with a business mentor. Check what programs and support local government units offer to small businesses. Do your research. Talk to other business owners and potential co-tenants.</Paragraph>
+                  Understanding laws and regulations imposed on businesses in a particular location is essential. As you look to grow your business, it can be advantageous to work with a business mentor. Check what programs and support local government units offer to small businesses. Do your research. Talk to other business owners and potential co-tenants.</Paragraph>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value='item-2' className='border-b mb-2'>
@@ -77,18 +77,18 @@ function RouteComponent() {
                 <Paragraph>Leasing commercial office space is one of the largest expenses incurred by new and expanding businesses, so it is important to do your due diligence. Here are some tips for negotiating a commercial lease for your small business.</Paragraph>
                 <Heading5>Lease Agreement</Heading5>
                 <div className='flex flex-row items-center space-x-20'>
-                  <Paragraph>Lease term and rent are your first negotiation points. It is generally recommended that small businesses negotiate one- to two-year leases with the option to renew. You will also want to factor in rent increases over the term and renewal options so you are not charged with an unexpected rent increase without warning.<br/><br/>
+                  <Paragraph>Lease term and rent are your first negotiation points. It is generally recommended that small businesses negotiate one- to two-year leases with the option to renew. You will also want to factor in rent increases over the term and renewal options so you are not charged with an unexpected rent increase without warning.<br /><br />
 
-                  Consider working with a broker to help you negotiate with the landlord. It is also important to consult a knowledgeable real estate lawyer; they can often recommend the right choice for you and protect your interests as you negotiate your lease through the broker.</Paragraph>
-                  <img src='/img-assets/start-a-business/choose-location-equipment/insurance-1.png'/>
+                    Consider working with a broker to help you negotiate with the landlord. It is also important to consult a knowledgeable real estate lawyer; they can often recommend the right choice for you and protect your interests as you negotiate your lease through the broker.</Paragraph>
+                  <img src='/img-assets/start-a-business/choose-location-equipment/insurance-1.png' />
                 </div>
                 {/*  */}
                 <Heading5>Expenses</Heading5>
                 <div className='flex flex-row items-center space-x-20'>
-                  <img src='/img-assets/start-a-business/choose-location-equipment/invest-guide-real-property-1.png'/>
-                  <Paragraph>In addition to your monthly lease payment, find out what expenses you may incur beyond rent.<br/><br/>
+                  <img src='/img-assets/start-a-business/choose-location-equipment/invest-guide-real-property-1.png' />
+                  <Paragraph>In addition to your monthly lease payment, find out what expenses you may incur beyond rent.<br /><br />
 
-                  Commercial real estate landlords often incorporate extra expenses into the lease such as maintenance fees, upkeep for shared facilities (Common Area Maintenance or CAM), etc. Other expenses to consider are utilities. These charges are usually the responsibility of the tenant, so find out how these are measured. Are they individually metered or apportioned by square footage? Ask to see these “hidden fees” and policies as well as examples of costs that are typically incurred by tenants.</Paragraph>
+                    Commercial real estate landlords often incorporate extra expenses into the lease such as maintenance fees, upkeep for shared facilities (Common Area Maintenance or CAM), etc. Other expenses to consider are utilities. These charges are usually the responsibility of the tenant, so find out how these are measured. Are they individually metered or apportioned by square footage? Ask to see these “hidden fees” and policies as well as examples of costs that are typically incurred by tenants.</Paragraph>
                 </div>
                 {/*  */}
                 <Heading5>Maintenance and Repair</Heading5>
@@ -97,7 +97,7 @@ function RouteComponent() {
                 <Heading5>Read the Lease</Heading5>
                 <div className='flex flex-row items-center space-x-20'>
                   <Paragraph>Be sure to read over your lease in detail and hire an attorney who specializes in commercial real estate to walk you through the clauses and fine print.</Paragraph>
-                  <img src='/img-assets/start-a-business/choose-location-equipment/repair.png'/>
+                  <img src='/img-assets/start-a-business/choose-location-equipment/repair.png' />
                 </div>
                 {/*  */}
                 <Heading5>Protect Your Business</Heading5>
@@ -135,16 +135,16 @@ function RouteComponent() {
                 </div>
                 {/*  */}
                 <div className='flex justify-center'>
-                  <img src='/img-assets/start-a-business/choose-location-equipment/business-equipment.png'/>
+                  <img src='/img-assets/start-a-business/choose-location-equipment/business-equipment.png' />
                 </div>
                 <Paragraph>Leasing also has its disadvantages. For example, the lifetime cost of the asset is generally going to be higher than if you purchased it. You are also giving up any ownership interest, which can be especially costly if you rely on the equipment and find at the end of the lease that the equipment is too expensive to purchase outright. You may also find that you lose the tax benefits of depreciation deductions.</Paragraph>
                 {/*  */}
                 <Heading5>Factors to Consider When Leasing Equipment</Heading5>
-                <Paragraph>There are many variables to consider when making the decision to lease equipment. Here are a few considerations:<br/><br/>
+                <Paragraph>There are many variables to consider when making the decision to lease equipment. Here are a few considerations:<br /><br />
 
-                If you anticipate needing the equipment for the long-term and want to establish equity in it, try to negotiate a purchase option under which a portion of your lease payments is credited to the purchase price.<br/><br/>
+                  If you anticipate needing the equipment for the long-term and want to establish equity in it, try to negotiate a purchase option under which a portion of your lease payments is credited to the purchase price.<br /><br />
 
-                Doing your homework can help prevent undesirable legal repercussions. Consider asking a lawyer to look over a lease before signing it.</Paragraph>
+                  Doing your homework can help prevent undesirable legal repercussions. Consider asking a lawyer to look over a lease before signing it.</Paragraph>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

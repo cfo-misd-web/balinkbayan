@@ -8,6 +8,7 @@ import { Link } from "@tanstack/react-router"
 import { AlignRight, X } from "lucide-react"
 import { navLinks } from "./nav-constants"
 import type { NavItem } from "./nav-types"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseId: string; depth?: number }) => {
     return (
@@ -26,11 +27,12 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                             <AccordionItem value={`${baseId}-${idx}`}>
                                 <AccordionTrigger
                                     className={cn(
-                                        "text-teal-700 hover:text-teal-800 font-medium py-2 rounded-none",
-
+                                        "text-teal-700 hover:text-teal-800 font-medium py-2 rounded-none [&[data-state=open]>svg]:rotate-90",
                                     )}
                                 >
-                                    {item.label}
+                                    <div className="flex items-center justify-between w-full">
+                                        {item.label}
+                                    </div>
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <div className="pl-4 border-l-2 border-slate-200">
@@ -38,7 +40,7 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                                             <Link
                                                 key={`${baseId}-${idx}-link-${linkIdx}`}
                                                 to={link.href}
-                                                className="block p-2 hover:bg-slate-100 rounded-md text-teal-700"
+                                                className="block p-2 hover:bg-slate-100 rounded-md text-teal-700 font-semibold"
                                             >
                                                 {link.label}
                                             </Link>
@@ -47,7 +49,7 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                                         {item.sublinks?.map((sublink, sublinkIdx) => (
                                             <div key={`${baseId}-${idx}-sublink-${sublinkIdx}`}>
                                                 {sublink.href && !sublink.links && !sublink.sublinks ? (
-                                                    <Link to={sublink.href} className="block p-2 hover:bg-slate-100 rounded-md text-teal-700">
+                                                    <Link to={sublink.href} className="block p-2 hover:bg-slate-100 rounded-md text-teal-700 font-semibold -ml-2">
                                                         {sublink.label}
                                                     </Link>
                                                 ) : (
@@ -62,7 +64,7 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                                                                         <Link
                                                                             key={`${baseId}-${idx}-sublink-${sublinkIdx}-link-${nestedLinkIdx}`}
                                                                             to={nestedLink.href}
-                                                                            className="block p-2 hover:bg-slate-100 rounded-md text-sm text-teal-700"
+                                                                            className="block p-2 hover:bg-slate-100 rounded-md text-sm text-teal-700 font-semibold"
                                                                         >
                                                                             {nestedLink.label}
                                                                         </Link>
@@ -79,7 +81,7 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                                                                                             {nestedItem.label}
                                                                                         </AccordionTrigger>
                                                                                         <AccordionContent>
-                                                                                            <div className="pl-2 border-l-2 border-slate-200">
+                                                                                            <div className="pl-2 border-l-2 border-slate-200 text-teal-700 font-semibold">
                                                                                                 {nestedItem.subsublinks.map((subsublink, subsubIdx) => (
                                                                                                     <Link
                                                                                                         key={`${baseId}-${idx}-sublink-${sublinkIdx}-nested-${nestedItemIdx}-sub-${subsubIdx}`}
@@ -96,7 +98,7 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                                                                             ) : nestedItem.href ? (
                                                                                 <Link
                                                                                     to={nestedItem.href}
-                                                                                    className="block p-2 hover:bg-slate-100 rounded-md text-sm"
+                                                                                    className="block p-2 hover:bg-slate-100 rounded-md text-sm font-semibold"
                                                                                 >
                                                                                     {nestedItem.label}
                                                                                 </Link>
@@ -124,13 +126,13 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
 }
 
 export const NavSheet = ({ open, setOpen }: { open: boolean; setOpen: (value: boolean) => void }) => {
-
+    const isMobile = useIsMobile()
     return (
         <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild className={cn("lg:hidden")}>
+            <SheetTrigger asChild>
                 <Button
                     variant="ghost"
-                    className="bg-transparent flex items-center justify-center   hover:text-white transition-all"
+                    className={cn("bg-transparent flex items-center justify-center hover:text-white transition-all", isMobile ? "block" : "hidden")}
                 >
                     {!open ? <AlignRight className="h-8 w-8" /> : <X className="h-6 w-6" />}
                     <span className="sr-only">Open menu</span>
@@ -147,7 +149,7 @@ export const NavSheet = ({ open, setOpen }: { open: boolean; setOpen: (value: bo
                                         variant="ghost"
 
                                     >
-                                        <Link to={item.href} className="block text-teal-700 hover:text-teal-600 font-medium py-2">
+                                        <Link to={item.href} className="block text-teal-700 hover:text-teal-600 font-semibold py-2">
                                             {item.label}
                                         </Link>
                                     </Button>
