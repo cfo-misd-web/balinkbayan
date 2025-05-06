@@ -16,3 +16,22 @@ export interface CategoryData {
     bgColor: string
     imgUrl: string
 }
+
+export type optional = {
+  country?:string,
+  name:string,
+  headOffice1:string,
+  headOffice2?:string,
+  headOffice3?:string,
+  headOffice4?:string,
+  headOffice5?:string,
+  headOffice6?:string,
+  address:string,
+  address2?:string,
+  address3?:string,
+  address4?:string,
+  email1?:string,
+  email2?:string,
+  email3?:string,
+  website?:string,
+}
