@@ -178,25 +178,25 @@ export const navLinks: NavItem[] = [
                 links: [
                     {
                         label: "Social Security System (SSS)",
-                        href: "/services/sss",
+                        href: "/services/national-gov-services/sss",
                     },
                     {
                         label: "Pag-IBIG",
-                        href: "/services/pag-ibig",
+                        href: "/services/national-gov-services/pagibig",
                     },
                     {
                         label: "PhilHealth",
-                        href: "/services/philhealth",
+                        href: "/services/national-gov-services/philhealth",
                     },
                     {
                         label: "Reintegration Program",
-                        href: "/services/reintegration-program",
+                        href: "/services/national-gov-services/reintegration-prog",
                     }
                 ]
             },
             {
                 label: "Other Government Online Services for Overseas Filipinos",
-                href: "/services/other-government-online-services",
+                href: "/services/other-online-gov-services",
             },
             {
                 label: "Local Government Partners",

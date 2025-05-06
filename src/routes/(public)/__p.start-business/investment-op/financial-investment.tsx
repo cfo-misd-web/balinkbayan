@@ -1146,7 +1146,7 @@ function RouteComponent() {
                 </div>
                 </Paragraph>
                 {/*  */}
-                <Table className='table-auto'>
+                <Table className='table-fixed'>
                   <TableHeader className='border-1'>
                     <TableRow>
                       <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
