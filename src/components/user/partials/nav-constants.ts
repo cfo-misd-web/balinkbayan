@@ -190,7 +190,7 @@ export const navLinks: NavItem[] = [
                     },
                     {
                         label: "Reintegration Program",
-                        href: "/services/national-gov-services/reintegration-program",
+                        href: "/services/national-gov-services/reintegration-prog",
                     }
                 ]
             },
