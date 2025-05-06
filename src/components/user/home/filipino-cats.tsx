@@ -4,9 +4,9 @@ import { categories } from "@/constants/contants"
 
 export default function FilipinoCategories() {
     return (
-        <div className="container mb-12 lg:w-[1400px] mx-auto px-4">
+        <div className="container mb-12 lg:w-[1100px] mx-auto px-4">
             <div className="">
-                <h3 className="font-medium text-[24px]">Our Services</h3>
+                <h3 className="font-bold text-[28px] text-[#135e69] font-[arial]">Our Services</h3>
                 <div className="w-8 md:w-10 lg:w-12 h-0.5 bg-orange-400 mb-3 md:mb-4 lg:mb-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
