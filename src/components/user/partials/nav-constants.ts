@@ -196,7 +196,7 @@ export const navLinks: NavItem[] = [
             },
             {
                 label: "Other Government Online Services for Overseas Filipinos",
-                href: "/services/other-government-online-services",
+                href: "/services/other-online-gov-services",
             },
             {
                 label: "Local Government Partners",

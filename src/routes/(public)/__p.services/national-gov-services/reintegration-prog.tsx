@@ -4,11 +4,6 @@ import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading4 from '@/components/user/shared/headings/heading-4'
 import Heading5 from '@/components/user/shared/headings/heading-5'
 import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
-import Button from '@/components/user/shared/buttons/button'
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { AccordionHeader } from '@radix-ui/react-accordion'
-import { Heading } from 'lucide-react'
 
 export const Route = createFileRoute(
   '/(public)/__p/services/national-gov-services/reintegration-prog',
