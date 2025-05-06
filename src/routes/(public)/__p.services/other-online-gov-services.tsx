@@ -4,11 +4,11 @@ import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading4 from '@/components/user/shared/headings/heading-4'
 import Heading5 from '@/components/user/shared/headings/heading-5'
 import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
-import Button from '@/components/user/shared/buttons/button'
+
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { AccordionHeader } from '@radix-ui/react-accordion'
-import { Heading } from 'lucide-react'
+
 type optional = {
   country?:string,
   name:string,
@@ -642,112 +642,7 @@ function RouteComponent() {
       email1: 'pcgmumbai@gmail.com',
     },
   ]
-  const indonesia:optional[] = [
-    {
-      country: 'Indonesia',
-      name: 'EMBASSY OF THE PHILIPPINES, JAKARTA',
-      headOffice1: 'H.E. (Mr.) Benito B. Valeriano',
-      headOffice2: 'Ambassador Extraordinary and Plenipotentiary',
-      address: '50-N Nyaya Marg. Chanakyapuri, New Delhi 110021, India',
-      email1: 'newdelhi.pe@dfa.gov.ph;',
-      email2: 'newdelhipe@bol.net.in',
-    },
-    {
-      name: 'PHILIPPINE CONSULATE GENERAL, MANADO',
-      headOffice1: 'Mr. Krishna Kumar Khemka',
-      headOffice2: 'Consul General, ad honorem',
-      address: '37 Shakespeare Sarani, 2/F, Kolkata, India 700017',
-      email1: 'pcqkolkata@gmail.com;',
-      email2: 'kkkhemka@vsnl.net',
-      email3: '',
-    },
-    {
-      name: 'PHILIPPINE CONSULATE, SURABAYA',
-      headOffice1: 'Mr. Carmelito J. Sagrado',
-      headOffice2: 'Consul, ad honorem',
-      address: 'JI Kaliwaron 128 Surabaya, 60285 Indonesia',
-    },
-  ]
-  const iran:optional[] = [
-  ]
-  const israel:optional[] = [
-  ]
-  const italy:optional[] = [
-  ]
-  const japan:optional[] = [
-  ]
-  const jordan:optional[] = [
-  ]
-  const kenya:optional[] = [
-  ]
-  const republicOfKorea:optional[] = [
-  ]
-  const kuwait:optional[] = [
-  ]
-  const laos:optional[] = [
-  ]
-  const lebanon:optional[] = [
-  ]
-  const libya:optional[] = [
-  ]
-  const malaysia:optional[] = [
-  ]
-  const mexico:optional[] = [
-  ]
-  const myanmar:optional[] = [
-  ]
-  const netherlands:optional[] = [
-  ]
-  const newZealand:optional[] = [
-  ]
-  const nigeria:optional[] = [
-  ]
-  const norway:optional[] = [
-  ]
-  const oman:optional[] = [
-  ]
-  const pakistan:optional[] = [
-  ]
-  const papuaNewGuinea:optional[] = [
-  ]
-  const poland:optional[] = [
-  ]
-  const portugal:optional[] = [
-  ]
-  const qatar:optional[] = [
-  ]
-  const russia:optional[] = [
-  ]
-  const saudiArabia:optional[] = [
-  ]
-  const singapore:optional[] = [
-  ]
-  const southAfrica:optional[] = [
-  ]
-  const spain:optional[] = [
-  ]
-  const switzerland:optional[] = [
-  ]
-  const syria:optional[] = [
-  ]
-  const timorLeste:optional[] = [
-  ]
-  const thailand:optional[] = [
-  ]
-  const turkey:optional[] = [
-  ]
-  const unitedArabEmirates:optional[] = [
-  ]
-  const unitedKingdom:optional[] = [
-  ]
-  const unitedStatesOfAmerica:optional[] = [
-  ]
-  const vatican:optional[] = [
-  ]
-  const venezuela:optional[] = [
-  ]
-  const vietnam:optional[] = [
-  ]
+
 
   return (
     <>
