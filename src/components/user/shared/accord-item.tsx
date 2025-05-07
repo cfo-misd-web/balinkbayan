@@ -4,9 +4,8 @@ import { AccordionHeader } from '@radix-ui/react-accordion'
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
 import Heading5 from './headings/heading-5';
 import RoseAnchor from './anchors/rose-anchor';
-// 
 import { countries } from '@/constants/countries';
-// 
+
 
 export default function AccordItem(){
   return (

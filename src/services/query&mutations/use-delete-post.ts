@@ -26,7 +26,6 @@ export const useDeletePost = () => {
             toast.success("Post deleted successfully", {
                 description: `Post ID: ${res.post.title}`
             })
-
         }
     })
 }

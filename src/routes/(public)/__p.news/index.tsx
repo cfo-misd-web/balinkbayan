@@ -3,6 +3,7 @@ import NewsList from '@/components/user/shared/list/news-list';
 import { createFileRoute } from '@tanstack/react-router';
 import { useGetPaginatedPosts } from '@/services/query&mutations/use-get-paginated-posts';
 import Pagination from "@/lib/use-pagination";
+import { Loader2 } from "lucide-react";
 
 
 export const Route = createFileRoute('/(public)/__p/news/')({
@@ -12,7 +13,19 @@ export const Route = createFileRoute('/(public)/__p/news/')({
 function RouteComponent() {
   const [page, setPage] = useState(1);
   const pageSize = 5;
-  const { data } = useGetPaginatedPosts({ page, pageSize, search: "" });
+  const { data, isPending, isError } = useGetPaginatedPosts({ page, pageSize, search: "" });
+
+  if (isPending) {
+    return <div className="flex justify-center items-center h-screen">
+      <Loader2 className="animate-spin h-30 w-30 text-teal-700" />
+    </div>;
+  }
+
+  if (isError) {
+    return <div className="flex justify-center items-center h-screen">
+      <p className="text-red-500">Error loading posts</p>
+    </div>;
+  }
 
   return (
     <div className="mt-10 mb-20">
@@ -29,13 +42,13 @@ function RouteComponent() {
           />
         ))}
       </ul>
-      <div className="mt-6 flex justify-center">
+      {!isPending && <div className="mt-6 flex justify-center">
         <Pagination
           currentPage={page}
           totalPages={data?.pagination.totalPages || 1}
           onPageChange={(newPage) => setPage(newPage)}
         />
-      </div>
+      </div>}
     </div>
   );
 }

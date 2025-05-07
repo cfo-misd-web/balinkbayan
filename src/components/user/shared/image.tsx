@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 const Image = ({ img_url }: { img_url: string }) => {
     return (
-        // Use <figure> for semantic image container instead of <section>
         <figure>
             <motion.img
                 className=''

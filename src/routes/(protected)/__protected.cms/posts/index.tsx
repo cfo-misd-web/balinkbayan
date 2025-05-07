@@ -29,6 +29,12 @@ const PostsTable = () => {
                     onChange={handleSearchChange}
                     className="w-1/3"
                 />
+
+               
+
+                <Button variant="outline" className="text-sm" type="button">
+                    <Link to="/cms/editor">Create New Post</Link>
+                </Button>
             </div>
             <Table>
                 <TableHeader>
@@ -69,7 +75,9 @@ const PostsTable = () => {
                     ))}
                 </TableBody>
             </Table>
-            <div className="mt-4 flex justify-end">
+            <div className="mt-4 flex justify-between">
+                {posts?.pagination.totalPages && <p>{posts.pagination.total} total posts</p>}
+                
                 <Pagination
                     currentPage={page}
                     totalPages={posts?.pagination.totalPages || 1}

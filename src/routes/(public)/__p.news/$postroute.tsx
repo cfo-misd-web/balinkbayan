@@ -12,6 +12,18 @@ export const Route = createFileRoute('/(public)/__p/news/$postroute')({
     const { data }: { data: { post: Post } } = await api.get(`/posts/${params.postroute}`);
     return data;
   },
+  head: (c) => ({
+    meta: [
+      {
+      title: c.loaderData.post.title,
+      description: c.loaderData.post.description,
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0",
+      },
+    ],
+  })
 });
 
 function RouteComponent() {
@@ -35,7 +47,7 @@ function RouteComponent() {
 
   return (
     <div className='flex flex-col items-center mb-[50px] justify-center w-full'>
-    <Card className='w-[1400px]'>
+    <Card className='lg:w-[1400px] max-lg:w-auto mx-auto w-full bg-white shadow-md rounded-lg overflow-hidden'>
       <CardContent className="p-6">
         <div className="prose max-w-none">
           <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
@@ -55,7 +67,8 @@ function RouteComponent() {
                   </Badge>
                 ))}
               </div>
-            )}
+            )
+          }
         
 
           {post.description && (

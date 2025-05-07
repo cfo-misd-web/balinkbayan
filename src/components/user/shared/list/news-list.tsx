@@ -23,9 +23,8 @@ const NewsList = ({className, newsTitle, postedDate, newsDescription, imageUrl, 
             </div>}
             <div className="space-y-3">
               <Heading5>{newsTitle}</Heading5>
-              <Paragraph className="font-light">{postedDate}</Paragraph>
+              <Paragraph className="font-light text-xs">{postedDate}</Paragraph>
               <Paragraph className="font-semibold">{newsDescription}</Paragraph>
-
               <Paragraph className="font-light text-sm">by: {author}</Paragraph>
 
               <RoseAnchor 

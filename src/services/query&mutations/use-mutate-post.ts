@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query"
+import { useMutation, useQueryClient } from "@tanstack/react-query"
 import { api } from "../axios-fetchers/api";
 import { toast } from "sonner";
 import { useSessionStore } from "@/store/session-store";
@@ -6,6 +6,7 @@ import type { cmsFormValues } from "@/constants/schema";
 
 export const useMutatePost = () => {
     const session = useSessionStore.getState().session;
+    const queryClient = useQueryClient()
 
     return useMutation({
         mutationFn: async (data: cmsFormValues) => {
@@ -23,6 +24,7 @@ export const useMutatePost = () => {
             });
         },
         onSuccess: (data) => {
+            queryClient.invalidateQueries({ queryKey: ["posts"] });
             toast.success("Post created successfully", {
                 description: `${data.post.title}`
             });

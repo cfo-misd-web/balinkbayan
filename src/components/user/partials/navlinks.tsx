@@ -97,14 +97,26 @@ const NavLinks = ({ className }: { className?: string }) => {
                                                             openMenus.level2?.menu === sublink.label && (
                                                                 <div className="absolute z-20 left-full top-0 bg-white rounded-md border shadow-md w-[250px] p-2 ml-1">
                                                                     {sublink.links.map(nestedLink => (
-                                                                        <NavigationMenuLink
-                                                                            className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm')}
-                                                                            onClick={() => router({ to: nestedLink.href })}
-                                                                            key={nestedLink.label}
-                                                                        >
-                                                                            {nestedLink.label}
-                                                                        </NavigationMenuLink>
-                                                                    ))}
+                                                                        nestedLink.target === "_blank" ? 
+                                                                        (
+                                                                            <NavigationMenuLink
+                                                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm')}
+                                                                                onClick={() => window.open(nestedLink.href, "_blank")}
+                                                                                key={nestedLink.label}
+                                                                            >
+                                                                                {nestedLink.label}
+                                                                            </NavigationMenuLink>
+                                                                        ) : (
+                                                                        (
+                                                                            <NavigationMenuLink
+                                                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm')}
+                                                                                onClick={() => router({ to: nestedLink.href })}
+                                                                                key={nestedLink.label}
+                                                                            >
+                                                                                {nestedLink.label}
+                                                                            </NavigationMenuLink>
+                                                                        )
+                                                                    )))}
                                                                 </div>
                                                             )}
                                                     </div>
