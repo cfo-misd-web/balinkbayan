@@ -17,13 +17,23 @@ export interface CategoryData {
     imgUrl: string
 }
 
-export type cmsFormValues = {
-    title: string;
-    content: string;
-    route: string;
-    description?: string | undefined;
-    bannerImage?: any;
-    author?: string | undefined;
-    tags?: string[] | undefined;
-    publishDate?: string | undefined;
+export type optional = {
+  country?:string,
+  name:string,
+  headOffice1:string,
+  headOffice2?:string,
+  headOffice3?:string,
+  headOffice4?:string,
+  headOffice5?:string,
+  headOffice6?:string,
+  address:string,
+  address2?:string,
+  address3?:string,
+  address4?:string,
+  email1?:string,
+  email2?:string,
+  email3?:string,
+  email4?:string,
+  website?:string,
+  website2?:string,
 }
