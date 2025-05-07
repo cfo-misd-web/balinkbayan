@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils"
 
-const Paragraph = ({children, className}: { children: React.ReactNode , className?:string}) => {
+const Paragraph = ({ children, className }: { children: React.ReactNode, className?: string }) => {
     return (
-        <p className={cn('text-lg text-justify', className)}>
+        <div className={cn('text-lg text-justify', className)}>
             {children}
-        </p>
+        </div>
     );
 };
 export default Paragraph;

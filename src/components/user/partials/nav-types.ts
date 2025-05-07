@@ -1,5 +1,6 @@
 interface NavLink {
     label: string;
+    target?: string;
     href?: string;
 }
 

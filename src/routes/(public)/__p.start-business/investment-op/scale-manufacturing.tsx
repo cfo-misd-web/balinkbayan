@@ -107,9 +107,9 @@ function RouteComponent() {
                 </AccordionTrigger>
               </AccordionHeader>
               <AccordionContent className='my-10 space-y-10'>
-                <Paragraph>Food and beverage are constantly being purchased and consumed because it is one of the most essential needs of humans. In addition, Filipinos have a taste for delicious and healthy food and beverage products.<br/><br/>
+                <Paragraph>Food and beverage are constantly being purchased and consumed because it is one of the most essential needs of humans. In addition, Filipinos have a taste for delicious and healthy food and beverage products.<br /><br />
 
-                Manufacture of food and beverages are two of the Philippines’ major industries. From 2010-2013, food and beverage manufacturing had 5% and 6% growths, respectively. To ensure the development of the industry and to encourage potential investors, the Philippine government considers it a priority sector.</Paragraph>
+                  Manufacture of food and beverages are two of the Philippines’ major industries. From 2010-2013, food and beverage manufacturing had 5% and 6% growths, respectively. To ensure the development of the industry and to encourage potential investors, the Philippine government considers it a priority sector.</Paragraph>
                 <Table className='table-fixed'>
                   <TableHeader className='border-1'>
                     <TableRow>
@@ -122,7 +122,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {foodBeverageProcessing.map((i,idx) => (
+                    {foodBeverageProcessing.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -133,74 +133,74 @@ function RouteComponent() {
                 {/*  */}
                 <Heading5>How to register a food and beverage processing business?</Heading5>
                 <Paragraph>
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
 
-                  The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law. The business name is valid for five years.</Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located. The permit is valid for a year.</Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
-                  <Paragraph className='text-center'>6.</Paragraph>
-                  <Paragraph className='col-span-11'>Register for a License to Operate at the Food and Drug Administration (FDA).</Paragraph>
-                  <Paragraph className='text-center'>7.</Paragraph>
-                  <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
-                </div>
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law. The business name is valid for five years.</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located. The permit is valid for a year.</Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
+                    <Paragraph className='text-center'>6.</Paragraph>
+                    <Paragraph className='col-span-11'>Register for a License to Operate at the Food and Drug Administration (FDA).</Paragraph>
+                    <Paragraph className='text-center'>7.</Paragraph>
+                    <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
+                  </div>
                 </Paragraph>
                 {/*  */}
-                <Paragraph><b>What are the opportunities in the food and processing sector?</b><br/><br/>
+                <Paragraph><b>What are the opportunities in the food and processing sector?</b><br /><br />
 
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-5'>Balut making</Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-5'>Banana chips</Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-5'>Burger</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-5'>Corned beef</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-5'>Daing</Paragraph>
-                  <Paragraph className='text-center'>6.</Paragraph>
-                  <Paragraph className='col-span-5'>Fruit shake</Paragraph>
-                  <Paragraph className='text-center'>7.</Paragraph>
-                  <Paragraph className='col-span-5'>Honey bee and honey production</Paragraph>
-                  <Paragraph className='text-center'>8.</Paragraph>
-                  <Paragraph className='col-span-5'>Jackfruit products</Paragraph>
-                  <Paragraph className='text-center'>9.</Paragraph>
-                  <Paragraph className='col-span-5'>Kaong preserves</Paragraph>
-                  <Paragraph className='text-center'>10.</Paragraph>
-                  <Paragraph className='col-span-5'>Lambanog</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-5'>Longganisa</Paragraph>
-                  <Paragraph className='text-center'>12.</Paragraph>
-                  <Paragraph className='col-span-5'>Mango Chutney</Paragraph>
-                  <Paragraph className='text-center'>13.</Paragraph>
-                  <Paragraph className='col-span-5'>Nata de coco</Paragraph>
-                  <Paragraph className='text-center'>14.</Paragraph>
-                  <Paragraph className='col-span-5'>Pandesal</Paragraph>
-                  <Paragraph className='text-center'>15.</Paragraph>
-                  <Paragraph className='col-span-5'>Siomai</Paragraph>
-                  <Paragraph className='text-center'>16.</Paragraph>
-                  <Paragraph className='col-span-5'>Smoked boneless bangus</Paragraph>
-                  <Paragraph className='text-center'>17.</Paragraph>
-                  <Paragraph className='col-span-5'>Smoked sausage</Paragraph>
-                  <Paragraph className='text-center'>18.</Paragraph>
-                  <Paragraph className='col-span-5'>Tinapa</Paragraph>
-                  <Paragraph className='text-center'>19.</Paragraph>
-                  <Paragraph className='col-span-5'>Tocino</Paragraph>
-                  <Paragraph className='text-center'>20.</Paragraph>
-                  <Paragraph className='col-span-5'>Tomato Catsup</Paragraph>
-                  <Paragraph className='text-center'>21.</Paragraph>
-                  <Paragraph className='col-span-5'>Tuyo</Paragraph>
-                  <Paragraph className='text-center'>22.</Paragraph>
-                  <Paragraph className='col-span-5'>Vinegar from banana peeling</Paragraph>
-                </div>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-5'>Balut making</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-5'>Banana chips</Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-5'>Burger</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-5'>Corned beef</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-5'>Daing</Paragraph>
+                    <Paragraph className='text-center'>6.</Paragraph>
+                    <Paragraph className='col-span-5'>Fruit shake</Paragraph>
+                    <Paragraph className='text-center'>7.</Paragraph>
+                    <Paragraph className='col-span-5'>Honey bee and honey production</Paragraph>
+                    <Paragraph className='text-center'>8.</Paragraph>
+                    <Paragraph className='col-span-5'>Jackfruit products</Paragraph>
+                    <Paragraph className='text-center'>9.</Paragraph>
+                    <Paragraph className='col-span-5'>Kaong preserves</Paragraph>
+                    <Paragraph className='text-center'>10.</Paragraph>
+                    <Paragraph className='col-span-5'>Lambanog</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-5'>Longganisa</Paragraph>
+                    <Paragraph className='text-center'>12.</Paragraph>
+                    <Paragraph className='col-span-5'>Mango Chutney</Paragraph>
+                    <Paragraph className='text-center'>13.</Paragraph>
+                    <Paragraph className='col-span-5'>Nata de coco</Paragraph>
+                    <Paragraph className='text-center'>14.</Paragraph>
+                    <Paragraph className='col-span-5'>Pandesal</Paragraph>
+                    <Paragraph className='text-center'>15.</Paragraph>
+                    <Paragraph className='col-span-5'>Siomai</Paragraph>
+                    <Paragraph className='text-center'>16.</Paragraph>
+                    <Paragraph className='col-span-5'>Smoked boneless bangus</Paragraph>
+                    <Paragraph className='text-center'>17.</Paragraph>
+                    <Paragraph className='col-span-5'>Smoked sausage</Paragraph>
+                    <Paragraph className='text-center'>18.</Paragraph>
+                    <Paragraph className='col-span-5'>Tinapa</Paragraph>
+                    <Paragraph className='text-center'>19.</Paragraph>
+                    <Paragraph className='col-span-5'>Tocino</Paragraph>
+                    <Paragraph className='text-center'>20.</Paragraph>
+                    <Paragraph className='col-span-5'>Tomato Catsup</Paragraph>
+                    <Paragraph className='text-center'>21.</Paragraph>
+                    <Paragraph className='col-span-5'>Tuyo</Paragraph>
+                    <Paragraph className='text-center'>22.</Paragraph>
+                    <Paragraph className='col-span-5'>Vinegar from banana peeling</Paragraph>
+                  </div>
                 </Paragraph>
               </AccordionContent>
             </AccordionItem>
@@ -212,9 +212,9 @@ function RouteComponent() {
                 </AccordionTrigger>
               </AccordionHeader>
               <AccordionContent className='my-10 space-y-10'>
-                <Paragraph>Products that are not fit for human consumption are called non-food products. They are produced for their respective purposes such as decorating and cleaning.<br/><br/>
+                <Paragraph>Products that are not fit for human consumption are called non-food products. They are produced for their respective purposes such as decorating and cleaning.<br /><br />
 
-                Home style products are always marketable because of the need to decorate homes. The Philippines is considered as the top manufacturer of home style products in terms of craftsmanship and design. Because of this, the potential for exportation of home style products is very viable.</Paragraph>
+                  Home style products are always marketable because of the need to decorate homes. The Philippines is considered as the top manufacturer of home style products in terms of craftsmanship and design. Because of this, the potential for exportation of home style products is very viable.</Paragraph>
                 {/*  */}
                 <Table className='table-fixed'>
                   <TableHeader className='border-1'>
@@ -228,7 +228,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {homeStyleManufacturing.map((i,idx) => (
+                    {homeStyleManufacturing.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -239,49 +239,49 @@ function RouteComponent() {
                 <Paragraph>Some home style products are décor and furniture.</Paragraph>
                 {/*  */}
                 <Heading5>Home Décor</Heading5>
-                <Paragraph>Philippine-made home décor products are often crafted from eco-friendly materials. In the advent of the call for protection of the environment, buyers are becoming environment-conscious. Thus, the marketability of Philippine-made home décor products increases.<br/><br/>
+                <Paragraph>Philippine-made home décor products are often crafted from eco-friendly materials. In the advent of the call for protection of the environment, buyers are becoming environment-conscious. Thus, the marketability of Philippine-made home décor products increases.<br /><br />
 
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>a.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sVFRmdjF4ODFYdTQ/edit'>Dipped and molded candles</RoseAnchor></Paragraph>
-                  <Paragraph className='text-center'>b.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sYmpBREZmLXBNTEE/edit'>Candle holder centerpiece</RoseAnchor></Paragraph>
-                </div>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>a.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sVFRmdjF4ODFYdTQ/edit'>Dipped and molded candles</RoseAnchor></Paragraph>
+                    <Paragraph className='text-center'>b.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sYmpBREZmLXBNTEE/edit'>Candle holder centerpiece</RoseAnchor></Paragraph>
+                  </div>
                 </Paragraph>
                 <Heading5>Furniture</Heading5>
-                <Paragraph>The furniture industry largely contributes to the Philippine economy. It had a growth of 57% from 2010-2013. In line with this, the Philippine Statistics Authority considers furniture as one of the top ten exports of the country as of April 2014. Products are sold to local buyers, distributor-wholesalers, and retailers.<br/><br/>
-                
-                Some furniture pieces are sofas, benches, beds, cabinets, tables, and chairs.<br/><br/>
+                <Paragraph>The furniture industry largely contributes to the Philippine economy. It had a growth of 57% from 2010-2013. In line with this, the Philippine Statistics Authority considers furniture as one of the top ten exports of the country as of April 2014. Products are sold to local buyers, distributor-wholesalers, and retailers.<br /><br />
 
-                Philippine furniture is noted as well-crafted, skillfully designed, and made from durable materials. Furniture can be made from different materials such as wood, buri, metal, stone, rattan, and bamboo.<br/><br/>
+                  Some furniture pieces are sofas, benches, beds, cabinets, tables, and chairs.<br /><br />
 
-                Click <RoseAnchor href_url='https://www.dticebu.net.ph/03_a_02.html'>here</RoseAnchor> to know more about the furniture industry.<br/><br/>
+                  Philippine furniture is noted as well-crafted, skillfully designed, and made from durable materials. Furniture can be made from different materials such as wood, buri, metal, stone, rattan, and bamboo.<br /><br />
 
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>a.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sVFRmdjF4ODFYdTQ/edit'>Dipped and molded candles</RoseAnchor></Paragraph>
-                  <Paragraph className='text-center'>b.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sYmpBREZmLXBNTEE/edit'>Candle holder centerpiece</RoseAnchor></Paragraph>
-                </div>
+                  Click <RoseAnchor href_url='https://www.dticebu.net.ph/03_a_02.html'>here</RoseAnchor> to know more about the furniture industry.<br /><br />
+
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>a.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sVFRmdjF4ODFYdTQ/edit'>Dipped and molded candles</RoseAnchor></Paragraph>
+                    <Paragraph className='text-center'>b.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sYmpBREZmLXBNTEE/edit'>Candle holder centerpiece</RoseAnchor></Paragraph>
+                  </div>
                 </Paragraph>
-                <Paragraph><b>How to register a home style business?</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
-                    
-                  The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law. The business name is valid for five years.</Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located. The permit is valid for one year.</Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
-                  <Paragraph className='text-center'>6.</Paragraph>
-                  <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
-                </div>
+                <Paragraph><b>How to register a home style business?</b><br /><br />
+
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
+
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law. The business name is valid for five years.</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located. The permit is valid for one year.</Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
+                    <Paragraph className='text-center'>6.</Paragraph>
+                    <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
+                  </div>
                 </Paragraph>
               </AccordionContent>
             </AccordionItem>
@@ -308,7 +308,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {soapManufacturing.map((i,idx) => (
+                    {soapManufacturing.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -317,42 +317,42 @@ function RouteComponent() {
                   </TableBody>
                 </Table>
                 {/*  */}
-                <Paragraph>Manufacturers can make bath soaps, whitening soaps, detergent soaps, and dishwashing soaps.<br/><br/>
+                <Paragraph>Manufacturers can make bath soaps, whitening soaps, detergent soaps, and dishwashing soaps.<br /><br />
 
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Herbal bath soap<br/><br/>
-                  
-                  <div className='grid grid-cols-12 gap-y-3 my-3'>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sSlBudV9zN3NnNUE/edit'>Akapulko and guava</RoseAnchor></Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sTm1qVjR2aDhGWDQ/edit'>Papaya, radish, calamansi, cucumber, and kamias</RoseAnchor></Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sWTdPWlczQmJZd28/edit'>Aloe vera, patchouli, citronella, rose, and sampaguita</RoseAnchor></Paragraph>
-                  </div>
-                  </Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Powdered detergent<br/></Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Fabric softener</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sN2ZFbFVSdXNzdGc/edit'>Dishwashing liquid</RoseAnchor></Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='http://www.pinoybisnes.com/money-making-business-ideas/how-to-make-biodegradable-detergent-soap/#ixzz3DMVca8D4'>Biodegradable detergent soap</RoseAnchor></Paragraph>
-                  <Paragraph className='text-center'>6.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='http://www.pinoybisnes.com/money-making-business-ideas/how-to-make-biodegradable-detergent-soap/#ixzz3DMVca8D4'>Coffee-scented soap</RoseAnchor></Paragraph>
-                  <Paragraph className='text-center'>7.</Paragraph>
-                  <Paragraph className='col-span-11'><RoseAnchor href_url='http://www.pinoybisnes.com/home-based-business/cornmeal-soap-small-business/#ixzz3DMVgrviW'>Cornmeal soap</RoseAnchor></Paragraph>
-                </div>
-                </Paragraph>
-                <Paragraph><b>How to register a soap manufacturing business?</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-3 my-3'>
+                  <div className='grid grid-cols-12 gap-y-5'>
                     <Paragraph className='text-center'>1.</Paragraph>
-                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
-                    
-                    The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law. The business name is valid for five years.</Paragraph>
+                    <Paragraph className='col-span-11'>Herbal bath soap<br /><br />
+
+                      <div className='grid grid-cols-12 gap-y-3 my-3'>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sSlBudV9zN3NnNUE/edit'>Akapulko and guava</RoseAnchor></Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sTm1qVjR2aDhGWDQ/edit'>Papaya, radish, calamansi, cucumber, and kamias</RoseAnchor></Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sWTdPWlczQmJZd28/edit'>Aloe vera, patchouli, citronella, rose, and sampaguita</RoseAnchor></Paragraph>
+                      </div>
+                    </Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Powdered detergent<br /></Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Fabric softener</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='https://docs.google.com/file/d/0BwHVUF_oks0sN2ZFbFVSdXNzdGc/edit'>Dishwashing liquid</RoseAnchor></Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='http://www.pinoybisnes.com/money-making-business-ideas/how-to-make-biodegradable-detergent-soap/#ixzz3DMVca8D4'>Biodegradable detergent soap</RoseAnchor></Paragraph>
+                    <Paragraph className='text-center'>6.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='http://www.pinoybisnes.com/money-making-business-ideas/how-to-make-biodegradable-detergent-soap/#ixzz3DMVca8D4'>Coffee-scented soap</RoseAnchor></Paragraph>
+                    <Paragraph className='text-center'>7.</Paragraph>
+                    <Paragraph className='col-span-11'><RoseAnchor href_url='http://www.pinoybisnes.com/home-based-business/cornmeal-soap-small-business/#ixzz3DMVgrviW'>Cornmeal soap</RoseAnchor></Paragraph>
+                  </div>
+                </Paragraph>
+                <Paragraph><b>How to register a soap manufacturing business?</b><br /><br />
+
+                  <div className='grid grid-cols-12 gap-y-3 my-3'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
+
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law. The business name is valid for five years.</Paragraph>
                     <Paragraph className='text-center'>2.</Paragraph>
                     <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located. The permit is valid for one year.</Paragraph>
                     <Paragraph className='text-center'>3.</Paragraph>
@@ -366,7 +366,7 @@ function RouteComponent() {
                     <Paragraph className='text-center'>7.</Paragraph>
                     <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
                   </div>
-                  </Paragraph>
+                </Paragraph>
               </AccordionContent>
             </AccordionItem>
           </Accordion>

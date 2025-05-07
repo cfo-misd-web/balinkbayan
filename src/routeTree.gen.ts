@@ -25,10 +25,14 @@ import { Route as publicpDownloadsIndexImport } from './routes/(public)/__p.down
 import { Route as publicpDonateIndexImport } from './routes/(public)/__p.donate/index'
 import { Route as publicpContactIndexImport } from './routes/(public)/__p.contact/index'
 import { Route as protectedprotectedCmsIndexImport } from './routes/(protected)/__protected.cms/index'
+import { Route as publicpServicesTourismIncentiveImport } from './routes/(public)/__p.services/tourism-incentive'
+import { Route as publicpServicesOtherOnlineGovServicesImport } from './routes/(public)/__p.services/other-online-gov-services'
+import { Route as publicpServicesLocalGovPartnersImport } from './routes/(public)/__p.services/local-gov-partners'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/index'
 import { Route as publicpStartBusinessInvestmentOpIndexImport } from './routes/(public)/__p.start-business/investment-op/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
 import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
+import { Route as protectedprotectedCmsEditorIndexImport } from './routes/(protected)/__protected.cms/editor/index'
 import { Route as publicpStartBusinessInvestmentOpServicesImport } from './routes/(public)/__p.start-business/investment-op/services'
 import { Route as publicpStartBusinessInvestmentOpScaleManufacturingImport } from './routes/(public)/__p.start-business/investment-op/scale-manufacturing'
 import { Route as publicpStartBusinessInvestmentOpRetailImport } from './routes/(public)/__p.start-business/investment-op/retail'
@@ -36,6 +40,13 @@ import { Route as publicpStartBusinessInvestmentOpRealPropertyImport } from './r
 import { Route as publicpStartBusinessInvestmentOpFranchiseBusinessImport } from './routes/(public)/__p.start-business/investment-op/franchise-business'
 import { Route as publicpStartBusinessInvestmentOpFinancialInvestmentImport } from './routes/(public)/__p.start-business/investment-op/financial-investment'
 import { Route as publicpStartBusinessInvestmentOpAgricultureImport } from './routes/(public)/__p.start-business/investment-op/agriculture'
+import { Route as publicpServicesResourceAgencyOverseasFilipinoBankImport } from './routes/(public)/__p.services/resource-agency/overseas-filipino-bank'
+import { Route as publicpServicesResourceAgencyCooperativeDevelopmentAuthorityImport } from './routes/(public)/__p.services/resource-agency/cooperative-development-authority'
+import { Route as publicpServicesResourceAgencyBureauOfTheTreasuryImport } from './routes/(public)/__p.services/resource-agency/bureau-of-the-treasury'
+import { Route as publicpServicesNationalGovServicesSssImport } from './routes/(public)/__p.services/national-gov-services/sss'
+import { Route as publicpServicesNationalGovServicesReintegrationProgImport } from './routes/(public)/__p.services/national-gov-services/reintegration-prog'
+import { Route as publicpServicesNationalGovServicesPhilhealthImport } from './routes/(public)/__p.services/national-gov-services/philhealth'
+import { Route as publicpServicesNationalGovServicesPagibigImport } from './routes/(public)/__p.services/national-gov-services/pagibig'
 import { Route as publicpDonateVolunteerBalikTuroImport } from './routes/(public)/__p.donate/volunteer/balik-turo'
 import { Route as publicpDonateVolunteerBalikScientistImport } from './routes/(public)/__p.donate/volunteer/balik-scientist'
 import { Route as publicpDonateDonateSurgicalMedicalMissionImport } from './routes/(public)/__p.donate/donate/surgical-medical-mission'
@@ -149,6 +160,27 @@ const protectedprotectedCmsIndexRoute = protectedprotectedCmsIndexImport.update(
   } as any,
 )
 
+const publicpServicesTourismIncentiveRoute =
+  publicpServicesTourismIncentiveImport.update({
+    id: '/services/tourism-incentive',
+    path: '/services/tourism-incentive',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesOtherOnlineGovServicesRoute =
+  publicpServicesOtherOnlineGovServicesImport.update({
+    id: '/services/other-online-gov-services',
+    path: '/services/other-online-gov-services',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesLocalGovPartnersRoute =
+  publicpServicesLocalGovPartnersImport.update({
+    id: '/services/local-gov-partners',
+    path: '/services/local-gov-partners',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
 const publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute =
   publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport.update({
     id: '/start-business/small-enterprise-knowledge-center/',
@@ -174,6 +206,13 @@ const publicpAboutBalinkbayanIndexRoute =
     id: '/about/balinkbayan/',
     path: '/about/balinkbayan/',
     getParentRoute: () => publicpRoute,
+  } as any)
+
+const protectedprotectedCmsEditorIndexRoute =
+  protectedprotectedCmsEditorIndexImport.update({
+    id: '/cms/editor/',
+    path: '/cms/editor/',
+    getParentRoute: () => protectedprotectedRoute,
   } as any)
 
 const publicpStartBusinessInvestmentOpServicesRoute =
@@ -222,6 +261,55 @@ const publicpStartBusinessInvestmentOpAgricultureRoute =
   publicpStartBusinessInvestmentOpAgricultureImport.update({
     id: '/start-business/investment-op/agriculture',
     path: '/start-business/investment-op/agriculture',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesResourceAgencyOverseasFilipinoBankRoute =
+  publicpServicesResourceAgencyOverseasFilipinoBankImport.update({
+    id: '/services/resource-agency/overseas-filipino-bank',
+    path: '/services/resource-agency/overseas-filipino-bank',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute =
+  publicpServicesResourceAgencyCooperativeDevelopmentAuthorityImport.update({
+    id: '/services/resource-agency/cooperative-development-authority',
+    path: '/services/resource-agency/cooperative-development-authority',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesResourceAgencyBureauOfTheTreasuryRoute =
+  publicpServicesResourceAgencyBureauOfTheTreasuryImport.update({
+    id: '/services/resource-agency/bureau-of-the-treasury',
+    path: '/services/resource-agency/bureau-of-the-treasury',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesSssRoute =
+  publicpServicesNationalGovServicesSssImport.update({
+    id: '/services/national-gov-services/sss',
+    path: '/services/national-gov-services/sss',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesReintegrationProgRoute =
+  publicpServicesNationalGovServicesReintegrationProgImport.update({
+    id: '/services/national-gov-services/reintegration-prog',
+    path: '/services/national-gov-services/reintegration-prog',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesPhilhealthRoute =
+  publicpServicesNationalGovServicesPhilhealthImport.update({
+    id: '/services/national-gov-services/philhealth',
+    path: '/services/national-gov-services/philhealth',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesNationalGovServicesPagibigRoute =
+  publicpServicesNationalGovServicesPagibigImport.update({
+    id: '/services/national-gov-services/pagibig',
+    path: '/services/national-gov-services/pagibig',
     getParentRoute: () => publicpRoute,
   } as any)
 
@@ -439,6 +527,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpIndexImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/services/local-gov-partners': {
+      id: '/(public)/__p/services/local-gov-partners'
+      path: '/services/local-gov-partners'
+      fullPath: '/services/local-gov-partners'
+      preLoaderRoute: typeof publicpServicesLocalGovPartnersImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/other-online-gov-services': {
+      id: '/(public)/__p/services/other-online-gov-services'
+      path: '/services/other-online-gov-services'
+      fullPath: '/services/other-online-gov-services'
+      preLoaderRoute: typeof publicpServicesOtherOnlineGovServicesImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/tourism-incentive': {
+      id: '/(public)/__p/services/tourism-incentive'
+      path: '/services/tourism-incentive'
+      fullPath: '/services/tourism-incentive'
+      preLoaderRoute: typeof publicpServicesTourismIncentiveImport
+      parentRoute: typeof publicpImport
+    }
     '/(protected)/__protected/cms/': {
       id: '/(protected)/__protected/cms/'
       path: '/cms'
@@ -516,6 +625,55 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpDonateVolunteerBalikTuroImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/services/national-gov-services/pagibig': {
+      id: '/(public)/__p/services/national-gov-services/pagibig'
+      path: '/services/national-gov-services/pagibig'
+      fullPath: '/services/national-gov-services/pagibig'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesPagibigImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/national-gov-services/philhealth': {
+      id: '/(public)/__p/services/national-gov-services/philhealth'
+      path: '/services/national-gov-services/philhealth'
+      fullPath: '/services/national-gov-services/philhealth'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesPhilhealthImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/national-gov-services/reintegration-prog': {
+      id: '/(public)/__p/services/national-gov-services/reintegration-prog'
+      path: '/services/national-gov-services/reintegration-prog'
+      fullPath: '/services/national-gov-services/reintegration-prog'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesReintegrationProgImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/national-gov-services/sss': {
+      id: '/(public)/__p/services/national-gov-services/sss'
+      path: '/services/national-gov-services/sss'
+      fullPath: '/services/national-gov-services/sss'
+      preLoaderRoute: typeof publicpServicesNationalGovServicesSssImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/resource-agency/bureau-of-the-treasury': {
+      id: '/(public)/__p/services/resource-agency/bureau-of-the-treasury'
+      path: '/services/resource-agency/bureau-of-the-treasury'
+      fullPath: '/services/resource-agency/bureau-of-the-treasury'
+      preLoaderRoute: typeof publicpServicesResourceAgencyBureauOfTheTreasuryImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/resource-agency/cooperative-development-authority': {
+      id: '/(public)/__p/services/resource-agency/cooperative-development-authority'
+      path: '/services/resource-agency/cooperative-development-authority'
+      fullPath: '/services/resource-agency/cooperative-development-authority'
+      preLoaderRoute: typeof publicpServicesResourceAgencyCooperativeDevelopmentAuthorityImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/resource-agency/overseas-filipino-bank': {
+      id: '/(public)/__p/services/resource-agency/overseas-filipino-bank'
+      path: '/services/resource-agency/overseas-filipino-bank'
+      fullPath: '/services/resource-agency/overseas-filipino-bank'
+      preLoaderRoute: typeof publicpServicesResourceAgencyOverseasFilipinoBankImport
+      parentRoute: typeof publicpImport
+    }
     '/(public)/__p/start-business/investment-op/agriculture': {
       id: '/(public)/__p/start-business/investment-op/agriculture'
       path: '/start-business/investment-op/agriculture'
@@ -564,6 +722,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/start-business/investment-op/services'
       preLoaderRoute: typeof publicpStartBusinessInvestmentOpServicesImport
       parentRoute: typeof publicpImport
+    }
+    '/(protected)/__protected/cms/editor/': {
+      id: '/(protected)/__protected/cms/editor/'
+      path: '/cms/editor'
+      fullPath: '/cms/editor'
+      preLoaderRoute: typeof protectedprotectedCmsEditorIndexImport
+      parentRoute: typeof protectedprotectedImport
     }
     '/(public)/__p/about/balinkbayan/': {
       id: '/(public)/__p/about/balinkbayan/'
@@ -720,10 +885,12 @@ const authRouteWithChildren = authRoute._addFileChildren(authRouteChildren)
 
 interface protectedprotectedRouteChildren {
   protectedprotectedCmsIndexRoute: typeof protectedprotectedCmsIndexRoute
+  protectedprotectedCmsEditorIndexRoute: typeof protectedprotectedCmsEditorIndexRoute
 }
 
 const protectedprotectedRouteChildren: protectedprotectedRouteChildren = {
   protectedprotectedCmsIndexRoute: protectedprotectedCmsIndexRoute,
+  protectedprotectedCmsEditorIndexRoute: protectedprotectedCmsEditorIndexRoute,
 }
 
 const protectedprotectedRouteWithChildren =
@@ -743,6 +910,9 @@ const protectedRouteWithChildren = protectedRoute._addFileChildren(
 
 interface publicpRouteChildren {
   publicpIndexRoute: typeof publicpIndexRoute
+  publicpServicesLocalGovPartnersRoute: typeof publicpServicesLocalGovPartnersRoute
+  publicpServicesOtherOnlineGovServicesRoute: typeof publicpServicesOtherOnlineGovServicesRoute
+  publicpServicesTourismIncentiveRoute: typeof publicpServicesTourismIncentiveRoute
   publicpContactIndexRoute: typeof publicpContactIndexRoute
   publicpDonateIndexRoute: typeof publicpDonateIndexRoute
   publicpDownloadsIndexRoute: typeof publicpDownloadsIndexRoute
@@ -753,6 +923,13 @@ interface publicpRouteChildren {
   publicpDonateDonateSurgicalMedicalMissionRoute: typeof publicpDonateDonateSurgicalMedicalMissionRoute
   publicpDonateVolunteerBalikScientistRoute: typeof publicpDonateVolunteerBalikScientistRoute
   publicpDonateVolunteerBalikTuroRoute: typeof publicpDonateVolunteerBalikTuroRoute
+  publicpServicesNationalGovServicesPagibigRoute: typeof publicpServicesNationalGovServicesPagibigRoute
+  publicpServicesNationalGovServicesPhilhealthRoute: typeof publicpServicesNationalGovServicesPhilhealthRoute
+  publicpServicesNationalGovServicesReintegrationProgRoute: typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  publicpServicesNationalGovServicesSssRoute: typeof publicpServicesNationalGovServicesSssRoute
+  publicpServicesResourceAgencyBureauOfTheTreasuryRoute: typeof publicpServicesResourceAgencyBureauOfTheTreasuryRoute
+  publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute: typeof publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute
+  publicpServicesResourceAgencyOverseasFilipinoBankRoute: typeof publicpServicesResourceAgencyOverseasFilipinoBankRoute
   publicpStartBusinessInvestmentOpAgricultureRoute: typeof publicpStartBusinessInvestmentOpAgricultureRoute
   publicpStartBusinessInvestmentOpFinancialInvestmentRoute: typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   publicpStartBusinessInvestmentOpFranchiseBusinessRoute: typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -782,6 +959,10 @@ interface publicpRouteChildren {
 
 const publicpRouteChildren: publicpRouteChildren = {
   publicpIndexRoute: publicpIndexRoute,
+  publicpServicesLocalGovPartnersRoute: publicpServicesLocalGovPartnersRoute,
+  publicpServicesOtherOnlineGovServicesRoute:
+    publicpServicesOtherOnlineGovServicesRoute,
+  publicpServicesTourismIncentiveRoute: publicpServicesTourismIncentiveRoute,
   publicpContactIndexRoute: publicpContactIndexRoute,
   publicpDonateIndexRoute: publicpDonateIndexRoute,
   publicpDownloadsIndexRoute: publicpDownloadsIndexRoute,
@@ -795,6 +976,20 @@ const publicpRouteChildren: publicpRouteChildren = {
   publicpDonateVolunteerBalikScientistRoute:
     publicpDonateVolunteerBalikScientistRoute,
   publicpDonateVolunteerBalikTuroRoute: publicpDonateVolunteerBalikTuroRoute,
+  publicpServicesNationalGovServicesPagibigRoute:
+    publicpServicesNationalGovServicesPagibigRoute,
+  publicpServicesNationalGovServicesPhilhealthRoute:
+    publicpServicesNationalGovServicesPhilhealthRoute,
+  publicpServicesNationalGovServicesReintegrationProgRoute:
+    publicpServicesNationalGovServicesReintegrationProgRoute,
+  publicpServicesNationalGovServicesSssRoute:
+    publicpServicesNationalGovServicesSssRoute,
+  publicpServicesResourceAgencyBureauOfTheTreasuryRoute:
+    publicpServicesResourceAgencyBureauOfTheTreasuryRoute,
+  publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute:
+    publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute,
+  publicpServicesResourceAgencyOverseasFilipinoBankRoute:
+    publicpServicesResourceAgencyOverseasFilipinoBankRoute,
   publicpStartBusinessInvestmentOpAgricultureRoute:
     publicpStartBusinessInvestmentOpAgricultureRoute,
   publicpStartBusinessInvestmentOpFinancialInvestmentRoute:
@@ -862,6 +1057,9 @@ const publicRouteWithChildren =
 export interface FileRoutesByFullPath {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
+  '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
+  '/services/tourism-incentive': typeof publicpServicesTourismIncentiveRoute
   '/cms': typeof protectedprotectedCmsIndexRoute
   '/contact': typeof publicpContactIndexRoute
   '/donate': typeof publicpDonateIndexRoute
@@ -873,6 +1071,13 @@ export interface FileRoutesByFullPath {
   '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
   '/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
+  '/services/national-gov-services/pagibig': typeof publicpServicesNationalGovServicesPagibigRoute
+  '/services/national-gov-services/philhealth': typeof publicpServicesNationalGovServicesPhilhealthRoute
+  '/services/national-gov-services/reintegration-prog': typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  '/services/national-gov-services/sss': typeof publicpServicesNationalGovServicesSssRoute
+  '/services/resource-agency/bureau-of-the-treasury': typeof publicpServicesResourceAgencyBureauOfTheTreasuryRoute
+  '/services/resource-agency/cooperative-development-authority': typeof publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute
+  '/services/resource-agency/overseas-filipino-bank': typeof publicpServicesResourceAgencyOverseasFilipinoBankRoute
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -880,6 +1085,7 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/retail': typeof publicpStartBusinessInvestmentOpRetailRoute
   '/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
+  '/cms/editor': typeof protectedprotectedCmsEditorIndexRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
   '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -903,6 +1109,9 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
+  '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
+  '/services/tourism-incentive': typeof publicpServicesTourismIncentiveRoute
   '/cms': typeof protectedprotectedCmsIndexRoute
   '/contact': typeof publicpContactIndexRoute
   '/donate': typeof publicpDonateIndexRoute
@@ -914,6 +1123,13 @@ export interface FileRoutesByTo {
   '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
   '/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
+  '/services/national-gov-services/pagibig': typeof publicpServicesNationalGovServicesPagibigRoute
+  '/services/national-gov-services/philhealth': typeof publicpServicesNationalGovServicesPhilhealthRoute
+  '/services/national-gov-services/reintegration-prog': typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  '/services/national-gov-services/sss': typeof publicpServicesNationalGovServicesSssRoute
+  '/services/resource-agency/bureau-of-the-treasury': typeof publicpServicesResourceAgencyBureauOfTheTreasuryRoute
+  '/services/resource-agency/cooperative-development-authority': typeof publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute
+  '/services/resource-agency/overseas-filipino-bank': typeof publicpServicesResourceAgencyOverseasFilipinoBankRoute
   '/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -921,6 +1137,7 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/retail': typeof publicpStartBusinessInvestmentOpRetailRoute
   '/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
+  '/cms/editor': typeof protectedprotectedCmsEditorIndexRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
   '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -951,6 +1168,9 @@ export interface FileRoutesById {
   '/(public)/__p': typeof publicpRouteWithChildren
   '/(auth)/__auth/login': typeof authauthLoginRoute
   '/(public)/__p/': typeof publicpIndexRoute
+  '/(public)/__p/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
+  '/(public)/__p/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
+  '/(public)/__p/services/tourism-incentive': typeof publicpServicesTourismIncentiveRoute
   '/(protected)/__protected/cms/': typeof protectedprotectedCmsIndexRoute
   '/(public)/__p/contact/': typeof publicpContactIndexRoute
   '/(public)/__p/donate/': typeof publicpDonateIndexRoute
@@ -962,6 +1182,13 @@ export interface FileRoutesById {
   '/(public)/__p/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/(public)/__p/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
   '/(public)/__p/donate/volunteer/balik-turo': typeof publicpDonateVolunteerBalikTuroRoute
+  '/(public)/__p/services/national-gov-services/pagibig': typeof publicpServicesNationalGovServicesPagibigRoute
+  '/(public)/__p/services/national-gov-services/philhealth': typeof publicpServicesNationalGovServicesPhilhealthRoute
+  '/(public)/__p/services/national-gov-services/reintegration-prog': typeof publicpServicesNationalGovServicesReintegrationProgRoute
+  '/(public)/__p/services/national-gov-services/sss': typeof publicpServicesNationalGovServicesSssRoute
+  '/(public)/__p/services/resource-agency/bureau-of-the-treasury': typeof publicpServicesResourceAgencyBureauOfTheTreasuryRoute
+  '/(public)/__p/services/resource-agency/cooperative-development-authority': typeof publicpServicesResourceAgencyCooperativeDevelopmentAuthorityRoute
+  '/(public)/__p/services/resource-agency/overseas-filipino-bank': typeof publicpServicesResourceAgencyOverseasFilipinoBankRoute
   '/(public)/__p/start-business/investment-op/agriculture': typeof publicpStartBusinessInvestmentOpAgricultureRoute
   '/(public)/__p/start-business/investment-op/financial-investment': typeof publicpStartBusinessInvestmentOpFinancialInvestmentRoute
   '/(public)/__p/start-business/investment-op/franchise-business': typeof publicpStartBusinessInvestmentOpFranchiseBusinessRoute
@@ -969,6 +1196,7 @@ export interface FileRoutesById {
   '/(public)/__p/start-business/investment-op/retail': typeof publicpStartBusinessInvestmentOpRetailRoute
   '/(public)/__p/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/(public)/__p/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
+  '/(protected)/__protected/cms/editor/': typeof protectedprotectedCmsEditorIndexRoute
   '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
   '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
   '/(public)/__p/start-business/investment-op/': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -994,6 +1222,9 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/login'
+    | '/services/local-gov-partners'
+    | '/services/other-online-gov-services'
+    | '/services/tourism-incentive'
     | '/cms'
     | '/contact'
     | '/donate'
@@ -1005,6 +1236,13 @@ export interface FileRouteTypes {
     | '/donate/donate/surgical-medical-mission'
     | '/donate/volunteer/balik-scientist'
     | '/donate/volunteer/balik-turo'
+    | '/services/national-gov-services/pagibig'
+    | '/services/national-gov-services/philhealth'
+    | '/services/national-gov-services/reintegration-prog'
+    | '/services/national-gov-services/sss'
+    | '/services/resource-agency/bureau-of-the-treasury'
+    | '/services/resource-agency/cooperative-development-authority'
+    | '/services/resource-agency/overseas-filipino-bank'
     | '/start-business/investment-op/agriculture'
     | '/start-business/investment-op/financial-investment'
     | '/start-business/investment-op/franchise-business'
@@ -1012,6 +1250,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/retail'
     | '/start-business/investment-op/scale-manufacturing'
     | '/start-business/investment-op/services'
+    | '/cms/editor'
     | '/about/balinkbayan'
     | '/about/cfo'
     | '/start-business/investment-op'
@@ -1034,6 +1273,9 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/login'
+    | '/services/local-gov-partners'
+    | '/services/other-online-gov-services'
+    | '/services/tourism-incentive'
     | '/cms'
     | '/contact'
     | '/donate'
@@ -1045,6 +1287,13 @@ export interface FileRouteTypes {
     | '/donate/donate/surgical-medical-mission'
     | '/donate/volunteer/balik-scientist'
     | '/donate/volunteer/balik-turo'
+    | '/services/national-gov-services/pagibig'
+    | '/services/national-gov-services/philhealth'
+    | '/services/national-gov-services/reintegration-prog'
+    | '/services/national-gov-services/sss'
+    | '/services/resource-agency/bureau-of-the-treasury'
+    | '/services/resource-agency/cooperative-development-authority'
+    | '/services/resource-agency/overseas-filipino-bank'
     | '/start-business/investment-op/agriculture'
     | '/start-business/investment-op/financial-investment'
     | '/start-business/investment-op/franchise-business'
@@ -1052,6 +1301,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/retail'
     | '/start-business/investment-op/scale-manufacturing'
     | '/start-business/investment-op/services'
+    | '/cms/editor'
     | '/about/balinkbayan'
     | '/about/cfo'
     | '/start-business/investment-op'
@@ -1080,6 +1330,9 @@ export interface FileRouteTypes {
     | '/(public)/__p'
     | '/(auth)/__auth/login'
     | '/(public)/__p/'
+    | '/(public)/__p/services/local-gov-partners'
+    | '/(public)/__p/services/other-online-gov-services'
+    | '/(public)/__p/services/tourism-incentive'
     | '/(protected)/__protected/cms/'
     | '/(public)/__p/contact/'
     | '/(public)/__p/donate/'
@@ -1091,6 +1344,13 @@ export interface FileRouteTypes {
     | '/(public)/__p/donate/donate/surgical-medical-mission'
     | '/(public)/__p/donate/volunteer/balik-scientist'
     | '/(public)/__p/donate/volunteer/balik-turo'
+    | '/(public)/__p/services/national-gov-services/pagibig'
+    | '/(public)/__p/services/national-gov-services/philhealth'
+    | '/(public)/__p/services/national-gov-services/reintegration-prog'
+    | '/(public)/__p/services/national-gov-services/sss'
+    | '/(public)/__p/services/resource-agency/bureau-of-the-treasury'
+    | '/(public)/__p/services/resource-agency/cooperative-development-authority'
+    | '/(public)/__p/services/resource-agency/overseas-filipino-bank'
     | '/(public)/__p/start-business/investment-op/agriculture'
     | '/(public)/__p/start-business/investment-op/financial-investment'
     | '/(public)/__p/start-business/investment-op/franchise-business'
@@ -1098,6 +1358,7 @@ export interface FileRouteTypes {
     | '/(public)/__p/start-business/investment-op/retail'
     | '/(public)/__p/start-business/investment-op/scale-manufacturing'
     | '/(public)/__p/start-business/investment-op/services'
+    | '/(protected)/__protected/cms/editor/'
     | '/(public)/__p/about/balinkbayan/'
     | '/(public)/__p/about/cfo/'
     | '/(public)/__p/start-business/investment-op/'
@@ -1169,7 +1430,8 @@ export const routeTree = rootRoute
       "filePath": "(protected)/__protected.tsx",
       "parent": "/(protected)",
       "children": [
-        "/(protected)/__protected/cms/"
+        "/(protected)/__protected/cms/",
+        "/(protected)/__protected/cms/editor/"
       ]
     },
     "/(public)": {
@@ -1183,6 +1445,9 @@ export const routeTree = rootRoute
       "parent": "/(public)",
       "children": [
         "/(public)/__p/",
+        "/(public)/__p/services/local-gov-partners",
+        "/(public)/__p/services/other-online-gov-services",
+        "/(public)/__p/services/tourism-incentive",
         "/(public)/__p/contact/",
         "/(public)/__p/donate/",
         "/(public)/__p/downloads/",
@@ -1193,6 +1458,13 @@ export const routeTree = rootRoute
         "/(public)/__p/donate/donate/surgical-medical-mission",
         "/(public)/__p/donate/volunteer/balik-scientist",
         "/(public)/__p/donate/volunteer/balik-turo",
+        "/(public)/__p/services/national-gov-services/pagibig",
+        "/(public)/__p/services/national-gov-services/philhealth",
+        "/(public)/__p/services/national-gov-services/reintegration-prog",
+        "/(public)/__p/services/national-gov-services/sss",
+        "/(public)/__p/services/resource-agency/bureau-of-the-treasury",
+        "/(public)/__p/services/resource-agency/cooperative-development-authority",
+        "/(public)/__p/services/resource-agency/overseas-filipino-bank",
         "/(public)/__p/start-business/investment-op/agriculture",
         "/(public)/__p/start-business/investment-op/financial-investment",
         "/(public)/__p/start-business/investment-op/franchise-business",
@@ -1226,6 +1498,18 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/": {
       "filePath": "(public)/__p.index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/local-gov-partners": {
+      "filePath": "(public)/__p.services/local-gov-partners.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/other-online-gov-services": {
+      "filePath": "(public)/__p.services/other-online-gov-services.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/tourism-incentive": {
+      "filePath": "(public)/__p.services/tourism-incentive.tsx",
       "parent": "/(public)/__p"
     },
     "/(protected)/__protected/cms/": {
@@ -1272,6 +1556,34 @@ export const routeTree = rootRoute
       "filePath": "(public)/__p.donate/volunteer/balik-turo.tsx",
       "parent": "/(public)/__p"
     },
+    "/(public)/__p/services/national-gov-services/pagibig": {
+      "filePath": "(public)/__p.services/national-gov-services/pagibig.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/national-gov-services/philhealth": {
+      "filePath": "(public)/__p.services/national-gov-services/philhealth.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/national-gov-services/reintegration-prog": {
+      "filePath": "(public)/__p.services/national-gov-services/reintegration-prog.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/national-gov-services/sss": {
+      "filePath": "(public)/__p.services/national-gov-services/sss.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/resource-agency/bureau-of-the-treasury": {
+      "filePath": "(public)/__p.services/resource-agency/bureau-of-the-treasury.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/resource-agency/cooperative-development-authority": {
+      "filePath": "(public)/__p.services/resource-agency/cooperative-development-authority.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/resource-agency/overseas-filipino-bank": {
+      "filePath": "(public)/__p.services/resource-agency/overseas-filipino-bank.tsx",
+      "parent": "/(public)/__p"
+    },
     "/(public)/__p/start-business/investment-op/agriculture": {
       "filePath": "(public)/__p.start-business/investment-op/agriculture.tsx",
       "parent": "/(public)/__p"
@@ -1299,6 +1611,10 @@ export const routeTree = rootRoute
     "/(public)/__p/start-business/investment-op/services": {
       "filePath": "(public)/__p.start-business/investment-op/services.tsx",
       "parent": "/(public)/__p"
+    },
+    "/(protected)/__protected/cms/editor/": {
+      "filePath": "(protected)/__protected.cms/editor/index.tsx",
+      "parent": "/(protected)/__protected"
     },
     "/(public)/__p/about/balinkbayan/": {
       "filePath": "(public)/__p.about/balinkbayan/index.tsx",

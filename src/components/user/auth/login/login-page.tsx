@@ -1,60 +1,78 @@
-import React from "react";
+import { useForm } from "react-hook-form";
 import { useSessionStore } from "@/store/session-store";
-import { useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
+import { useGetAuthentication } from "@/services/query&mutations/use-get-authentication";
+import { loginSchema } from "@/constants/schema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader2 } from "lucide-react";
+
+type LoginFormInputs = {
+    email: string;
+    password: string;
+};
 
 export default function LoginPage() {
     const setSession = useSessionStore((s) => s.setSession);
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
     const navigate = useNavigate();
+    const { register, handleSubmit, formState: { errors } } = useForm({
+        resolver: zodResolver(loginSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    });
+    const { mutate: login, isPending } = useGetAuthentication();
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Mock authentication logic
-        if (username === "admin" && password === "password") {
-            setSession({
-                username: "admin",
-                email: "admin@example.com",
-                token: "mock-token-123",
-            });
-            navigate({ to: "/" });
-        } else {
-            setError("Invalid username or password");
-        }
+    const onSubmit = (data: LoginFormInputs) => {
+        login(data, {
+            onSuccess: (data) => {
+                setSession({ name: data.user.name, email: data.user.email, token: data.token });
+                setTimeout(() => {
+                    navigate({ to: "/cms/editor" });
+                }, 500);
+            },
+        })
     };
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-            <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-sm">
+            <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="bg-white p-8 rounded shadow-md w-full max-w-sm"
+            >
                 <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-                {error && <div className="mb-4 text-red-500">{error}</div>}
+                {errors.email && (
+                    <div className="mb-4 text-red-500">
+                        {errors.email.message}
+                    </div>
+                )}
                 <div className="mb-4">
-                    <label className="block mb-1">Username</label>
+                    <label className="block mb-1">Email</label>
                     <input
                         type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        {...register("email", { required: "Email is required" })}
                         className="w-full border px-3 py-2 rounded"
-                        required
                     />
                 </div>
+                {errors.password && (
+                    <div className="mb-4 text-red-500">
+                        {errors.password.message}
+                    </div>
+                )}
                 <div className="mb-6">
                     <label className="block mb-1">Password</label>
                     <input
                         type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        {...register("password", { required: "Password is required" })}
                         className="w-full border px-3 py-2 rounded"
-                        required
                     />
                 </div>
                 <button
                     type="submit"
                     className="w-full bg-teal-700 text-white py-2 rounded hover:bg-teal-800 transition"
+                    disabled={isPending}
                 >
-                    Login
+                    {isPending ? <div className="flex flex-row items-center justify-center"><Loader2 className="animate-spin mr-2" size={16} /> Logging in...</div> : "Login"}
                 </button>
             </form>
         </div>

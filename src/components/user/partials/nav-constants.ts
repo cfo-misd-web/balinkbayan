@@ -178,73 +178,83 @@ export const navLinks: NavItem[] = [
                 links: [
                     {
                         label: "Social Security System (SSS)",
-                        href: "/services/sss",
+                        href: "/services/national-gov-services/sss",
                     },
                     {
                         label: "Pag-IBIG",
-                        href: "/services/pag-ibig",
+                        href: "/services/national-gov-services/pagibig",
                     },
                     {
                         label: "PhilHealth",
-                        href: "/services/philhealth",
+                        href: "/services/national-gov-services/philhealth",
                     },
                     {
                         label: "Reintegration Program",
-                        href: "/services/reintegration-program",
+                        href: "/services/national-gov-services/reintegration-prog",
                     }
                 ]
             },
             {
                 label: "Other Government Online Services for Overseas Filipinos",
-                href: "/services/other-government-online-services",
+                href: "/services/other-online-gov-services",
             },
             {
                 label: "Local Government Partners",
-                href: "/services/local-government-partners",
+                href: "/services/local-gov-partners",
             },
             {
                 label: "Filipino Association Overseas' Partners",
                 links: [
                     {
-                        label: "Balinkbayan Filipino Korean Heritage Association South Korea",
-                        href: "/services/overseas-partners/balinkbayan-filipino-korean-heritage-association-south-korea",
+                        label: "Balinkbayan Filipino Korean Heritage Association, South Korea",
+                        target: "_blank",
+                        href: "https://filkoha.balinkbayan.gov.ph/",
                     },
                     {
                         label: "BalinkBayan Coalition of Filipino American Chamber of Commerce",
-                        href: "/services/overseas-partners/balinkbayan-coalition-of-filipino-american-chamber-of-commerce",
+                        target: "_blank",
+                        href: "https://cofacc.balinkbayan.gov.ph/",
                     },
                     {
-                        label: "BalikBayan Philippine Institute of Civil Engineers, Qatar",
-                        href: "/services/overseas-partners/balikbayan-philippine-institute-of-civil-engineers-qatar",
+                        label: "BalinkBayan Philippine Institute of Civil Engineers, Qatar",
+                        target: "_blank",
+                        href: "https://piceqatar.balinkbayan.gov.ph/",
                     },
                     {
                         label: "Balinkbayan Institute of Electronics Engineers of the Philippines",
-                        href: "/services/overseas-partners/balikbayan-institute-of-electronics-engineers-of-the-philippines",
+                        target: "_blank",
+                        href: "https://iecep.balinkbayan.gov.ph/",
                     },
                     {
-                        label: "BalikBayan Indiana Feed The Hungry",
-                        href: "/services/overseas-partners/balikbayan-indiana-feed-the-hungry",
+                        label: "BalinkBayan Indiana Feed The Hungry",
+                        target: "_blank",
+                        href: "https://fth.balinkbayan.gov.ph/",
 
                     },
                     {
                         label: "Balinkbayan Association of Fil-Am Teachers in America",
-                        href: "/services/overseas-partners/balikbayan-association-of-fil-am-teachers-in-america",
+                        target: "_blank",
+                        href: "https://afta.balinkbayan.gov.ph/",
                     },
                     {
-                        label: "Balinkbayan Batangas Varsitarian International Chapter Singapore (BVISO)",
-                        href: "/services/overseas-partners/batangas-varsitarian-international-chapter-singapore-bviso",
+                        label: "Batangas Varsitarian International Chapter Singapore (BVISG)",
+                        target: "_blank",
+                        href: "https://bvisg.balinkbayan.gov.ph/",
                     },
                     {
-                        label: "Balinkbayan Philippine Bayanihan Society Singapore (PBSS)",
-                        href: "/services/overseas-partners/philippine-bayanihan-society-singapore-pbss",
+                        label: "Philippine Bayanihan Society Singapore (PBSS)",
+                        target: "_blank",
+                        href: "https://pbss.balinkbayan.gov.ph/",
                     },
                     {
-                        label: "Balinkbayan United Architects of the Philippines-Singapore Chapter (UAPS)",
-                        href: "/services/overseas-partners/united-architects-of-the-philippines-singapore-chapter-uaps",
+                        label: "United Architects of the Philippines-Singapore Chapter (UAPS)",
+                        target: "_blank",
+                        href: "https://uaps.balinkbayan.gov.ph/",
                     },
                     {
                         label: "Kalayaan Cultural Community Center",
-                        href: "/services/overseas-partners/kalayaan-cultural-community-center",
+                        target: "_blank",
+                        href: "https://kccc.balinkbayan.gov.ph/",
                     }
                 ]
             },
@@ -253,21 +263,21 @@ export const navLinks: NavItem[] = [
                 links: [
                     {
                         label: "Bureau of Treasury (BTr)",
-                        href: "/services/partners/bureau-of-treasure",
+                        href: "/services/resource-agency/bureau-of-the-treasury",
                     },
                     {
                         label: "Cooperative Development Authority (CDA)",
-                        href: "/services/partners/cooperative-development-authority",
+                        href: "/services/resource-agency/cooperative-development-authority",
                     },
                     {
                         label: "Overseas Filipino Bank (OFBank)",
-                        href: "/services/partners/overseas-filipino-bank",
+                        href: "/services/resource-agency/overseas-filipino-bank",
                     }
                 ]
             },
             {
                 label: "Tourism Incentive for Overseas Filipinos",
-                href: "/services/tourism-incentive-for-overseas-filipinos",
+                href: "/services/tourism-incentive",
             }
 
 
