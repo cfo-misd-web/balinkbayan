@@ -160,3 +160,34 @@ code {
     @apply bg-background text-foreground;
   }
 }
+
+.tiptap [data-layout="2-col"] {
+  display: inline-block;
+  width: calc(50% - 5px);
+  margin-right: 5px;
+}
+
+.tiptap [data-layout="2-col"]:nth-of-type(2n) {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.tiptap [data-layout="3-col"] {
+  display: inline-block;
+  width: calc(33.33% - 4px);
+  margin-right: 6px;
+}
+
+.tiptap [data-layout="3-col"]:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.tiptap ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.tiptap ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+}

@@ -137,7 +137,7 @@ function RouteComponent() {
         {
           Incens: '- protection from requisition of investment'
         },
-      ] ,
+      ],
       tezIncentive: [],
       disadvantagesTitle: 'Challenging preparation',
       disadvantagesDesc: ': Tour promos and packages include hotel accommodations, itineraries, and transport services.',
@@ -181,14 +181,14 @@ function RouteComponent() {
       <BiggerBanner text='Business Opportunities in the PH' label='Services' img_url='/img-assets/start-a-business/services/airport-man-travel-1822133.jpg' />
       <section className='text-cyan-900'>
         <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col items-center justify-center mx-auto my-20 bg-light space-y-20'>
-          <Paragraph>The service sector is considered as one of the country’s primary tools for economic growth. According to the National Economic and Development Authority, the service sector can give significant contributions to the country’s inclusive growth. Aside from the employment and export earnings it provides, it also allows economic transformation through inter-sectoral connections. Sectors connected to the service sector include agriculture, manufacturing, and retail trading.<br/><br/>
+          <Paragraph>The service sector is considered as one of the country’s primary tools for economic growth. According to the National Economic and Development Authority, the service sector can give significant contributions to the country’s inclusive growth. Aside from the employment and export earnings it provides, it also allows economic transformation through inter-sectoral connections. Sectors connected to the service sector include agriculture, manufacturing, and retail trading.<br /><br />
 
-          The service sector is expected to grow further because of the country’s economic development plan.<br/><br/>
+            The service sector is expected to grow further because of the country’s economic development plan.<br /><br />
 
-          Businesses in the service sector provide facilities, amenities, and assistances to customers. This includes financial services, travel and tourism, health and wellness, computer and printing shops, and public transportation services.
-          
-          
-          <p className='italic font-light text-center'><br/>(Sources: National Economic and Development Authority, Asian Development Bank, and Economy Watch)</p>
+            Businesses in the service sector provide facilities, amenities, and assistances to customers. This includes financial services, travel and tourism, health and wellness, computer and printing shops, and public transportation services.
+
+
+            <p className='italic font-light text-center'><br />(Sources: National Economic and Development Authority, Asian Development Bank, and Economy Watch)</p>
           </Paragraph>
           {/*  */}
           <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col items-center justify-center mx-auto bg-light'>
@@ -221,7 +221,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {technologyShops.map((i,idx) => (
+                    {technologyShops.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -232,35 +232,35 @@ function RouteComponent() {
                 {/*  */}
                 <Paragraph className='text-center italic font-light'>*from <RoseAnchor href_url='http://www.gmanetwork.com/news/story/367983/scitech/technology/pinoys-lead-the-world-in-social-media-engagement-study'>http://www.gmanetwork.com/news/story/367983/scitech/technology/pinoys-lead-the-world-in-social-media-engagement-study</RoseAnchor></Paragraph>
                 {/*  */}
-                <Paragraph><b>How to Register a Computer, Printing, and Photocopy Business</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
+                <Paragraph><b>How to Register a Computer, Printing, and Photocopy Business</b><br /><br />
 
-                  <b>Validity</b>: 5 years<br/><br/>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
 
-                  The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.
-                  </Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br/><br/>
+                      <b>Validity</b>: 5 years<br /><br />
 
-                  <b>Validity</b>: 1 year
-                  </Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
-                </div></Paragraph>
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.
+                    </Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br /><br />
+
+                      <b>Validity</b>: 1 year
+                    </Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
+                  </div></Paragraph>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
         {/*  */}
         <Heading5 className='max-lg:mx-4 mx-auto w-full max-w-3xl'>Financial</Heading5>
-          <div className='bg-cyan-900 max-lg:px-4 text-white w-full flex items-center flex-col justify-center py-5 mb-32'>
+        <div className='bg-cyan-900 max-lg:px-4 text-white w-full flex items-center flex-col justify-center py-5 mb-32'>
           <Accordion type='single' collapsible className='max-lg:mx-4 mx-auto w-full max-w-3xl'>
             <AccordionItem value='item-1' className='border-b mb-2'>
               <AccordionHeader>
@@ -273,13 +273,13 @@ function RouteComponent() {
                   <Paragraph>The General Baking Law of 2000 directs the Bangko Sentral ng Pilipinas (BSP) towards the promotion and maintenance of a stable and efficient banking and financial system that is globally competitive, dynamic, and responsive to the demands of a developing economy. However, as a heavily regulated sector, financial institutions fail to address the needs of individuals from low-income level. This segment of society is usually in need of short-term and small amount of loans, which are also uncollateralized.</Paragraph>
                   <img src='/img-assets/start-a-business/services/service-financial.png' />
                 </div>
-                <Paragraph>Through Social Reform and Alleviation Act, the demand of the low income bracket is recognized and resolved. Particularly, one of it salient provisions is the creation and development of microfinance. Microfinance is noted as an essential tool to support poverty reduction. The EIU Global Microscope on the Microfinance Business Environment commended Bangko Sentral ng Pilipinas (BSP) for continuously promoting an enabling environment for microfinance.<br/><br/>
+                <Paragraph>Through Social Reform and Alleviation Act, the demand of the low income bracket is recognized and resolved. Particularly, one of it salient provisions is the creation and development of microfinance. Microfinance is noted as an essential tool to support poverty reduction. The EIU Global Microscope on the Microfinance Business Environment commended Bangko Sentral ng Pilipinas (BSP) for continuously promoting an enabling environment for microfinance.<br /><br />
 
-                In 2013, the aggregate savings of microfinance clients attained a peak at P 8.9 billion despite of being unregulated by the General Banking Law. As a non-regulated sector, microfinance offers interest rates higher than the market rates. The upward trend of microfinance makes it as a viable business and investment opportunities. In the Philippines, there are two widely known types of microfinance: microcredit and pawn shop.<br/><br/>
+                  In 2013, the aggregate savings of microfinance clients attained a peak at P 8.9 billion despite of being unregulated by the General Banking Law. As a non-regulated sector, microfinance offers interest rates higher than the market rates. The upward trend of microfinance makes it as a viable business and investment opportunities. In the Philippines, there are two widely known types of microfinance: microcredit and pawn shop.<br /><br />
 
-                Microcredit, also known as microfinance loans, are small loans granted to the poor and low-income households for their microenterprise and small businesses to enable them to raise their income levels and improve their living standards. Other microfinance products include loans, deposits, transfers or payments or micro insurance.<br/><br/>
+                  Microcredit, also known as microfinance loans, are small loans granted to the poor and low-income households for their microenterprise and small businesses to enable them to raise their income levels and improve their living standards. Other microfinance products include loans, deposits, transfers or payments or micro insurance.<br /><br />
 
-                Microfinance loans are typically unsecured, for relatively short periods of time (180 days) with monthly (or more frequent) amortizations of interest and principal, and often featuring a joint and several guarantee of one or more persons and, certainly, seldom with tangible collateral.</Paragraph>
+                  Microfinance loans are typically unsecured, for relatively short periods of time (180 days) with monthly (or more frequent) amortizations of interest and principal, and often featuring a joint and several guarantee of one or more persons and, certainly, seldom with tangible collateral.</Paragraph>
                 {/*  */}
                 <Table className='table-fixed'>
                   <TableHeader className='border-1'>
@@ -293,7 +293,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {microcredit.map((i,idx) => (
+                    {microcredit.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -302,60 +302,60 @@ function RouteComponent() {
                   </TableBody>
                 </Table>
                 {/*  */}
-                <Paragraph><b>How to establish a micro-lending business?</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Secure a Certificate of Authority<br/><br/>
-
-                  In forming a microfinance organization, choose the corporate and trade name that shall include the word “Microfinance” to indicate its primary activity. The purpose clause of the Articles of Incorporation shall state that the organization conducts microfinance operations pursuant to Republic Acy No. 8425, the Social Reform and Poverty Alleviation Act.</Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Acquire the minimum capital of P150, 000</Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Complete all the necessary requirements<br/><br/>
-                  
-                  Microfinance shall file with SEC four copies of duly accomplished application form to operate as a Micro-finance-NGO, signed under oath by the President, together with the following documents in the prescribed form:<br/><br/>
+                <Paragraph><b>How to establish a micro-lending business?</b><br /><br />
 
                   <div className='grid grid-cols-12 gap-y-5'>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'>Information sheet</Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'>NBI clearance of each director/officer</Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'>President Sworn Statement and Undertaking</Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'>Business plan including method of marketing its product and sources of funds and maturities of credit</Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'>Statement of its compliance with Rule 17, 1 (2) (A) (i) and (ii) of the Amended Implementing Rules and Regulations of the Securities Regulation Code</Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-11'>A location map indicating the exact address of the principal office signed by the President and countersigned by the Corporate Secretary</Paragraph>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Secure a Certificate of Authority<br /><br />
+
+                      In forming a microfinance organization, choose the corporate and trade name that shall include the word “Microfinance” to indicate its primary activity. The purpose clause of the Articles of Incorporation shall state that the organization conducts microfinance operations pursuant to Republic Acy No. 8425, the Social Reform and Poverty Alleviation Act.</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Acquire the minimum capital of P150, 000</Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Complete all the necessary requirements<br /><br />
+
+                      Microfinance shall file with SEC four copies of duly accomplished application form to operate as a Micro-finance-NGO, signed under oath by the President, together with the following documents in the prescribed form:<br /><br />
+
+                      <div className='grid grid-cols-12 gap-y-5'>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'>Information sheet</Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'>NBI clearance of each director/officer</Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'>President Sworn Statement and Undertaking</Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'>Business plan including method of marketing its product and sources of funds and maturities of credit</Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'>Statement of its compliance with Rule 17, 1 (2) (A) (i) and (ii) of the Amended Implementing Rules and Regulations of the Securities Regulation Code</Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-11'>A location map indicating the exact address of the principal office signed by the President and countersigned by the Corporate Secretary</Paragraph>
+                      </div>
+                    </Paragraph>
                   </div>
-                  </Paragraph>
-                </div>
                 </Paragraph>
                 <Paragraph className='text-center'>4.</Paragraph>
                 <Paragraph className='col-span-11'>Register the micro-lending business with the Securities and Exchange Commission (SEC)</Paragraph>
                 {/*  */}
-                <Paragraph><b>Regulation and Compliance</b><br/><br/>
-                
-                Microcredit business is under the provision of the “Rules and Regulation on Microfinance Non-Government Organization” which provides specific guidelines on capital requirement, amount and charges on loans, maintenance of books of accounts and records, and the authority of SEC. The Bangko Sentral ng Pilipinas also supervises the sector through implementing circulars related to microfinance:<br/><br/>
+                <Paragraph><b>Regulation and Compliance</b><br /><br />
 
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>(1)</Paragraph>
-                  <Paragraph className='col-span-11'>Microfinance Loan Regulations</Paragraph>
-                  <Paragraph className='text-center'>(2)</Paragraph>
-                  <Paragraph className='col-span-11'>Rediscounting for Microfinance Loans</Paragraph>
-                  <Paragraph className='text-center'>(3)</Paragraph>
-                  <Paragraph className='col-span-11'>Reporting Requirements for Microfinance Loans</Paragraph>
-                  <Paragraph className='text-center'>(4)</Paragraph>
-                  <Paragraph className='col-span-11'>Documentary Requirements for Microfinance Loans Clients</Paragraph>
-                  <Paragraph className='text-center'>(5)</Paragraph>
-                  <Paragraph className='col-span-11'>Microfinance Products</Paragraph>
-                  <Paragraph className='text-center'>(6)</Paragraph>
-                  <Paragraph className='col-span-11'>Governance of Microfinance Banks</Paragraph>
-                  <Paragraph className='text-center'>(7)</Paragraph>
-                  <Paragraph className='col-span-11'>Microfinance Ratings</Paragraph>
-                </div><br/>
+                  Microcredit business is under the provision of the “Rules and Regulation on Microfinance Non-Government Organization” which provides specific guidelines on capital requirement, amount and charges on loans, maintenance of books of accounts and records, and the authority of SEC. The Bangko Sentral ng Pilipinas also supervises the sector through implementing circulars related to microfinance:<br /><br />
+
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>(1)</Paragraph>
+                    <Paragraph className='col-span-11'>Microfinance Loan Regulations</Paragraph>
+                    <Paragraph className='text-center'>(2)</Paragraph>
+                    <Paragraph className='col-span-11'>Rediscounting for Microfinance Loans</Paragraph>
+                    <Paragraph className='text-center'>(3)</Paragraph>
+                    <Paragraph className='col-span-11'>Reporting Requirements for Microfinance Loans</Paragraph>
+                    <Paragraph className='text-center'>(4)</Paragraph>
+                    <Paragraph className='col-span-11'>Documentary Requirements for Microfinance Loans Clients</Paragraph>
+                    <Paragraph className='text-center'>(5)</Paragraph>
+                    <Paragraph className='col-span-11'>Microfinance Products</Paragraph>
+                    <Paragraph className='text-center'>(6)</Paragraph>
+                    <Paragraph className='col-span-11'>Governance of Microfinance Banks</Paragraph>
+                    <Paragraph className='text-center'>(7)</Paragraph>
+                    <Paragraph className='col-span-11'>Microfinance Ratings</Paragraph>
+                  </div><br />
                 </Paragraph>
               </AccordionContent>
             </AccordionItem>
@@ -383,7 +383,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {pawnshop.map((i,idx) => (
+                    {pawnshop.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -392,48 +392,48 @@ function RouteComponent() {
                   </TableBody>
                 </Table>
                 {/*  */}
-                <Paragraph><b>How to register your pawn shop?</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Choose a pawnshop name and call Bangko Sentral ng Pilipinas (BSP) pawnshop hotline to check if your chosen pawnshop name is still available.</Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Register your business with; the Bureau of Commerce, for sole proprietorship; or the Securities and Exchange Commission, for partnerships or corporations.</Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Secure a business permit from the city or municipality where the pawnshop will be established.</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the pawnshop with the BSP by submitting all the requirements below.</Paragraph>
-                </div>
+                <Paragraph><b>How to register your pawn shop?</b><br /><br />
+
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Choose a pawnshop name and call Bangko Sentral ng Pilipinas (BSP) pawnshop hotline to check if your chosen pawnshop name is still available.</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Register your business with; the Bureau of Commerce, for sole proprietorship; or the Securities and Exchange Commission, for partnerships or corporations.</Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Secure a business permit from the city or municipality where the pawnshop will be established.</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the pawnshop with the BSP by submitting all the requirements below.</Paragraph>
+                  </div>
                 </Paragraph>
                 {/*  */}
-                <Paragraph><b>Requirements:</b><br/><br/>
-                
-                Incorporations papers duly authenticated by the Securities Exchange Commission (for corporation and partnership)/CDA Registration (for Cooperative) (Activity applied for should be indicated/added in the purpose clause);<br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>&#8226;</Paragraph>
-                  <Paragraph className='col-span-11'>Copy of certificate of Registration duly authenticated by the Department of Trade and Industry (for single proprietorship);</Paragraph>
-                  <Paragraph className='text-center'>&#8226;</Paragraph>
-                  <Paragraph className='col-span-11'>Copy of business license/permit from the city or municipality having territorial jurisdiction over the place of establishment and operation (Activity applied for should be indicated/added in the kind of business and original copy should be presented);</Paragraph>
-                  <Paragraph className='text-center'>&#8226;</Paragraph>
-                  <Paragraph className='col-span-11'>List of stockholders/partners/proprietor/directors/principal officers as the case may be; (Name, Designation, Contact No. and Address);</Paragraph>
-                  <Paragraph className='text-center'>&#8226;</Paragraph>
-                  <Paragraph className='col-span-11'>Notarized Deed of Undertaking (Annex B) to strictly comply with the requirements of all relevant laws, rules and regulations, signed either by the owner, partner, president or officer of equivalent rank;</Paragraph>
-                  <Paragraph className='text-center'>&#8226;</Paragraph>
-                  <Paragraph className='col-span-11'>Two (2) copies passport size pictures and Xerox copy of one (1) valid ID with picture and signature of the proprietor or the officer duly authorized by the Board of Directors or Partners; and</Paragraph>
-                  <Paragraph className='text-center'>&#8226;</Paragraph>
-                  <Paragraph className='col-span-11'>For Remittance Agent (RA) Only – notarized document on tie-up agreement with a remittance company (REMCO)/Remittance Service Provider (RSP).<br/><br/>
+                <Paragraph><b>Requirements:</b><br /><br />
 
-                  <div className='grid grid-cols-6 gap-y-5'>
-                    <Paragraph className='text-center'>1.</Paragraph>
-                    <Paragraph className='col-span-5'>For any REMCO/RSP or counterparty based abroad, proof that the REMCO/RSP or counterparty is licensed by the regulatory authority to engage in the remittance business and is subject to the anti-money laundering laws of the country;</Paragraph>
-                    <Paragraph className='text-center'>2.</Paragraph>
-                    <Paragraph className='col-span-5'>For an entity acting as local agent of a REMCO/RSP, a copy of agreement between the local agent and the REMCO/RSP; and</Paragraph>
-                    <Paragraph className='text-center'>3.</Paragraph>
-                    <Paragraph className='col-span-5'>For an entity that is a sub-agent or sub-representative of a local agent, copy of tie-up agreement between sub agent/sub-representative and local agent.</Paragraph>
+                  Incorporations papers duly authenticated by the Securities Exchange Commission (for corporation and partnership)/CDA Registration (for Cooperative) (Activity applied for should be indicated/added in the purpose clause);<br /><br />
+
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>&#8226;</Paragraph>
+                    <Paragraph className='col-span-11'>Copy of certificate of Registration duly authenticated by the Department of Trade and Industry (for single proprietorship);</Paragraph>
+                    <Paragraph className='text-center'>&#8226;</Paragraph>
+                    <Paragraph className='col-span-11'>Copy of business license/permit from the city or municipality having territorial jurisdiction over the place of establishment and operation (Activity applied for should be indicated/added in the kind of business and original copy should be presented);</Paragraph>
+                    <Paragraph className='text-center'>&#8226;</Paragraph>
+                    <Paragraph className='col-span-11'>List of stockholders/partners/proprietor/directors/principal officers as the case may be; (Name, Designation, Contact No. and Address);</Paragraph>
+                    <Paragraph className='text-center'>&#8226;</Paragraph>
+                    <Paragraph className='col-span-11'>Notarized Deed of Undertaking (Annex B) to strictly comply with the requirements of all relevant laws, rules and regulations, signed either by the owner, partner, president or officer of equivalent rank;</Paragraph>
+                    <Paragraph className='text-center'>&#8226;</Paragraph>
+                    <Paragraph className='col-span-11'>Two (2) copies passport size pictures and Xerox copy of one (1) valid ID with picture and signature of the proprietor or the officer duly authorized by the Board of Directors or Partners; and</Paragraph>
+                    <Paragraph className='text-center'>&#8226;</Paragraph>
+                    <Paragraph className='col-span-11'>For Remittance Agent (RA) Only – notarized document on tie-up agreement with a remittance company (REMCO)/Remittance Service Provider (RSP).<br /><br />
+
+                      <div className='grid grid-cols-6 gap-y-5'>
+                        <Paragraph className='text-center'>1.</Paragraph>
+                        <Paragraph className='col-span-5'>For any REMCO/RSP or counterparty based abroad, proof that the REMCO/RSP or counterparty is licensed by the regulatory authority to engage in the remittance business and is subject to the anti-money laundering laws of the country;</Paragraph>
+                        <Paragraph className='text-center'>2.</Paragraph>
+                        <Paragraph className='col-span-5'>For an entity acting as local agent of a REMCO/RSP, a copy of agreement between the local agent and the REMCO/RSP; and</Paragraph>
+                        <Paragraph className='text-center'>3.</Paragraph>
+                        <Paragraph className='col-span-5'>For an entity that is a sub-agent or sub-representative of a local agent, copy of tie-up agreement between sub agent/sub-representative and local agent.</Paragraph>
+                      </div>
+                    </Paragraph>
                   </div>
-                  </Paragraph>
-                </div>
                 </Paragraph>
                 {/*  */}
                 <div className='grid grid-cols-12 gap-y-5'>
@@ -444,9 +444,9 @@ function RouteComponent() {
                 </div>
                 {/*  */}
                 <Paragraph>NOTE: The pawnshop should be open within six months after the application is approved. The permit will be revoked otherwise.</Paragraph>
-                <Paragraph><b>Regulation and Compliance</b><br/><br/>
-                
-                Pawnshops are under the regulation of the Bangko Sentral ng Pilipinas. The Presidential Decree No. 114 of January 29, 1973 specifies all the regulations on the establishment and operation of pawn shops.</Paragraph>
+                <Paragraph><b>Regulation and Compliance</b><br /><br />
+
+                  Pawnshops are under the regulation of the Bangko Sentral ng Pilipinas. The Presidential Decree No. 114 of January 29, 1973 specifies all the regulations on the establishment and operation of pawn shops.</Paragraph>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -479,7 +479,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {healthWellness.map((i,idx) => (
+                    {healthWellness.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -490,51 +490,51 @@ function RouteComponent() {
                 {/*  */}
                 <Paragraph className='text-center italic font-light'>*from <RoseAnchor href_url='http://www.gmanetwork.com/news/story/367983/scitech/technology/pinoys-lead-the-world-in-social-media-engagement-study'>http://www.gmanetwork.com/news/story/367983/scitech/technology/pinoys-lead-the-world-in-social-media-engagement-study</RoseAnchor></Paragraph>
                 {/*  */}
-                <Paragraph><b>How to Register a Computer, Printing, and Photocopy Business</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
+                <Paragraph><b>How to Register a Computer, Printing, and Photocopy Business</b><br /><br />
 
-                  <b>Validity</b>: 5 years<br/><br/>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
 
-                  The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.
-                  </Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br/><br/>
+                      <b>Validity</b>: 5 years<br /><br />
 
-                  <b>Validity</b>: 1 year
-                  </Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
-                </div></Paragraph>
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.
+                    </Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br /><br />
+
+                      <b>Validity</b>: 1 year
+                    </Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
+                  </div></Paragraph>
                 {/*  */}
-                <Paragraph><b>How to register a home style business?</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
+                <Paragraph><b>How to register a home style business?</b><br /><br />
 
-                  <b>Validity</b>: 5 years<br/><br/>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
 
-                  The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.</Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br/><br/>
+                      <b>Validity</b>: 5 years<br /><br />
 
-                  <b>Validity</b>: 1 year</Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
-                  <Paragraph className='text-center'>6.</Paragraph>
-                  <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
-                </div>
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br /><br />
+
+                      <b>Validity</b>: 1 year</Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
+                    <Paragraph className='text-center'>6.</Paragraph>
+                    <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
+                  </div>
                 </Paragraph>
               </AccordionContent>
             </AccordionItem>
@@ -553,11 +553,11 @@ function RouteComponent() {
               </AccordionHeader>
               <AccordionContent className='my-10 space-y-10'>
                 <div className='flex flex-row items-center space-x-20'>
-                  <Paragraph>As of the third quarter of 2014, there is a continuous surge in the tourism industry. Specifically, it experienced a growth of 2.72% over its previous year’s volume for the same period. The positive trend is attributed to the marketing efforts and participation of the country in international travel fairs, as well as tourism infrastructure development undertaken.<br/><br/>
+                  <Paragraph>As of the third quarter of 2014, there is a continuous surge in the tourism industry. Specifically, it experienced a growth of 2.72% over its previous year’s volume for the same period. The positive trend is attributed to the marketing efforts and participation of the country in international travel fairs, as well as tourism infrastructure development undertaken.<br /><br />
 
-                  The growth in international visitor arrivals and domestic travel movements is expected to bring about a corresponding increase in capacity requirements and demand for new products, facilities, and services, thus paving the way for business and investment opportunities in the tourism industry.<br/><br/>
+                    The growth in international visitor arrivals and domestic travel movements is expected to bring about a corresponding increase in capacity requirements and demand for new products, facilities, and services, thus paving the way for business and investment opportunities in the tourism industry.<br /><br />
 
-                  Tourist Inns are lodging establishments that caters to transient which does not meet the minimum requirements of an economy hotel. The anticipated growth in international visitor arrivals and domestic travel movements is expected to bring about a corresponding increase in capacity requirements and demand for new products, facilities and services, thus paving the way for the establishment of tourist inns.</Paragraph>
+                    Tourist Inns are lodging establishments that caters to transient which does not meet the minimum requirements of an economy hotel. The anticipated growth in international visitor arrivals and domestic travel movements is expected to bring about a corresponding increase in capacity requirements and demand for new products, facilities and services, thus paving the way for the establishment of tourist inns.</Paragraph>
                 </div>
                 <Table className='table-fixed'>
                   <TableHeader className='border-1'>
@@ -571,7 +571,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {tourismInns.map((i,idx) => (
+                    {tourismInns.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -580,85 +580,85 @@ function RouteComponent() {
                   </TableBody>
                 </Table>
                 {/*  */}
-                <Paragraph><b>How to establish a tourist inn?</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Find a location that maximizes the potential of the tourist inn business. The following should be considered when choosing a location:<br/><br/>
+                <Paragraph><b>How to establish a tourist inn?</b><br /><br />
 
-                  <div className='grid grid-cols-6 gap-y-5'>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-5'><b>Potential demands</b>: Select a location that is within the area of tourist destinations such as churches, historical sitesTourist Inns, and scenic views. Spots with unique activities like diving, bungee jumping, and hiking could also be considered.</Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-5'><b>Ease of transport</b>: For tourists’ convenience, the location should have readily available transport services such as airports and bus terminals. It should also have access to principal highways and roads.</Paragraph>
-                    <Paragraph className='text-center'>&#8226;</Paragraph>
-                    <Paragraph className='col-span-5'><b>Services that cater to tourists’ needs</b>: The location should be near businesses that provide services that tourists require. These are laundry shops, restaurants, convenience stores, pasalubong and handicrafts stores, and other micro-businesses in the area. This boosts the potential of the tourist inn business, supports existing businesses, and upholds the tourism industry.</Paragraph>
-                  </div></Paragraph>
-
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the tourist inn business.<br/><br/>
-                  
-                  Complete all the necessary requirements below and pass them to the specified government agency. Unless otherwise indicated in the form, the application shall be accompanied by two (2) copies of the following documents;<br/><br/>
-                  
                   <div className='grid grid-cols-12 gap-y-5'>
-                    <Paragraph className='text-center'>a.</Paragraph>
-                    <Paragraph className='col-span-11'>In the case of corporation or partnership, a certified true copy of the Articles of Incorporation, its by-laws, or Articles of Partnership and amendments thereof, duly registered with the Securities and Exchange Commission, and Business Name Certificate and amendments thereof, if any.</Paragraph>
-                    <Paragraph className='text-center'>b.</Paragraph>
-                    <Paragraph className='col-span-11'>Applicant’s latest income tax return and audited financial statements for the preceding year of its operation (not applicable for new establishments).</Paragraph>
-                    <Paragraph className='text-center'>c.</Paragraph>
-                    <Paragraph className='col-span-11'>List of the names of all officials and employees and their respective designations, nationalities, home addresses; for alien personnel – valid visa from the Bureau of Immigration and the appropriate permit from the Department of Labor and Employment.</Paragraph>
-                    <Paragraph className='text-center'>d.</Paragraph>
-                    <Paragraph className='col-span-11'>Mayor’s permit and/or municipal license.</Paragraph>
-                    <Paragraph className='text-center'>e.</Paragraph>
-                    <Paragraph className='col-span-11'>Such other papers or documents as may be required from time to time by the Department.<br/><br/>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Find a location that maximizes the potential of the tourist inn business. The following should be considered when choosing a location:<br /><br />
 
-                    <div className='grid grid-cols-12 gap-y-5'>
-                      <Paragraph className='text-center'>&#8226;</Paragraph>
-                      <Paragraph className='col-span-11'>Bedroom facilities and furnishing must meet the following minimum requirements;<br/><br/>
+                      <div className='grid grid-cols-6 gap-y-5'>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-5'><b>Potential demands</b>: Select a location that is within the area of tourist destinations such as churches, historical sitesTourist Inns, and scenic views. Spots with unique activities like diving, bungee jumping, and hiking could also be considered.</Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-5'><b>Ease of transport</b>: For tourists’ convenience, the location should have readily available transport services such as airports and bus terminals. It should also have access to principal highways and roads.</Paragraph>
+                        <Paragraph className='text-center'>&#8226;</Paragraph>
+                        <Paragraph className='col-span-5'><b>Services that cater to tourists’ needs</b>: The location should be near businesses that provide services that tourists require. These are laundry shops, restaurants, convenience stores, pasalubong and handicrafts stores, and other micro-businesses in the area. This boosts the potential of the tourist inn business, supports existing businesses, and upholds the tourism industry.</Paragraph>
+                      </div></Paragraph>
 
-                      <div className='grid grid-cols-12 gap-y-3'>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>All bedrooms shall have attached toilet and bath equipped with 24-hour service of running water. They shall have adequate natural as well as artificial light and ventilation and shall be furnished with comfortable beds and quality furniture (mirror, writing table, chair, closet and dresser).</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Walls shall be painted or wall-wrapped and kept clean and pleasing to the eye. Windows shall be furnished with clean and appropriate draperies. Floors shall be of good flooring materials.</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>All single bedrooms shall have a floor area of not less than nine (9) square meters and all twin-rooms or double-rooms shall have a floor area of not less than sixteen (16) square meters.</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>There shall be vacuum jugs and thermos flasks with drinking water with glasses in each bedroom. There shall be adequate supply of clean linen, blankets and towels that shall be changed regularly.</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the tourist inn business.<br /><br />
+
+                      Complete all the necessary requirements below and pass them to the specified government agency. Unless otherwise indicated in the form, the application shall be accompanied by two (2) copies of the following documents;<br /><br />
+
+                      <div className='grid grid-cols-12 gap-y-5'>
+                        <Paragraph className='text-center'>a.</Paragraph>
+                        <Paragraph className='col-span-11'>In the case of corporation or partnership, a certified true copy of the Articles of Incorporation, its by-laws, or Articles of Partnership and amendments thereof, duly registered with the Securities and Exchange Commission, and Business Name Certificate and amendments thereof, if any.</Paragraph>
+                        <Paragraph className='text-center'>b.</Paragraph>
+                        <Paragraph className='col-span-11'>Applicant’s latest income tax return and audited financial statements for the preceding year of its operation (not applicable for new establishments).</Paragraph>
+                        <Paragraph className='text-center'>c.</Paragraph>
+                        <Paragraph className='col-span-11'>List of the names of all officials and employees and their respective designations, nationalities, home addresses; for alien personnel – valid visa from the Bureau of Immigration and the appropriate permit from the Department of Labor and Employment.</Paragraph>
+                        <Paragraph className='text-center'>d.</Paragraph>
+                        <Paragraph className='col-span-11'>Mayor’s permit and/or municipal license.</Paragraph>
+                        <Paragraph className='text-center'>e.</Paragraph>
+                        <Paragraph className='col-span-11'>Such other papers or documents as may be required from time to time by the Department.<br /><br />
+
+                          <div className='grid grid-cols-12 gap-y-5'>
+                            <Paragraph className='text-center'>&#8226;</Paragraph>
+                            <Paragraph className='col-span-11'>Bedroom facilities and furnishing must meet the following minimum requirements;<br /><br />
+
+                              <div className='grid grid-cols-12 gap-y-3'>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>All bedrooms shall have attached toilet and bath equipped with 24-hour service of running water. They shall have adequate natural as well as artificial light and ventilation and shall be furnished with comfortable beds and quality furniture (mirror, writing table, chair, closet and dresser).</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Walls shall be painted or wall-wrapped and kept clean and pleasing to the eye. Windows shall be furnished with clean and appropriate draperies. Floors shall be of good flooring materials.</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>All single bedrooms shall have a floor area of not less than nine (9) square meters and all twin-rooms or double-rooms shall have a floor area of not less than sixteen (16) square meters.</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>There shall be vacuum jugs and thermos flasks with drinking water with glasses in each bedroom. There shall be adequate supply of clean linen, blankets and towels that shall be changed regularly.</Paragraph>
+                              </div>
+                            </Paragraph>
+                            <Paragraph className='text-center'>&#8226;</Paragraph>
+                            <Paragraph className='col-span-11'>The parking space for vehicles is recommended to be proportionate to the number of lettable rooms and other public facilities of the inn.</Paragraph>
+                            <Paragraph className='text-center'>&#8226;</Paragraph>
+                            <Paragraph className='col-span-11'>The following areas must also be established within the vicinity of the tourist inns.<br /><br />
+
+                              <div className='grid grid-cols-12 gap-y-3'>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Reception and Information Counter</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Telephone</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Radio/ Television</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Dining Room</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Security</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Emergency Power</Paragraph>
+                                <Paragraph className='text-center'>-</Paragraph>
+                                <Paragraph className='col-span-11'>Fire-fighting facilities</Paragraph>
+                              </div>
+                            </Paragraph>
+                          </div>
+                        </Paragraph>
                       </div>
-                      </Paragraph>
-                      <Paragraph className='text-center'>&#8226;</Paragraph>
-                      <Paragraph className='col-span-11'>The parking space for vehicles is recommended to be proportionate to the number of lettable rooms and other public facilities of the inn.</Paragraph>
-                      <Paragraph className='text-center'>&#8226;</Paragraph>
-                      <Paragraph className='col-span-11'>The following areas must also be established within the vicinity of the tourist inns.<br/><br/>
-                      
-                      <div className='grid grid-cols-12 gap-y-3'>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Reception and Information Counter</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Telephone</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Radio/ Television</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Dining Room</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Security</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Emergency Power</Paragraph>
-                        <Paragraph className='text-center'>-</Paragraph>
-                        <Paragraph className='col-span-11'>Fire-fighting facilities</Paragraph>
-                      </div>
-                      </Paragraph>
-                    </div>
                     </Paragraph>
                   </div>
-                  </Paragraph>
-                </div>
                 </Paragraph>
                 {/*  */}
-                <Paragraph><b>Regulations and Compliance</b><br/><br/>
-                
-                Tourist inns are under the supervision of the Department of Tourism. Executive No. 120 states the rules and regulations that govern the accreditation of hotels, tourist inns, motels, apartels, resorts, pension houses and other accommodation establishments.</Paragraph>
+                <Paragraph><b>Regulations and Compliance</b><br /><br />
+
+                  Tourist inns are under the supervision of the Department of Tourism. Executive No. 120 states the rules and regulations that govern the accreditation of hotels, tourist inns, motels, apartels, resorts, pension houses and other accommodation establishments.</Paragraph>
               </AccordionContent>
             </AccordionItem>
             {/*  */}
@@ -685,16 +685,16 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {travelAgencies.map((i,idx) => (
+                    {travelAgencies.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'>
                           <b>{i.advantagesTitle}</b>
                           {i.advantagesDesc}
-                          {i.businessIncentive.map((i,idx) => (
-                            <p className='text-left' key={idx}><br/>{i.Incens}<br/></p>
+                          {i.businessIncentive.map((i, idx) => (
+                            <p className='text-left' key={idx}><br />{i.Incens}<br /></p>
                           ))}
-                          {i.tezIncentive.map((i,idx) => (
-                            <p className='text-left' key={idx}><br/>{i.Incens}<br/></p>
+                          {i.tezIncentive.map((i, idx) => (
+                            <p className='text-left' key={idx}><br />{i.Incens}<br /></p>
                           ))}
                         </TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -703,54 +703,54 @@ function RouteComponent() {
                   </TableBody>
                 </Table>
                 {/*  */}
-                <Paragraph><b>How to Register a Travel Agency Business</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
+                <Paragraph><b>How to Register a Travel Agency Business</b><br /><br />
 
-                  <b>Validity</b>: 5 years<br/><br/>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
 
-                  The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.</Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br/><br/>
-                  
-                  <b>Validity</b>: 1 year</Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.<br/><br/>
-                  Social Security System<br/>
-                  Loans and Investment Office<br/>
-                  SSS Building, East Avenue, Diliman,<br/>
-                  Quezon City<br/><br/>
-                  Email: member_relations@sss.gov.ph<br/>
-                  Website: <RoseAnchor href_url='https://www.sss.gov.ph'>www.sss.gov.ph</RoseAnchor></Paragraph>
-                  <Paragraph className='text-center'>6.</Paragraph>
-                  <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).<br/><br/>
-                  DOLE<br/>
-                  Labor Standard and Enforcement Division<br/>
-                  2nd Flr. Dy International Building, San Marcelino<br/><br/>
-                  Hotline No.: 527-8000<br/>
-                  Email: osec@dole.gov.ph<br/>
-                  Website: <RoseAnchor href_url='https://www.dole.gov.ph'>www.dole.gov.ph</RoseAnchor></Paragraph>
-                  <Paragraph className='text-center'>7.</Paragraph>
-                  <Paragraph className='col-span-11'>To avail of incentives provided in the Tourism Act of 2009, travel agencies within a tourism economic zone (TEZ) should register with TIEZA.<br/><br/>
-                  Tourism Infrastructure and Enterprise Zone Authority<br/>
-                  142 Amorsolo St., Legaspi Village<br/>
-                  Makati City<br/><br/>
-                  Fax No.:  463-9936</Paragraph>
-                  <Paragraph className='text-center'>8.</Paragraph>
-                  <Paragraph className='col-span-11'>Travel agencies need to be accredited by the Department of Tourism.<br/><br/>
-                  Department of Tourism Central Office<br/>
-                  #351 Sen. Gil Puyat Ave., JB Bldg., Makati City<br/><br/>
-                  Trunkline: (63 2) 459-5200 / 5230<br/><br/>
-                  Contact the DOT Regional or District Office where the business is located.<br/>
-                  <p className='text-left'>For online accreditation, visit: <RoseAnchor href_url='http://accreditationonline.tourism.gov.ph/Registration/registerpage.aspx'>http://accreditationonline.tourism.gov.ph/Registration/registerpage.aspx</RoseAnchor></p>
-                  </Paragraph>
-                </div>
+                      <b>Validity</b>: 5 years<br /><br />
+
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.</Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br /><br />
+
+                      <b>Validity</b>: 1 year</Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.<br /><br />
+                      Social Security System<br />
+                      Loans and Investment Office<br />
+                      SSS Building, East Avenue, Diliman,<br />
+                      Quezon City<br /><br />
+                      Email: member_relations@sss.gov.ph<br />
+                      Website: <RoseAnchor href_url='https://www.sss.gov.ph'>www.sss.gov.ph</RoseAnchor></Paragraph>
+                    <Paragraph className='text-center'>6.</Paragraph>
+                    <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).<br /><br />
+                      DOLE<br />
+                      Labor Standard and Enforcement Division<br />
+                      2nd Flr. Dy International Building, San Marcelino<br /><br />
+                      Hotline No.: 527-8000<br />
+                      Email: osec@dole.gov.ph<br />
+                      Website: <RoseAnchor href_url='https://www.dole.gov.ph'>www.dole.gov.ph</RoseAnchor></Paragraph>
+                    <Paragraph className='text-center'>7.</Paragraph>
+                    <Paragraph className='col-span-11'>To avail of incentives provided in the Tourism Act of 2009, travel agencies within a tourism economic zone (TEZ) should register with TIEZA.<br /><br />
+                      Tourism Infrastructure and Enterprise Zone Authority<br />
+                      142 Amorsolo St., Legaspi Village<br />
+                      Makati City<br /><br />
+                      Fax No.:  463-9936</Paragraph>
+                    <Paragraph className='text-center'>8.</Paragraph>
+                    <Paragraph className='col-span-11'>Travel agencies need to be accredited by the Department of Tourism.<br /><br />
+                      Department of Tourism Central Office<br />
+                      #351 Sen. Gil Puyat Ave., JB Bldg., Makati City<br /><br />
+                      Trunkline: (63 2) 459-5200 / 5230<br /><br />
+                      Contact the DOT Regional or District Office where the business is located.<br />
+                      <p className='text-left'>For online accreditation, visit: <RoseAnchor href_url='http://accreditationonline.tourism.gov.ph/Registration/registerpage.aspx'>http://accreditationonline.tourism.gov.ph/Registration/registerpage.aspx</RoseAnchor></p>
+                    </Paragraph>
+                  </div>
                 </Paragraph>
               </AccordionContent>
             </AccordionItem>
@@ -769,9 +769,9 @@ function RouteComponent() {
               </AccordionHeader>
               <AccordionContent className='my-10 space-y-10'>
                 <div className='flex flex-row items-center space-x-20'>
-                  <Paragraph>Transportation is a public necessity that allows commuters to go to and from places by riding public utility vehicles (PUVs) such as jeepneys, buses, tricycles, pedicabs, and FXs. These PUVs follow their respective routes.<br/><br/>
+                  <Paragraph>Transportation is a public necessity that allows commuters to go to and from places by riding public utility vehicles (PUVs) such as jeepneys, buses, tricycles, pedicabs, and FXs. These PUVs follow their respective routes.<br /><br />
 
-                  Another type of PUVs are taxis, which allow passengers to specify a location they want to go to.</Paragraph>
+                    Another type of PUVs are taxis, which allow passengers to specify a location they want to go to.</Paragraph>
                 </div>
                 <Table className='table-fixed'>
                   <TableHeader className='border-1'>
@@ -785,7 +785,7 @@ function RouteComponent() {
                     </TableRow>
                   </TableHeader>
                   <TableBody className='border-1 '>
-                    {transportationServices.map((i,idx) => (
+                    {transportationServices.map((i, idx) => (
                       <TableRow key={idx}>
                         <TableCell className='border-r-1 border-gray-400'><b>{i.advantagesTitle}</b>{i.advantagesDesc}</TableCell>
                         <TableCell><b>{i.disadvantagesTitle}</b>{i.disadvantagesDesc}</TableCell>
@@ -794,103 +794,103 @@ function RouteComponent() {
                   </TableBody>
                 </Table>
                 {/*  */}
-                <Paragraph><b>How to Register a Public Transportation Business</b><br/><br/>
-                
-                <div className='grid grid-cols-12 gap-y-5'>
-                  <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br/><br/>
+                <Paragraph><b>How to Register a Public Transportation Business</b><br /><br />
 
-                  <b>Validity</b>: 5 years<br/><br/>
+                  <div className='grid grid-cols-12 gap-y-5'>
+                    <Paragraph className='text-center'>1.</Paragraph>
+                    <Paragraph className='col-span-11'>Register the Business Name at the Department of Trade and Industry (for Single Proprietorships) or the Securities and Exchange Commission (for Partnerships and Corporations).<br /><br />
 
-                  The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.
-                  </Paragraph>
-                  <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br/><br/>
+                      <b>Validity</b>: 5 years<br /><br />
 
-                  <b>Validity</b>: 1 year
-                  </Paragraph>
-                  <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
-                  <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
-                  <Paragraph className='text-center'>5.</Paragraph>
-                  <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
-                  <Paragraph className='text-center'>6.</Paragraph>
-                  <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
-                  <Paragraph className='text-center'>7.</Paragraph>
-                  <Paragraph className='col-span-11'>Apply for a Professional Driver’s License (for taxis and jeepneys) or a Motorized Tricycle Operator’s Permit (for tricycles) from Land Transportation Office (LTO).</Paragraph>
-                  <Paragraph className='text-center'>8.</Paragraph>
-                  <Paragraph className='col-span-11'>Get a Certificate of Public Convenience (Franchise) at Land Transportation Franchising And Regulatory Board (LTFRB).</Paragraph>
-                  <Paragraph className='text-center'>9.</Paragraph>
-                  <Paragraph className='col-span-11'>Owners may opt to provide insurance for their vehicles and drivers.</Paragraph>
-                </div></Paragraph>
+                      The law governing the registration of business name is Act No. 3883, as amended by Act No. 41476 and R.A. No. 863, otherwise known as the Business Name Law.
+                    </Paragraph>
+                    <Paragraph className='text-center'>2.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Mayor’s permit from the municipality or city where the business is located.<br /><br />
+
+                      <b>Validity</b>: 1 year
+                    </Paragraph>
+                    <Paragraph className='text-center'>3.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for an Employer’s Tax Identification Number (TIN) at the Bureau of Internal Revenue (BIR).</Paragraph>
+                    <Paragraph className='text-center'>4.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for Authority to Print Receipts and Invoices at the BIR.</Paragraph>
+                    <Paragraph className='text-center'>5.</Paragraph>
+                    <Paragraph className='col-span-11'>Investors should register for a Social Security System (SSS) Certificate.</Paragraph>
+                    <Paragraph className='text-center'>6.</Paragraph>
+                    <Paragraph className='col-span-11'>For businesses with five or more employees, owners must register with the Department of Labor and Employment (DOLE).</Paragraph>
+                    <Paragraph className='text-center'>7.</Paragraph>
+                    <Paragraph className='col-span-11'>Apply for a Professional Driver’s License (for taxis and jeepneys) or a Motorized Tricycle Operator’s Permit (for tricycles) from Land Transportation Office (LTO).</Paragraph>
+                    <Paragraph className='text-center'>8.</Paragraph>
+                    <Paragraph className='col-span-11'>Get a Certificate of Public Convenience (Franchise) at Land Transportation Franchising And Regulatory Board (LTFRB).</Paragraph>
+                    <Paragraph className='text-center'>9.</Paragraph>
+                    <Paragraph className='col-span-11'>Owners may opt to provide insurance for their vehicles and drivers.</Paragraph>
+                  </div></Paragraph>
                 {/*  */}
                 <Heading5>BUSINESS OPPORTUNITIES</Heading5>
                 <div className='grid grid-cols-12 gap-y-5'>
                   <Paragraph className='text-center'>1.</Paragraph>
-                  <Paragraph className='col-span-11'>TAXI BUSINESS<br/><br/>
+                  <Paragraph className='col-span-11'>TAXI BUSINESS<br /><br />
 
-                  Requirements in establishing a Taxi business:<br/><br/>
+                    Requirements in establishing a Taxi business:<br /><br />
 
-                  <div className='grid grid-cols-12 gap-y-5'>
-                    <Paragraph className='text-center'>a.</Paragraph>
-                    <Paragraph className='col-span-11'>At least one car</Paragraph>
-                    <Paragraph className='text-center'>b.</Paragraph>
-                    <Paragraph className='col-span-11'>Professionally licensed drivers</Paragraph>
-                    <Paragraph className='text-center'>c.</Paragraph>
-                    <Paragraph className='col-span-11'>A Certificate of Public Convenience (Franchise)</Paragraph>
-                    <Paragraph className='text-center'>d.</Paragraph>
-                    <Paragraph className='col-span-11'>A garage to use during car barn<br/>
-                    
-                    <RoseAnchor href_url='http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-taxi-franchise/'>http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-taxi-franchise/</RoseAnchor></Paragraph>
-                  </div>
+                    <div className='grid grid-cols-12 gap-y-5'>
+                      <Paragraph className='text-center'>a.</Paragraph>
+                      <Paragraph className='col-span-11'>At least one car</Paragraph>
+                      <Paragraph className='text-center'>b.</Paragraph>
+                      <Paragraph className='col-span-11'>Professionally licensed drivers</Paragraph>
+                      <Paragraph className='text-center'>c.</Paragraph>
+                      <Paragraph className='col-span-11'>A Certificate of Public Convenience (Franchise)</Paragraph>
+                      <Paragraph className='text-center'>d.</Paragraph>
+                      <Paragraph className='col-span-11'>A garage to use during car barn<br />
+
+                        <RoseAnchor href_url='http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-taxi-franchise/'>http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-taxi-franchise/</RoseAnchor></Paragraph>
+                    </div>
                   </Paragraph>
                   {/*  */}
                   <Paragraph className='text-center'>2.</Paragraph>
-                  <Paragraph className='col-span-11'>JEEPNEY BUSINESS<br/><br/>
+                  <Paragraph className='col-span-11'>JEEPNEY BUSINESS<br /><br />
 
-                  Requirements in establishing a Jeepney business:<br/><br/>
+                    Requirements in establishing a Jeepney business:<br /><br />
 
-                  <div className='grid grid-cols-12 gap-y-5'>
-                    <Paragraph className='text-center'>a.</Paragraph>
-                    <Paragraph className='col-span-11'>At least one jeepney</Paragraph>
-                    <Paragraph className='text-center'>b.</Paragraph>
-                    <Paragraph className='col-span-11'>Professionally licensed drivers<br/>
-                    
-                    <RoseAnchor href_url='http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-jeepney-route/'>http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-jeepney-route/</RoseAnchor></Paragraph>
-                  </div>
+                    <div className='grid grid-cols-12 gap-y-5'>
+                      <Paragraph className='text-center'>a.</Paragraph>
+                      <Paragraph className='col-span-11'>At least one jeepney</Paragraph>
+                      <Paragraph className='text-center'>b.</Paragraph>
+                      <Paragraph className='col-span-11'>Professionally licensed drivers<br />
+
+                        <RoseAnchor href_url='http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-jeepney-route/'>http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-jeepney-route/</RoseAnchor></Paragraph>
+                    </div>
                   </Paragraph>
                   {/*  */}
                   <Paragraph className='text-center'>3.</Paragraph>
-                  <Paragraph className='col-span-11'>TRICYCLE BUSINESS<br/><br/>
+                  <Paragraph className='col-span-11'>TRICYCLE BUSINESS<br /><br />
 
-                  Requirements in establishing a Tricycle business:<br/><br/>
+                    Requirements in establishing a Tricycle business:<br /><br />
 
-                  <div className='grid grid-cols-12 gap-y-5'>
-                    <Paragraph className='text-center'>a.</Paragraph>
-                    <Paragraph className='col-span-11'>At least one tricycle</Paragraph>
-                    <Paragraph className='text-center'>b.</Paragraph>
-                    <Paragraph className='col-span-11'>Motorized Tricycle Operators Permit (MTOP) for tricycle drivers<br/>
-                    
-                    <RoseAnchor href_url='http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-tricycle-route/'>http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-tricycle-route/</RoseAnchor></Paragraph>
-                  </div>
+                    <div className='grid grid-cols-12 gap-y-5'>
+                      <Paragraph className='text-center'>a.</Paragraph>
+                      <Paragraph className='col-span-11'>At least one tricycle</Paragraph>
+                      <Paragraph className='text-center'>b.</Paragraph>
+                      <Paragraph className='col-span-11'>Motorized Tricycle Operators Permit (MTOP) for tricycle drivers<br />
+
+                        <RoseAnchor href_url='http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-tricycle-route/'>http://www.forumcash.com/wordpress/guide-to-owning-and-operating-a-tricycle-route/</RoseAnchor></Paragraph>
+                    </div>
                   </Paragraph>
                   {/*  */}
                   <Paragraph className='text-center'>4.</Paragraph>
-                  <Paragraph className='col-span-11'>PEDICAB BUSINESS<br/><br/>
+                  <Paragraph className='col-span-11'>PEDICAB BUSINESS<br /><br />
 
-                  Other businesses connected to public transportation are:<br/><br/>
+                    Other businesses connected to public transportation are:<br /><br />
 
-                  <div className='grid grid-cols-12 gap-y-5'>
-                    <Paragraph className='text-center'>a.</Paragraph>
-                    <Paragraph className='col-span-11'>CAR WASH<br/>
-                    
-                    <RoseAnchor href_url='https://drive.google.com/file/d/0B0ilL7KAK3i5eEFqV3FXLW1iNmM/edit'>https://drive.google.com/file/d/0B0ilL7KAK3i5eEFqV3FXLW1iNmM/edit</RoseAnchor></Paragraph>
-                    <Paragraph className='text-center'>b.</Paragraph>
-                    <Paragraph className='col-span-11'>REPAIR SHOP<br/>
-                    
-                    <RoseAnchor href_url='https://drive.google.com/file/d/0B0ilL7KAK3i5d0ZQRG5vTXR3QkU/edit'>https://drive.google.com/file/d/0B0ilL7KAK3i5d0ZQRG5vTXR3QkU/edit</RoseAnchor></Paragraph>
-                  </div>
+                    <div className='grid grid-cols-12 gap-y-5'>
+                      <Paragraph className='text-center'>a.</Paragraph>
+                      <Paragraph className='col-span-11'>CAR WASH<br />
+
+                        <RoseAnchor href_url='https://drive.google.com/file/d/0B0ilL7KAK3i5eEFqV3FXLW1iNmM/edit'>https://drive.google.com/file/d/0B0ilL7KAK3i5eEFqV3FXLW1iNmM/edit</RoseAnchor></Paragraph>
+                      <Paragraph className='text-center'>b.</Paragraph>
+                      <Paragraph className='col-span-11'>REPAIR SHOP<br />
+
+                        <RoseAnchor href_url='https://drive.google.com/file/d/0B0ilL7KAK3i5d0ZQRG5vTXR3QkU/edit'>https://drive.google.com/file/d/0B0ilL7KAK3i5d0ZQRG5vTXR3QkU/edit</RoseAnchor></Paragraph>
+                    </div>
                   </Paragraph>
                 </div>
                 {/*  */}

@@ -31,11 +31,6 @@ export default function BalikbayanAbout() {
                             </p>
                         </div>
                     </div>
-                    <img
-                        src="/balinkbayan-sl.png"
-                        alt="BaLinkBayan Logo"
-                        className="object-contain w-full"
-                    />
                 </div>
 
                 <div className="flex flex-col">
@@ -51,12 +46,6 @@ export default function BalikbayanAbout() {
                         <button className="border border-black rounded-none p-2">
                             <ChevronRight size={16} />
                         </button>
-
-                        <img
-                            src="/balinkbayan-sl.png"
-                            alt="BaLinkBayan Logo"
-                            className="object-contain w-full items-center justify-center self-center"
-                        />
                     </div>
 
                     <div className="bg-orange-400 text-black p-6 md:p-10 flex-1 border-t border-orange-300">
@@ -72,11 +61,7 @@ export default function BalikbayanAbout() {
                             <ChevronRight size={16} />
                         </button>
 
-                        <img
-                            src="/balinkbayan-sl.png"
-                            alt="BaLinkBayan Logo"
-                            className="object-contain w-full"
-                        />
+
                     </div>
                 </div>
             </div>
