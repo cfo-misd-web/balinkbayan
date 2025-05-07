@@ -56,7 +56,7 @@ const ResizableImage = Image.extend({
                 renderHTML: attributes => {
                     return {
                         width: attributes.width,
-                        style: `width: ${attributes.width}`,
+                        style: `width: ${attributes.width}; margin-top: 20px; margin-bottom: 20px;`,
                     };
                 },
             },
@@ -168,7 +168,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
             const file = target.files[0];
 
 
-            const placeholderSrc = '/balinkbayan.png';
+            const placeholderSrc = '/loader.gif';
             if (editor) {
                 editor.chain().focus().setImage({ src: placeholderSrc }).run();
             }
@@ -386,6 +386,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                         </div>
                         <span className="text-xs">{selectedImage.width}%</span>
                         <Button
+                        type="button"
                             size="sm"
                             variant="outline"
                             onClick={setFullWidth}
@@ -395,6 +396,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                             Full
                         </Button>
                         <Button
+                        type="button"
                             size="sm"
                             variant="outline"
                             onClick={setHalfWidth}

@@ -41,3 +41,27 @@ export type optional = {
   website?:string,
   website2?:string,
 }
+
+export type Post = {
+    id: string;
+    title: string;
+    author: string;
+    bannerImg: string;
+    content: string;
+    likes: number;
+    createdAt: string;
+    updatedAt: string;
+    tags: string;
+    description: string;
+    route: string;
+}
+
+export type Paginated<T> = {
+    posts: T;
+    pagination: {
+        page: number;
+        pageSize: number;
+        total: number;
+        totalPages: number;
+    };
+}

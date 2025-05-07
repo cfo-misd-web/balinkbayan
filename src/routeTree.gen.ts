@@ -27,10 +27,12 @@ import { Route as publicpContactIndexImport } from './routes/(public)/__p.contac
 import { Route as protectedprotectedCmsIndexImport } from './routes/(protected)/__protected.cms/index'
 import { Route as publicpServicesOtherOnlineGovServicesImport } from './routes/(public)/__p.services/other-online-gov-services'
 import { Route as publicpServicesLocalGovPartnersImport } from './routes/(public)/__p.services/local-gov-partners'
+import { Route as publicpNewsPostrouteImport } from './routes/(public)/__p.news/$postroute'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/index'
 import { Route as publicpStartBusinessInvestmentOpIndexImport } from './routes/(public)/__p.start-business/investment-op/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
 import { Route as publicpAboutBalinkbayanIndexImport } from './routes/(public)/__p.about/balinkbayan/index'
+import { Route as protectedprotectedCmsPostsIndexImport } from './routes/(protected)/__protected.cms/posts/index'
 import { Route as protectedprotectedCmsEditorIndexImport } from './routes/(protected)/__protected.cms/editor/index'
 import { Route as publicpStartBusinessInvestmentOpServicesImport } from './routes/(public)/__p.start-business/investment-op/services'
 import { Route as publicpStartBusinessInvestmentOpScaleManufacturingImport } from './routes/(public)/__p.start-business/investment-op/scale-manufacturing'
@@ -170,6 +172,12 @@ const publicpServicesLocalGovPartnersRoute =
     getParentRoute: () => publicpRoute,
   } as any)
 
+const publicpNewsPostrouteRoute = publicpNewsPostrouteImport.update({
+  id: '/news/$postroute',
+  path: '/news/$postroute',
+  getParentRoute: () => publicpRoute,
+} as any)
+
 const publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexRoute =
   publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport.update({
     id: '/start-business/small-enterprise-knowledge-center/',
@@ -195,6 +203,13 @@ const publicpAboutBalinkbayanIndexRoute =
     id: '/about/balinkbayan/',
     path: '/about/balinkbayan/',
     getParentRoute: () => publicpRoute,
+  } as any)
+
+const protectedprotectedCmsPostsIndexRoute =
+  protectedprotectedCmsPostsIndexImport.update({
+    id: '/cms/posts/',
+    path: '/cms/posts/',
+    getParentRoute: () => protectedprotectedRoute,
   } as any)
 
 const protectedprotectedCmsEditorIndexRoute =
@@ -495,6 +510,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof publicpIndexImport
       parentRoute: typeof publicpImport
     }
+    '/(public)/__p/news/$postroute': {
+      id: '/(public)/__p/news/$postroute'
+      path: '/news/$postroute'
+      fullPath: '/news/$postroute'
+      preLoaderRoute: typeof publicpNewsPostrouteImport
+      parentRoute: typeof publicpImport
+    }
     '/(public)/__p/services/local-gov-partners': {
       id: '/(public)/__p/services/local-gov-partners'
       path: '/services/local-gov-partners'
@@ -670,6 +692,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof protectedprotectedCmsEditorIndexImport
       parentRoute: typeof protectedprotectedImport
     }
+    '/(protected)/__protected/cms/posts/': {
+      id: '/(protected)/__protected/cms/posts/'
+      path: '/cms/posts'
+      fullPath: '/cms/posts'
+      preLoaderRoute: typeof protectedprotectedCmsPostsIndexImport
+      parentRoute: typeof protectedprotectedImport
+    }
     '/(public)/__p/about/balinkbayan/': {
       id: '/(public)/__p/about/balinkbayan/'
       path: '/about/balinkbayan'
@@ -826,11 +855,13 @@ const authRouteWithChildren = authRoute._addFileChildren(authRouteChildren)
 interface protectedprotectedRouteChildren {
   protectedprotectedCmsIndexRoute: typeof protectedprotectedCmsIndexRoute
   protectedprotectedCmsEditorIndexRoute: typeof protectedprotectedCmsEditorIndexRoute
+  protectedprotectedCmsPostsIndexRoute: typeof protectedprotectedCmsPostsIndexRoute
 }
 
 const protectedprotectedRouteChildren: protectedprotectedRouteChildren = {
   protectedprotectedCmsIndexRoute: protectedprotectedCmsIndexRoute,
   protectedprotectedCmsEditorIndexRoute: protectedprotectedCmsEditorIndexRoute,
+  protectedprotectedCmsPostsIndexRoute: protectedprotectedCmsPostsIndexRoute,
 }
 
 const protectedprotectedRouteWithChildren =
@@ -850,6 +881,7 @@ const protectedRouteWithChildren = protectedRoute._addFileChildren(
 
 interface publicpRouteChildren {
   publicpIndexRoute: typeof publicpIndexRoute
+  publicpNewsPostrouteRoute: typeof publicpNewsPostrouteRoute
   publicpServicesLocalGovPartnersRoute: typeof publicpServicesLocalGovPartnersRoute
   publicpServicesOtherOnlineGovServicesRoute: typeof publicpServicesOtherOnlineGovServicesRoute
   publicpContactIndexRoute: typeof publicpContactIndexRoute
@@ -895,6 +927,7 @@ interface publicpRouteChildren {
 
 const publicpRouteChildren: publicpRouteChildren = {
   publicpIndexRoute: publicpIndexRoute,
+  publicpNewsPostrouteRoute: publicpNewsPostrouteRoute,
   publicpServicesLocalGovPartnersRoute: publicpServicesLocalGovPartnersRoute,
   publicpServicesOtherOnlineGovServicesRoute:
     publicpServicesOtherOnlineGovServicesRoute,
@@ -986,6 +1019,7 @@ const publicRouteWithChildren =
 export interface FileRoutesByFullPath {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/news/$postroute': typeof publicpNewsPostrouteRoute
   '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
   '/cms': typeof protectedprotectedCmsIndexRoute
@@ -1011,6 +1045,7 @@ export interface FileRoutesByFullPath {
   '/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
   '/cms/editor': typeof protectedprotectedCmsEditorIndexRoute
+  '/cms/posts': typeof protectedprotectedCmsPostsIndexRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
   '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -1034,6 +1069,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/news/$postroute': typeof publicpNewsPostrouteRoute
   '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
   '/cms': typeof protectedprotectedCmsIndexRoute
@@ -1059,6 +1095,7 @@ export interface FileRoutesByTo {
   '/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
   '/cms/editor': typeof protectedprotectedCmsEditorIndexRoute
+  '/cms/posts': typeof protectedprotectedCmsPostsIndexRoute
   '/about/balinkbayan': typeof publicpAboutBalinkbayanIndexRoute
   '/about/cfo': typeof publicpAboutCfoIndexRoute
   '/start-business/investment-op': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -1089,6 +1126,7 @@ export interface FileRoutesById {
   '/(public)/__p': typeof publicpRouteWithChildren
   '/(auth)/__auth/login': typeof authauthLoginRoute
   '/(public)/__p/': typeof publicpIndexRoute
+  '/(public)/__p/news/$postroute': typeof publicpNewsPostrouteRoute
   '/(public)/__p/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/(public)/__p/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
   '/(protected)/__protected/cms/': typeof protectedprotectedCmsIndexRoute
@@ -1114,6 +1152,7 @@ export interface FileRoutesById {
   '/(public)/__p/start-business/investment-op/scale-manufacturing': typeof publicpStartBusinessInvestmentOpScaleManufacturingRoute
   '/(public)/__p/start-business/investment-op/services': typeof publicpStartBusinessInvestmentOpServicesRoute
   '/(protected)/__protected/cms/editor/': typeof protectedprotectedCmsEditorIndexRoute
+  '/(protected)/__protected/cms/posts/': typeof protectedprotectedCmsPostsIndexRoute
   '/(public)/__p/about/balinkbayan/': typeof publicpAboutBalinkbayanIndexRoute
   '/(public)/__p/about/cfo/': typeof publicpAboutCfoIndexRoute
   '/(public)/__p/start-business/investment-op/': typeof publicpStartBusinessInvestmentOpIndexRoute
@@ -1139,6 +1178,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/login'
+    | '/news/$postroute'
     | '/services/local-gov-partners'
     | '/services/other-online-gov-services'
     | '/cms'
@@ -1164,6 +1204,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/scale-manufacturing'
     | '/start-business/investment-op/services'
     | '/cms/editor'
+    | '/cms/posts'
     | '/about/balinkbayan'
     | '/about/cfo'
     | '/start-business/investment-op'
@@ -1186,6 +1227,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/login'
+    | '/news/$postroute'
     | '/services/local-gov-partners'
     | '/services/other-online-gov-services'
     | '/cms'
@@ -1211,6 +1253,7 @@ export interface FileRouteTypes {
     | '/start-business/investment-op/scale-manufacturing'
     | '/start-business/investment-op/services'
     | '/cms/editor'
+    | '/cms/posts'
     | '/about/balinkbayan'
     | '/about/cfo'
     | '/start-business/investment-op'
@@ -1239,6 +1282,7 @@ export interface FileRouteTypes {
     | '/(public)/__p'
     | '/(auth)/__auth/login'
     | '/(public)/__p/'
+    | '/(public)/__p/news/$postroute'
     | '/(public)/__p/services/local-gov-partners'
     | '/(public)/__p/services/other-online-gov-services'
     | '/(protected)/__protected/cms/'
@@ -1264,6 +1308,7 @@ export interface FileRouteTypes {
     | '/(public)/__p/start-business/investment-op/scale-manufacturing'
     | '/(public)/__p/start-business/investment-op/services'
     | '/(protected)/__protected/cms/editor/'
+    | '/(protected)/__protected/cms/posts/'
     | '/(public)/__p/about/balinkbayan/'
     | '/(public)/__p/about/cfo/'
     | '/(public)/__p/start-business/investment-op/'
@@ -1336,7 +1381,8 @@ export const routeTree = rootRoute
       "parent": "/(protected)",
       "children": [
         "/(protected)/__protected/cms/",
-        "/(protected)/__protected/cms/editor/"
+        "/(protected)/__protected/cms/editor/",
+        "/(protected)/__protected/cms/posts/"
       ]
     },
     "/(public)": {
@@ -1350,6 +1396,7 @@ export const routeTree = rootRoute
       "parent": "/(public)",
       "children": [
         "/(public)/__p/",
+        "/(public)/__p/news/$postroute",
         "/(public)/__p/services/local-gov-partners",
         "/(public)/__p/services/other-online-gov-services",
         "/(public)/__p/contact/",
@@ -1399,6 +1446,10 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/": {
       "filePath": "(public)/__p.index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/news/$postroute": {
+      "filePath": "(public)/__p.news/$postroute.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/services/local-gov-partners": {
@@ -1499,6 +1550,10 @@ export const routeTree = rootRoute
     },
     "/(protected)/__protected/cms/editor/": {
       "filePath": "(protected)/__protected.cms/editor/index.tsx",
+      "parent": "/(protected)/__protected"
+    },
+    "/(protected)/__protected/cms/posts/": {
+      "filePath": "(protected)/__protected.cms/posts/index.tsx",
       "parent": "/(protected)/__protected"
     },
     "/(public)/__p/about/balinkbayan/": {

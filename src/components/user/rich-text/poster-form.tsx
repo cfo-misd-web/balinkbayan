@@ -22,6 +22,9 @@ import {
 import { toast } from "sonner";
 import { cmsformSchema, type cmsFormValues } from "@/constants/schema";
 import { useMutatePost } from "@/services/query&mutations/use-mutate-post";
+import { useNavigate } from "@tanstack/react-router";
+import { Textarea } from "@/components/ui/textarea";
+
 
 
 
@@ -29,7 +32,7 @@ export function PosterForm() {
     const [activeTab, setActiveTab] = useState("edit");
     const [content] = useState("<p>Start writing your content here...</p>");
     const [routeTouched, setRouteTouched] = useState(false);
-
+    const navigate = useNavigate();
     const { mutate: uploadPost } = useMutatePost();
 
     const form = useForm<cmsFormValues>({
@@ -44,6 +47,7 @@ export function PosterForm() {
             publishDate: new Date().toISOString().slice(0, 16),
         },
     });
+
 
     const { watch, setValue } = form;
     const title = watch("title");
@@ -71,7 +75,6 @@ export function PosterForm() {
             for (const placeholder of imagePlaceholders) {
                 const base64Data = placeholder.match(/src="(data:image\/[^;]+;base64,[^"]+)"/)![1];
 
-                // Convert base64 image to a File object
                 const blob = await (await fetch(base64Data)).blob();
                 const file = new File([blob], "uploaded-image.png", { type: blob.type });
 
@@ -100,9 +103,11 @@ export function PosterForm() {
         };
 
         uploadPost(fd, {
-            onSuccess: () => {
-
+            onSuccess: (data) => {
                 form.reset();
+                setTimeout(() => {
+                    navigate({ to: "/news/$postroute", params: { postroute: data.post.id } });
+                } , 1000);
             },
             onError: (error) => {
                 toast.error(`Error creating poster: ${error.message}`);
@@ -119,7 +124,7 @@ export function PosterForm() {
                             <TabsTrigger value="edit">Edit</TabsTrigger>
                             <TabsTrigger value="preview">Preview</TabsTrigger>
                         </TabsList>
-                        <Button type="submit">Save Poster</Button>
+                        <Button type="submit">Save Post</Button>
                     </div>
 
                     <TabsContent value="edit" className="space-y-6">
@@ -131,7 +136,7 @@ export function PosterForm() {
                                     <FormItem>
                                         <FormLabel>Title</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="Enter poster title" {...field} />
+                                            <Input placeholder="Enter post title" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -205,14 +210,12 @@ export function PosterForm() {
                                 <FormItem>
                                     <FormLabel>Description</FormLabel>
                                     <FormControl>
-                                        <Input
-                                            placeholder="Brief description of the poster"
+                                        <Textarea
+                                            placeholder="Brief description of the post"
                                             {...field}
                                         />
                                     </FormControl>
-                                    <FormDescription>
-                                        Will be used for SEO and social media sharing
-                                    </FormDescription>
+                                    
                                     <FormMessage />
                                 </FormItem>
                             )}

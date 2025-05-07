@@ -24,7 +24,7 @@ export const useMutatePost = () => {
         },
         onSuccess: (data) => {
             toast.success("Post created successfully", {
-                description: `Post ID: ${data.id}`
+                description: `${data.post.title}`
             });
         }
     })

@@ -10,31 +10,32 @@ type NewsListProps = {
     postedDate?:string,
     newsDescription?:string,
     imageUrl?:string,
+    id?:string,
+    author?:string,
 }
 
-const NewsList = ({className, newsTitle, postedDate, newsDescription, imageUrl}: NewsListProps) => {
+const NewsList = ({className, newsTitle, postedDate, newsDescription, imageUrl, id, author}: NewsListProps) => {
     return (
         <li className='even:bg-gray-200 odd:bg-gray-100 w-full flex justify-center py-8 text-cyan-900'>
-          <div className={cn('flex flex-row space-x-20 w-[80%] border border-gray-300 rounded-lg shadow-md p-4', className)}>
-            <div className="h-full bg-teal-700 rounded-lg flex items-center">
-                <img className='max-w-64 h-fit rounded-lg' src={imageUrl ?? "https://balinkbayan.gov.ph/wp-content/uploads/2025/04/for-eblast-819x1024.jpg"}/>
-            </div>
+          <div className={cn('flex flex-row space-x-20 w-[80%] border border-gray-300 rounded-lg shadow-md p-[25px]', className)}>
+            {imageUrl&& <div className="h-full bg-transparent rounded-lg flex items-center">
+                <img className='max-w-64 h-fit rounded-lg' src={imageUrl}/>
+            </div>}
             <div className="space-y-3">
               <Heading5>{newsTitle}</Heading5>
               <Paragraph className="font-light">{postedDate}</Paragraph>
-              <Paragraph>{newsDescription}</Paragraph>
+              <Paragraph className="font-semibold">{newsDescription}</Paragraph>
 
-              {/* TODO: RATING */}
-              <div>
-                <Paragraph>Rating Title</Paragraph>
-                <Paragraph>Rating description</Paragraph>
-                <div>Rating</div>
-              </div>
+              <Paragraph className="font-light text-sm">by: {author}</Paragraph>
 
               <RoseAnchor 
-              className="flex flex-row text-rose-700 hover:text-rose-500 cursor-pointer" 
-              //TODO: href_url="template"
-              >Read more <ChevronRight className="w-10"/></RoseAnchor>
+                target="_self"
+                className="flex flex-row text-rose-700 hover:text-rose-500 cursor-pointer" 
+                href_url={`/news/${id}`}
+              >
+                Read more 
+                <ChevronRight className="w-10"/>
+              </RoseAnchor>
             </div>
           </div>
         </li>

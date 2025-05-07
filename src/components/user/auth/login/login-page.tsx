@@ -28,7 +28,7 @@ export default function LoginPage() {
             onSuccess: (data) => {
                 setSession({ name: data.user.name, email: data.user.email, token: data.token });
                 setTimeout(() => {
-                    navigate({ to: "/cms/editor" });
+                    navigate({ to: "/cms/posts" });
                 }, 500);
             },
         })

@@ -94,7 +94,7 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
                     <Button
                         variant="outline"
                         type="button"
-                        className="h-[700px] w-full"
+                        className="h-[350px] w-full"
                         onClick={() => document.getElementById(`image-upload-${label}`)?.click()}
                     >
                         Upload {label}
