@@ -8,7 +8,7 @@ export default function FilipinoServices() {
     const isMobile = useMediaQuery("(max-width: 768px)")
 
     return (
-        <div className="lg:w-[1400px] mx-auto max-lg:px-4 items-center justify-center">
+        <div className="lg:w-[1100px] mx-auto max-lg:px-4 items-center justify-center">
             <div className="grid grid-cols-1 gap-6">
                 {features.map((feature) => (
                     <FeatureCard

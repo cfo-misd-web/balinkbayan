@@ -30,28 +30,28 @@ export const categories: CategoryData[] = [
         title: "OVERSEAS FILIPINO YOUTH",
         description: "I want to be a BaLinkBayan and I am interested to learn more about the Philippines.",
         bgColor: "bg-yellow-300",
-        imgUrl: "/placeholder.svg?height=128&width=128",
+        imgUrl: "/img-assets/homepage/Overseas-Filipino-Youth-Logo-150x150.png",
     },
     {
         id: "workers",
         title: "OVERSEAS FILIPINO WORKERS (OFWS)",
         description: "How can BaLinkBayan help me and my family.",
         bgColor: "bg-red-400",
-        imgUrl: "/placeholder.svg?height=128&width=128",
+        imgUrl: "/img-assets/homepage/Overseas-Filipino-Workers-OFWS-Logo-150x150.png",
     },
     {
         id: "migrants",
         title: "MIGRANTS",
         description: "I am a BaLinkBayan and I want to rekindle my ties with the Philippines.",
         bgColor: "bg-blue-500",
-        imgUrl: "/placeholder.svg?height=128&width=128",
+        imgUrl: "/img-assets/homepage/Migrants-Logo-150x150.png",
     },
     {
         id: "retirees",
         title: "OVERSEAS FILIPINO RETIREES",
         description: "I am a BaLinkBayan and I want to retire in the Philippines.",
         bgColor: "bg-green-500",
-        imgUrl: "/placeholder.svg?height=128&width=128",
+        imgUrl: "/img-assets/homepage/Overseas-Filipino-Retirees-Logo-150x150.png",
     },
 ]
 
