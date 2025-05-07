@@ -200,7 +200,7 @@ export const navLinks: NavItem[] = [
             },
             {
                 label: "Local Government Partners",
-                href: "/services/local-government-partners",
+                href: "/services/local-gov-partners",
             },
             {
                 label: "Filipino Association Overseas' Partners",

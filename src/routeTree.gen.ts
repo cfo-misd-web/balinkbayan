@@ -26,6 +26,7 @@ import { Route as publicpDonateIndexImport } from './routes/(public)/__p.donate/
 import { Route as publicpContactIndexImport } from './routes/(public)/__p.contact/index'
 import { Route as protectedprotectedCmsIndexImport } from './routes/(protected)/__protected.cms/index'
 import { Route as publicpServicesOtherOnlineGovServicesImport } from './routes/(public)/__p.services/other-online-gov-services'
+import { Route as publicpServicesLocalGovPartnersImport } from './routes/(public)/__p.services/local-gov-partners'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/index'
 import { Route as publicpStartBusinessInvestmentOpIndexImport } from './routes/(public)/__p.start-business/investment-op/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
@@ -159,6 +160,13 @@ const publicpServicesOtherOnlineGovServicesRoute =
   publicpServicesOtherOnlineGovServicesImport.update({
     id: '/services/other-online-gov-services',
     path: '/services/other-online-gov-services',
+    getParentRoute: () => publicpRoute,
+  } as any)
+
+const publicpServicesLocalGovPartnersRoute =
+  publicpServicesLocalGovPartnersImport.update({
+    id: '/services/local-gov-partners',
+    path: '/services/local-gov-partners',
     getParentRoute: () => publicpRoute,
   } as any)
 
@@ -485,6 +493,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof publicpIndexImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/services/local-gov-partners': {
+      id: '/(public)/__p/services/local-gov-partners'
+      path: '/services/local-gov-partners'
+      fullPath: '/services/local-gov-partners'
+      preLoaderRoute: typeof publicpServicesLocalGovPartnersImport
       parentRoute: typeof publicpImport
     }
     '/(public)/__p/services/other-online-gov-services': {
@@ -835,6 +850,7 @@ const protectedRouteWithChildren = protectedRoute._addFileChildren(
 
 interface publicpRouteChildren {
   publicpIndexRoute: typeof publicpIndexRoute
+  publicpServicesLocalGovPartnersRoute: typeof publicpServicesLocalGovPartnersRoute
   publicpServicesOtherOnlineGovServicesRoute: typeof publicpServicesOtherOnlineGovServicesRoute
   publicpContactIndexRoute: typeof publicpContactIndexRoute
   publicpDonateIndexRoute: typeof publicpDonateIndexRoute
@@ -879,6 +895,7 @@ interface publicpRouteChildren {
 
 const publicpRouteChildren: publicpRouteChildren = {
   publicpIndexRoute: publicpIndexRoute,
+  publicpServicesLocalGovPartnersRoute: publicpServicesLocalGovPartnersRoute,
   publicpServicesOtherOnlineGovServicesRoute:
     publicpServicesOtherOnlineGovServicesRoute,
   publicpContactIndexRoute: publicpContactIndexRoute,
@@ -969,6 +986,7 @@ const publicRouteWithChildren =
 export interface FileRoutesByFullPath {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
   '/cms': typeof protectedprotectedCmsIndexRoute
   '/contact': typeof publicpContactIndexRoute
@@ -1016,6 +1034,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
   '/cms': typeof protectedprotectedCmsIndexRoute
   '/contact': typeof publicpContactIndexRoute
@@ -1070,6 +1089,7 @@ export interface FileRoutesById {
   '/(public)/__p': typeof publicpRouteWithChildren
   '/(auth)/__auth/login': typeof authauthLoginRoute
   '/(public)/__p/': typeof publicpIndexRoute
+  '/(public)/__p/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/(public)/__p/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
   '/(protected)/__protected/cms/': typeof protectedprotectedCmsIndexRoute
   '/(public)/__p/contact/': typeof publicpContactIndexRoute
@@ -1119,6 +1139,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/login'
+    | '/services/local-gov-partners'
     | '/services/other-online-gov-services'
     | '/cms'
     | '/contact'
@@ -1165,6 +1186,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/login'
+    | '/services/local-gov-partners'
     | '/services/other-online-gov-services'
     | '/cms'
     | '/contact'
@@ -1217,6 +1239,7 @@ export interface FileRouteTypes {
     | '/(public)/__p'
     | '/(auth)/__auth/login'
     | '/(public)/__p/'
+    | '/(public)/__p/services/local-gov-partners'
     | '/(public)/__p/services/other-online-gov-services'
     | '/(protected)/__protected/cms/'
     | '/(public)/__p/contact/'
@@ -1327,6 +1350,7 @@ export const routeTree = rootRoute
       "parent": "/(public)",
       "children": [
         "/(public)/__p/",
+        "/(public)/__p/services/local-gov-partners",
         "/(public)/__p/services/other-online-gov-services",
         "/(public)/__p/contact/",
         "/(public)/__p/donate/",
@@ -1375,6 +1399,10 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/": {
       "filePath": "(public)/__p.index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/services/local-gov-partners": {
+      "filePath": "(public)/__p.services/local-gov-partners.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/services/other-online-gov-services": {
