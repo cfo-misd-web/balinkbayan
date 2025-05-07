@@ -1,8 +1,8 @@
 import { useMutation } from "@tanstack/react-query"
 import { api } from "../axios-fetchers/api";
 import { toast } from "sonner";
-import type { cmsFormValues } from "@/constants/types";
 import { useSessionStore } from "@/store/session-store";
+import type { cmsFormValues } from "@/constants/schema";
 
 export const useMutatePost = () => {
     const session = useSessionStore.getState().session;

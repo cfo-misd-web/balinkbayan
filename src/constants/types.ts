@@ -17,6 +17,10 @@ export interface CategoryData {
     imgUrl: string
 }
 
+export const cmsFormValues = {
+    
+}
+
 export type optional = {
   country?:string,
   name:string,
