@@ -2,10 +2,9 @@ import { createFileRoute } from '@tanstack/react-router'
 import Paragraph from '@/components/user/shared/paragraph'
 import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading5 from '@/components/user/shared/headings/heading-5'
-import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
 import Heading4 from '@/components/user/shared/headings/heading-4'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-import { Dialog, DialogHeader, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog'
+import { Dialog, DialogHeader, DialogTrigger, DialogContent, DialogDescription } from '@/components/ui/dialog'
 import ImageHolder from '@/components/user/shared/images/image-holder'
 
 export const Route = createFileRoute(
