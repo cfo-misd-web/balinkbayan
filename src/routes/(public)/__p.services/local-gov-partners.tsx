@@ -2,10 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import Paragraph from '@/components/user/shared/paragraph'
 import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading4 from '@/components/user/shared/headings/heading-4'
-import Heading5 from '@/components/user/shared/headings/heading-5'
-import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
 import ImageHolder from '@/components/user/shared/images/image-holder'
-import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
 
 
 export const Route = createFileRoute(
