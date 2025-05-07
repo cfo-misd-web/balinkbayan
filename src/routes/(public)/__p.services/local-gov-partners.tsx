@@ -22,7 +22,7 @@ function RouteComponent() {
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center space-x-20 justify-between'>
               <ImageHolder blb_url='https://agusandelnorte.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/agusan-del-norte-province-logo.png'>Agusan del Norte</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/aklanlogo.png'>Aklan</ImageHolder>
+              <ImageHolder blb_url='https://aklan.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/aklanlogo.png'>Aklan</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
               <ImageHolder blb_url='https://antiqueprovince.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/antique-logo.png'>Antique</ImageHolder>
@@ -32,21 +32,21 @@ function RouteComponent() {
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center space-x-20 justify-between'>
               <ImageHolder blb_url='https://batangas.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/batangas.png'>Batangas</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/camnorte.png'>Camarines Norte</ImageHolder>
+              <ImageHolder blb_url='https://camarinesnorte.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/camnorte.png'>Camarines Norte</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/guimaras.png'>Guimaras</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/ilocosnorte.png'>Ilocos Norte</ImageHolder>
+              <ImageHolder blb_url='https://guimaras.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/guimaras.png'>Guimaras</ImageHolder>
+              <ImageHolder blb_url='https://ilocosnorte.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/ilocosnorte.png'>Ilocos Norte</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center space-x-20 justify-between'>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/iloiloprovince.png'>Iloilo Province</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/laguna.png'>Laguna</ImageHolder>
+              <ImageHolder blb_url='https://iloiloprovince.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/iloiloprovince.png'>Iloilo Province</ImageHolder>
+              <ImageHolder blb_url='https://laguna.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/laguna.png'>Laguna</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
               <ImageHolder blb_url='https://negrosoccidental.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/negrosoccidental.png'>Negros Occidental</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/pangasinan.png'>Pangasinan</ImageHolder>
+              <ImageHolder blb_url='https://pangasinan.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/pangasinan.png'>Pangasinan</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
@@ -77,17 +77,17 @@ function RouteComponent() {
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
               <ImageHolder blb_url='https://catbalogancity.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/Catbalogan-City.png'>Catbalogan</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/cebucity.png'>Cebu</ImageHolder>
+              <ImageHolder blb_url='https://cebucity.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/cebucity.png'>Cebu</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center space-x-20 justify-between'>
               <ImageHolder blb_url='https://dagupan.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/dagupan.png'>Dagupan</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/dumaguete.png'>Dumaguete</ImageHolder>
+              <ImageHolder blb_url='https://dumaguete.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/dumaguete.png'>Dumaguete</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
               <ImageHolder blb_url='https://iloilocity.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/iloilocity.png'>Iloilo City</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/iriga.png'>Iriga</ImageHolder>
+              <ImageHolder blb_url='https://iriga.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/iriga.png'>Iriga</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
@@ -96,18 +96,18 @@ function RouteComponent() {
               <ImageHolder blb_url='https://lapulapu.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/lapulapu-logo.png'>Lapu-Lapu</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/legazpi.png'>Legazpi</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/ligao.png'>Ligao</ImageHolder>
+              <ImageHolder blb_url='https://legazpi.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/legazpi.png'>Legazpi</ImageHolder>
+              <ImageHolder blb_url='https://ligao.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/ligao.png'>Ligao</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center space-x-20 justify-between'>
               <ImageHolder blb_url='https://mabalacat.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/mabalacat.png'>Mabalacat</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/mabini-batangas-logo.png'>Mabini</ImageHolder>
+              <ImageHolder blb_url='https://mabinilgu.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/mabini-batangas-logo.png'>Mabini</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/masbate.png'>Masbate</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/naga.png'>Naga</ImageHolder>
+              <ImageHolder blb_url='https://masbatecity.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/masbate.png'>Masbate</ImageHolder>
+              <ImageHolder blb_url='https://naga.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/naga.png'>Naga</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
@@ -116,13 +116,13 @@ function RouteComponent() {
               <ImageHolder blb_url='https://quezoncity.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/quezoncitylogo.png'>Quezon City</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/sorsogon-city.png'>Sorsogon</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/tabacocity.png'>Tabaco</ImageHolder>
+              <ImageHolder blb_url='https://sorsogoncity.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/sorsogon-city.png'>Sorsogon</ImageHolder>
+              <ImageHolder blb_url='https://tabaco.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/tabacocity.png'>Tabaco</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center space-x-20 justify-between'>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/tagbilaran.png'>Tagbilaran</ImageHolder>
+              <ImageHolder blb_url='https://tagbilaran.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/tagbilaran.png'>Tagbilaran</ImageHolder>
               <ImageHolder blb_url='https://tarlaccity.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/Tarlac-City.png'>Tarlac City</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
@@ -145,16 +145,16 @@ function RouteComponent() {
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-20 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center space-x-20 justify-between'>
               <ImageHolder blb_url='https://dauin.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/dauin-logo.png'>Dauin</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/guinobatan.png'>Guinobatan</ImageHolder>
+              <ImageHolder blb_url='https://guinobatan.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/guinobatan.png'>Guinobatan</ImageHolder>
             </div>
             <div className='flex flex-row max-lg:justify-center space-x-20  justify-between'>
               <ImageHolder blb_url='https://losbanos.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/losbanos.png'>Los Baños</ImageHolder>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/mercedes-logo.png'>Mercedes, Camarines Norte</ImageHolder>
+              <ImageHolder blb_url='https://mercedes.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/mercedes-logo.png'>Mercedes, Camarines Norte</ImageHolder>
             </div>
           </div>
           <div className='max-lg:space-y-20 space-y-10 flex flex-row max-lg:flex-col justify-center space-x-10 max-lg:space-x-0'>
             <div className='flex flex-row max-lg:justify-center max-lg:space-x-20 space-x-10 justify-between'>
-              <ImageHolder blb_url='' img_url='/img-assets/gov-services/local-gov-partners/rosales-pangasinan.png'>Rosales, Pangasinan</ImageHolder>
+              <ImageHolder blb_url='https://rosales.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/rosales-pangasinan.png'>Rosales, Pangasinan</ImageHolder>
               <ImageHolder blb_url='https://sanildefonso.balinkbayan.gov.ph/' img_url='/img-assets/gov-services/local-gov-partners/sanildefonso-logo.png'>San Ildefonso</ImageHolder>
             </div>
             <div className='flex max-lg:flex-col flex-row space-y-20 max-lg:space-x-0 space-x-10'>
