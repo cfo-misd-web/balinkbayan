@@ -4,7 +4,9 @@ import { AccordionHeader } from '@radix-ui/react-accordion'
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
 import Heading5 from './headings/heading-5';
 import RoseAnchor from './anchors/rose-anchor';
-import { australia, austria, brazil, canada, china, france, germany, greece, india, indonesia, israel, italy, japan, mexico, netherlands, newZealand, russia } from '@/constants/contants'
+// 
+import { countries } from '@/constants/countries';
+// 
 
 export default function AccordItem(){
   return (
@@ -84,7 +86,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {australia.map((i,idx) => (
+              {countries.australia.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -136,7 +138,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {austria.map((i,idx) => (
+              {countries.austria.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -328,7 +330,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {brazil.map((i,idx) => (
+              {countries.brazil.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -468,7 +470,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {canada.map((i,idx) => (
+              {countries.canada.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -572,7 +574,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {china.map((i,idx) => (
+              {countries.china.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -757,7 +759,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {france.map((i,idx) => (
+              {countries.france.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -809,7 +811,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {germany.map((i,idx) => (
+              {countries.germany.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -863,7 +865,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {greece.map((i,idx) => (
+              {countries.greece.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -960,7 +962,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {india.map((i,idx) => (
+              {countries.india.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -1016,7 +1018,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {indonesia.map((i,idx) => (
+              {countries.indonesia.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -1112,7 +1114,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {israel.map((i,idx) => (
+              {countries.israel.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -1163,7 +1165,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {italy.map((i,idx) => (
+              {countries.italy.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -1215,7 +1217,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {japan.map((i,idx) => (
+              {countries.japan.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -1619,7 +1621,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {mexico.map((i,idx) => (
+              {countries.mexico.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -1719,7 +1721,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {netherlands.map((i,idx) => (
+              {countries.netherlands.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -1772,7 +1774,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {newZealand.map((i,idx) => (
+              {countries.newZealand.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -2200,7 +2202,7 @@ export default function AccordItem(){
               </TableRow>
             </TableHeader>
             <TableBody className='border-1 '>
-              {russia.map((i,idx) => (
+              {countries.russia.map((i,idx) => (
               <TableRow key={idx}>
                 <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
                 <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
@@ -2369,23 +2371,6 @@ export default function AccordItem(){
           </Table>
         </AccordionContent>
       </AccordionItem>
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
-      {/* TODO */}
       {/*  */}
       <AccordionItem value='item-50' className='border-b mb-2'>
         <AccordionHeader>
@@ -2417,21 +2402,555 @@ export default function AccordItem(){
                 </TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody className='border-1'>
+            <TableBody className='border-1 '>
+              {countries.spain.map((i,idx) => (
+              <TableRow key={idx}>
+                <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.headOffice1}
+                  <p>{i.headOffice2}</p>
+                  <p><br/>{i.headOffice3}</p>
+                  <p>{i.headOffice4}</p>
+                </TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.address}
+                  <p>{i.address2}</p>
+                </TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>{i.email1}
+                  <p><br/>{i.email2}</p>
+                  <p><br/>{i.email3}</p>
+                  <p><br/>{i.email4}</p>
+                </TableCell>
+                <TableCell className='p-2'><RoseAnchor className='break-all' href_url={i.website}>{i.website}</RoseAnchor></TableCell>
+              </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-51' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>SWITZERLAND</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
               <TableRow>
-                <TableCell className='p-2 border-r-1 border-gray-400'>South Africa</TableCell>
-                <TableCell className='p-2 text-left border-r-1 border-gray-400'>EMBASSY OF THE PHILIPPINES, PRETORIA</TableCell>
-                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (MR.) Constancio R. Vingno, Jr.<br/><br/>Ambassador Extraordinary and Plenipotentiary</TableCell>
-                <TableCell className='p-2 text-left border-r-1 border-gray-400'>54 Nicolson St., Muckleneuk, 0181, Pretoria, South Africa</TableCell>
-                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>pretoria.pe@dfa.gov.ph;<br/><br/>pretoriape@mweb.co.za;<br/><br/>pretoria2@mweb.co.za</TableCell>
-                <TableCell className='p-2'></TableCell>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'>Switzerland</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>EMBASSY OF THE PHILIPPINES, BERNE</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (Mr.) Leslie J. Baja<br/><br/>Ambassador Extraordinary and Plenipotentiary</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400 break-all'>Kirchenfeldstrasse 73-75 3005 Berne, Switzerland</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>berne.pe@dfa.gov.ph;<br/><br/>berne_pe@bluewin.ch;<br/><br/>info@philembassyberne.ch</TableCell>
+                <TableCell className='p-2'><RoseAnchor className='break-all' href_url='https://www.philembassyberne.ch'>www.philembassyberne.ch</RoseAnchor></TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className='p-2 border-r-1 border-gray-400'></TableCell>
-                <TableCell className='p-2 text-left border-r-1 border-gray-400'>PHILIPPINE CONSULATE, CAPE TOWN</TableCell>
-                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Mr. Steven David Chaimowitz<br/><br/>Consul, ad honorem</TableCell>
-                <TableCell className='p-2 text-left border-r-1 border-gray-400'>The Cottage, Bramber Court, Ravenscraig Road, Green Point, Cape Town, South Africa</TableCell>
-                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>avatar@web.co.za</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>PHILIPPINE CONSULATE GENERAL, BASEL</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Mr. Daniel Andreas Vogel<br/><br/>Consul General, ad honorem</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400 break-all'>Innere Margarethenstrasse 2, CH, 4002 Basel, Switzerland</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>d.vogel@dasteam.ch</TableCell>
+                <TableCell className='p-2'></TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-52' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>SYRIA</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              {countries.syria.map((i,idx) => (
+              <TableRow key={idx}>
+                <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.headOffice1}
+                  <p><br/>{i.headOffice2}</p>
+                </TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.address}</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>{i.email1}
+                  <p><br/>{i.email2}</p>
+                  <p><br/>{i.email3}</p>
+                </TableCell>
+                <TableCell className='p-2'></TableCell>
+              </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-53' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>TIMOR LESTE</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'>Timor Leste</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>EMBASSY OF THE PHILIPPINES, DILI</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (Ms.) Ma. Aniceta Aileen H. Bugarin<br/><br/>Ambassador Extraordinary and Plenipotentiary</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Rua Gov. Serpa Rosa, Bairo Farol, Dili, Timor-Leste</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>dili.pe@dfa.gov.ph;<br/><br/>philembdili@gmail.com;<br/><br/>philembdili2010@yahoo.com</TableCell>
+                <TableCell className='p-2'></TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-54' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>THAILAND</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'>Thailand</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>EMBASSY OF THE PHILIPPINES, BANGKOK</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (Ms.) Jocelyn S. Batoon-Garcia<br/><br/>Ambassador Extraordinary and Plenipotentiary</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>760 Sukhumvit Road, cor. Soi Philippines (Soi 30/1)<br/><br/>Bangkok 10110, Kingdom of Thailand</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>bangkok.pe@dfa.gov.ph;<br/><br/>bangkokpe@gmail.com;<br/><br/>inquiry@philembassy-bangkok.net</TableCell>
+                <TableCell className='p-2'><RoseAnchor className='break-all' href_url='https://www.philembassy-bangkok.net'>www.philembassy-bangkok.net</RoseAnchor></TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-55' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>TURKEY</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              {countries.turkey.map((i,idx) => (
+              <TableRow key={idx}>
+                <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.headOffice1}
+                  <p><br/>{i.headOffice2}</p>
+                </TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.address}</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>{i.email1}
+                  <p><br/>{i.email2}</p>
+                  <p><br/>{i.email3}</p>
+                </TableCell>
+                <TableCell className='p-2'></TableCell>
+              </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-56' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>UNITED ARAB EMIRATES</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'>United Arab Emirates</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>EMBASSY OF THE PHILIPPINES, ABU DHABI</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (Ms.) Grace R. Princesa<br/><br/>Ambassador Extraordinary and Plenipotentiary</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Villa No. 8 Street No. 8, Sector 94, Zone 2 Al Bateen, Abu Dhabi, UAE</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>abudhabi.pe@dfa.gov.ph;;<br/><br/>auhpe@philembassy.ae</TableCell>
+                <TableCell className='p-2'><RoseAnchor className='break-all' href_url='https://www.philembassy.ae'>www.philembassy.ae</RoseAnchor></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'></TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>PHILIPPINE CONSULATE GENERAL, DUBAI</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (Ms.) Frank R. Cimafranca<br/><br/>Consul General</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>No. 35 Beirut St., Ext. No. 2 Al Qusais Area 3, P.O. Box 94778, Dubai, United Arab Emirates</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>pcgdxb@gmail.com;<br/><br/>pcgdxb@pcgdubai.ae</TableCell>
+                <TableCell className='p-2'></TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-57' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>UNITED KINGDOM</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              {countries.unitedKingdom.map((i,idx) => (
+              <TableRow key={idx}>
+                <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.headOffice1}
+                  <p><br/>{i.headOffice2}</p>
+                </TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.address}</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>{i.email1}</TableCell>
+                <TableCell className='p-2'><RoseAnchor className='break-all' href_url={i.website}>{i.website}</RoseAnchor></TableCell>
+              </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-58' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>UNITED STATES OF AMERICA</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              {countries.unitedStatesOfAmerica.map((i,idx) => (
+              <TableRow key={idx}>
+                <TableCell className='p-2 border-r-1 border-gray-400'>{i.country}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.name}</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.headOffice1}
+                  <p><br/>{i.headOffice2}</p>
+                </TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>{i.address}</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>{i.email1}<br/><br/>{i.email2}<br/><br/>{i.email3}</TableCell>
+                <TableCell className='p-2'><RoseAnchor className='break-all' href_url={i.website}>{i.website}</RoseAnchor><br/><br/><RoseAnchor className='break-all' href_url={i.website2}>{i.website2}</RoseAnchor></TableCell>
+              </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-59' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>VATICAN</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'>Vatican</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>EMBASSY OF THE PHILIPPINES, VATICAN</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (Ms.) Mercedes Reinares-Arrastia Tuazon<br/><br/>Ambassador Extraordinary and Plenipotentiary</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Via Paolo VI, 29, 00193 Rome, Italy</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>vatican.pe@dfa.gov.ph;<br/><br/>embholysee@philvatican.it;<br/><br/>vaticanpe@gmail.com</TableCell>
+                <TableCell className='p-2'></TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-60' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>VENEZUELA</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'>Venezuela</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>PHILIPPINE CONSULATE, PUERTO CABELLO</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Mr. Andres V. Duarte<br/><br/>Consul, ad honorem</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Edificio Boulton, Calle Anzoátegui, No. 4-85, Zona Colonial, Puerto Cabello, Estado Carabobo, Venezuela</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>aduarte@dvaccs.com</TableCell>
+                <TableCell className='p-2'></TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </AccordionContent>
+      </AccordionItem>
+      {/*  */}
+      <AccordionItem value='item-61' className='border-b mb-2'>
+        <AccordionHeader>
+          <AccordionTrigger className='cursor-pointer hover:bg-teal-500 rounded-none w-full flex items-center justify-between p-4 text-lg font-medium'>
+            <p className='text-sm font-light'>VIETNAM</p>
+          </AccordionTrigger>
+        </AccordionHeader>
+        <AccordionContent className='my-10 space-y-10'>
+          <Table>
+            <TableHeader className='border-1'>
+              <TableRow>
+                <TableHead className="text-white border-r-1 border-gray-400 text-center py-8">
+                  <Heading5>Country</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Name</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Head of Office</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Address</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center border-r-1 border-gray-400 py-8">
+                  <Heading5>Email</Heading5>
+                </TableHead>
+                <TableHead className="text-white text-center py-8">
+                  <Heading5>Website</Heading5>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className='border-1 '>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'>Vietnam</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>EMBASSY OF THE PHILIPPINES, HANOI</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>H.E. (Mr.) Jerril G. Santos<br/><br/>Ambassador Extraordinary and Plenipotentiary</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>27-B Tran Hung Dao Street, Hanoi, Socialist Republic of Vietnam</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>hanoi.pe@dfa.gov.ph;<br/><br/>hnpe2000@gmail.com</TableCell>
+                <TableCell className='p-2'><RoseAnchor className='break-all' href_url='https://www.hanoipe.org'>www.hanoipe.org</RoseAnchor></TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className='p-2 border-r-1 border-gray-400'></TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>PHILIPPINE CONSULATE GENERAL, HO CHI MINH CITY</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>Atty. Le Thi Phung<br/><br/>Consul General, ad honorem</TableCell>
+                <TableCell className='p-2 text-left border-r-1 border-gray-400'>40-5 Pham Viet Chahn St., Ward 19, Binh Thanh, District, Ho Chi Mihn City, Vietnam</TableCell>
+                <TableCell className='p-2 border-r-1 border-gray-400 break-all'>philippineconsulate-hcm@fmc.com.vn</TableCell>
                 <TableCell className='p-2'></TableCell>
               </TableRow>
             </TableBody>

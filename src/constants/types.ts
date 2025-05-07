@@ -33,5 +33,7 @@ export type optional = {
   email1?:string,
   email2?:string,
   email3?:string,
+  email4?:string,
   website?:string,
+  website2?:string,
 }

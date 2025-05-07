@@ -1,0 +1,66 @@
+import type { optional } from "../types";
+
+export const australia: optional[] = [
+  {
+    country: 'Australia',
+    name: 'EMBASSY OF THE PHILIPPINES, CANBERRA',
+    headOffice1: 'H.E. (Ms.) Belen F. Anota',
+    headOffice2: 'Ambassador Extraordinary and Plenipotentiary',
+    address: '1 Moonah Place, Yarralumla, Canberra, A.C.T. 2600',
+    email1: 'canberra.pe@dfa.gov.ph;',
+    email2: 'cbrpe@philembassy.org.au',
+    website: 'https://www.philembassy.org.au',
+  },
+  {
+    name: 'PHILIPPINE CONSULATE GENERAL, ADELAIDE',
+    headOffice1: 'Mr. Reynaldo Dante G. Juanta',
+    headOffice2: 'Consul General, ad honorem',
+    address: '61 Melville Street, South Plympton 5038, South Australia',
+    email1: 'rdgjuanta@bigpond.com',
+  },
+  {
+    name: 'PHILIPPINE CONSULATE GENERAL, BRISBANE',
+    headOffice1: 'Mrs. Margaret Grummitt',
+    headOffice2: 'Consul General, a.h.',
+    address: 'Regus, Level 22, 69 Ann Street, Brisbane, QLD 4000',
+    email1: 'alang@cgrgroup.com',
+  },
+  {
+    name: 'PHILIPPINE CONSULATE GENERAL, DARWIN',
+    headOffice1: 'Mr. Januario John R. Rivas',
+    headOffice2: 'Consul General, ad honorem',
+    address: '22 Mirrakma Crescent Lyons, Northern Territory 0812',
+    email1: 'philcon.nt@gmail.com',
+  },
+  {
+    name: 'PHILIPPINE CONSULATE GENERAL, HOBART',
+    headOffice1: 'pjgreen@kpmg.com.au',
+    address: 'Level 3, 100 Melville Street, Hobart, Tasmania 7000',
+    email1: 'pjgreen@kpmg.com.au',
+  },
+  {
+    name: 'PHILIPPINE CONSULATE, MELBOURNE',
+    headOffice1: 'Ms. Virginia Kalong',
+    headOffice2: 'Consul, ad honorem',
+    address: 'Suite 1205, No. 1, Queens Road, Melbourne, Victoria 3004',
+    email1: 'info@philconsulate.com.au;',
+    email2: 'consul@philconsulate.com.au',
+  },
+  {
+    name: 'PHILIPPINE CONSULATE GENERAL, PERTH',
+    headOffice1: 'Mr. Gerald Francis Donnelly',
+    headOffice2: 'Consul General, ad honorem',
+    address: 'Unit 2/116 Mounts Bay Road, Perth, Western Australia 6000',
+    email1: 'gfdonnelly@iprimus.com.au',
+  },
+  {
+    name: 'PHILIPPINE CONSULATE GENERAL, SYDNEY',
+    headOffice1: 'Hon. (Ms.) Anne J. Louis',
+    headOffice2: 'Consul General',
+    address: 'Philippine Centre, Level 1',
+    address2: '27-33 Wentworth Avenue, Sydney NSW 2000',
+    email1: 'sydney.pcg@dfa.gov.ph;',
+    email2: 'contact@philippineconsulate.com.au',
+    website: 'https://www.philippineconsulate.com.au',
+  },
+];
