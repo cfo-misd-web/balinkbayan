@@ -6,9 +6,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { RichTextEditor } from "./editor";
+import { RichTextEditor, uploaDer } from "./editor";
 import { ImageUpload } from "./image-upload";
-
+import './ps.css'
 import { TagInput } from "./tag-input";
 import {
     Form,
@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/form";
 import { toast } from "sonner";
 import { cmsformSchema, type cmsFormValues } from "@/constants/schema";
+import { useMutatePost } from "@/services/query&mutations/use-mutate-post";
 
 
 
@@ -28,6 +29,8 @@ export function PosterForm() {
     const [activeTab, setActiveTab] = useState("edit");
     const [content] = useState("<p>Start writing your content here...</p>");
     const [routeTouched, setRouteTouched] = useState(false);
+
+    const { mutate: uploadPost } = useMutatePost();
 
     const form = useForm<cmsFormValues>({
         resolver: zodResolver(cmsformSchema),
@@ -38,7 +41,7 @@ export function PosterForm() {
             content: content,
             author: "",
             tags: [],
-            publishDate: new Date().toISOString().slice(0, 16), // yyyy-MM-ddTHH:mm
+            publishDate: new Date().toISOString().slice(0, 16),
         },
     });
 
@@ -57,9 +60,54 @@ export function PosterForm() {
 
 
 
-    const onSubmit = (data: cmsFormValues) => {
-        console.log("Form submitted:", data);
-        toast.success("Poster saved successfully!");
+    const onSubmit = async (data: cmsFormValues) => {
+        const { title, route, description, tags, author, bannerImage, content, publishDate } = data;
+
+        let contentWithUploadedImages = content;
+
+        const imagePlaceholders = content.match(/<img src="data:image\/[^;]+;base64,[^"]+"[^>]*>/g);
+
+        if (imagePlaceholders) {
+            for (const placeholder of imagePlaceholders) {
+                const base64Data = placeholder.match(/src="(data:image\/[^;]+;base64,[^"]+)"/)![1];
+
+                // Convert base64 image to a File object
+                const blob = await (await fetch(base64Data)).blob();
+                const file = new File([blob], "uploaded-image.png", { type: blob.type });
+
+                try {
+                    const uploadedUrl = await uploaDer(file);
+                    const fullUrl = `${import.meta.env.VITE_API_URL}${uploadedUrl}`;
+
+                    // Replace the placeholder with the uploaded image URL
+                    contentWithUploadedImages = contentWithUploadedImages.replace(base64Data, fullUrl);
+                } catch (error) {
+                    toast.error("Failed to upload an image in the content. Please try again.");
+                    console.error(error);
+                }
+            }
+        }
+
+        const fd = {
+            title,
+            route,
+            description,
+            tags: tags || [],
+            author,
+            bannerImg: bannerImage, 
+            content: contentWithUploadedImages, 
+            publishDate: publishDate || new Date().toISOString(),
+        };
+
+        uploadPost(fd, {
+            onSuccess: () => {
+
+                form.reset();
+            },
+            onError: (error) => {
+                toast.error(`Error creating poster: ${error.message}`);
+            },
+        });
     };
 
     return (
@@ -177,7 +225,7 @@ export function PosterForm() {
                                 <FormItem>
                                     <ImageUpload
                                         label="Banner Image"
-                                        value={value}
+                                        value={value ?? null}
                                         onChange={onChange}
                                     />
                                     <FormDescription>
@@ -236,10 +284,10 @@ export function PosterForm() {
                                                     className="w-full h-[300px] object-cover rounded-md mb-6"
                                                 />
                                             );
-                                        } else if (banner instanceof File) {
+                                        } else if (banner) {
                                             return (
                                                 <img
-                                                    src={URL.createObjectURL(banner)}
+                                                    src={banner}
                                                     alt={form.watch("title")}
                                                     className="w-full h-[300px] object-cover rounded-md mb-6"
                                                 />

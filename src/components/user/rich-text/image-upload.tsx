@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { useSessionStore } from "@/store/session-store";
 
 interface ImageUploadProps {
-    onChange: (file: File | null) => void;
+    onChange: any;
     value: string | null;
     label: string;
 }
@@ -35,21 +35,18 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0] || null;
 
-
         if (file) {
-            uploaDer(file).then(
-                (url) => {
-                    const fullurl = `${import.meta.env.VITE_API_URL}${url}`;
-                    setPreview(fullurl);
-                    onChange(file);
-                }
-            ).catch((err) => {
-                toast.error(err);
-            }
-            )
+            uploaDer(file)
+                .then((url) => {
+                    const fullUrl = `${import.meta.env.VITE_API_URL}${url}`;
+                    setPreview(fullUrl);
+                    onChange(fullUrl); // Pass the uploaded image URL instead of the file
+                })
+                .catch((err) => {
+                    toast.error("Failed to upload image. Please try again.");
+                    console.error(err);
+                });
         }
-
-
     };
 
     const handleRemove = () => {
@@ -60,7 +57,7 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
     return (
         <div className="space-y-2">
             <Label htmlFor={`image-upload-${label}`}>{label}</Label>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 w-1/2">
                 <input
                     id={`image-upload-${label}`}
                     type="file"
@@ -73,10 +70,11 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
                         <img
                             src={preview}
                             alt="Preview"
-                            className="w-full max-h-[300px] object-cover rounded-md"
+                            className="w-full max-h-[700px] object-full rounded-md"
                         />
                         <div className="absolute top-2 right-2 flex gap-2">
                             <Button
+                                type="button"
                                 variant="destructive"
                                 size="sm"
                                 onClick={handleRemove}
@@ -96,7 +94,7 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
                     <Button
                         variant="outline"
                         type="button"
-                        className="h-24 w-full"
+                        className="h-[700px] w-full"
                         onClick={() => document.getElementById(`image-upload-${label}`)?.click()}
                     >
                         Upload {label}

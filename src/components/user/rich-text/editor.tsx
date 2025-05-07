@@ -361,6 +361,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                 <div className="h-6 w-px bg-border mx-1" />
 
                 <Button
+                    type="button"
                     variant="outline"
                     size="sm"
                     onClick={addImage}
