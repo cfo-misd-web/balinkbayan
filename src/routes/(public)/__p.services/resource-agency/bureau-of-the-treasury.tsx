@@ -11,6 +11,8 @@ import { Facebook, Globe, Mail, MapPin, MessageCircle, Phone, } from 'lucide-rea
 import { AccordionHeader } from '@radix-ui/react-accordion'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
+import CurrencyConverter from '@/components/user/shared/embed/currencyconverter'
+import ExchangeRates from '@/components/user/shared/embed/exchangerates'
 
 export const Route = createFileRoute(
   '/(public)/__p/services/resource-agency/bureau-of-the-treasury',
@@ -315,7 +317,14 @@ function RouteComponent() {
             {/* TODO */}
             {/* TODO */}
             {/* EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES EXCHANGE RATES */}
-            <div className='border-4 border-teal-500 rounded p-5 space-y-10'></div>
+            <div className='border-4 items-center border-teal-500 rounded p-5 space-y-10'>
+              <Heading5 className='text-center'>CURRENCY CONVERTER</Heading5>
+              <CurrencyConverter />
+            </div>
+
+            <div className='border-4 items-center border-teal-500 rounded p-5 space-y-10'>
+              <ExchangeRates />
+            </div>
           </div>
         </div>
       </section>
