@@ -3,7 +3,7 @@ import Paragraph from '@/components/user/shared/paragraph'
 import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading4 from '@/components/user/shared/headings/heading-4'
 import Heading5 from '@/components/user/shared/headings/heading-5'
-import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
+import DarkRoseAnchor from '@/components/user/shared/anchors/darkrose-anchor'
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
 import { services } from '@/constants/contants'
 import AccordItem from '@/components/user/shared/accord-item'
@@ -51,7 +51,7 @@ function RouteComponent() {
                       <p>{i.description3}</p>
                     </TableCell>
                     <TableCell className='border-r-1 border-gray-400'>{i.govAgency}</TableCell>
-                    <TableCell><RoseAnchor className='text-rose-700 hover:text-rose-500 break-all' href_url={i.links}>{i.links}</RoseAnchor></TableCell>
+                    <TableCell><DarkRoseAnchor className='break-all' href_url={i.links}>{i.links}</DarkRoseAnchor></TableCell>
                   </TableRow>
                 ))}
               </TableBody>
