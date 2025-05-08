@@ -21,10 +21,10 @@ import {
 } from "@/components/ui/form";
 import { toast } from "sonner";
 import { cmsformSchema, type cmsFormValues } from "@/constants/schema";
-import { useMutatePost } from "@/services/query&mutations/use-mutate-post";
 import { useNavigate } from "@tanstack/react-router";
 import { Textarea } from "@/components/ui/textarea";
 import type { Post } from "@/constants/types";
+import { useEditPost } from "@/services/query&mutations/use-edit-post";
 
 
 
@@ -36,7 +36,7 @@ export function EditPosterForm({
     const [content] = useState("<p>Start writing your content here...</p>");
     const [routeTouched, setRouteTouched] = useState(false);
     const navigate = useNavigate();
-    const { mutate: uploadPost } = useMutatePost();
+    const { mutate: editPost } = useEditPost();
 
     const form = useForm<cmsFormValues>({
         resolver: zodResolver(cmsformSchema),
@@ -107,7 +107,7 @@ export function EditPosterForm({
             publishedDate: publishDate,
         };
 
-        uploadPost(fd, {
+        editPost({data, route}, {
             onSuccess: (data) => {
                 form.reset();
                 setTimeout(() => {
