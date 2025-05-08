@@ -39,6 +39,8 @@ function RouteComponent() {
             imageUrl={news.bannerImg}
             author={news.author}
             id={news.id}
+
+            className="max-lg:w-full max-lg:mx-auto flex max-lg:flex-col max-lg:gap-4 "
           />
         ))}
       </ul>

@@ -2,17 +2,18 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useGetPaginatedPosts } from "@/services/query&mutations/use-get-paginated-posts";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import Pagination from "@/lib/use-pagination";
 import { useDeletePost } from "@/services/query&mutations/use-delete-post";
 
 const PostsTable = () => {
     const [search, setSearch] = useState("");
+    const [debouncedSearch, setDebouncedSearch] = useState("");
     const [page, setPage] = useState(1);
     const pageSize = 10;
 
-    const { data: posts } = useGetPaginatedPosts({ page, pageSize, search });
+    const { data: posts, isPending } = useGetPaginatedPosts({ page, pageSize, search: debouncedSearch });
     const { mutate: deletePost } = useDeletePost();
 
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,8 +21,18 @@ const PostsTable = () => {
         setPage(1);
     };
 
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedSearch(search);
+        }, 300);
+
+        return () => {
+            clearTimeout(handler);
+        };
+    }, [search]);
+
     return (
-        <div className="max-w-[1400px] mx-auto py-10 px-[50px]">
+        <div className="max-w-[1400px] mx-auto py-10 px-[50px] ">
             <div className="flex justify-between items-center mb-4">
                 <Input
                     placeholder="Search posts..."
@@ -36,20 +47,20 @@ const PostsTable = () => {
                     <Link to="/cms/editor">Create New Post</Link>
                 </Button>
             </div>
-            <Table>
+            <Table className="overflow-x-scroll">
                 <TableHeader>
                     <TableRow>
-                        <TableHead>ID</TableHead>
-                        <TableHead>Title</TableHead>
-                        <TableHead>Author</TableHead>
-                        <TableHead>Route</TableHead>
-                        <TableHead>Created At</TableHead>
-                        <TableHead>Updated At</TableHead>
-                        <TableHead>Actions</TableHead>
+                        <TableHead className="w-[200px]">ID</TableHead>
+                        <TableHead className="w-[200px]">Title</TableHead>
+                        <TableHead className="w-[200px]">Author</TableHead>
+                        <TableHead className="w-[200px]">Route</TableHead>
+                        <TableHead className="w-[200px]">Created At</TableHead>
+                        <TableHead className="w-[200px]">Updated At</TableHead>
+                        <TableHead className="w-[200px]">Actions</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {posts?.posts.map((post) => (
+                    {posts && posts?.posts.map((post) => (
                         <TableRow key={post.id}>
                             <TableCell>{post.id.split("-")[0]}</TableCell>
                             <TableCell className="">{post.title}</TableCell>
@@ -73,10 +84,26 @@ const PostsTable = () => {
                             </TableCell>
                         </TableRow>
                     ))}
+                    
+                    {!isPending && posts?.posts.length === 0 && (
+                        <TableRow>
+                            <TableCell colSpan={7} className="text-center">
+                                No posts found.
+                            </TableCell>
+                        </TableRow>
+                    )}
+
+                    {isPending && (
+                        <TableRow>
+                            <TableCell colSpan={7} className="text-center">
+                                Loading...
+                            </TableCell>
+                        </TableRow>
+                    )}
                 </TableBody>
             </Table>
             <div className="mt-4 flex justify-between">
-                {posts?.pagination.totalPages && <p>{posts.pagination.total} total posts</p>}
+                <p>{posts?.pagination.total || 0} total posts</p>
                 
                 <Pagination
                     currentPage={page}

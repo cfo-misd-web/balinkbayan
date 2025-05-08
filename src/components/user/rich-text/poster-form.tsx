@@ -52,6 +52,8 @@ export function PosterForm() {
     const { watch, setValue } = form;
     const title = watch("title");
 
+    console.log("Form values:", watch("publishDate"));
+
     useEffect(() => {
         if (!routeTouched && title) {
             setValue("route", title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
