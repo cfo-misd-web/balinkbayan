@@ -101,7 +101,7 @@ export function PosterForm() {
             author,
             bannerImg: bannerImage, 
             content: contentWithUploadedImages, 
-            publishDate: publishDate || new Date().toISOString(),
+            publishedDate: publishDate,
         };
 
         uploadPost(fd, {
@@ -115,6 +115,8 @@ export function PosterForm() {
                 toast.error(`Error creating poster: ${error.message}`);
             },
         });
+
+        console.log("Form data:", fd);
     };
 
     return (
