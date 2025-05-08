@@ -27,10 +27,10 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                             <AccordionItem value={`${baseId}-${idx}`}>
                                 <AccordionTrigger
                                     className={cn(
-                                        "text-teal-700 hover:text-teal-800 font-medium py-2 rounded-none [&[data-state=open]>svg]:rotate-90",
+                                        "text-teal-700 hover:text-teal-800 font-medium py-2 rounded-none",
                                     )}
                                 >
-                                    <div className="flex items-center justify-between w-full">
+                                    <div className="flex items-center justify-between w-full font-semibold">
                                         {item.label}
                                     </div>
                                 </AccordionTrigger>
@@ -55,7 +55,7 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                                                 ) : (
                                                     <Accordion type="single" collapsible>
                                                         <AccordionItem value={`${baseId}-${idx}-sublink-${sublinkIdx}`}>
-                                                            <AccordionTrigger className="text-teal-700 hover:text-teal-800 py-2 text-sm">
+                                                            <AccordionTrigger className="text-teal-700 hover:text-teal-800 py-2 text-sm font-semibold">
                                                                 {sublink.label}
                                                             </AccordionTrigger>
                                                             <AccordionContent>
@@ -77,7 +77,7 @@ const NestedAccordion = ({ items, baseId, depth = 0 }: { items: NavItem[]; baseI
                                                                                     <AccordionItem
                                                                                         value={`${baseId}-${idx}-sublink-${sublinkIdx}-nested-${nestedItemIdx}`}
                                                                                     >
-                                                                                        <AccordionTrigger className="text-teal-700 hover:text-teal-800 py-1 text-sm">
+                                                                                        <AccordionTrigger className="text-teal-700 hover:text-teal-800 py-1 text-sm font-semibold">
                                                                                             {nestedItem.label}
                                                                                         </AccordionTrigger>
                                                                                         <AccordionContent>

@@ -46,7 +46,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                     <NavigationMenuItem key={item.label} className="group">
                         {item.href && !item.links && !item.sublinks && (
                             <NavigationMenuLink
-                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start bg-transparent')}
+                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start bg-transparent hover:cursor-pointer')}
                                 onClick={() => router({ to: item.href })}
                                 key={item.label}
                             >
@@ -67,7 +67,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                                     <div className="w-[250px] z-20 p-2 bg-white rounded-md shadow-md border border-slate-200">
                                         {item.links && item.links.map(link => (
                                             <NavigationMenuLink
-                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start')}
+                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start hover:cursor-pointer')}
                                                 onClick={() => router({ to: link.href })}
                                                 key={link.label}
                                             >
@@ -80,7 +80,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                                                 {sublink.links ? (
                                                     <div className="relative" key={sublink.label}>
                                                         <div
-                                                            className="flex items-center justify-between font-medium px-3 py-2 text-sm rounded hover:bg-slate-100 cursor-pointer p-2"
+                                                            className="flex items-center justify-between font-medium px-3 py-2 text-sm rounded hover:bg-slate-100 p-2"
                                                             onClick={() => startTransition(() => toggleLevel2(item.label, sublink.label))}
                                                         >
                                                             {sublink.label}
@@ -100,7 +100,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                                                                         nestedLink.target === "_blank" ? 
                                                                         (
                                                                             <NavigationMenuLink
-                                                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm')}
+                                                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm hover:cursor-pointer')}
                                                                                 onClick={() => window.open(nestedLink.href, "_blank")}
                                                                                 key={nestedLink.label}
                                                                             >
@@ -109,7 +109,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                                                                         ) : (
                                                                         (
                                                                             <NavigationMenuLink
-                                                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm')}
+                                                                                className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm hover:cursor-pointer')}
                                                                                 onClick={() => router({ to: nestedLink.href })}
                                                                                 key={nestedLink.label}
                                                                             >
@@ -123,7 +123,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                                                 ) : sublink.sublinks ? (
                                                     <div className="relative">
                                                         <div
-                                                            className="flex items-center justify-between font-medium px-3 py-2 text-sm rounded hover:bg-slate-100 cursor-pointer"
+                                                            className="flex items-center justify-between font-medium px-3 py-2 text-sm rounded hover:bg-slate-100"
                                                             onClick={() => startTransition(() => toggleLevel2(item.label, sublink.label))}
                                                         >
                                                             {sublink.label}
@@ -164,7 +164,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                                                                                             <div className="absolute left-full top-0 bg-white rounded-md border shadow-md w-[300px] p-2 ml-1">
                                                                                                 {nestedItem.subsublinks.map(subsublink => (
                                                                                                     <NavigationMenuLink
-                                                                                                        className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm')}
+                                                                                                        className={cn(navigationMenuTriggerStyle(), 'w-full justify-start text-sm hover:cursor-pointer')}
                                                                                                         onClick={() => router({ to: subsublink.href })}
                                                                                                         key={subsublink.label}
                                                                                                     >
@@ -183,7 +183,7 @@ const NavLinks = ({ className }: { className?: string }) => {
                                                     </div>
                                                 ) : (sublink && sublink.label && sublink.href) && (
                                                     <NavigationMenuLink
-                                                        className={cn(navigationMenuTriggerStyle(), 'w-full justify-start -ml-1')}
+                                                        className={cn(navigationMenuTriggerStyle(), 'w-full justify-start -ml-1 hover:cursor-pointer')}
                                                         onClick={() => { router({ to: sublink.href }) }}
                                                     >
 
