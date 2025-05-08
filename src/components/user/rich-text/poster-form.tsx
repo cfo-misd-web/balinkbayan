@@ -44,7 +44,7 @@ export function PosterForm() {
             content: content,
             author: "",
             tags: [],
-            publishDate: new Date().toISOString().slice(0, 16),
+            publishDate: new Date().toISOString(),
         },
     });
 
@@ -108,7 +108,7 @@ export function PosterForm() {
             onSuccess: (data) => {
                 form.reset();
                 setTimeout(() => {
-                    navigate({ to: "/news/$postroute", params: { postroute: data.post.id } });
+                    navigate({ to: "/news/$postroute", params: { postroute: data.post.route } });
                 } , 1000);
             },
             onError: (error) => {
@@ -196,7 +196,7 @@ export function PosterForm() {
                                                 type="datetime-local"
                                                 {...field}
                                                 value={field.value ? field.value.slice(0, 16) : ''}
-                                                onChange={e => field.onChange(e.target.value)}
+                                                onChange={e => field.onChange(new Date(e.target.value).toISOString())}
                                             />
                                         </FormControl>
                                         <FormMessage />

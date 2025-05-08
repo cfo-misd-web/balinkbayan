@@ -9,7 +9,7 @@ import { StarIcon } from "lucide-react";
 export const Route = createFileRoute('/(public)/__p/news/$postroute')({
   component: RouteComponent,
   loader: async ({ params }) => {
-    const { data }: { data: { post: Post } } = await api.get(`/posts/${params.postroute}`);
+    const { data }: { data: { post: Post } } = await api.get(`/posts/specific/${params.postroute}`);
     return data;
   },
   head: (c) => ({

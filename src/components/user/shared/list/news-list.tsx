@@ -12,9 +12,10 @@ type NewsListProps = {
     imageUrl?:string,
     id?:string,
     author?:string,
+    route?:string,
 }
 
-const NewsList = ({className, newsTitle, postedDate, newsDescription, imageUrl, id, author}: NewsListProps) => {
+const NewsList = ({className, newsTitle, postedDate, newsDescription, imageUrl, author, route}: NewsListProps) => {
     return (
         <li className='even:bg-gray-200 odd:bg-gray-100 w-full flex justify-center py-8 text-cyan-900'>
           <div className={cn('flex flex-row space-x-20 w-[80%] border border-gray-300 rounded-lg shadow-md p-[25px]', className)}>
@@ -30,7 +31,7 @@ const NewsList = ({className, newsTitle, postedDate, newsDescription, imageUrl, 
               <RoseAnchor 
                 target="_self"
                 className="flex flex-row text-rose-700 hover:text-rose-500 cursor-pointer" 
-                href_url={`/news/${id}`}
+                href_url={`/news/${route}`}
               >
                 Read more 
                 <ChevronRight className="w-10"/>

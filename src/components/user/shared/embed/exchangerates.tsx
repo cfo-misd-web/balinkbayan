@@ -25,7 +25,6 @@ const ExchangeRates: React.FC = () => {
     return (
         <div>
             <div id='gcw_mainFKZz1x2n8' className='gcw_mainFKZz1x2n8'></div>
-            <a id='gcw_siteFKZz1x2n8' href='https://freecurrencyrates.com/en/'>FreeCurrencyRates.com</a>
         </div>
     );
 };

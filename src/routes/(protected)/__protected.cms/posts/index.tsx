@@ -70,7 +70,7 @@ const PostsTable = () => {
                             <TableCell>{new Date(post.updatedAt).toLocaleString()}</TableCell>
                             <TableCell className="flex flex-row gap-2">
                                 <Button>
-                                    <Link to={'/news/' + post.id}>
+                                    <Link to={'/news/' + post.route}>
                                         View
                                     </Link>
                                 </Button>
