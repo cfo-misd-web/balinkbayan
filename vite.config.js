@@ -24,6 +24,6 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true,
-    allowedHosts: ["balinkbayan.r3workshop.live"],
+    allowedHosts: ["beta.balinkbayan.gov.ph"],
   },
 });

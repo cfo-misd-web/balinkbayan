@@ -21,30 +21,34 @@ import {
 } from "@/components/ui/form";
 import { toast } from "sonner";
 import { cmsformSchema, type cmsFormValues } from "@/constants/schema";
-import { useMutatePost } from "@/services/query&mutations/use-mutate-post";
 import { useNavigate } from "@tanstack/react-router";
 import { Textarea } from "@/components/ui/textarea";
+import type { Post } from "@/constants/types";
+import { useEditPost } from "@/services/query&mutations/use-edit-post";
 
 
 
 
-export function PosterForm() {
+export function EditPosterForm({
+    post
+}: { post: Post }) {
     const [activeTab, setActiveTab] = useState("edit");
     const [content] = useState("<p>Start writing your content here...</p>");
     const [routeTouched, setRouteTouched] = useState(false);
     const navigate = useNavigate();
-    const { mutate: uploadPost } = useMutatePost();
+    const { mutate: editPost } = useEditPost();
 
     const form = useForm<cmsFormValues>({
         resolver: zodResolver(cmsformSchema),
-        defaultValues: {
-            title: "",
-            route: "",
-            description: "",
-            content: content,
-            author: "",
-            tags: [],
-            publishDate: new Date().toISOString(),
+        values: {
+            title: post?.title ?? "",
+            route: post?.route ?? "",
+            bannerImage: post?.bannerImg ?? null,
+            description: post?.description ?? "",
+            content: post?.content ?? content,
+            author: post?.author ?? "",
+            tags: post?.tags ? JSON.parse(post.tags) : [],
+            publishDate: post?.createdAt ? new Date(post.createdAt).toISOString() : new Date().toISOString(),
         },
     });
 
@@ -52,7 +56,6 @@ export function PosterForm() {
     const { watch, setValue } = form;
     const title = watch("title");
 
-    console.log("Form values:", watch("publishDate"));
 
     useEffect(() => {
         if (!routeTouched && title) {
@@ -104,7 +107,7 @@ export function PosterForm() {
             publishedDate: publishDate,
         };
 
-        uploadPost(fd, {
+        editPost({data, route}, {
             onSuccess: (data) => {
                 form.reset();
                 setTimeout(() => {
@@ -117,6 +120,27 @@ export function PosterForm() {
         });
 
         console.log("Form data:", fd);
+    };
+
+    const renderBannerImage = (banner: string | File | null) => {
+        if (typeof banner === "string" && banner) {
+            return (
+                <img
+                    src={banner}
+                    alt={form.watch("title")}
+                    className="w-full h-[300px] object-cover rounded-md mb-6"
+                />
+            );
+        } else if (banner instanceof File) {
+            return (
+                <img
+                    src={URL.createObjectURL(banner)}
+                    alt={form.watch("title")}
+                    className="w-full h-[300px] object-cover rounded-md mb-6"
+                />
+            );
+        }
+        return null;
     };
 
     return (
@@ -281,27 +305,7 @@ export function PosterForm() {
                         <Card>
                             <CardContent className="p-6">
                                 <div className="prose max-w-none">
-                                    {form.watch("bannerImage") && (() => {
-                                        const banner = form.watch("bannerImage");
-                                        if (typeof banner === "string" && banner) {
-                                            return (
-                                                <img
-                                                    src={banner}
-                                                    alt={form.watch("title")}
-                                                    className="w-full h-[300px] object-cover rounded-md mb-6"
-                                                />
-                                            );
-                                        } else if (banner) {
-                                            return (
-                                                <img
-                                                    src={banner}
-                                                    alt={form.watch("title")}
-                                                    className="w-full h-[300px] object-cover rounded-md mb-6"
-                                                />
-                                            );
-                                        }
-                                        return null;
-                                    })()}
+                                    {renderBannerImage(form.watch("bannerImage") ?? null)}
                                     <h1 className="text-3xl font-bold mb-2">{form.watch("title")}</h1>
 
                                     <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">

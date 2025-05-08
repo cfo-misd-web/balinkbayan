@@ -23,6 +23,7 @@ import {
 import '@/styles.css'
 import { useSessionStore } from "@/store/session-store";
 import { api } from "@/services/axios-fetchers/api";
+import { toast } from "sonner";
 
 interface RichTextEditorProps {
     value: string;
@@ -42,7 +43,7 @@ export const uploaDer = async (file: File) => {
     }).then((res) => {
         return res.data.url;
     }).catch((err) => {
-        console.error(err);
+        toast.error(err);
     })
 }
 
