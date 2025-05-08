@@ -53,6 +53,7 @@ import { Route as publicpDonateVolunteerBalikTuroImport } from './routes/(public
 import { Route as publicpDonateVolunteerBalikScientistImport } from './routes/(public)/__p.donate/volunteer/balik-scientist'
 import { Route as publicpDonateDonateSurgicalMedicalMissionImport } from './routes/(public)/__p.donate/donate/surgical-medical-mission'
 import { Route as publicpDonateDonateLinkapilDonationsImport } from './routes/(public)/__p.donate/donate/linkapil-donations'
+import { Route as protectedprotectedCmsEditorPostrouteImport } from './routes/(protected)/__protected.cms/editor/$postroute'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/thinking-about-it'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessObtainBusinessLicensesPermitsImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/obtain-business-licenses-permits'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessLearnBusinessRegulationsImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/start-a-business/learn-business-regulations'
@@ -356,6 +357,13 @@ const publicpDonateDonateLinkapilDonationsRoute =
     getParentRoute: () => publicpRoute,
   } as any)
 
+const protectedprotectedCmsEditorPostrouteRoute =
+  protectedprotectedCmsEditorPostrouteImport.update({
+    id: '/cms/editor/$postroute',
+    path: '/cms/editor/$postroute',
+    getParentRoute: () => protectedprotectedRoute,
+  } as any)
+
 const publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItRoute =
   publicpStartBusinessSmallEnterpriseKnowledgeCenterStartABusinessThinkingAboutItImport.update(
     {
@@ -618,6 +626,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/start-business'
       preLoaderRoute: typeof publicpStartBusinessIndexImport
       parentRoute: typeof publicpImport
+    }
+    '/(protected)/__protected/cms/editor/$postroute': {
+      id: '/(protected)/__protected/cms/editor/$postroute'
+      path: '/cms/editor/$postroute'
+      fullPath: '/cms/editor/$postroute'
+      preLoaderRoute: typeof protectedprotectedCmsEditorPostrouteImport
+      parentRoute: typeof protectedprotectedImport
     }
     '/(public)/__p/donate/donate/linkapil-donations': {
       id: '/(public)/__p/donate/donate/linkapil-donations'
@@ -914,12 +929,15 @@ const authRouteWithChildren = authRoute._addFileChildren(authRouteChildren)
 
 interface protectedprotectedRouteChildren {
   protectedprotectedCmsIndexRoute: typeof protectedprotectedCmsIndexRoute
+  protectedprotectedCmsEditorPostrouteRoute: typeof protectedprotectedCmsEditorPostrouteRoute
   protectedprotectedCmsEditorIndexRoute: typeof protectedprotectedCmsEditorIndexRoute
   protectedprotectedCmsPostsIndexRoute: typeof protectedprotectedCmsPostsIndexRoute
 }
 
 const protectedprotectedRouteChildren: protectedprotectedRouteChildren = {
   protectedprotectedCmsIndexRoute: protectedprotectedCmsIndexRoute,
+  protectedprotectedCmsEditorPostrouteRoute:
+    protectedprotectedCmsEditorPostrouteRoute,
   protectedprotectedCmsEditorIndexRoute: protectedprotectedCmsEditorIndexRoute,
   protectedprotectedCmsPostsIndexRoute: protectedprotectedCmsPostsIndexRoute,
 }
@@ -1101,6 +1119,7 @@ export interface FileRoutesByFullPath {
   '/news': typeof publicpNewsIndexRoute
   '/services': typeof publicpServicesIndexRoute
   '/start-business': typeof publicpStartBusinessIndexRoute
+  '/cms/editor/$postroute': typeof protectedprotectedCmsEditorPostrouteRoute
   '/donate/donate/linkapil-donations': typeof publicpDonateDonateLinkapilDonationsRoute
   '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
@@ -1155,6 +1174,7 @@ export interface FileRoutesByTo {
   '/news': typeof publicpNewsIndexRoute
   '/services': typeof publicpServicesIndexRoute
   '/start-business': typeof publicpStartBusinessIndexRoute
+  '/cms/editor/$postroute': typeof protectedprotectedCmsEditorPostrouteRoute
   '/donate/donate/linkapil-donations': typeof publicpDonateDonateLinkapilDonationsRoute
   '/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
@@ -1216,6 +1236,7 @@ export interface FileRoutesById {
   '/(public)/__p/news/': typeof publicpNewsIndexRoute
   '/(public)/__p/services/': typeof publicpServicesIndexRoute
   '/(public)/__p/start-business/': typeof publicpStartBusinessIndexRoute
+  '/(protected)/__protected/cms/editor/$postroute': typeof protectedprotectedCmsEditorPostrouteRoute
   '/(public)/__p/donate/donate/linkapil-donations': typeof publicpDonateDonateLinkapilDonationsRoute
   '/(public)/__p/donate/donate/surgical-medical-mission': typeof publicpDonateDonateSurgicalMedicalMissionRoute
   '/(public)/__p/donate/volunteer/balik-scientist': typeof publicpDonateVolunteerBalikScientistRoute
@@ -1272,6 +1293,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/services'
     | '/start-business'
+    | '/cms/editor/$postroute'
     | '/donate/donate/linkapil-donations'
     | '/donate/donate/surgical-medical-mission'
     | '/donate/volunteer/balik-scientist'
@@ -1325,6 +1347,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/services'
     | '/start-business'
+    | '/cms/editor/$postroute'
     | '/donate/donate/linkapil-donations'
     | '/donate/donate/surgical-medical-mission'
     | '/donate/volunteer/balik-scientist'
@@ -1384,6 +1407,7 @@ export interface FileRouteTypes {
     | '/(public)/__p/news/'
     | '/(public)/__p/services/'
     | '/(public)/__p/start-business/'
+    | '/(protected)/__protected/cms/editor/$postroute'
     | '/(public)/__p/donate/donate/linkapil-donations'
     | '/(public)/__p/donate/donate/surgical-medical-mission'
     | '/(public)/__p/donate/volunteer/balik-scientist'
@@ -1476,6 +1500,7 @@ export const routeTree = rootRoute
       "parent": "/(protected)",
       "children": [
         "/(protected)/__protected/cms/",
+        "/(protected)/__protected/cms/editor/$postroute",
         "/(protected)/__protected/cms/editor/",
         "/(protected)/__protected/cms/posts/"
       ]
@@ -1590,6 +1615,10 @@ export const routeTree = rootRoute
     "/(public)/__p/start-business/": {
       "filePath": "(public)/__p.start-business/index.tsx",
       "parent": "/(public)/__p"
+    },
+    "/(protected)/__protected/cms/editor/$postroute": {
+      "filePath": "(protected)/__protected.cms/editor/$postroute.tsx",
+      "parent": "/(protected)/__protected"
     },
     "/(public)/__p/donate/donate/linkapil-donations": {
       "filePath": "(public)/__p.donate/donate/linkapil-donations.tsx",
