@@ -278,7 +278,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
             {/* Sticky container for both toolbars */}
             <div className="sticky top-0 z-40 bg-white">
                 {/* Main options bar */}
-                <div className="flex flex-wrap items-center gap-1 p-2 border-b bg-white">
+                <div className="flex flex-wrap border-l rounded-tl-md items-center gap-1 p-2 border-b bg-white">
                     <Toggle
                         pressed={editor.isActive('bold')}
                         onPressedChange={() => editor.chain().focus().toggleBold().run()}
@@ -394,7 +394,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                 </div>
 
                 {selectedImage && (
-                    <div className="p-2 bg-gray-50 border-b">
+                    <div className="p-2 border-l bg-gray-50 border-b">
                         <div className="flex items-center gap-3 mb-2 flex-wrap">
                             <span className="text-xs font-medium">Image Size:</span>
                             <div className="w-32">

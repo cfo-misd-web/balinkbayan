@@ -147,12 +147,12 @@ export function EditPosterForm({
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <Tabs value={activeTab} onValueChange={setActiveTab}>
-                    <div className="flex justify-between items-center mb-4">
+                    <div className="flex flex-col justify-between space-y-2 items-center mb-4">
                         <TabsList>
                             <TabsTrigger value="edit">Edit</TabsTrigger>
                             <TabsTrigger value="preview">Preview</TabsTrigger>
                         </TabsList>
-                        <Button type="submit">Save Post</Button>
+                        <Button className="self-end" type="submit">Save Post</Button>
                     </div>
 
                     <TabsContent value="edit" className="space-y-6">
