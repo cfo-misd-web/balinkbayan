@@ -3,11 +3,11 @@ import Paragraph from '@/components/user/shared/paragraph'
 import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading4 from '@/components/user/shared/headings/heading-4'
 import Heading5 from '@/components/user/shared/headings/heading-5'
+import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { AccordionHeader } from '@radix-ui/react-accordion'
 import { Separator } from '@radix-ui/react-separator'
 import { Table, TableHead, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table'
-import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
 
 export const Route = createFileRoute(
   '/(public)/__p/start-business/small-enterprise-knowledge-center/manage-business/running-business',

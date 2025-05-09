@@ -32,7 +32,7 @@ const CurrencyConverter: React.FC = () => {
         document.getElementById('currency-converter-163324')?.appendChild(script1);
     }, []);
 
-    return <div id="currency-converter-163324"></div>;
+    return <div id="currency-converter-163324" className='w-full'></div>;
 };
 
 export default CurrencyConverter;

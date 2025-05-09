@@ -3,7 +3,7 @@ import Paragraph from '@/components/user/shared/paragraph'
 import BiggerBanner from '@/components/user/shared/banner/bigger-banner'
 import Heading4 from '@/components/user/shared/headings/heading-4'
 import Heading5 from '@/components/user/shared/headings/heading-5'
-import RoseAnchor from '@/components/user/shared/anchors/rose-anchor'
+import DarkRoseAnchor from '@/components/user/shared/anchors/darkrose-anchor'
 
 export const Route = createFileRoute(
   '/(public)/__p/start-business/investment-op/franchise-business',
@@ -232,19 +232,19 @@ function RouteComponent() {
           </div>
           {/*  */}
           <div className='mx-4 max-lg:mx-0 space-y-20'>
-            <Paragraph>Click <RoseAnchor className='text-rose-700 hover:text-rose-500' href_url='http://44.199.161.141/wp-content/uploads/2024/05/List-of-Legitimate-franchise-businesses-in-the-Philippines-CFO-BaLinkBayan.pdf'>here</RoseAnchor> for <b>LIST OF SOME LEGITIMATE FRANCHISE BUSINESS IN THE PHILIPPINES</b></Paragraph>
+            <Paragraph>Click <DarkRoseAnchor href_url='http://44.199.161.141/wp-content/uploads/2024/05/List-of-Legitimate-franchise-businesses-in-the-Philippines-CFO-BaLinkBayan.pdf'>here</DarkRoseAnchor> for <b>LIST OF SOME LEGITIMATE FRANCHISE BUSINESS IN THE PHILIPPINES</b></Paragraph>
             <div className='flex flex-row items-center space-x-20'>
               <img className='col-span-12' src='/img-assets/start-a-business/franchise-business/sources.png' />
               <Paragraph className='italic font-light'><b>SOURCES</b>:<br/><br/>
 
               International Franchise Conference (2023).<br/>
-              Retrieved from <RoseAnchor className='text-rose-700 hover:text-rose-500' href_url='https://www.franchiseasiaph.com'>www.franchiseasiaph.com</RoseAnchor><br/><br/>
+              Retrieved from <DarkRoseAnchor href_url='https://www.franchiseasiaph.com'>www.franchiseasiaph.com</DarkRoseAnchor><br/><br/>
 
               Philippine Franchise Association.<br/>
-              Retrieved from <RoseAnchor className='text-rose-700 hover:text-rose-500' href_url='https://www.pfa.org.ph'>www.pfa.org.ph</RoseAnchor><br/><br/>
+              Retrieved from <DarkRoseAnchor href_url='https://www.pfa.org.ph'>www.pfa.org.ph</DarkRoseAnchor><br/><br/>
 
               Franchise Market.<br/>
-              Retrieved from <RoseAnchor className='text-rose-700 hover:text-rose-500' href_url='https://www.franchisemarket.ph'>www.franchisemarket.ph</RoseAnchor></Paragraph>
+              Retrieved from <DarkRoseAnchor href_url='https://www.franchisemarket.ph'>www.franchisemarket.ph</DarkRoseAnchor></Paragraph>
             </div>
           </div>
         </div>
