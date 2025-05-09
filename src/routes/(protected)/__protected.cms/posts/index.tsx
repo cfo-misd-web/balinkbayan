@@ -47,7 +47,7 @@ const PostsTable = () => {
                     <Link to="/cms/editor">Create New Post</Link>
                 </Button>
             </div>
-            <Table className="overflow-x-scroll">
+            <Table className="overflow-x-scroll w-full">
                 <TableHeader>
                     <TableRow>
                         <TableHead className="w-[200px]">ID</TableHead>
@@ -56,10 +56,10 @@ const PostsTable = () => {
                         <TableHead className="w-[200px]">Route</TableHead>
                         <TableHead className="w-[200px]">Created At</TableHead>
                         <TableHead className="w-[200px]">Updated At</TableHead>
-                        <TableHead className="w-[200px]">Actions</TableHead>
+                        <TableHead className="w-[300px]">Actions</TableHead>
                     </TableRow>
                 </TableHeader>
-                <TableBody>
+                <TableBody className="overflow-x-scroll">
                     {posts && posts?.posts.map((post) => (
                         <TableRow key={post.id}>
                             <TableCell>{post.id.split("-")[0]}</TableCell>
@@ -68,18 +68,18 @@ const PostsTable = () => {
                             <TableCell>/news/{post.route}</TableCell>
                             <TableCell>{new Date(post.createdAt).toLocaleString()}</TableCell>
                             <TableCell>{new Date(post.updatedAt).toLocaleString()}</TableCell>
-                            <TableCell className="flex flex-row gap-2">
-                                <Button>
-                                    <Link to={'/news/' + post.route}>
+                            <TableCell className="flex flex-row gap-2 w-[300px]">
+                                <Link to={'/news/' + post.route}>
+                                    <Button className="cursor-pointer">
                                         View
-                                    </Link>
-                                </Button>
-                                <Button className="bg-teal-700">
-                                    <Link to={'/cms/editor/' + post.route}>
+                                    </Button>
+                                </Link>
+                                <Link to={'/cms/editor/' + post.route} >
+                                    <Button className="bg-teal-700 cursor-pointer" >
                                         Edit
-                                    </Link>
-                                </Button>
-                                <Button variant="destructive" className="ml-2"
+                                    </Button>
+                                </Link>
+                                <Button variant="destructive"
                                     onClick={() => {
                                         deletePost(post.id)
                                     }}
@@ -116,7 +116,7 @@ const PostsTable = () => {
                     onPageChange={(newPage) => setPage(newPage)}
                 />
             </div>
-        </div>
+        </div >
     );
 };
 
