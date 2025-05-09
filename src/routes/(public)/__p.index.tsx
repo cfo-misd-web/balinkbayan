@@ -27,16 +27,16 @@ function App() {
         <h2 className="text-2xl font-bold text-start mt-10 mb-5">Latest News</h2>
 
 
-        {post && post?.pagination?.total !== 0 && !isPending ?  <ul className="flex flex-col gap-4 mb-10">
+        {post && post?.pagination?.total !== 0 && !isPending ? <ul className="flex flex-col gap-4 mb-10">
           {post?.posts?.map((news) => (
             <li>
-            <a href={`/news/${news.id}`} key={news.id} className='text-teal-700 hover:text-teal-500 hover:underline cursor-pointer flex flex-row gap-2 items-center'>
-            • {news.title}
-            </a>
+              <a href={`/news/${news.route}`} key={news.id} className='text-teal-700 hover:text-teal-500 hover:underline cursor-pointer flex flex-row gap-2 items-center text-wrap'>
+                • {news.title}
+              </a>
             </li>
           ))}
-          </ul>
-          : <>no news</>}
+        </ul>
+          : <>no news available at this time</>}
 
       </div>
     </div>

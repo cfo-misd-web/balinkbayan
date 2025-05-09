@@ -78,6 +78,14 @@ const ResizableImage = Image.extend({
                         'data-layout': attributes.layout
                     };
                 }
+            },
+            class: {
+                default: null,
+                renderHTML: attributes => {
+                    return {
+                        'class': attributes.class
+                    };
+                }
             }
         };
     },
@@ -266,160 +274,162 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
     }
 
     return (
-        <div className="border min-h-[400px] rounded-md">
-            <div className="flex flex-wrap items-center gap-1 p-2 border-b">
-                <Toggle
-                    pressed={editor.isActive('bold')}
-                    onPressedChange={() => editor.chain().focus().toggleBold().run()}
-                    aria-label="Bold"
-                    size="sm"
-                >
-                    <Bold className="h-4 w-4" />
-                </Toggle>
-
-                <Toggle
-                    pressed={editor.isActive('italic')}
-                    onPressedChange={() => editor.chain().focus().toggleItalic().run()}
-                    aria-label="Italic"
-                    size="sm"
-                >
-                    <Italic className="h-4 w-4" />
-                </Toggle>
-
-                <Toggle
-                    pressed={editor.isActive('heading', { level: 1 })}
-                    onPressedChange={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-                    aria-label="Heading 1"
-                    size="sm"
-                >
-                    <Heading className="h-4 w-4" />
-                    <span className="ml-1 text-xs">1</span>
-                </Toggle>
-
-                <Toggle
-                    pressed={editor.isActive('heading', { level: 2 })}
-                    onPressedChange={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-                    aria-label="Heading 2"
-                    size="sm"
-                >
-                    <Heading className="h-4 w-4" />
-                    <span className="ml-1 text-xs">2</span>
-                </Toggle>
-
-                <Toggle
-                    pressed={editor.isActive('heading', { level: 3 })}
-                    onPressedChange={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-                    aria-label="Heading 3"
-                    size="sm"
-                >
-                    <Heading className="h-4 w-4" />
-                    <span className="ml-1 text-xs">3</span>
-                </Toggle>
-
-                <div className="h-6 w-px bg-border mx-1" />
-
-                <Toggle
-                    pressed={editor.isActive({ textAlign: 'left' })}
-                    onPressedChange={() => editor.chain().focus().setTextAlign('left').run()}
-                    aria-label="Align left"
-                    size="sm"
-                >
-                    <AlignLeft className="h-4 w-4" />
-                </Toggle>
-
-                <Toggle
-                    pressed={editor.isActive({ textAlign: 'center' })}
-                    onPressedChange={() => editor.chain().focus().setTextAlign('center').run()}
-                    aria-label="Align center"
-                    size="sm"
-                >
-                    <AlignCenter className="h-4 w-4" />
-                </Toggle>
-
-                <Toggle
-                    pressed={editor.isActive({ textAlign: 'right' })}
-                    onPressedChange={() => editor.chain().focus().setTextAlign('right').run()}
-                    aria-label="Align right"
-                    size="sm"
-                >
-                    <AlignRight className="h-4 w-4" />
-                </Toggle>
-
-                <div className="h-6 w-px bg-border mx-1" />
-
-                <Toggle
-                    pressed={editor.isActive('bulletList')}
-                    onPressedChange={() => editor.chain().focus().toggleBulletList().run()}
-                    aria-label="Bullet list"
-                    size="sm"
-                >
-                    <List className="h-4 w-4" />
-                </Toggle>
-
-                <Toggle
-                    pressed={editor.isActive('orderedList')}
-                    onPressedChange={() => editor.chain().focus().toggleOrderedList().run()}
-                    aria-label="Ordered list"
-                    size="sm"
-                >
-                    <ListOrdered className="h-4 w-4" />
-                </Toggle>
-
-                <div className="h-6 w-px bg-border mx-1" />
-
-                <CTooltip>
-                    <Button
-                        type="button"
-                        variant="outline"
+        <div className="border min-h-[400px] rounded-md overflow-visible relative">
+            {/* Sticky container for both toolbars */}
+            <div className="sticky top-0 z-40 bg-white">
+                {/* Main options bar */}
+                <div className="flex flex-wrap items-center gap-1 p-2 border-b bg-white">
+                    <Toggle
+                        pressed={editor.isActive('bold')}
+                        onPressedChange={() => editor.chain().focus().toggleBold().run()}
+                        aria-label="Bold"
                         size="sm"
-                        onClick={addImage}
-                        disabled={isUploading}
                     >
-                        <ImageIcon className="h-4 w-4 mr-1" />
-                        Image
-                    </Button>
-                </CTooltip>
+                        <Bold className="h-4 w-4" />
+                    </Toggle>
 
-            </div>
+                    <Toggle
+                        pressed={editor.isActive('italic')}
+                        onPressedChange={() => editor.chain().focus().toggleItalic().run()}
+                        aria-label="Italic"
+                        size="sm"
+                    >
+                        <Italic className="h-4 w-4" />
+                    </Toggle>
 
-            {selectedImage && (
-                <div className="p-2 bg-gray-50 border-b">
-                    <div className="flex items-center gap-3 mb-2">
-                        <span className="text-xs font-medium">Image Size:</span>
-                        <div className="w-32">
-                            <Slider
-                                value={[selectedImage.width]}
-                                min={10}
-                                max={100}
-                                step={1}
-                                onValueChange={(value) => updateImageWidth(value[0])}
-                            />
-                        </div>
-                        <span className="text-xs">{selectedImage.width}%</span>
+                    <Toggle
+                        pressed={editor.isActive('heading', { level: 1 })}
+                        onPressedChange={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
+                        aria-label="Heading 1"
+                        size="sm"
+                    >
+                        <Heading className="h-4 w-4" />
+                        <span className="ml-1 text-xs">1</span>
+                    </Toggle>
+
+                    <Toggle
+                        pressed={editor.isActive('heading', { level: 2 })}
+                        onPressedChange={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+                        aria-label="Heading 2"
+                        size="sm"
+                    >
+                        <Heading className="h-4 w-4" />
+                        <span className="ml-1 text-xs">2</span>
+                    </Toggle>
+
+                    <Toggle
+                        pressed={editor.isActive('heading', { level: 3 })}
+                        onPressedChange={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
+                        aria-label="Heading 3"
+                        size="sm"
+                    >
+                        <Heading className="h-4 w-4" />
+                        <span className="ml-1 text-xs">3</span>
+                    </Toggle>
+
+                    <div className="h-6 w-px bg-border mx-1" />
+
+                    <Toggle
+                        pressed={editor.isActive({ textAlign: 'left' })}
+                        onPressedChange={() => editor.chain().focus().setTextAlign('left').run()}
+                        aria-label="Align left"
+                        size="sm"
+                    >
+                        <AlignLeft className="h-4 w-4" />
+                    </Toggle>
+
+                    <Toggle
+                        pressed={editor.isActive({ textAlign: 'center' })}
+                        onPressedChange={() => editor.chain().focus().setTextAlign('center').run()}
+                        aria-label="Align center"
+                        size="sm"
+                    >
+                        <AlignCenter className="h-4 w-4" />
+                    </Toggle>
+
+                    <Toggle
+                        pressed={editor.isActive({ textAlign: 'right' })}
+                        onPressedChange={() => editor.chain().focus().setTextAlign('right').run()}
+                        aria-label="Align right"
+                        size="sm"
+                    >
+                        <AlignRight className="h-4 w-4" />
+                    </Toggle>
+
+                    <div className="h-6 w-px bg-border mx-1" />
+
+                    <Toggle
+                        pressed={editor.isActive('bulletList')}
+                        onPressedChange={() => editor.chain().focus().toggleBulletList().run()}
+                        aria-label="Bullet list"
+                        size="sm"
+                    >
+                        <List className="h-4 w-4" />
+                    </Toggle>
+
+                    <Toggle
+                        pressed={editor.isActive('orderedList')}
+                        onPressedChange={() => editor.chain().focus().toggleOrderedList().run()}
+                        aria-label="Ordered list"
+                        size="sm"
+                    >
+                        <ListOrdered className="h-4 w-4" />
+                    </Toggle>
+
+                    <div className="h-6 w-px bg-border mx-1" />
+
+                    <CTooltip>
                         <Button
                             type="button"
-                            size="sm"
                             variant="outline"
-                            onClick={setFullWidth}
-                            className="ml-auto"
-                        >
-                            <Maximize className="h-3.5 w-3.5 mr-1" />
-                            Full
-                        </Button>
-                        <Button
-                            type="button"
                             size="sm"
-                            variant="outline"
-                            onClick={setHalfWidth}
+                            onClick={addImage}
+                            disabled={isUploading}
                         >
-                            <Minimize className="h-3.5 w-3.5 mr-1" />
-                            Half
+                            <ImageIcon className="h-4 w-4 mr-1" />
+                            Image
                         </Button>
-                    </div>
-
+                    </CTooltip>
 
                 </div>
-            )}
+                {/* Image resizer bar, sticky below main toolbar */}
+                {selectedImage && (
+                    <div className="p-2 bg-gray-50 border-b">
+                        <div className="flex items-center gap-3 mb-2 flex-wrap">
+                            <span className="text-xs font-medium">Image Size:</span>
+                            <div className="w-32">
+                                <Slider
+                                    value={[selectedImage.width]}
+                                    min={10}
+                                    max={100}
+                                    step={1}
+                                    onValueChange={(value) => updateImageWidth(value[0])}
+                                />
+                            </div>
+                            <span className="text-xs">{selectedImage.width}%</span>
+                            <Button
+                                type="button"
+                                size="sm"
+                                variant="outline"
+                                onClick={setFullWidth}
+                                className="ml-auto"
+                            >
+                                <Maximize className="h-3.5 w-3.5 mr-1" />
+                                Full
+                            </Button>
+                            <Button
+                                type="button"
+                                size="sm"
+                                variant="outline"
+                                onClick={setHalfWidth}
+                            >
+                                <Minimize className="h-3.5 w-3.5 mr-1" />
+                                Half
+                            </Button>
+                        </div>
+                    </div>
+                )}
+            </div>
 
 
             <EditorContent editor={editor} className="tiptap p-3" />

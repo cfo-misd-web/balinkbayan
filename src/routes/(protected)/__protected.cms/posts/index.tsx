@@ -41,7 +41,7 @@ const PostsTable = () => {
                     className="w-1/3"
                 />
 
-               
+
 
                 <Button variant="outline" className="text-sm" type="button">
                     <Link to="/cms/editor">Create New Post</Link>
@@ -74,6 +74,11 @@ const PostsTable = () => {
                                         View
                                     </Link>
                                 </Button>
+                                <Button className="bg-teal-700">
+                                    <Link to={'/cms/editor/' + post.route}>
+                                        Edit
+                                    </Link>
+                                </Button>
                                 <Button variant="destructive" className="ml-2"
                                     onClick={() => {
                                         deletePost(post.id)
@@ -84,7 +89,7 @@ const PostsTable = () => {
                             </TableCell>
                         </TableRow>
                     ))}
-                    
+
                     {!isPending && posts?.posts.length === 0 && (
                         <TableRow>
                             <TableCell colSpan={7} className="text-center">
@@ -104,7 +109,7 @@ const PostsTable = () => {
             </Table>
             <div className="mt-4 flex justify-between">
                 <p>{posts?.pagination.total || 0} total posts</p>
-                
+
                 <Pagination
                     currentPage={page}
                     totalPages={posts?.pagination.totalPages || 1}

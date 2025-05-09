@@ -18,7 +18,7 @@ export default function ProtectedHeader() {
     }
 
     return (
-        <header className={cn("w-full border-b sticky top-0 z-50 bg-white")}>
+        <header className={cn("w-full border-b top-0 z-50 bg-white")}>
             <div className="container flex h-16 items-center justify-between px-4 lg:px-0 mx-auto">
 
                 <Link to="/" className="text-xl font-bold">
@@ -33,24 +33,22 @@ export default function ProtectedHeader() {
                     <Link to="/cms/editor" className="hover:underline">
                         Editor
                     </Link>
-                    <Link to="/cms" className="hover:underline">
-                        About
-                    </Link>
+
                 </nav>
-                
+
 
                 <div className="flex items-center gap-4">
-                {
-                    session && session.session && (
-                        <div className="hidden md:flex items-center gap-4">
-                            <span className="text-sm font-medium"><Badge>{session.session.name}</Badge></span>
-                            
-                        </div>
-                    )
-                }
-                        <Button variant="outline" className="text-sm" type="button" onClick={handleLogout}>
-                            Logout
-                     </Button>
+                    {
+                        session && session.session && (
+                            <div className="hidden md:flex items-center gap-4">
+                                <span className="text-sm font-medium"><Badge>{session.session.name}</Badge></span>
+
+                            </div>
+                        )
+                    }
+                    <Button variant="outline" className="text-sm" type="button" onClick={handleLogout}>
+                        Logout
+                    </Button>
                 </div>
             </div>
         </header>
