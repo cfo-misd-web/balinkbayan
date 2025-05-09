@@ -25,6 +25,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { Textarea } from "@/components/ui/textarea";
 import type { Post } from "@/constants/types";
 import { useEditPost } from "@/services/query&mutations/use-edit-post";
+import { useUploadStore } from "@/store/image-uplaod-state";
 
 
 
@@ -37,6 +38,7 @@ export function EditPosterForm({
     const [routeTouched, setRouteTouched] = useState(false);
     const navigate = useNavigate();
     const { mutate: editPost } = useEditPost();
+    const { isUploading } = useUploadStore();
 
     const form = useForm<cmsFormValues>({
         resolver: zodResolver(cmsformSchema),
@@ -102,17 +104,17 @@ export function EditPosterForm({
             description,
             tags: tags || [],
             author,
-            bannerImg: bannerImage, 
-            content: contentWithUploadedImages, 
+            bannerImg: bannerImage,
+            content: contentWithUploadedImages,
             publishedDate: publishDate,
         };
 
-        editPost({data, route}, {
+        editPost({ data, route: post.route }, {
             onSuccess: (data) => {
                 form.reset();
                 setTimeout(() => {
                     navigate({ to: "/news/$postroute", params: { postroute: data.post.route } });
-                } , 1000);
+                }, 1000);
             },
             onError: (error) => {
                 toast.error(`Error creating poster: ${error.message}`);
@@ -243,7 +245,7 @@ export function EditPosterForm({
                                             {...field}
                                         />
                                     </FormControl>
-                                    
+
                                     <FormMessage />
                                 </FormItem>
                             )}
@@ -258,6 +260,7 @@ export function EditPosterForm({
                                         label="Banner Image"
                                         value={value ?? null}
                                         onChange={onChange}
+                                        disabled={isUploading}
                                     />
                                     <FormDescription>
                                         Recommended size: 1200x630 pixels

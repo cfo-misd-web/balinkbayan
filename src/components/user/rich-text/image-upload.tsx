@@ -29,7 +29,7 @@ export const uploaDer = async (file: File) => {
     })
 }
 
-export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
+export function ImageUpload({ onChange, value, label, disabled }: ImageUploadProps & { disabled?: boolean }) {
     const [preview, setPreview] = useState<string | null>(value);
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,6 +78,7 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
                                 variant="destructive"
                                 size="sm"
                                 onClick={handleRemove}
+                                disabled={disabled}
                             >
                                 Remove
                             </Button>
@@ -85,6 +86,7 @@ export function ImageUpload({ onChange, value, label }: ImageUploadProps) {
                                 variant="secondary"
                                 size="sm"
                                 onClick={() => document.getElementById(`image-upload-${label}`)?.click()}
+                                disabled={disabled}
                             >
                                 Change
                             </Button>

@@ -24,6 +24,8 @@ import '@/styles.css'
 import { useSessionStore } from "@/store/session-store";
 import { api } from "@/services/axios-fetchers/api";
 import { toast } from "sonner";
+import { CTooltip } from "../shared/custom-tooltip";
+import { useUploadStore } from "@/store/image-uplaod-state";
 
 interface RichTextEditorProps {
     value: string;
@@ -84,6 +86,7 @@ const ResizableImage = Image.extend({
 export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
     const [isMounted, setIsMounted] = useState(false);
     const [selectedImage, setSelectedImage] = useState<{ node: any, width: number } | null>(null);
+    const { isUploading, setIsUploading } = useUploadStore()
 
     const editor = useEditor({
         extensions: [
@@ -173,6 +176,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
             if (editor) {
                 editor.chain().focus().setImage({ src: placeholderSrc }).run();
             }
+            setIsUploading(true);
             try {
                 const url = await uploaDer(file);
                 if (url && editor) {
@@ -187,6 +191,8 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                     const updatedHtml = html.replace(placeholderSrc, '');
                     editor.commands.setContent(updatedHtml, false);
                 }
+            } finally {
+                setIsUploading(false);
             }
         };
 
@@ -361,15 +367,19 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
 
                 <div className="h-6 w-px bg-border mx-1" />
 
-                <Button
-                    type="button"
-                    variant="outline"
-                    size="sm"
-                    onClick={addImage}
-                >
-                    <ImageIcon className="h-4 w-4 mr-1" />
-                    Image
-                </Button>
+                <CTooltip>
+                    <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        onClick={addImage}
+                        disabled={isUploading}
+                    >
+                        <ImageIcon className="h-4 w-4 mr-1" />
+                        Image
+                    </Button>
+                </CTooltip>
+
             </div>
 
             {selectedImage && (
@@ -387,7 +397,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                         </div>
                         <span className="text-xs">{selectedImage.width}%</span>
                         <Button
-                        type="button"
+                            type="button"
                             size="sm"
                             variant="outline"
                             onClick={setFullWidth}
@@ -397,7 +407,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                             Full
                         </Button>
                         <Button
-                        type="button"
+                            type="button"
                             size="sm"
                             variant="outline"
                             onClick={setHalfWidth}
