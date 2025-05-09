@@ -50,8 +50,8 @@ export function ImageUpload({ onChange, value, label, disabled }: ImageUploadPro
     };
 
     const handleRemove = () => {
-        setPreview(null);
-        onChange(null);
+        setPreview("");
+        onChange("");
     };
 
     return (

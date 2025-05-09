@@ -11,7 +11,7 @@ export const cmsformSchema = z.object({
     route: z.string().min(1, "Route is required"),
     description: z.string().optional(),
     content: z.string().min(1, "Content is required"),
-    bannerImage: z.string().optional(),
+    bannerImage: z.string().optional().nullable(),
     author: z.string().optional(),
     tags: z.array(z.string()).optional(),
     publishDate: z.string().optional(),

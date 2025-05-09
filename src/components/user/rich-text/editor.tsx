@@ -392,7 +392,7 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                     </CTooltip>
 
                 </div>
-                {/* Image resizer bar, sticky below main toolbar */}
+
                 {selectedImage && (
                     <div className="p-2 bg-gray-50 border-b">
                         <div className="flex items-center gap-3 mb-2 flex-wrap">
@@ -425,6 +425,21 @@ export function RichTextEditor({ value, onChange }: RichTextEditorProps) {
                             >
                                 <Minimize className="h-3.5 w-3.5 mr-1" />
                                 Half
+                            </Button>
+                            <Button
+                                type="button"
+                                size="sm"
+                                variant="destructive"
+                                onClick={() => {
+                                    if (!editor || !selectedImage) return;
+                                    const pos = findSelectedImagePosition();
+                                    if (pos !== null) {
+                                        editor.chain().focus().setNodeSelection(pos).deleteSelection().run();
+                                        setSelectedImage(null);
+                                    }
+                                }}
+                            >
+                                Remove Image
                             </Button>
                         </div>
                     </div>

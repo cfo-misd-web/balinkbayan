@@ -45,7 +45,7 @@ export function EditPosterForm({
         values: {
             title: post?.title ?? "",
             route: post?.route ?? "",
-            bannerImage: post?.bannerImg ?? null,
+            bannerImage: post?.bannerImg ?? "",
             description: post?.description ?? "",
             content: post?.content ?? content,
             author: post?.author ?? "",
@@ -109,7 +109,7 @@ export function EditPosterForm({
             publishedDate: publishDate,
         };
 
-        editPost({ data, route: post.route }, {
+        editPost({ data: fd, route: post.route }, {
             onSuccess: (data) => {
                 form.reset();
                 setTimeout(() => {
@@ -120,8 +120,6 @@ export function EditPosterForm({
                 toast.error(`Error creating poster: ${error.message}`);
             },
         });
-
-        console.log("Form data:", fd);
     };
 
     const renderBannerImage = (banner: string | File | null) => {

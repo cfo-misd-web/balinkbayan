@@ -52,8 +52,6 @@ export function PosterForm() {
     const { watch, setValue } = form;
     const title = watch("title");
 
-    console.log("Form values:", watch("publishDate"));
-
     useEffect(() => {
         if (!routeTouched && title) {
             setValue("route", title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
@@ -99,8 +97,8 @@ export function PosterForm() {
             description,
             tags: tags || [],
             author,
-            bannerImg: bannerImage, 
-            content: contentWithUploadedImages, 
+            bannerImg: bannerImage,
+            content: contentWithUploadedImages,
             publishedDate: publishDate,
         };
 
@@ -109,7 +107,7 @@ export function PosterForm() {
                 form.reset();
                 setTimeout(() => {
                     navigate({ to: "/news/$postroute", params: { postroute: data.post.route } });
-                } , 1000);
+                }, 1000);
             },
             onError: (error) => {
                 toast.error(`Error creating poster: ${error.message}`);
@@ -219,7 +217,7 @@ export function PosterForm() {
                                             {...field}
                                         />
                                     </FormControl>
-                                    
+
                                     <FormMessage />
                                 </FormItem>
                             )}
