@@ -9,7 +9,6 @@ import { Facebook, MapPin, Mail, MessageCircle, Phone, Globe } from 'lucide-reac
 import { Dialog, DialogHeader, DialogTrigger, DialogContent, DialogDescription } from '@/components/ui/dialog'
 import { Table, TableHeader, TableRow, TableHead, TableBody, TableCell } from '@/components/ui/table'
 import DarkRoseAnchor from '@/components/user/shared/anchors/darkrose-anchor'
-import { services } from '@/constants/contants'
 
 
 export const Route = createFileRoute(

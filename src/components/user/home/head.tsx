@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import { Link } from '@tanstack/react-router';
+import Heading3 from '../shared/headings/heading-3';
 
 
 const HeadSection = () => {
@@ -38,11 +39,11 @@ const HeadSection = () => {
             </motion.div>
 
             <div className='max-lg:hidden font-[1000] absolute text-start top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-[75%] text-white text-[45px] drop-shadow-lg max-lg:w-[90%] max-lg:mx-auto'>
-                <h2 className='text-center text-wrap'>
+                <Heading3 className='text-center text-wrap'>
                     We aim to reconnect
                     overseas Filipinos
                     with the Philippines.
-                </h2>
+                </Heading3>
                 <div className='flex flex-col items-center justify-center mt-4 gap-y-5'>
                     <Separator className='max-lg:hidden w-full data-[orientation=horizontal]:h-[5px] rounded-full bg-green-700' />
                     <Separator className='max-lg:hidden data-[orientation=horizontal]:w-3/4 data-[orientation=horizontal]:h-[5px] rounded-full bg-[#F4A03A]' />

@@ -64,7 +64,7 @@ function RouteComponent() {
                       <DialogContent className='m-0 p-0'>
                         <DialogHeader>
                           <DialogDescription>
-                            <img className='rounded-lg' src='/img-assets/gov-services/btr/btr_1.jpg'/>
+                            <img className='rounded-sm outline-4 outline-gray-200' src='/img-assets/gov-services/btr/btr_1.jpg'/>
                           </DialogDescription>
                         </DialogHeader>
                       </DialogContent>
@@ -78,7 +78,7 @@ function RouteComponent() {
                       <DialogContent className='m-0 p-0'>
                         <DialogHeader>
                           <DialogDescription>
-                            <img className='rounded-lg' src='/img-assets/gov-services/btr/BTR_2.jpg'/>
+                            <img className='rounded-sm outline-4 outline-gray-200' src='/img-assets/gov-services/btr/BTR_2.jpg'/>
                           </DialogDescription>
                         </DialogHeader>
                       </DialogContent>
@@ -92,7 +92,7 @@ function RouteComponent() {
                       <DialogContent className='m-0 p-0'>
                         <DialogHeader>
                           <DialogDescription>
-                            <img className='rounded-lg' src='/img-assets/gov-services/btr/BTR_3.jpg'/>
+                            <img className='rounded-sm outline-4 outline-gray-200' src='/img-assets/gov-services/btr/BTR_3.jpg'/>
                           </DialogDescription>
                         </DialogHeader>
                       </DialogContent>

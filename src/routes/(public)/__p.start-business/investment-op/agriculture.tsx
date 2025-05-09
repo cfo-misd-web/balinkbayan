@@ -60,49 +60,49 @@ function RouteComponent() {
         </div>
         {/*  */}
         <div className='text-white'>
-          <SmallerBanner label='A' img_url='/img-assets/start-a-business/agriculture/benefits/active-government.jpg' />
+          <SmallerBanner divClass='bottom-5' label='A' img_url='/img-assets/start-a-business/agriculture/benefits/active-government.jpg' />
           <div className='bg-teal-500 w-full py-5'>
             <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
               <Heading4>ACTIVE GOVERNMENT SUPPORT AND INTERVENTION</Heading4>
               <Paragraph className='mt-5'>In line with the national response to both local and international demands, agriculture is one of the few national industries with the largest endowment of funds for productivity, alongside active research and the provision of incentives and supplies for local farmers and producers.</Paragraph>
             </div>
           </div>
-          <SmallerBanner label='G' img_url='/img-assets/start-a-business/agriculture/benefits/growing-traction-and-support.jpg' />
+          <SmallerBanner divClass='bottom-5' label='G' img_url='/img-assets/start-a-business/agriculture/benefits/growing-traction-and-support.jpg' />
           <div className='bg-teal-500 w-full py-5'>
             <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
               <Heading4>GROWING TRACTION AND SUPPORT OF AGRICULTURAL LABOR AND HUMAN RESOURCE</Heading4>
               <Paragraph className='mt-5'>The Philippines has a large chunk of readily available labor for agricultural activities, particularly in rural areas. As of 2023, there exists a total of 25% of Filipino workers being involved in the agricultural industry–which continues to grow faster by 1.2%.</Paragraph>
             </div>
           </div>
-          <SmallerBanner label='R' img_url='/img-assets/start-a-business/agriculture/benefits/rich-fertile-land.jpg' />
+          <SmallerBanner divClass='bottom-5' label='R' img_url='/img-assets/start-a-business/agriculture/benefits/rich-fertile-land.jpg' />
           <div className='bg-teal-500 w-full py-5'>
             <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
               <Heading4>RICH, FERTILE, AND EXPANSIVE AGRICULTURAL LANDS</Heading4>
               <Paragraph className='mt-5'>As an archipelagic country, the Philippines is richly built with both terrestrial and aquatic zones–offering a wide array of natural resources for cultivation and consumption.</Paragraph>
             </div>
           </div>
-          <SmallerBanner label='I' img_url='/img-assets/start-a-business/agriculture/benefits/in-demand-and-consistent-necessity.jpg' />
+          <SmallerBanner divClass='bottom-5' label='I' img_url='/img-assets/start-a-business/agriculture/benefits/in-demand-and-consistent-necessity.jpg' />
           <div className='bg-teal-500 w-full py-5'>
             <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
               <Heading4>IN-DEMAND AND CONSISTENT NECESSITY FOR AGRICULTURAL GOODS </Heading4>
               <Paragraph className='mt-5'>The agricultural sector will always be needed as it is a means of public sustenance and development. Products and services, whether locally consumed or exported, are all dependent on raw materials from agriculture.</Paragraph>
             </div>
           </div>
-          <SmallerBanner label='C' img_url='/img-assets/start-a-business/agriculture/benefits/climate-change.jpg' />
+          <SmallerBanner divClass='bottom-5' label='C' img_url='/img-assets/start-a-business/agriculture/benefits/climate-change.jpg' />
           <div className='bg-rose-500 w-full py-5'>
             <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
               <Heading4>CLIMATE CHANGE AND THE UNCONTROLLABLE</Heading4>
               <Paragraph className='mt-5'>Floods, typhoons, and even droughts are major critical and inevitable problems of the agricultural industry.</Paragraph>
             </div>
           </div>
-          <SmallerBanner label='U' img_url='/img-assets/start-a-business/agriculture/benefits/urbanization.jpg' />
+          <SmallerBanner divClass='bottom-5' label='U' img_url='/img-assets/start-a-business/agriculture/benefits/urbanization.jpg' />
           <div className='bg-rose-500 w-full py-5'>
             <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
               <Heading4>URBANIZATION AND INFRASTRUCTURAL DEVELOPMENTS AND NECESSITY FOR AGRICULTURAL GOODS</Heading4>
               <Paragraph className='mt-5'>The rapid growth of urbanization within the Philippines minimizes agricultural land capacity, leading to food supply shortages and the frequent importation of basic necessities.</Paragraph>
             </div>
           </div>
-          <SmallerBanner label='L' img_url='/img-assets/start-a-business/agriculture/benefits/low-technological-support.jpg' />
+          <SmallerBanner divClass='bottom-5' label='L' img_url='/img-assets/start-a-business/agriculture/benefits/low-technological-support.jpg' />
           <div className='bg-rose-500 w-full py-5'>
             <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
               <Heading4>LOW TECHNOLOGICAL SUPPORT</Heading4>
@@ -110,28 +110,28 @@ function RouteComponent() {
             </div>
           </div>
         </div>
-        <SmallerBanner label='T' img_url='/img-assets/start-a-business/agriculture/benefits/technological-and-machinery-adv.jpg' />
+        <SmallerBanner divClass='bottom-5' label='T' img_url='/img-assets/start-a-business/agriculture/benefits/technological-and-machinery-adv.jpg' />
         <div className='bg-yellow-200 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>TECHNOLOGICAL AND MACHINERY ADVANCEMENTS</Heading4>
             <Paragraph className='mt-5'>The creation of the National Agricultural and Fisheries Modernization and Industrialization Plan (NAFMIP) 2021-2030 of the DA aims to advance and modernize the agriculture industry through holistic agri-food systems and raising the compensation and benefits of fishermen and fisherfolk in the country.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='U' img_url='/img-assets/start-a-business/agriculture/benefits/upstreaming-agriculture.jpg' />
+        <SmallerBanner divClass='bottom-5' label='U' img_url='/img-assets/start-a-business/agriculture/benefits/upstreaming-agriculture.jpg' />
         <div className='bg-yellow-200 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>UPSTREAMING AGRICULTURE AND BUSINESS (AGRIBUSINESS)</Heading4>
             <Paragraph className='mt-5'>The Philippine Development Plan of 2023 (PDP 2023) envisions promoting production efficiency through the adoption of technical advancements and integrating modern ways of farming into production and market supply.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='R' img_url='/img-assets/start-a-business/agriculture/benefits/rural-infra.png' />
+        <SmallerBanner divClass='bottom-5' label='R' img_url='/img-assets/start-a-business/agriculture/benefits/rural-infra.png' />
         <div className='bg-yellow-200 w-full py-5'>
           <div className=' max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>RURAL INFRASTRUCTURE INVESTMENTS</Heading4>
             <Paragraph className='mt-5'>Revitalizing rural areas through infrastructure developments will create more opportunities for Filipinos to harness the agricultural industry. The DA, with the help of other government agencies, will pioneer bridging opportunities for rural communities in the country through Science and Technology (S&T) offices, private sector engagements, and agribusiness venture agreements.</Paragraph>
           </div>
         </div>
-        <SmallerBanner label='E' img_url='/img-assets/start-a-business/agriculture/benefits/educational-and-academic.jpg' />
+        <SmallerBanner divClass='bottom-5' label='E' img_url='/img-assets/start-a-business/agriculture/benefits/educational-and-academic.jpg' />
         <div className='bg-yellow-200 w-full py-5'>
           <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] flex flex-col mx-auto bg-light'>
             <Heading4>EDUCATION AND ACADEMIC INTERVENTIONS</Heading4>

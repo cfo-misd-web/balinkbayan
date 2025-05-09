@@ -22,7 +22,7 @@ export default function TabList(
             aria-selected={activeTab === tab.idx}
         >
             {tab.icon}
-            <Paragraph className="mt-10 text-center text-sm font-black">{tab.title}</Paragraph>
+            <Paragraph className="mt-10 text-center text-sm font-black mx-4">{tab.title}</Paragraph>
             {activeTab === tab.idx && (
             <div
                 className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-teal-500"
