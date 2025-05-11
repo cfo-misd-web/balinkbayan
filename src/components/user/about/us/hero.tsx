@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Separator } from '@/components/ui/separator';
 
 
 const AboutHead = () => {
@@ -32,15 +33,18 @@ const AboutHead = () => {
                 transition={{ duration: 1, ease: 'easeInOut' }}
             >
                 <div className="absolute inset-0 bg-black/50"></div>
+                <div className="font-extrabold min-w-[400px] text-center text-[80px] max-lg:text-4xl text-white drop-shadow-lg absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    About Us
+                    <div className='flex flex-col items-center justify-center mt-4 gap-y-5'>
+                        <Separator className='w-full data-[orientation=horizontal]:h-[5px] rounded-full bg-green-700' />
+                        <Separator className='data-[orientation=horizontal]:w-3/4 data-[orientation=horizontal]:h-[5px] rounded-full bg-[#F4A03A]' />
+                        <Separator className='data-[orientation=horizontal]:w-2/4 data-[orientation=horizontal]:h-[5px] rounded-full bg-white' />
+                    </div>
+
+                </div>
             </motion.div>
 
-            <h2 className='max-lg:hidden font-[1000] absolute text-start top-1/2 left-1/3 transform -translate-x-1/3 -translate-y-[50%] text-white text-[80px] drop-shadow-lg max-lg:w-[90%] max-lg:mx-auto'>
-                About Us
-            </h2>
 
-            <div className='hidden max-lg:block absolute text-start bottom-2/3 translate-y-28 left-1/12 font-extrabold  text-[45px] text-white gap-y-1.5'>
-                About Us
-            </div>
 
         </section>
     );
