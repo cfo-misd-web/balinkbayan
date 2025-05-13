@@ -9,6 +9,7 @@ export const SubHeader = () => {
 
     return (
         <>
+        <section className="bg-white">
             <div className="container w-full lg:w-[1600px] p-4 mx-auto">
                 <div className="flex items-center justify-between space-x-0 sm:space-x-3 space-y-3 sm:space-y-0 flex-col sm:flex-row">
                     <div className="flex items-center w-full mx-auto justify-between space-x-4">
@@ -53,6 +54,7 @@ export const SubHeader = () => {
                 </div>
             </div >
             <Nav />
+        </section>
         </>
     )
 }

@@ -29,6 +29,7 @@ import { Route as publicpServicesTourismIncentiveImport } from './routes/(public
 import { Route as publicpServicesOtherOnlineGovServicesImport } from './routes/(public)/__p.services/other-online-gov-services'
 import { Route as publicpServicesLocalGovPartnersImport } from './routes/(public)/__p.services/local-gov-partners'
 import { Route as publicpNewsPostrouteImport } from './routes/(public)/__p.news/$postroute'
+import { Route as publicpContactContactUsImport } from './routes/(public)/__p.contact/contact-us'
 import { Route as publicpStartBusinessSmallEnterpriseKnowledgeCenterIndexImport } from './routes/(public)/__p.start-business/small-enterprise-knowledge-center/index'
 import { Route as publicpStartBusinessInvestmentOpIndexImport } from './routes/(public)/__p.start-business/investment-op/index'
 import { Route as publicpAboutCfoIndexImport } from './routes/(public)/__p.about/cfo/index'
@@ -187,6 +188,12 @@ const publicpServicesLocalGovPartnersRoute =
 const publicpNewsPostrouteRoute = publicpNewsPostrouteImport.update({
   id: '/news/$postroute',
   path: '/news/$postroute',
+  getParentRoute: () => publicpRoute,
+} as any)
+
+const publicpContactContactUsRoute = publicpContactContactUsImport.update({
+  id: '/contact/contact-us',
+  path: '/contact/contact-us',
   getParentRoute: () => publicpRoute,
 } as any)
 
@@ -548,6 +555,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof publicpIndexImport
+      parentRoute: typeof publicpImport
+    }
+    '/(public)/__p/contact/contact-us': {
+      id: '/(public)/__p/contact/contact-us'
+      path: '/contact/contact-us'
+      fullPath: '/contact/contact-us'
+      preLoaderRoute: typeof publicpContactContactUsImport
       parentRoute: typeof publicpImport
     }
     '/(public)/__p/news/$postroute': {
@@ -959,6 +973,7 @@ const protectedRouteWithChildren = protectedRoute._addFileChildren(
 
 interface publicpRouteChildren {
   publicpIndexRoute: typeof publicpIndexRoute
+  publicpContactContactUsRoute: typeof publicpContactContactUsRoute
   publicpNewsPostrouteRoute: typeof publicpNewsPostrouteRoute
   publicpServicesLocalGovPartnersRoute: typeof publicpServicesLocalGovPartnersRoute
   publicpServicesOtherOnlineGovServicesRoute: typeof publicpServicesOtherOnlineGovServicesRoute
@@ -1009,6 +1024,7 @@ interface publicpRouteChildren {
 
 const publicpRouteChildren: publicpRouteChildren = {
   publicpIndexRoute: publicpIndexRoute,
+  publicpContactContactUsRoute: publicpContactContactUsRoute,
   publicpNewsPostrouteRoute: publicpNewsPostrouteRoute,
   publicpServicesLocalGovPartnersRoute: publicpServicesLocalGovPartnersRoute,
   publicpServicesOtherOnlineGovServicesRoute:
@@ -1108,6 +1124,7 @@ const publicRouteWithChildren =
 export interface FileRoutesByFullPath {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/contact/contact-us': typeof publicpContactContactUsRoute
   '/news/$postroute': typeof publicpNewsPostrouteRoute
   '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
@@ -1163,6 +1180,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof publicpIndexRoute
   '/login': typeof authauthLoginRoute
+  '/contact/contact-us': typeof publicpContactContactUsRoute
   '/news/$postroute': typeof publicpNewsPostrouteRoute
   '/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
@@ -1225,6 +1243,7 @@ export interface FileRoutesById {
   '/(public)/__p': typeof publicpRouteWithChildren
   '/(auth)/__auth/login': typeof authauthLoginRoute
   '/(public)/__p/': typeof publicpIndexRoute
+  '/(public)/__p/contact/contact-us': typeof publicpContactContactUsRoute
   '/(public)/__p/news/$postroute': typeof publicpNewsPostrouteRoute
   '/(public)/__p/services/local-gov-partners': typeof publicpServicesLocalGovPartnersRoute
   '/(public)/__p/services/other-online-gov-services': typeof publicpServicesOtherOnlineGovServicesRoute
@@ -1282,6 +1301,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/login'
+    | '/contact/contact-us'
     | '/news/$postroute'
     | '/services/local-gov-partners'
     | '/services/other-online-gov-services'
@@ -1336,6 +1356,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/login'
+    | '/contact/contact-us'
     | '/news/$postroute'
     | '/services/local-gov-partners'
     | '/services/other-online-gov-services'
@@ -1396,6 +1417,7 @@ export interface FileRouteTypes {
     | '/(public)/__p'
     | '/(auth)/__auth/login'
     | '/(public)/__p/'
+    | '/(public)/__p/contact/contact-us'
     | '/(public)/__p/news/$postroute'
     | '/(public)/__p/services/local-gov-partners'
     | '/(public)/__p/services/other-online-gov-services'
@@ -1516,6 +1538,7 @@ export const routeTree = rootRoute
       "parent": "/(public)",
       "children": [
         "/(public)/__p/",
+        "/(public)/__p/contact/contact-us",
         "/(public)/__p/news/$postroute",
         "/(public)/__p/services/local-gov-partners",
         "/(public)/__p/services/other-online-gov-services",
@@ -1570,6 +1593,10 @@ export const routeTree = rootRoute
     },
     "/(public)/__p/": {
       "filePath": "(public)/__p.index.tsx",
+      "parent": "/(public)/__p"
+    },
+    "/(public)/__p/contact/contact-us": {
+      "filePath": "(public)/__p.contact/contact-us.tsx",
       "parent": "/(public)/__p"
     },
     "/(public)/__p/news/$postroute": {

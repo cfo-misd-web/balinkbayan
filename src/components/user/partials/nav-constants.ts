@@ -279,9 +279,6 @@ export const navLinks: NavItem[] = [
                 label: "Tourism Incentive for Overseas Filipinos",
                 href: "/services/tourism-incentive",
             }
-
-
-
         ],
     },
     {
@@ -294,6 +291,6 @@ export const navLinks: NavItem[] = [
     },
     {
         label: "Contact Us",
-        href: "/contact",
+        href: "/contact/contact-us",
     },
 ];

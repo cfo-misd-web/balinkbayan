@@ -26,7 +26,6 @@ const ContactHead = () => {
                         <Separator className='data-[orientation=horizontal]:w-3/4 data-[orientation=horizontal]:h-[5px] rounded-full bg-[#F4A03A]' />
                         <Separator className='data-[orientation=horizontal]:w-2/4 data-[orientation=horizontal]:h-[5px] rounded-full bg-white' />
                     </div>
-
                 </div>
             </motion.div>
 

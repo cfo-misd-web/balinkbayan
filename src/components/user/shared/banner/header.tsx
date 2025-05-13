@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 
-const HeaderTemp = ({ label , img_url}:{label?: string, img_url:string}) => {
+const HeaderTemp = ({ label , img_url }:{ label?: string, img_url:string }) => {
 
 
     return (

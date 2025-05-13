@@ -22,7 +22,7 @@ function RouteComponent() {
         <div className='max-lg:mx-4 3xl:max-w-[1400px] 2xl:max-w-[1280px] lg:max-w-[1080px] mx-auto my-20 bg-light space-y-20'>
           <Heading4><u>Pag</u>tutulungan sa kinabukasan: <u>I</u>kaw, <u>B</u>angko, <u>I</u>ndustriya, at <u>G</u>obyerno</Heading4>
           <div className='flex flex-row items-center space-x-20'>
-            <img src='/img-assets/gov-services/pagibig/pagibig.png' />
+            <img src='/img-assets/gov-services/pagibig/pagibig.jpg' />
             <Paragraph>The Home Development Mutual Fund (HDMF), more popularly known as the Pag-IBIG Fund, was established to provide a national savings program and affordable shelter financing for the Filipino worker. The Fund offers its members short-term loans and access to housing programs. It is mandatory for all SSS- and GSIS-covered employees; uniformed members of the AFP, BFP, BJMP and PNP; as well as Filipinos employed by foreign-based employers.</Paragraph>
           </div>
           {/*  */}
